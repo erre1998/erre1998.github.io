@@ -10,7 +10,9 @@
         >
         
         <title>
-            {% if page.title %}
+            {% if page.url == "/" %}
+            {{ site.title }}
+            {% elsif page.title %}
             {{ page.title }} · {{ site.title }}
             {% else %}
             {{ site.title }}
@@ -34,15 +36,25 @@
             
             <div class="container site-header-inner">
                 
-                <a class="site-title" href="{{ '/' | relative_url }}">
-                    {{ site.title }}
-                </a>
+                <div class="site-identity">
+                    
+                    <a class="site-title" href="{{ '/' | relative_url }}">
+                        {{ site.title }}
+                    </a>
+                    
+                    <p class="site-subtitle">
+                        {{ site.tagline }}
+                    </p>
+                    
+                </div>
                 
                 {% include navigation.html %}
                 
             </div>
             
         </header>
+        
+        <div class="site-mosaic" aria-hidden="true"></div>
         
         <main class="site-main">
             
@@ -56,7 +68,7 @@
         
         <footer class="site-footer">
             
-            <div class="container">
+            <div class="container site-footer-inner">
                 
                 <p>&copy; {{ "now" | date: "%Y" }} Erik Renz</p>
                 
