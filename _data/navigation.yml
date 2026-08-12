@@ -1,0 +1,23 @@
+- title: Home
+  url: /
+
+- title: Curriculum Vitae
+  url: /cv/
+
+- title: Publications
+  url: /publications/
+
+- title: Talks & Presentations
+  url: /talks/
+
+- title: Projects & Funding
+  url: /projects/
+
+- title: Teaching & Thesis Supervision
+  url: /teaching/
+
+- title: Organized Events
+  url: /events/
+
+- title: Committees & Service
+  url: /service/
