@@ -144,6 +144,29 @@ a {
     max-width: 700px;
 }
 
+/* ---------------------------------
+   Pages
+---------------------------------- */
+
+.page {
+    max-width: 800px;
+}
+
+.page-header {
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    margin: 0;
+
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 500;
+}
+
+.page-content {
+    max-width: 700px;
+}
 
 /* ---------------------------------
    Footer
