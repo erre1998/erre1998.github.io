@@ -54,8 +54,6 @@
             
         </header>
         
-        <div class="site-mosaic" aria-hidden="true"></div>
-        
         <main class="site-main">
             
             <div class="container">
@@ -66,31 +64,7 @@
             
         </main>
         
-        <footer class="site-footer">
-            
-            <div class="container site-footer-inner">
-                
-                <p class="site-footer-copyright">
-                    &copy; {{ "now" | date: "%Y" }} Erik Renz
-                </p>
-                
-                <div class="site-footer-meta">
-                    
-                    <a href="{{ '/privacy-policy/' | relative_url }}">
-                        Privacy Policy
-                    </a>
-                    
-                    <span aria-hidden="true">·</span>
-                    
-                    <span>
-                        Last update: {{ site.time | date: "%-d %B %Y" }}
-                    </span>
-                    
-                </div>
-                
-            </div>
-            
-        </footer>
+        {% include footer.html %}
         
     </body>
     

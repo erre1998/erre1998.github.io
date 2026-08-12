@@ -1,0 +1,86 @@
+<footer class="site-footer">
+
+    <div class="container site-footer-inner">
+
+        <div class="site-footer-info">
+
+            <p class="site-footer-copyright">
+                &copy; {{ "now" | date: "%Y" }} Erik Renz
+            </p>
+
+            <div class="site-footer-meta">
+
+                <a href="{{ '/privacy-policy/' | relative_url }}">
+                    Privacy Policy
+                </a>
+
+                <span aria-hidden="true">·</span>
+
+                <span>
+                    Last update: {{ site.time | date: "%-d %B %Y" }}
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="site-footer-contact">
+
+            <p class="site-footer-email">
+                erik.renz [at] uni-rostock.de
+            </p>
+
+            <div
+                class="site-footer-profiles"
+                aria-label="Profiles"
+            >
+
+                <a
+                    class="site-footer-profile"
+                    href="https://github.com/erre1998"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    title="GitHub"
+                >
+                    <span
+                        class="site-footer-icon site-footer-icon-github"
+                        aria-hidden="true"
+                    ></span>
+                </a>
+
+                <a
+                    class="site-footer-profile"
+                    href="https://orcid.org/0009-0005-8288-7470"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="ORCID"
+                    title="ORCID"
+                >
+                    <span
+                        class="site-footer-icon site-footer-icon-orcid"
+                        aria-hidden="true"
+                    ></span>
+                </a>
+
+                <a
+                    class="site-footer-profile"
+                    href="https://fedihum.org/@erre1998"
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    aria-label="Mastodon"
+                    title="Mastodon"
+                >
+                    <span
+                        class="site-footer-icon site-footer-icon-mastodon"
+                        aria-hidden="true"
+                    ></span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
