@@ -1,0 +1,14 @@
+title: "Erik Renz"
+description: "Personal website of Erik Renz"
+
+url: "https://erre1998.github.io"
+baseurl: ""
+
+lang: "en"
+
+markdown: kramdown
+
+permalink: pretty
+
+exclude:
+  - README.md

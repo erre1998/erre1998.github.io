@@ -1,0 +1,125 @@
+/* ---------------------------------
+   Variables
+---------------------------------- */
+
+:root {
+    --color-background: #ffffff;
+    --color-text: #202020;
+    --color-muted: #666666;
+    --color-border: #dddddd;
+
+    --content-width: 1100px;
+}
+
+
+/* ---------------------------------
+   Base
+---------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* ---------------------------------
+   Layout
+---------------------------------- */
+
+.container {
+    width: min(100% - 3rem, var(--content-width));
+    margin-inline: auto;
+}
+
+
+/* ---------------------------------
+   Header
+---------------------------------- */
+
+.site-header {
+    padding: 1.5rem 0;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.site-title {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* ---------------------------------
+   Main
+---------------------------------- */
+
+.site-main {
+    min-height: 70vh;
+    padding: 6rem 0;
+}
+
+.site-main h1 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+    font-weight: 500;
+}
+
+.site-main p {
+    max-width: 700px;
+}
+
+
+/* ---------------------------------
+   Footer
+---------------------------------- */
+
+.site-footer {
+    padding: 2rem 0;
+
+    border-top: 1px solid var(--color-border);
+
+    color: var(--color-muted);
+    font-size: 0.875rem;
+}
+
+
+/* ---------------------------------
+   Responsive
+---------------------------------- */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(100% - 2rem, var(--content-width));
+    }
+
+    .site-main {
+        padding: 4rem 0;
+    }
+}
