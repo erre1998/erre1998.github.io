@@ -70,7 +70,23 @@
             
             <div class="container site-footer-inner">
                 
-                <p>&copy; {{ "now" | date: "%Y" }} Erik Renz</p>
+                <p class="site-footer-copyright">
+                    &copy; {{ "now" | date: "%Y" }} Erik Renz
+                </p>
+                
+                <div class="site-footer-meta">
+                    
+                    <a href="{{ '/privacy-policy/' | relative_url }}">
+                        Privacy Policy
+                    </a>
+                    
+                    <span aria-hidden="true">·</span>
+                    
+                    <span>
+                        Last update: {{ site.time | date: "%-d %B %Y" }}
+                    </span>
+                    
+                </div>
                 
             </div>
             

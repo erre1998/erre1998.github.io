@@ -6,6 +6,7 @@ url: "https://erre1998.github.io"
 baseurl: ""
 
 lang: "en"
+timezone: "Europe/Berlin"
 
 markdown: kramdown
 
