@@ -60,7 +60,7 @@ description: "Curriculum Vitae of Erik Renz."
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        KI-gestützte Unterrichtsplanung II
+                        KI-gestützte Unterrichtsplanung II: Entwicklung eines Selbstlernangebots für Lehramtsstudierende
                     </a>
                 </p>
 

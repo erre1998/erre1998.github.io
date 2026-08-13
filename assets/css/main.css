@@ -817,3 +817,267 @@ a:focus-visible {
     vertical-align: 0.08em;
     white-space: nowrap;
 }
+
+/* ---------------------------------
+   Organized Events
+---------------------------------- */
+
+.events-intro {
+    margin: 0 0 3rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* Featured recurring series */
+
+.event-series {
+    margin-top: 0;
+}
+
+.event-series-header {
+    padding-bottom: 1.5rem;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.event-eyebrow {
+    margin: 0 0 0.55rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.event-series-title {
+    margin: 0;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+}
+
+.event-series-title a {
+    color: var(--color-text);
+
+    text-decoration: none;
+}
+
+.event-series-title a:hover {
+    color: var(--color-primary);
+}
+
+.event-series-description {
+    margin: 0.75rem 0 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+
+/* Semester editions */
+
+.event-editions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    margin-top: 1.5rem;
+
+    border-top: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
+}
+
+.event-edition {
+    min-width: 0;
+
+    padding: 1.15rem;
+
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.event-edition-semester {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 0.96rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.event-edition-organizers {
+    margin: 0.45rem 0 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
+.event-edition-organizers span {
+    color: var(--color-text);
+
+    font-weight: 500;
+}
+
+.event-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.45rem;
+
+    margin-top: 0.8rem;
+}
+
+.event-action {
+    display: inline-block;
+
+    padding: 0.22rem 0.5rem;
+
+    border: 1px solid var(--color-primary);
+
+    color: var(--color-primary);
+
+    font-size: 0.76rem;
+    font-weight: 500;
+    line-height: 1.4;
+
+    text-decoration: none;
+}
+
+.event-action:hover {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+.event-action-secondary {
+    border-color: var(--color-border);
+
+    color: var(--color-muted);
+}
+
+.event-action-secondary:hover {
+    border-color: var(--color-primary);
+
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+
+/* Conferences and workshops */
+
+.event-section {
+    margin-top: 4rem;
+}
+
+.event-section-title {
+    margin: 0 0 1.25rem;
+
+    color: var(--color-text);
+
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+.event-entry {
+    display: grid;
+    grid-template-columns: 125px minmax(0, 1fr);
+
+    gap: 1.5rem;
+
+    padding: 1.25rem 0;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.event-entry-date {
+    color: var(--color-muted);
+
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.event-entry-content {
+    min-width: 0;
+}
+
+.event-entry-type {
+    margin: 0 0 0.25rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.event-entry-title {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.event-entry-title a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+.event-entry-title a:hover {
+    color: var(--color-primary);
+}
+
+.event-entry-meta,
+.event-entry-role {
+    margin: 0.25rem 0 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.event-entry-role {
+    margin-top: 0.55rem;
+}
+
+.event-entry-role span {
+    color: var(--color-text);
+
+    font-weight: 500;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .event-editions {
+        grid-template-columns: 1fr;
+    }
+
+    .event-entry {
+        grid-template-columns: 1fr;
+
+        gap: 0.35rem;
+    }
+
+}
