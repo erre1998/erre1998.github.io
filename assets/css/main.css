@@ -799,3 +799,21 @@ a:focus-visible {
         gap: 0.75rem;
     }
 }
+
+.pub-publication-status {
+    display: inline-block;
+
+    margin-left: 0.55rem;
+    padding: 0.08rem 0.4rem;
+
+    border: 1px solid var(--color-border);
+
+    color: var(--color-muted);
+
+    font-size: 0.72rem;
+    font-weight: 500;
+    line-height: 1.35;
+
+    vertical-align: 0.08em;
+    white-space: nowrap;
+}

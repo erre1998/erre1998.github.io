@@ -26,7 +26,7 @@ description: "Curriculum Vitae of Erik Renz."
 </p>
 
                 <p class="cv-entry-meta">
-                    Junior Professorship of Digital Humanities,
+                    Junior Professorship for Digital Humanities,
                     University of Rostock
                 </p>
 
@@ -72,11 +72,11 @@ description: "Curriculum Vitae of Erik Renz."
                 <div class="cv-entry-content">
 
                     <p class="cv-entry-title">
-                        Student Assistant (B.A.)
+                        Graduate Student Assistant
                     </p>
 
                     <p class="cv-entry-meta">
-                        Junior Professorship of Digital Humanities,
+                        Junior Professorship for Digital Humanities,
                         University of Rostock
                     </p>
 
@@ -93,7 +93,7 @@ description: "Curriculum Vitae of Erik Renz."
                 <div class="cv-entry-content">
 
                     <p class="cv-entry-title">
-                        Student Assistant (B.A.)
+                         Graduate Student Assistant
                     </p>
 
                     <p class="cv-entry-meta">
@@ -118,7 +118,7 @@ description: "Curriculum Vitae of Erik Renz."
                     </p>
 
                     <p class="cv-entry-meta">
-                        Junior Professorship of Digital Humanities,
+                        Junior Professorship for Digital Humanities,
                         University of Rostock
                     </p>
 
