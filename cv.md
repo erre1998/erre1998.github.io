@@ -19,9 +19,11 @@ description: "Curriculum Vitae of Erik Renz."
 
             <div class="cv-entry-content">
 
-                <p class="cv-entry-title">
-                    Research Associate (TV-L E 13, 50%)
-                </p>
+          <p class="cv-entry-title">
+    <a href="https://www.germanistik.uni-rostock.de/personen/wiss-mitarbeitende/erik-renz/">
+        Research Associate (TV-L E 13, 50%)
+    </a>
+</p>
 
                 <p class="cv-entry-meta">
                     Junior Professorship of Digital Humanities,
@@ -45,8 +47,8 @@ description: "Curriculum Vitae of Erik Renz."
                 </p>
 
                 <p class="cv-entry-meta">
-                    Professur für Didaktik der deutschen Sprache und Literatur,
-                    project “KI-gestützte Unterrichtsplanung II”,
+                    Professorship for Didactics of German Language and Literature,
+                    Project “KI-gestützte Unterrichtsplanung II”,
                     University of Rostock
                 </p>
 
@@ -74,7 +76,7 @@ description: "Curriculum Vitae of Erik Renz."
                     </p>
 
                     <p class="cv-entry-meta">
-                        Juniorprofessur für Digital Humanities,
+                        Junior Professorship of Digital Humanities,
                         University of Rostock
                     </p>
 
@@ -95,8 +97,7 @@ description: "Curriculum Vitae of Erik Renz."
                     </p>
 
                     <p class="cv-entry-meta">
-                        Uwe Johnson-Professur für Neuere deutsche Literaturwissenschaft
-                        des 20. Jahrhunderts,
+                        Uwe Johnson Professorship for 20th Century Modern German Literature,
                         University of Rostock
                     </p>
 
@@ -117,7 +118,7 @@ description: "Curriculum Vitae of Erik Renz."
                     </p>
 
                     <p class="cv-entry-meta">
-                        Juniorprofessur für Digital Humanities,
+                        Junior Professorship of Digital Humanities,
                         University of Rostock
                     </p>
 
@@ -233,5 +234,74 @@ description: "Curriculum Vitae of Erik Renz."
         </div>
 
     </section>
+    
+    <section class="cv-section">
+
+    <h2 class="cv-section-title">Grants, Fellowships & Awards</h2>
+
+    <div class="cv-entry">
+
+        <div class="cv-entry-date">
+            2025
+        </div>
+
+        <div class="cv-entry-content">
+
+            <p class="cv-entry-title">
+                <a
+                    href="https://web.archive.org/web/20260727053522/https://dhd-blog.org/?p=22812"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Early-Career Travel Grant
+                </a>
+            </p>
+
+            <p class="cv-entry-meta">
+                Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)
+            </p>
+
+            <p class="cv-entry-thesis">
+                For participation in the ADHO Digital Humanities Conference 2025
+                (DH2025), Lisbon, Portugal
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="cv-entry">
+
+        <div class="cv-entry-date">
+            2024
+        </div>
+
+        <div class="cv-entry-content">
+
+            <p class="cv-entry-title">
+                <a
+                    href="https://web.archive.org/web/20260727053652/https://dhd-blog.org/?p=20908"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Early-Career Travel Grant
+                </a>
+            </p>
+
+            <p class="cv-entry-meta">
+                Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)
+            </p>
+
+            <p class="cv-entry-thesis">
+                For participation in the 10th Annual Conference of the
+                German-speaking Digital Humanities Association (DHd2024),
+                Passau, Germany
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 </div>
