@@ -25,7 +25,21 @@
         "Other Publications"
     ];
 
+    const WEBSITE_TAGS = {
+        upcoming: "website:upcoming",
+        inPreparation: "website:in-preparation",
+        forthcoming: "website:forthcoming",
+        editedJournalIssue: "website:edited-journal-issue"
+    };
+
     let allItems = [];
+
+    let websiteTagKeys = {
+        upcoming: new Set(),
+        inPreparation: new Set(),
+        forthcoming: new Set(),
+        editedJournalIssue: new Set()
+    };
 
 
     /* ---------------------------------
@@ -138,33 +152,79 @@
     }
 
 
+    function itemKey(item) {
+
+        return item.key ||
+            item.data?.key ||
+            "";
+
+    }
+
+
+    function hasWebsiteTag(item, tagName) {
+
+        /*
+         * First try the tags included directly
+         * in the Zotero item.
+         */
+
+        const directTags =
+            getTags(item.data);
+
+        if (
+            directTags.includes(
+                WEBSITE_TAGS[tagName]
+            )
+        ) {
+            return true;
+        }
+
+
+        /*
+         * Fallback: use the separately queried
+         * item keys for the tag.
+         */
+
+        const key =
+            itemKey(item);
+
+        return (
+            key &&
+            websiteTagKeys[tagName] &&
+            websiteTagKeys[tagName].has(key)
+        );
+
+    }
+
+
     /* ---------------------------------
        Publication status
     ---------------------------------- */
 
-    function publicationStatus(data) {
-
-        const tags = getTags(data);
+    function publicationStatus(item) {
 
         if (
-            tags.includes(
-                "website:in-preparation"
+            hasWebsiteTag(
+                item,
+                "inPreparation"
             )
         ) {
             return "In preparation";
         }
 
         if (
-            tags.includes(
-                "website:upcoming"
+            hasWebsiteTag(
+                item,
+                "upcoming"
             )
         ) {
             return "Upcoming";
         }
 
         if (
-            tags.includes(
-                "website:forthcoming"
+            hasWebsiteTag(
+                item,
+                "forthcoming"
             )
         ) {
             return "Forthcoming";
@@ -183,17 +243,17 @@
 
         const data = item.data;
         const type = data.itemType;
-        const tags = getTags(data);
 
 
         /*
-         * Special website category:
+         * Special category:
          * edited journal issues
          */
 
         if (
-            tags.includes(
-                "website:edited-journal-issue"
+            hasWebsiteTag(
+                item,
+                "editedJournalIssue"
             )
         ) {
             return "Edited Journal Issues";
@@ -201,7 +261,7 @@
 
 
         /*
-         * Books and edited volumes
+         * Books and edited books
          */
 
         if (type === "book") {
@@ -434,7 +494,8 @@
 
             if (series) {
 
-                let seriesText = series;
+                let seriesText =
+                    series;
 
                 if (seriesNumber) {
                     seriesText +=
@@ -447,7 +508,9 @@
 
 
             if (pages) {
-                parts.push(`pp. ${pages}`);
+                parts.push(
+                    `pp. ${pages}`
+                );
             }
 
             return parts.join(" — ");
@@ -483,7 +546,9 @@
 
 
             if (pages) {
-                parts.push(`pp. ${pages}`);
+                parts.push(
+                    `pp. ${pages}`
+                );
             }
 
             return parts.join(" — ");
@@ -512,7 +577,8 @@
 
             if (series) {
 
-                let seriesText = series;
+                let seriesText =
+                    series;
 
                 if (seriesNumber) {
                     seriesText +=
@@ -553,7 +619,9 @@
             const parts = [];
 
             if (version) {
-                parts.push(`Version ${version}`);
+                parts.push(
+                    `Version ${version}`
+                );
             }
 
             if (repository) {
@@ -569,7 +637,10 @@
         }
 
 
-        /* Other publication types */
+        /*
+         * Edited journal issues and
+         * other publication types
+         */
 
         return [
             publicationTitle,
@@ -607,10 +678,8 @@
         ) {
 
             return {
-                url:
-                    data.url,
-                label:
-                    "Link"
+                url: data.url,
+                label: "Link"
             };
 
         }
@@ -627,7 +696,8 @@
 
     function renderItem(item, category) {
 
-        const data = item.data;
+        const data =
+            item.data;
 
         const year =
             yearOf(data);
@@ -667,15 +737,12 @@
             itemLink(data);
 
         const statusLabel =
-            publicationStatus(data);
-
+            publicationStatus(item);
 
         const meta = [];
 
 
-        /*
-         * Authors
-         */
+        /* Authors */
 
         if (authors) {
 
@@ -686,9 +753,7 @@
         }
 
 
-        /*
-         * Editors of books and journal issues
-         */
+        /* Editors */
 
         if (
             !authors &&
@@ -711,18 +776,14 @@
         }
 
 
-        /*
-         * Venue / publisher / series
-         */
+        /* Venue */
 
         if (venue) {
             meta.push(venue);
         }
 
 
-        /*
-         * Year
-         */
+        /* Year */
 
         if (year) {
             meta.push(
@@ -731,9 +792,7 @@
         }
 
 
-        /*
-         * DOI or URL
-         */
+        /* Link */
 
         const linkHTML = link
             ? `
@@ -749,9 +808,7 @@
             : "";
 
 
-        /*
-         * Publication status
-         */
+        /* Status */
 
         const statusHTML =
             statusLabel
@@ -826,8 +883,7 @@
                         )
                             .localeCompare(
                                 String(
-                                    b.data.title ||
-                                    ""
+                                    b.data.title || ""
                                 ),
                                 "en"
                             );
@@ -906,6 +962,13 @@
 
     function buildFilters() {
 
+        yearSelect.innerHTML =
+            `<option value="">All years</option>`;
+
+        categorySelect.innerHTML =
+            `<option value="">All categories</option>`;
+
+
         const years = [
             ...new Set(
                 allItems
@@ -971,10 +1034,9 @@
                 option.textContent =
                     category;
 
-                categorySelect
-                    .appendChild(
-                        option
-                    );
+                categorySelect.appendChild(
+                    option
+                );
 
             });
 
@@ -983,15 +1045,8 @@
 
     function searchableText(item) {
 
-        const data = item.data;
-
-        const tags =
-            (data.tags || [])
-                .map(
-                    tag =>
-                        tag.tag || ""
-                )
-                .join(" ");
+        const data =
+            item.data;
 
 
         return [
@@ -1011,9 +1066,8 @@
             data.seriesNumber,
             data.DOI,
             data.date,
-            publicationStatus(data),
-            detectCategory(item),
-            tags
+            publicationStatus(item),
+            detectCategory(item)
         ]
             .filter(Boolean)
             .join(" ")
@@ -1097,7 +1151,6 @@
     async function fetchPublications() {
 
         const items = [];
-
         const limit = 100;
 
         let start = 0;
@@ -1109,7 +1162,6 @@
                 new URL(
                     `https://api.zotero.org/users/${USER_ID}/publications/items`
                 );
-
 
             url.searchParams.set(
                 "format",
@@ -1161,18 +1213,12 @@
             const batch =
                 await response.json();
 
-
-            items.push(
-                ...batch
-            );
+            items.push(...batch);
 
 
-            if (
-                batch.length < limit
-            ) {
+            if (batch.length < limit) {
                 break;
             }
-
 
             start += limit;
 
@@ -1184,7 +1230,6 @@
             const type =
                 item?.data?.itemType;
 
-
             return (
                 item?.data &&
                 type !== "attachment" &&
@@ -1193,6 +1238,107 @@
             );
 
         });
+
+    }
+
+
+    /*
+     * Fetch item keys for one specific
+     * Zotero tag.
+     */
+
+    async function fetchTaggedItemKeys(tag) {
+
+        const url =
+            new URL(
+                `https://api.zotero.org/users/${USER_ID}/publications/items`
+            );
+
+        url.searchParams.set(
+            "format",
+            "keys"
+        );
+
+        url.searchParams.set(
+            "tag",
+            tag
+        );
+
+
+        const response =
+            await fetch(
+                url.toString(),
+                {
+                    headers: {
+                        "Zotero-API-Version":
+                            "3"
+                    }
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                `Could not retrieve Zotero tag "${tag}".`
+            );
+
+        }
+
+
+        const text =
+            await response.text();
+
+
+        return new Set(
+            text
+                .split(/\s+/)
+                .map(key => key.trim())
+                .filter(Boolean)
+        );
+
+    }
+
+
+    /*
+     * Fetch all website-specific tags
+     * independently from the item JSON.
+     */
+
+    async function fetchWebsiteTags() {
+
+        const [
+            upcoming,
+            inPreparation,
+            forthcoming,
+            editedJournalIssue
+        ] = await Promise.all([
+
+            fetchTaggedItemKeys(
+                WEBSITE_TAGS.upcoming
+            ),
+
+            fetchTaggedItemKeys(
+                WEBSITE_TAGS.inPreparation
+            ),
+
+            fetchTaggedItemKeys(
+                WEBSITE_TAGS.forthcoming
+            ),
+
+            fetchTaggedItemKeys(
+                WEBSITE_TAGS.editedJournalIssue
+            )
+
+        ]);
+
+
+        return {
+            upcoming,
+            inPreparation,
+            forthcoming,
+            editedJournalIssue
+        };
 
     }
 
@@ -1215,11 +1361,30 @@
 
         try {
 
+            /*
+             * Publications and website tags
+             * are loaded separately.
+             */
+
+            const [
+                publications,
+                tagKeys
+            ] = await Promise.all([
+
+                fetchPublications(),
+                fetchWebsiteTags()
+
+            ]);
+
+
             allItems =
-                await fetchPublications();
+                publications;
+
+            websiteTagKeys =
+                tagKeys;
+
 
             buildFilters();
-
             render(allItems);
 
             status.textContent = "";
@@ -1256,24 +1421,20 @@
         applyFilters
     );
 
-
     yearSelect.addEventListener(
         "change",
         applyFilters
     );
-
 
     categorySelect.addEventListener(
         "change",
         applyFilters
     );
 
-
     resetButton.addEventListener(
         "click",
         resetFilters
     );
-
 
     printButton.addEventListener(
         "click",

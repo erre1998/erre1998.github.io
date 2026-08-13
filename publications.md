@@ -82,6 +82,6 @@ description: "Publications by Erik Renz."
 </div>
 
 <script
-    src="{{ '/assets/js/publications.js' | relative_url }}"
+    src="{{ '/assets/js/publications.js' | relative_url }}?v=3"
     defer
 ></script>
