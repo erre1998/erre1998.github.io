@@ -48,7 +48,7 @@ description: "Curriculum Vitae of Erik Renz."
 
                 <p class="cv-entry-meta">
                     Professorship for Didactics of German Language and Literature,
-                    Project “KI-gestützte Unterrichtsplanung II”,
+                    project “KI-gestützte Unterrichtsplanung II”,
                     University of Rostock
                 </p>
 
@@ -72,7 +72,7 @@ description: "Curriculum Vitae of Erik Renz."
                 <div class="cv-entry-content">
 
                     <p class="cv-entry-title">
-                        Graduate Student Assistant (B.A.)
+                        Student Assistant (B.A.)
                     </p>
 
                     <p class="cv-entry-meta">
@@ -93,11 +93,11 @@ description: "Curriculum Vitae of Erik Renz."
                 <div class="cv-entry-content">
 
                     <p class="cv-entry-title">
-                        Graduate Student Assistant (B.A.)
+                        Student Assistant (B.A.)
                     </p>
 
                     <p class="cv-entry-meta">
-                        Uwe Johnson Professorship for 20th Century Modern German Literature,
+                        Uwe Johnson Professorship for 20th Century Modern German Literature, project “Computational Approaches to Narrative Space in 19th and 20th Century Novels”,
                         University of Rostock
                     </p>
 

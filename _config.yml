@@ -14,3 +14,7 @@ permalink: pretty
 
 exclude:
   - README.md
+  
+zotero:
+  user_id: "11763888"
+  username: "erre1998"
