@@ -5,22 +5,31 @@ permalink: /events/
 description: "Academic events organized by Erik Renz."
 ---
 
-<div class="events-page">
+<div class="events">
 
     <p class="events-intro">
-        Selected conferences, workshops, and recurring academic events that I have
+        Conferences, workshops, and recurring academic events that I have
         organized or co-organized.
     </p>
 
-    <section class="event-series">
 
-        <div class="event-series-header">
+    <!-- =========================================
+         Recurring Lecture Series
+    ========================================== -->
 
-            <p class="event-eyebrow">
-                Recurring lecture series · since Summer Semester 2023
+    <section class="events-section">
+
+        <h2 class="events-section-title">
+            Recurring Lecture Series
+        </h2>
+
+        <div class="event-series-intro">
+
+            <p class="event-series-label">
+                Since Summer Semester 2023
             </p>
 
-            <h2 class="event-series-title">
+            <h3 class="event-series-title">
                 <a
                     href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/"
                     target="_blank"
@@ -28,59 +37,87 @@ description: "Academic events organized by Erik Renz."
                 >
                     Digital Humanities in Focus: Methods, Applications, and Perspectives
                 </a>
-            </h2>
+            </h3>
 
-            <p class="event-series-description">
-                Lecture series of the Rostock Working Group Digital Humanities (RosDH)
-                and the Junior Professorship for Digital Humanities at the University of
-                Rostock. Co-organized by Erik Renz since its first edition.
+            <p class="event-series-meta">
+                Lecture series of the Rostock Working Group Digital Humanities
+                (RosDH) and the Junior Professorship for Digital Humanities,
+                University of Rostock.
+            </p>
+
+            <p class="event-role">
+                <span class="event-role-label">Role:</span>
+                Co-organiser since the first edition
             </p>
 
         </div>
 
-        <div class="event-editions">
 
-            <article class="event-edition">
+        <!-- WiSe 2026/27 -->
 
-                <p class="event-edition-semester">
+        <article class="event-entry">
+
+            <div class="event-entry-date">
+                Winter Semester<br>
+                2026/27
+            </div>
+
+            <div class="event-entry-content">
+
+                <p class="event-entry-title">
                     Winter Semester 2026/27
                 </p>
 
-                <p class="event-edition-organizers">
-                    <span>Co-organizer:</span> Erik Renz
+                <p class="event-role">
+                    <span class="event-role-label">Role:</span>
+                    Co-organiser
                 </p>
 
-                <div class="event-actions">
+                <p class="event-entry-meta">
+                    Organised with Ulrike Henny-Krahmer
+                </p>
 
+                <p class="event-entry-links">
                     <a
-                        class="event-action"
                         href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/2026-27/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Program
                     </a>
+                </p>
 
-                </div>
+            </div>
 
-            </article>
+        </article>
 
 
-            <article class="event-edition">
+        <!-- SoSe 2026 -->
 
-                <p class="event-edition-semester">
+        <article class="event-entry">
+
+            <div class="event-entry-date">
+                Summer Semester<br>
+                2026
+            </div>
+
+            <div class="event-entry-content">
+
+                <p class="event-entry-title">
                     Summer Semester 2026
                 </p>
 
-                <p class="event-edition-organizers">
-                    <span>Organizers:</span>
-                    Ulrike Henny-Krahmer and Erik Renz
+                <p class="event-role">
+                    <span class="event-role-label">Role:</span>
+                    Co-organiser
                 </p>
 
-                <div class="event-actions">
+                <p class="event-entry-meta">
+                    Organised with Ulrike Henny-Krahmer
+                </p>
 
+                <p class="event-entry-links">
                     <a
-                        class="event-action"
                         href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/suse-2026/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -88,35 +125,63 @@ description: "Academic events organized by Erik Renz."
                         Program
                     </a>
 
+                    <span aria-hidden="true">·</span>
+
                     <a
-                        class="event-action event-action-secondary"
-                        href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2026/Plakat_SoSe_26.pdf"
+                        href="{{ '/assets/imgs/2026_poster-dh-im-fokus.png' | relative_url }}"
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
                         Poster
                     </a>
+                </p>
 
-                </div>
+            </div>
 
-            </article>
+            <div class="event-entry-visual">
+
+                <a
+                    href="{{ '/assets/imgs/2026_poster-dh-im-fokus.png' | relative_url }}"
+                    target="_blank"
+                    aria-label="Open poster for Digital Humanities in Focus, Summer Semester 2026"
+                >
+                    <img
+                        src="{{ '/assets/imgs/2026_poster-dh-im-fokus.png' | relative_url }}"
+                        alt="Poster for Digital Humanities in Focus, Summer Semester 2026"
+                        loading="lazy"
+                    >
+                </a>
+
+            </div>
+
+        </article>
 
 
-            <article class="event-edition">
+        <!-- WiSe 2025/26 -->
 
-                <p class="event-edition-semester">
+        <article class="event-entry">
+
+            <div class="event-entry-date">
+                Winter Semester<br>
+                2025/26
+            </div>
+
+            <div class="event-entry-content">
+
+                <p class="event-entry-title">
                     Winter Semester 2025/26
                 </p>
 
-                <p class="event-edition-organizers">
-                    <span>Organizers:</span>
-                    Ulrike Henny-Krahmer and Erik Renz
+                <p class="event-role">
+                    <span class="event-role-label">Role:</span>
+                    Co-organiser
                 </p>
 
-                <div class="event-actions">
+                <p class="event-entry-meta">
+                    Organised with Ulrike Henny-Krahmer
+                </p>
 
+                <p class="event-entry-links">
                     <a
-                        class="event-action"
                         href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/2025-26/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -124,37 +189,64 @@ description: "Academic events organized by Erik Renz."
                         Program
                     </a>
 
+                    <span aria-hidden="true">·</span>
+
                     <a
-                        class="event-action event-action-secondary"
-                        href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2025-26/Plakat_WiSe_25-26.ai.pdf"
+                        href="{{ '/assets/imgs/2025-26_poster-dh-im-fokus.png' | relative_url }}"
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
                         Poster
                     </a>
+                </p>
 
-                </div>
+            </div>
 
-            </article>
+            <div class="event-entry-visual">
+
+                <a
+                    href="{{ '/assets/imgs/2025-26_poster-dh-im-fokus.png' | relative_url }}"
+                    target="_blank"
+                    aria-label="Open poster for Digital Humanities in Focus, Winter Semester 2025/26"
+                >
+                    <img
+                        src="{{ '/assets/imgs/2025-26_poster-dh-im-fokus.png' | relative_url }}"
+                        alt="Poster for Digital Humanities in Focus, Winter Semester 2025/26"
+                        loading="lazy"
+                    >
+                </a>
+
+            </div>
+
+        </article>
 
 
-            <article class="event-edition">
+        <!-- SoSe 2025 -->
 
-                <p class="event-edition-semester">
+        <article class="event-entry">
+
+            <div class="event-entry-date">
+                Summer Semester<br>
+                2025
+            </div>
+
+            <div class="event-entry-content">
+
+                <p class="event-entry-title">
                     Summer Semester 2025
                 </p>
 
-                <p class="event-edition-organizers">
-                    <span>Organizers:</span>
-                    Ulrike Henny-Krahmer,
-                    Fernanda Wolff (née Alvares Freire),
-                    and Erik Renz
+                <p class="event-role">
+                    <span class="event-role-label">Role:</span>
+                    Co-organiser
                 </p>
 
-                <div class="event-actions">
+                <p class="event-entry-meta">
+                    Organised with Ulrike Henny-Krahmer and
+                    Fernanda Wolff
+                </p>
 
+                <p class="event-entry-links">
                     <a
-                        class="event-action"
                         href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/suse-2025/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -162,37 +254,64 @@ description: "Academic events organized by Erik Renz."
                         Program
                     </a>
 
+                    <span aria-hidden="true">·</span>
+
                     <a
-                        class="event-action event-action-secondary"
-                        href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2025/Plakat_SoSe_25.pdf"
+                        href="{{ '/assets/imgs/2025_poster-dh-im-fokus.png' | relative_url }}"
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
                         Poster
                     </a>
+                </p>
 
-                </div>
+            </div>
 
-            </article>
+            <div class="event-entry-visual">
+
+                <a
+                    href="{{ '/assets/imgs/2025_poster-dh-im-fokus.png' | relative_url }}"
+                    target="_blank"
+                    aria-label="Open poster for Digital Humanities in Focus, Summer Semester 2025"
+                >
+                    <img
+                        src="{{ '/assets/imgs/2025_poster-dh-im-fokus.png' | relative_url }}"
+                        alt="Poster for Digital Humanities in Focus, Summer Semester 2025"
+                        loading="lazy"
+                    >
+                </a>
+
+            </div>
+
+        </article>
 
 
-            <article class="event-edition">
+        <!-- WiSe 2024/25 -->
 
-                <p class="event-edition-semester">
+        <article class="event-entry">
+
+            <div class="event-entry-date">
+                Winter Semester<br>
+                2024/25
+            </div>
+
+            <div class="event-entry-content">
+
+                <p class="event-entry-title">
                     Winter Semester 2024/25
                 </p>
 
-                <p class="event-edition-organizers">
-                    <span>Organizers:</span>
-                    Ulrike Henny-Krahmer,
-                    Fernanda Wolff (née Alvares Freire),
-                    and Erik Renz
+                <p class="event-role">
+                    <span class="event-role-label">Role:</span>
+                    Co-organiser
                 </p>
 
-                <div class="event-actions">
+                <p class="event-entry-meta">
+                    Organised with Ulrike Henny-Krahmer and
+                    Fernanda Wolff
+                </p>
 
+                <p class="event-entry-links">
                     <a
-                        class="event-action"
                         href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/2024-25/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -200,37 +319,64 @@ description: "Academic events organized by Erik Renz."
                         Program
                     </a>
 
+                    <span aria-hidden="true">·</span>
+
                     <a
-                        class="event-action event-action-secondary"
-                        href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2024-25/NEU_Plakat_WiSe_24-25.pdf"
+                        href="{{ '/assets/imgs/2024-25_poster-dh-im-fokus.png' | relative_url }}"
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
                         Poster
                     </a>
+                </p>
 
-                </div>
+            </div>
 
-            </article>
+            <div class="event-entry-visual">
+
+                <a
+                    href="{{ '/assets/imgs/2024-25_poster-dh-im-fokus.png' | relative_url }}"
+                    target="_blank"
+                    aria-label="Open poster for Digital Humanities in Focus, Winter Semester 2024/25"
+                >
+                    <img
+                        src="{{ '/assets/imgs/2024-25_poster-dh-im-fokus.png' | relative_url }}"
+                        alt="Poster for Digital Humanities in Focus, Winter Semester 2024/25"
+                        loading="lazy"
+                    >
+                </a>
+
+            </div>
+
+        </article>
 
 
-            <article class="event-edition">
+        <!-- SoSe 2024 -->
 
-                <p class="event-edition-semester">
+        <article class="event-entry">
+
+            <div class="event-entry-date">
+                Summer Semester<br>
+                2024
+            </div>
+
+            <div class="event-entry-content">
+
+                <p class="event-entry-title">
                     Summer Semester 2024
                 </p>
 
-                <p class="event-edition-organizers">
-                    <span>Organizers:</span>
-                    Ulrike Henny-Krahmer,
-                    Fernanda Wolff (née Alvares Freire),
-                    and Erik Renz
+                <p class="event-role">
+                    <span class="event-role-label">Role:</span>
+                    Co-organiser
                 </p>
 
-                <div class="event-actions">
+                <p class="event-entry-meta">
+                    Organised with Ulrike Henny-Krahmer and
+                    Fernanda Wolff
+                </p>
 
+                <p class="event-entry-links">
                     <a
-                        class="event-action"
                         href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/2024/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -238,37 +384,64 @@ description: "Academic events organized by Erik Renz."
                         Program
                     </a>
 
+                    <span aria-hidden="true">·</span>
+
                     <a
-                        class="event-action event-action-secondary"
-                        href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2024/Plakat_SoSe_24.pdf"
+                        href="{{ '/assets/imgs/2024_poster-dh-im-fokus.png' | relative_url }}"
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
                         Poster
                     </a>
+                </p>
 
-                </div>
+            </div>
 
-            </article>
+            <div class="event-entry-visual">
+
+                <a
+                    href="{{ '/assets/imgs/2024_poster-dh-im-fokus.png' | relative_url }}"
+                    target="_blank"
+                    aria-label="Open poster for Digital Humanities in Focus, Summer Semester 2024"
+                >
+                    <img
+                        src="{{ '/assets/imgs/2024_poster-dh-im-fokus.png' | relative_url }}"
+                        alt="Poster for Digital Humanities in Focus, Summer Semester 2024"
+                        loading="lazy"
+                    >
+                </a>
+
+            </div>
+
+        </article>
 
 
-            <article class="event-edition">
+        <!-- WiSe 2023/24 -->
 
-                <p class="event-edition-semester">
+        <article class="event-entry">
+
+            <div class="event-entry-date">
+                Winter Semester<br>
+                2023/24
+            </div>
+
+            <div class="event-entry-content">
+
+                <p class="event-entry-title">
                     Winter Semester 2023/24
                 </p>
 
-                <p class="event-edition-organizers">
-                    <span>Organizers:</span>
-                    Ulrike Henny-Krahmer,
-                    Fernanda Wolff (née Alvares Freire),
-                    and Erik Renz
+                <p class="event-role">
+                    <span class="event-role-label">Role:</span>
+                    Co-organiser
                 </p>
 
-                <div class="event-actions">
+                <p class="event-entry-meta">
+                    Organised with Ulrike Henny-Krahmer and
+                    Fernanda Wolff
+                </p>
 
+                <p class="event-entry-links">
                     <a
-                        class="event-action"
                         href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/2023-24/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -276,37 +449,64 @@ description: "Academic events organized by Erik Renz."
                         Program
                     </a>
 
+                    <span aria-hidden="true">·</span>
+
                     <a
-                        class="event-action event-action-secondary"
-                        href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2023-24/Plakat_WiSe_23-24.pdf"
+                        href="{{ '/assets/imgs/2023-24_poster-dh-im-fokus.png' | relative_url }}"
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
                         Poster
                     </a>
+                </p>
 
-                </div>
+            </div>
 
-            </article>
+            <div class="event-entry-visual">
+
+                <a
+                    href="{{ '/assets/imgs/2023-24_poster-dh-im-fokus.png' | relative_url }}"
+                    target="_blank"
+                    aria-label="Open poster for Digital Humanities in Focus, Winter Semester 2023/24"
+                >
+                    <img
+                        src="{{ '/assets/imgs/2023-24_poster-dh-im-fokus.png' | relative_url }}"
+                        alt="Poster for Digital Humanities in Focus, Winter Semester 2023/24"
+                        loading="lazy"
+                    >
+                </a>
+
+            </div>
+
+        </article>
 
 
-            <article class="event-edition">
+        <!-- SoSe 2023 -->
 
-                <p class="event-edition-semester">
+        <article class="event-entry">
+
+            <div class="event-entry-date">
+                Summer Semester<br>
+                2023
+            </div>
+
+            <div class="event-entry-content">
+
+                <p class="event-entry-title">
                     Summer Semester 2023
                 </p>
 
-                <p class="event-edition-organizers">
-                    <span>Organizers:</span>
-                    Ulrike Henny-Krahmer,
-                    Fernanda Wolff (née Alvares Freire),
-                    and Erik Renz
+                <p class="event-role">
+                    <span class="event-role-label">Role:</span>
+                    Co-organiser
                 </p>
 
-                <div class="event-actions">
+                <p class="event-entry-meta">
+                    Organised with Ulrike Henny-Krahmer and
+                    Fernanda Wolff
+                </p>
 
+                <p class="event-entry-links">
                     <a
-                        class="event-action"
                         href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/2023/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -314,35 +514,57 @@ description: "Academic events organized by Erik Renz."
                         Program
                     </a>
 
+                    <span aria-hidden="true">·</span>
+
                     <a
-                        class="event-action event-action-secondary"
-                        href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2023/Plakat_Ringvorlesung_SS23_updated2.pdf"
+                        href="{{ '/assets/imgs/2023_poster-dh-im-fokus.png' | relative_url }}"
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
                         Poster
                     </a>
+                </p>
 
-                </div>
+            </div>
 
-            </article>
+            <div class="event-entry-visual">
 
-        </div>
+                <a
+                    href="{{ '/assets/imgs/2023_poster-dh-im-fokus.png' | relative_url }}"
+                    target="_blank"
+                    aria-label="Open poster for Digital Humanities in Focus, Summer Semester 2023"
+                >
+                    <img
+                        src="{{ '/assets/imgs/2023_poster-dh-im-fokus.png' | relative_url }}"
+                        alt="Poster for Digital Humanities in Focus, Summer Semester 2023"
+                        loading="lazy"
+                    >
+                </a>
+
+            </div>
+
+        </article>
 
     </section>
 
 
-    <section class="event-section">
+    <!-- =========================================
+         Conferences & Workshops
+    ========================================== -->
 
-        <h2 class="event-section-title">
+    <section class="events-section">
+
+        <h2 class="events-section-title">
             Conferences &amp; Workshops
         </h2>
 
 
-        <article class="event-entry">
+        <!-- DraCor Hackathon -->
+
+        <article class="event-entry event-entry-featured">
 
             <div class="event-entry-date">
-                7–9 September 2026
+                7–9 September<br>
+                2026
             </div>
 
             <div class="event-entry-content">
@@ -351,8 +573,7 @@ description: "Academic events organized by Erik Renz."
                     Hackathon
                 </p>
 
-                <h3 class="event-entry-title">
-
+                <p class="event-entry-title">
                     <a
                         href="https://dhd-blog.org/?p=23996"
                         target="_blank"
@@ -360,27 +581,68 @@ description: "Academic events organized by Erik Renz."
                     >
                         Women Playwrights in Digital Corpora: a DraCor Hackathon
                     </a>
-
-                </h3>
+                </p>
 
                 <p class="event-entry-meta">
                     University of Rostock
                 </p>
 
-                <p class="event-entry-role">
-                    <span>Role:</span>
-                    Local organiser (with Ulrike Henny-Krahmer)
+                <p class="event-role">
+                    <span class="event-role-label">Role:</span>
+                    Organiser
                 </p>
+
+                <p class="event-entry-meta">
+                    Organised with Ulrike Henny-Krahmer
+                </p>
+
+                <p class="event-entry-links">
+                    <a
+                        href="https://dhd-blog.org/?p=23996"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Event page
+                    </a>
+
+                    <span aria-hidden="true">·</span>
+
+                    <a
+                        href="{{ '/assets/imgs/2026_dracor-hackathon.png' | relative_url }}"
+                        target="_blank"
+                    >
+                        Poster
+                    </a>
+                </p>
+
+            </div>
+
+            <div class="event-entry-visual">
+
+                <a
+                    href="{{ '/assets/imgs/2026_dracor-hackathon.png' | relative_url }}"
+                    target="_blank"
+                    aria-label="Open poster for Women Playwrights in Digital Corpora: a DraCor Hackathon"
+                >
+                    <img
+                        src="{{ '/assets/imgs/2026_dracor-hackathon.png' | relative_url }}"
+                        alt="Poster for Women Playwrights in Digital Corpora: a DraCor Hackathon"
+                        loading="lazy"
+                    >
+                </a>
 
             </div>
 
         </article>
 
 
-        <article class="event-entry">
+        <!-- FORGE -->
+
+        <article class="event-entry event-entry-featured">
 
             <div class="event-entry-date">
-                24–26 September 2025
+                24–26 September<br>
+                2025
             </div>
 
             <div class="event-entry-content">
@@ -389,8 +651,7 @@ description: "Academic events organized by Erik Renz."
                     Conference
                 </p>
 
-                <h3 class="event-entry-title">
-
+                <p class="event-entry-title">
                     <a
                         href="https://www.forge25.uni-rostock.de/"
                         target="_blank"
@@ -398,19 +659,56 @@ description: "Academic events organized by Erik Renz."
                     >
                         FORGE 2025: Daten neu denken
                     </a>
-
-                </h3>
+                </p>
 
                 <p class="event-entry-meta">
                     University of Rostock
                 </p>
 
-                <p class="event-entry-role">
-                    <span>Role:</span>
-                    Main organiser of the local organising team
-                    (with Ulrike Henny-Krahmer and Karsten Labahn);
+                <p class="event-role">
+                    <span class="event-role-label">Role:</span>
+                    Main organiser of the local organisers' team;
                     session chair
                 </p>
+
+                <p class="event-entry-meta">
+                    Organised with Ulrike Henny-Krahmer and Karsten Labahn
+                </p>
+
+                <p class="event-entry-links">
+                    <a
+                        href="https://www.forge25.uni-rostock.de/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Conference website
+                    </a>
+
+                    <span aria-hidden="true">·</span>
+
+                    <a
+                        href="{{ '/assets/imgs/2025_forge-logo.png' | relative_url }}"
+                        target="_blank"
+                    >
+                        Logo
+                    </a>
+                </p>
+
+            </div>
+
+            <div class="event-entry-visual event-entry-visual-logo">
+
+                <a
+                    href="{{ '/assets/imgs/2025_forge-logo.png' | relative_url }}"
+                    target="_blank"
+                    aria-label="Open FORGE 2025 logo"
+                >
+                    <img
+                        src="{{ '/assets/imgs/2025_forge-logo.png' | relative_url }}"
+                        alt="FORGE 2025 logo"
+                        loading="lazy"
+                    >
+                </a>
 
             </div>
 
