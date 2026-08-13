@@ -19,14 +19,14 @@ description: "Curriculum Vitae of Erik Renz."
 
             <div class="cv-entry-content">
 
-          <p class="cv-entry-title">
-    <a href="https://www.germanistik.uni-rostock.de/personen/wiss-mitarbeitende/erik-renz/">
-        Research Associate (TV-L E 13, 50%)
-    </a>
-</p>
+                <p class="cv-entry-title">
+                    <a href="https://www.germanistik.uni-rostock.de/personen/wiss-mitarbeitende/erik-renz/">
+                        Research Associate (TV-L E 13, 50%)
+                    </a>
+                </p>
 
                 <p class="cv-entry-meta">
-                    Junior Professorship for Digital Humanities,
+                    Junior Professorship for Digital Humanities,<br>
                     University of Rostock
                 </p>
 
@@ -47,15 +47,26 @@ description: "Curriculum Vitae of Erik Renz."
                 </p>
 
                 <p class="cv-entry-meta">
-                    Professorship for Didactics of German Language and Literature,
-                    project “KI-gestützte Unterrichtsplanung II”,
+                    Professorship for Didactics of German Language and Literature,<br>
                     University of Rostock
+                </p>
+
+                <p class="cv-entry-thesis">
+                    <span class="cv-entry-thesis-label">
+                        Project:
+                    </span>
+                    <a
+                        href="https://www.germanistik.uni-rostock.de/forschung/fachdidaktik-deutsch/projektuebersicht/ki-gestuetzte-unterrichtsplanung-ii/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        KI-gestützte Unterrichtsplanung II
+                    </a>
                 </p>
 
             </div>
 
         </div>
-
 
         <div class="cv-subsection">
 
@@ -76,7 +87,7 @@ description: "Curriculum Vitae of Erik Renz."
                     </p>
 
                     <p class="cv-entry-meta">
-                        Junior Professorship for Digital Humanities,
+                        Junior Professorship for Digital Humanities,<br>
                         University of Rostock
                     </p>
 
@@ -93,12 +104,25 @@ description: "Curriculum Vitae of Erik Renz."
                 <div class="cv-entry-content">
 
                     <p class="cv-entry-title">
-                         Graduate Student Assistant
+                        Graduate Student Assistant
                     </p>
 
                     <p class="cv-entry-meta">
-                        Uwe Johnson Professorship for 20th Century Modern German Literature, project “Computational Approaches to Narrative Space in 19th and 20th Century Novels”,
+                        Uwe Johnson Professorship for 20th Century Modern German Literature,<br>
                         University of Rostock
+                    </p>
+
+                    <p class="cv-entry-thesis">
+                        <span class="cv-entry-thesis-label">
+                            Project:
+                        </span>
+                        <a
+                            href="https://www.canspin.uni-rostock.de/en/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Computational Approaches to Narrative Space in 19th and 20th Century Novels (CANSpiN)
+                        </a>
                     </p>
 
                 </div>
@@ -118,7 +142,7 @@ description: "Curriculum Vitae of Erik Renz."
                     </p>
 
                     <p class="cv-entry-meta">
-                        Junior Professorship for Digital Humanities,
+                        Junior Professorship for Digital Humanities,<br>
                         University of Rostock
                     </p>
 
@@ -150,7 +174,6 @@ description: "Curriculum Vitae of Erik Renz."
         </div>
 
     </section>
-
 
     <section class="cv-section">
 
@@ -234,74 +257,313 @@ description: "Curriculum Vitae of Erik Renz."
         </div>
 
     </section>
-    
+
     <section class="cv-section">
 
-    <h2 class="cv-section-title">Grants, Fellowships & Awards</h2>
+        <h2 class="cv-section-title">Grants, Fellowships & Awards</h2>
 
-    <div class="cv-entry">
+        <div class="cv-entry">
 
-        <div class="cv-entry-date">
-            2025
-        </div>
+            <div class="cv-entry-date">
+                2025
+            </div>
 
-        <div class="cv-entry-content">
+            <div class="cv-entry-content">
 
-            <p class="cv-entry-title">
-                <a
-                    href="https://web.archive.org/web/20260727053522/https://dhd-blog.org/?p=22812"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Early-Career Travel Grant
-                </a>
-            </p>
+                <p class="cv-entry-title">
+                    <a
+                        href="https://web.archive.org/web/20260727053522/https://dhd-blog.org/?p=22812"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Early-Career Travel Grant
+                    </a>
+                </p>
 
-            <p class="cv-entry-meta">
-                Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)
-            </p>
+                <p class="cv-entry-meta">
+                    Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)
+                </p>
 
-            <p class="cv-entry-thesis">
-                For participation in the ADHO Digital Humanities Conference 2025
-                (DH2025), Lisbon, Portugal
-            </p>
+                <p class="cv-entry-thesis">
+                    For participation in the ADHO Digital Humanities Conference 2025
+                    (DH2025), Lisbon, Portugal
+                </p>
 
-        </div>
-
-    </div>
-
-    <div class="cv-entry">
-
-        <div class="cv-entry-date">
-            2024
-        </div>
-
-        <div class="cv-entry-content">
-
-            <p class="cv-entry-title">
-                <a
-                    href="https://web.archive.org/web/20260727053652/https://dhd-blog.org/?p=20908"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Early-Career Travel Grant
-                </a>
-            </p>
-
-            <p class="cv-entry-meta">
-                Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)
-            </p>
-
-            <p class="cv-entry-thesis">
-                For participation in the 10th Annual Conference of the
-                German-speaking Digital Humanities Association (DHd2024),
-                Passau, Germany
-            </p>
+            </div>
 
         </div>
 
-    </div>
+        <div class="cv-entry">
 
-</section>
+            <div class="cv-entry-date">
+                2024
+            </div>
+
+            <div class="cv-entry-content">
+
+                <p class="cv-entry-title">
+                    <a
+                        href="https://web.archive.org/web/20260727053652/https://dhd-blog.org/?p=20908"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Early-Career Travel Grant
+                    </a>
+                </p>
+
+                <p class="cv-entry-meta">
+                    Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)
+                </p>
+
+                <p class="cv-entry-thesis">
+                    For participation in the 10th Annual Conference of the
+                    German-speaking Digital Humanities Association (DHd2024),
+                    Passau, Germany
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="cv-section">
+
+        <h2 class="cv-section-title">Academic Service</h2>
+
+        <div class="cv-subsection">
+
+            <h3 class="cv-subsection-title">
+                University Service
+            </h3>
+
+            <div class="cv-entry">
+
+                <div class="cv-entry-date">
+                    04/2024–05/2025
+                </div>
+
+                <div class="cv-entry-content">
+
+                    <p class="cv-entry-title">
+                        Member of the Appointment Committee
+                    </p>
+
+                    <p class="cv-entry-meta">
+                        W2 Professorship in Historical Linguistics of German,<br>
+                        Faculty of Arts and Humanities, University of Rostock
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="cv-entry">
+
+                <div class="cv-entry-date">
+                    01/2024–11/2024
+                </div>
+
+                <div class="cv-entry-content">
+
+                    <p class="cv-entry-title">
+                        Spokesperson of the German Studies Student Council (GeFaR)
+                    </p>
+
+                    <p class="cv-entry-meta">
+                        University of Rostock
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="cv-subsection">
+
+            <h3 class="cv-subsection-title">
+                Programme Committees
+            </h3>
+
+            <div class="cv-entry">
+
+                <div class="cv-entry-date">
+                    2026
+                </div>
+
+                <div class="cv-entry-content">
+
+                    <p class="cv-entry-title">
+                        <a
+                            href="https://editopia2026.i-d-e.de/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Editopia 2026: Zur Zukunft von Dokumentologie und Editorik im Postdigitalen
+                        </a>
+                    </p>
+
+                    <p class="cv-entry-meta">
+                        Programme Committee
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="cv-entry">
+
+                <div class="cv-entry-date">
+                    2025
+                </div>
+
+                <div class="cv-entry-content">
+
+                    <p class="cv-entry-title">
+                        <a
+                            href="https://www.forge25.uni-rostock.de/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            FORGE 2025: Daten neu denken
+                        </a>
+                    </p>
+
+                    <p class="cv-entry-meta">
+                        Programme Committee
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="cv-subsection">
+
+            <h3 class="cv-subsection-title">
+                Reviewing
+            </h3>
+
+            <div class="cv-entry">
+
+                <div class="cv-entry-date">
+                    2025
+                </div>
+
+                <div class="cv-entry-content">
+
+                    <p class="cv-entry-title">
+                        Reviewer
+                    </p>
+
+                    <p class="cv-entry-meta">
+                        <a
+                            href="https://jcls.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Journal of Computational Literary Studies (JCLS)
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <p>
+            For conferences, workshops, and other events organized by me, see
+            <a href="{{ '/events/' | relative_url }}">Organized Events</a>.
+        </p>
+
+    </section>
+
+    <section class="cv-section">
+
+        <h2 class="cv-section-title">Professional Memberships & Roles</h2>
+
+        <div class="cv-entry">
+
+            <div class="cv-entry-date">
+                since 06/2026
+            </div>
+
+            <div class="cv-entry-content">
+
+                <p class="cv-entry-title">
+                    Member
+                </p>
+
+                <p class="cv-entry-meta">
+                    <a
+                        href="https://www.i-d-e.de/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Institut für Dokumentologie und Editorik (IDE)
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="cv-entry">
+
+            <div class="cv-entry-date">
+                since 11/2024
+            </div>
+
+            <div class="cv-entry-content">
+
+                <p class="cv-entry-title">
+                    Member
+                </p>
+
+                <p class="cv-entry-meta">
+                    <a
+                        href="https://digitalhumanities.de/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="cv-entry">
+
+            <div class="cv-entry-date">
+                since 04/2023
+            </div>
+
+            <div class="cv-entry-content">
+
+                <p class="cv-entry-title">
+                    Co-Organizer and Founding Member
+                </p>
+
+                <p class="cv-entry-meta">
+                    <a
+                        href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Rostock Working Group Digital Humanities (RosDH)
+                    </a>,<br>
+                    University of Rostock
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </div>
