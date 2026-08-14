@@ -489,11 +489,13 @@ a:focus-visible {
 ---------------------------------- */
 
 .pub-status {
+    min-height: 1.3rem;
+
     margin: 0;
 
     color: var(--color-muted);
 
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 
@@ -553,11 +555,13 @@ a:focus-visible {
 
     padding:
         1rem
-        1.1rem;
+        1.1rem
+        0.8rem
+        1.3rem;
 
     border:
         1px solid
-        rgba(50, 88, 107, 0.3);
+        rgba(50, 88, 107, 0.34);
 
     border-radius: 7px;
 
@@ -613,10 +617,15 @@ a:focus-visible {
 .pub-title {
     display: block;
 
+    margin: 0;
+
     color: var(--color-text);
 
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 1.5;
+
+    line-height: 1.45;
+    letter-spacing: -0.006em;
 }
 
 .pub-editors {
@@ -659,12 +668,12 @@ a:focus-visible {
     width: 100%;
 
     min-width: 3.5rem;
-    min-height: 1.8rem;
+    min-height: 1.75rem;
 
     margin: 0;
 
     padding:
-        0.3rem
+        0.28rem
         0.5rem;
 
     border:
@@ -676,10 +685,9 @@ a:focus-visible {
     background-color:
         rgba(35, 91, 133, 0.05);
 
-    color:
-        var(--color-primary);
+    color: var(--color-primary);
 
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     font-weight: 600;
 
     line-height: 1.3;
@@ -702,8 +710,7 @@ a:focus-visible {
     background-color:
         rgba(35, 91, 133, 0.09);
 
-    color:
-        var(--color-text);
+    color: var(--color-text);
 
     text-decoration: none;
 
@@ -770,16 +777,33 @@ a:focus-visible {
    Publications responsive
 ---------------------------------- */
 
+@media (max-width: 700px) {
+
+    .pub-list {
+        gap: 0.8rem;
+    }
+
+    .pub-item {
+        padding:
+            0.95rem
+            0.9rem
+            0.75rem
+            1.1rem;
+    }
+
+    .pub-title {
+        font-size: 0.96rem;
+    }
+
+}
+
+
 @media (max-width: 600px) {
 
     .pub-item {
         grid-template-columns: 1fr;
 
         gap: 0.6rem;
-
-        padding:
-            0.95rem
-            1rem;
     }
 
     .pub-actions {
@@ -1417,6 +1441,593 @@ a:focus-visible {
 
 
 /* ---------------------------------
+   Talks
+---------------------------------- */
+
+.talks {
+    width: 100%;
+
+    --talks-color-1: #19405d;
+    --talks-color-2: #bb9e76;
+    --talks-color-3: #32586b;
+    --talks-color-4: #123348;
+}
+
+
+/* ---------------------------------
+   Talks toolbar
+---------------------------------- */
+
+.talks-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.65rem;
+
+    margin-bottom: 0.7rem;
+}
+
+.talks-toolbar input,
+.talks-toolbar select,
+.talks-toolbar button {
+    min-height: 2.5rem;
+
+    padding:
+        0.5rem
+        0.7rem;
+
+    border:
+        1px solid
+        var(--color-border);
+
+    background-color:
+        var(--color-background);
+
+    color:
+        var(--color-text);
+
+    font: inherit;
+    font-size: 0.85rem;
+}
+
+.talks-toolbar input[type="search"] {
+    flex:
+        1 1
+        220px;
+
+    min-width: 180px;
+}
+
+.talks-toolbar select {
+    cursor: pointer;
+}
+
+.talks-toolbar button {
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.talks-toolbar button:hover {
+    border-color:
+        var(--talks-color-1);
+
+    color:
+        var(--talks-color-1);
+}
+
+.talks-toolbar input:focus,
+.talks-toolbar select:focus,
+.talks-toolbar button:focus-visible {
+    outline:
+        2px solid
+        var(--talks-color-1);
+
+    outline-offset: 2px;
+}
+
+.talks-filter-status {
+    min-height: 1.3rem;
+
+    margin:
+        0
+        0
+        1.5rem;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* ---------------------------------
+   Talks list
+---------------------------------- */
+
+.talks-list {
+    display: grid;
+
+    gap: 0.9rem;
+}
+
+
+/* ---------------------------------
+   Talk card
+---------------------------------- */
+
+.talk-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        108px
+        minmax(0, 1fr);
+
+    gap: 1.35rem;
+
+    overflow: hidden;
+
+    padding:
+        1.15rem
+        1.2rem
+        1.1rem
+        1.15rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.34);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        transform 0.18s ease;
+}
+
+.talk-item:hover {
+    border-color:
+        rgba(25, 64, 93, 0.62);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.065);
+}
+
+.talk-item:focus-within {
+    border-color:
+        var(--talks-color-1);
+}
+
+
+/* ---------------------------------
+   Talk date
+---------------------------------- */
+
+.talk-date {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    min-width: 0;
+
+    padding-right: 1.15rem;
+}
+
+.talk-date::after {
+    content: "";
+
+    position: absolute;
+
+    top: -1.15rem;
+    right: 0;
+    bottom: -1.1rem;
+
+    width: 4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--talks-color-1),
+            var(--talks-color-2)
+        );
+
+    opacity: 0.86;
+
+    transition:
+        opacity 0.18s ease,
+        width 0.18s ease;
+}
+
+.talk-item:hover .talk-date::after {
+    width: 5px;
+
+    opacity: 1;
+}
+
+.talk-date-day {
+    color:
+        var(--talks-color-3);
+
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+.talk-date-year {
+    margin-top: 0.05rem;
+
+    color:
+        var(--talks-color-4);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+
+/* ---------------------------------
+   Talk content
+---------------------------------- */
+
+.talk-content {
+    min-width: 0;
+}
+
+
+/* ---------------------------------
+   Talk heading
+---------------------------------- */
+
+.talk-heading-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap:
+        0.45rem
+        1rem;
+
+    margin-bottom: 0.3rem;
+}
+
+.talk-event {
+    margin: 0;
+
+    color:
+        var(--talks-color-1);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------
+   Talk title
+---------------------------------- */
+
+.talk-title {
+    max-width: 650px;
+
+    margin: 0;
+
+    color:
+        var(--talks-color-4);
+
+    font-size: 1.02rem;
+    font-weight: 600;
+
+    line-height: 1.48;
+    letter-spacing: -0.006em;
+}
+
+
+/* ---------------------------------
+   Talk status
+---------------------------------- */
+
+.talk-status {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 1.55rem;
+
+    padding:
+        0.2rem
+        0.45rem;
+
+    border-radius: 999px;
+
+    font-size: 0.64rem;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+.talk-status-upcoming {
+    border:
+        1px solid
+        rgba(187, 158, 118, 0.68);
+
+    background-color:
+        rgba(187, 158, 118, 0.1);
+
+    color:
+        #795f3d;
+}
+
+
+/* ---------------------------------
+   Talk location
+---------------------------------- */
+
+.talk-location {
+    margin:
+        0.4rem
+        0
+        0;
+
+    color:
+        var(--talks-color-3);
+
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------
+   Talk collaborators
+---------------------------------- */
+
+.talk-collaborators {
+    margin:
+        0.45rem
+        0
+        0;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
+.talk-collaborators-label {
+    margin-right: 0.2rem;
+
+    color:
+        var(--talks-color-1);
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------
+   Talk resource links
+---------------------------------- */
+
+.talk-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.4rem;
+
+    margin-top: 0.65rem;
+}
+
+.talk-resource-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 1.75rem;
+
+    padding:
+        0.28rem
+        0.55rem;
+
+    border:
+        1px solid
+        rgba(25, 64, 93, 0.38);
+
+    border-radius: 4px;
+
+    background-color:
+        rgba(25, 64, 93, 0.045);
+
+    color:
+        var(--talks-color-1);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.talk-resource-button:hover {
+    border-color:
+        var(--talks-color-1);
+
+    background-color:
+        rgba(25, 64, 93, 0.085);
+
+    color:
+        var(--talks-color-4);
+
+    text-decoration: none;
+
+    transform:
+        translateY(-1px);
+}
+
+.talk-resource-button:focus-visible {
+    outline:
+        2px solid
+        var(--talks-color-1);
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Filtered talks
+---------------------------------- */
+
+.talk-item[hidden] {
+    display: none;
+}
+
+
+/* ---------------------------------
+   Talks responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .talks-list {
+        gap: 0.8rem;
+    }
+
+    .talk-item {
+        grid-template-columns: 1fr;
+
+        gap: 0.65rem;
+
+        padding:
+            1rem
+            0.95rem
+            0.95rem
+            1.1rem;
+    }
+
+    .talk-date {
+        flex-direction: row;
+
+        align-items: baseline;
+
+        gap: 0.35rem;
+
+        padding:
+            0
+            0
+            0.55rem;
+    }
+
+    .talk-date::after {
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 3px;
+
+        background:
+            linear-gradient(
+                90deg,
+                var(--talks-color-1),
+                var(--talks-color-2)
+            );
+    }
+
+    .talk-item:hover .talk-date::after {
+        width: 100%;
+        height: 4px;
+    }
+
+    .talk-date-year {
+        margin-top: 0;
+
+        font-size: 0.9rem;
+    }
+
+    .talk-title {
+        font-size: 0.96rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .talks-toolbar {
+        align-items: stretch;
+    }
+
+    .talks-toolbar input[type="search"] {
+        flex-basis: 100%;
+    }
+
+    .talks-toolbar select {
+        flex:
+            1 1
+            calc(50% - 0.65rem);
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .talks-toolbar select,
+    .talks-toolbar button {
+        width: 100%;
+    }
+
+    .talks-toolbar select {
+        flex-basis: 100%;
+    }
+
+    .talk-heading-row {
+        display: block;
+    }
+
+    .talk-status {
+        margin-top: 0.4rem;
+    }
+
+}
+
+
+/* ---------------------------------
    Footer
 ---------------------------------- */
 
@@ -1468,9 +2079,6 @@ a:focus-visible {
         url("../imgs/footer-2.webp");
 }
 
-
-/* Different crops for the repeated images */
-
 .site-footer-mosaic-tile:nth-child(1) {
     background-position: 30% 45%;
 }
@@ -1486,9 +2094,6 @@ a:focus-visible {
 .site-footer-mosaic-tile:nth-child(4) {
     background-position: 35% 40%;
 }
-
-
-/* Dark layer for reliable text contrast */
 
 .site-footer::after {
     content: "";
@@ -1863,10 +2468,14 @@ a:focus-visible {
 
     overflow: hidden;
 
-    border: 1px solid rgba(50, 88, 107, 0.34);
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.34);
+
     border-radius: 7px;
 
-    background-color: var(--color-surface);
+    background-color:
+        var(--color-surface);
 
     transition:
         border-color 0.18s ease,
@@ -1874,14 +2483,17 @@ a:focus-visible {
 }
 
 .teaching-course:hover {
-    border-color: rgba(23, 82, 91, 0.72);
+    border-color:
+        rgba(23, 82, 91, 0.72);
 
     box-shadow:
-        0 5px 17px rgba(18, 51, 72, 0.07);
+        0 5px 17px
+        rgba(18, 51, 72, 0.07);
 }
 
 .teaching-course:focus-within {
-    border-color: var(--teaching-color-1);
+    border-color:
+        var(--teaching-color-1);
 }
 
 .teaching-course::before {
@@ -1923,7 +2535,8 @@ a:focus-visible {
 .teaching-course-title {
     margin: 0;
 
-    color: var(--teaching-color-4);
+    color:
+        var(--teaching-color-4);
 
     font-size: 1rem;
     font-weight: 600;
@@ -1942,11 +2555,13 @@ a:focus-visible {
 }
 
 .teaching-course-title a:hover {
-    color: var(--teaching-color-1);
+    color:
+        var(--teaching-color-1);
 }
 
 .teaching-course-title a:focus-visible {
-    color: var(--teaching-color-1);
+    color:
+        var(--teaching-color-1);
 
     outline:
         2px solid
@@ -1991,7 +2606,8 @@ a:focus-visible {
     background-color:
         rgba(50, 88, 107, 0.055);
 
-    color: var(--teaching-color-4);
+    color:
+        var(--teaching-color-4);
 
     font-size: 0.73rem;
     line-height: 1.3;
@@ -2000,7 +2616,8 @@ a:focus-visible {
 }
 
 .teaching-badge-label {
-    color: var(--teaching-color-3);
+    color:
+        var(--teaching-color-3);
 
     font-size: 0.62rem;
     font-weight: 600;
@@ -2010,7 +2627,8 @@ a:focus-visible {
 }
 
 .teaching-badge-value {
-    color: var(--teaching-color-4);
+    color:
+        var(--teaching-color-4);
 
     font-weight: 500;
 }
@@ -2104,7 +2722,9 @@ a:focus-visible {
     border-radius: 4px;
 
     background-color: transparent;
-    color: var(--abstract-color-4);
+
+    color:
+        var(--abstract-color-4);
 
     font-size: 0.72rem;
     font-weight: 600;
@@ -2128,7 +2748,8 @@ a:focus-visible {
 .teaching-abstract summary::after {
     content: "+";
 
-    color: var(--abstract-color-1);
+    color:
+        var(--abstract-color-1);
 
     font-size: 0.9rem;
     font-weight: 400;
@@ -2137,12 +2758,14 @@ a:focus-visible {
 }
 
 .teaching-abstract summary:hover {
-    border-color: var(--abstract-color-1);
+    border-color:
+        var(--abstract-color-1);
 
     background-color:
         rgba(132, 184, 125, 0.16);
 
-    color: var(--abstract-color-4);
+    color:
+        var(--abstract-color-4);
 }
 
 .teaching-abstract summary:focus-visible {
@@ -2154,9 +2777,12 @@ a:focus-visible {
 }
 
 .teaching-abstract[open] summary {
-    border-color: var(--color-primary);
+    border-color:
+        var(--color-primary);
 
-    background-color: var(--color-primary);
+    background-color:
+        var(--color-primary);
+
     color: #ffffff;
 }
 
@@ -2173,26 +2799,39 @@ a:focus-visible {
 
 .teaching-abstract-panel {
     margin-top: 0.75rem;
-    padding: 0.9rem 1rem;
 
-    border: 1px solid rgba(35, 91, 133, 0.22);
-    border-left: 3px solid var(--color-accent);
+    padding:
+        0.9rem
+        1rem;
+
+    border:
+        1px solid
+        rgba(35, 91, 133, 0.22);
+
+    border-left:
+        3px solid
+        var(--color-accent);
+
     border-radius: 5px;
 
-    background-color: rgba(35, 91, 133, 0.045);
+    background-color:
+        rgba(35, 91, 133, 0.045);
 
-    color: var(--color-muted);
+    color:
+        var(--color-muted);
 
     font-size: 0.86rem;
     line-height: 1.68;
 }
 
 .teaching-abstract-panel a {
-    color: var(--abstract-color-1);
+    color:
+        var(--abstract-color-1);
 }
 
 .teaching-abstract-panel a:hover {
-    color: var(--abstract-color-4);
+    color:
+        var(--abstract-color-4);
 }
 
 .teaching-abstract-panel > :first-child {
@@ -2330,7 +2969,8 @@ a:focus-visible {
         0
         1.5rem;
 
-    color: var(--color-text);
+    color:
+        var(--color-text);
 
     font-size: 1.4rem;
     font-weight: 600;
@@ -2459,7 +3099,7 @@ a:focus-visible {
     padding:
         1rem
         1.1rem
-        1rem
+        0.8rem
         1.3rem;
 
     border:
@@ -2529,11 +3169,11 @@ a:focus-visible {
     color:
         var(--color-text);
 
-    font-size: 0.96rem;
+    font-size: 1rem;
     font-weight: 600;
 
-    line-height: 1.5;
-    letter-spacing: -0.004em;
+    line-height: 1.45;
+    letter-spacing: -0.006em;
 }
 
 .thesis-title em {
@@ -2579,7 +3219,7 @@ a:focus-visible {
     color:
         var(--color-text);
 
-    font-size: 0.72rem;
+    font-size: 0.73rem;
     line-height: 1.3;
 
     white-space: nowrap;
@@ -2589,7 +3229,7 @@ a:focus-visible {
     color:
         var(--color-muted);
 
-    font-size: 0.6rem;
+    font-size: 0.62rem;
     font-weight: 600;
 
     letter-spacing: 0.055em;
@@ -2604,9 +3244,7 @@ a:focus-visible {
 }
 
 
-/* ---------------------------------
-   Thesis badge: Role
----------------------------------- */
+/* Role */
 
 .thesis-badge:nth-child(1) {
     border-color:
@@ -2617,9 +3255,7 @@ a:focus-visible {
 }
 
 
-/* ---------------------------------
-   Thesis badge: Second Supervisor
----------------------------------- */
+/* Second Supervisor */
 
 .thesis-badge:nth-child(2) {
     border-color:
@@ -2630,9 +3266,7 @@ a:focus-visible {
 }
 
 
-/* ---------------------------------
-   Thesis badge: Location
----------------------------------- */
+/* Location */
 
 .thesis-badge:nth-child(3) {
     border-color:
@@ -2643,9 +3277,7 @@ a:focus-visible {
 }
 
 
-/* ---------------------------------
-   Thesis badge: Term
----------------------------------- */
+/* Term */
 
 .thesis-badge:nth-child(4) {
     border-color:
@@ -2656,9 +3288,7 @@ a:focus-visible {
 }
 
 
-/* ---------------------------------
-   Thesis badge: Type
----------------------------------- */
+/* Type */
 
 .thesis-badge:nth-child(5) {
     border-color:
@@ -2669,9 +3299,7 @@ a:focus-visible {
 }
 
 
-/* ---------------------------------
-   Thesis badge: Language
----------------------------------- */
+/* Language */
 
 .thesis-badge:nth-child(6) {
     border-color:
@@ -2709,7 +3337,7 @@ a:focus-visible {
         padding:
             0.95rem
             0.9rem
-            0.95rem
+            0.75rem
             1.1rem;
     }
 
@@ -2718,7 +3346,7 @@ a:focus-visible {
     }
 
     .thesis-title {
-        font-size: 0.92rem;
+        font-size: 0.96rem;
     }
 
     .thesis-badges {
@@ -2760,124 +3388,6 @@ a:focus-visible {
 
     .thesis-toolbar select {
         flex-basis: 100%;
-    }
-
-}
-
-/* ---------------------------------
-   Match Teaching + Thesis dimensions
----------------------------------- */
-
-.teaching-list,
-.thesis-list {
-    gap: 0.9rem;
-}
-
-
-.teaching-course,
-.thesis-entry {
-    border:
-        1px solid
-        rgba(50, 88, 107, 0.34);
-
-    border-radius: 7px;
-
-    background-color:
-        var(--color-surface);
-}
-
-
-/* Same inner spacing */
-
-.teaching-course-header,
-.thesis-entry {
-    padding:
-        1rem
-        1.1rem
-        0.8rem
-        1.3rem;
-}
-
-
-/* Same title size */
-
-.teaching-course-title,
-.thesis-title {
-    margin: 0;
-
-    font-size: 1rem;
-    font-weight: 600;
-
-    line-height: 1.45;
-    letter-spacing: -0.006em;
-}
-
-
-/* Same badge spacing */
-
-.teaching-badges,
-.thesis-badges {
-    gap: 0.45rem;
-
-    margin-top: 0.7rem;
-}
-
-
-/* Same badge dimensions */
-
-.teaching-badge,
-.thesis-badge {
-    min-height: 1.75rem;
-
-    padding:
-        0.28rem
-        0.55rem;
-
-    border-radius: 999px;
-
-    font-size: 0.73rem;
-    line-height: 1.3;
-}
-
-
-/* Same badge label size */
-
-.teaching-badge-label,
-.thesis-badge-label {
-    font-size: 0.62rem;
-    font-weight: 600;
-
-    letter-spacing: 0.055em;
-    text-transform: uppercase;
-}
-
-@media (max-width: 700px) {
-
-    .teaching-list,
-    .thesis-list {
-        gap: 0.8rem;
-    }
-
-
-    .teaching-course-header,
-    .thesis-entry {
-        padding:
-            0.95rem
-            0.9rem
-            0.75rem
-            1.1rem;
-    }
-
-
-    .teaching-course-title,
-    .thesis-title {
-        font-size: 0.96rem;
-    }
-
-
-    .teaching-badges,
-    .thesis-badges {
-        gap: 0.4rem;
     }
 
 }
