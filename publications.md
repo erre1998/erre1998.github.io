@@ -11,15 +11,6 @@ description: "Publications by Erik Renz."
     data-zotero-url="https://www.zotero.org/{{ site.zotero.username }}/publications"
 >
 
-    <p class="publications-intro">
-        Publications are automatically retrieved from my
-        <a
-            href="https://www.zotero.org/{{ site.zotero.username }}/publications"
-            target="_blank"
-            rel="noopener noreferrer"
-        >Zotero library</a>.
-    </p>
-
     <div class="pub-toolbar">
 
         <input

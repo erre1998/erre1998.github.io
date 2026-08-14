@@ -7,12 +7,6 @@ description: "Academic events organized by Erik Renz."
 
 <div class="events">
 
-    <p class="events-intro">
-        Conferences, workshops, and recurring academic events that I have
-        organized or co-organized.
-    </p>
-
-
     <!-- =========================================
          Recurring Lecture Series
     ========================================== -->

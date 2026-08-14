@@ -1425,9 +1425,11 @@ a:focus-visible {
     background:
         linear-gradient(
             180deg,
-            var(--teaching-color-1),
-            var(--teaching-color-2)
+            var(--color-primary),
+            var(--color-accent)
         );
+
+    opacity: 0.9;
 
     pointer-events: none;
 }
@@ -1692,12 +1694,9 @@ a:focus-visible {
 
 
 .teaching-abstract[open] summary {
-    border-color:
-        var(--abstract-color-4);
+    border-color: var(--color-primary);
 
-    background-color:
-        var(--abstract-color-4);
-
+    background-color: var(--color-primary);
     color: #ffffff;
 }
 
@@ -1715,25 +1714,15 @@ a:focus-visible {
 
 .teaching-abstract-panel {
     margin-top: 0.75rem;
+    padding: 0.9rem 1rem;
 
-    padding:
-        0.95rem
-        1rem;
-
-    border:
-        1px solid
-        rgba(84, 146, 145, 0.42);
-
-    border-left:
-        3px solid
-        var(--abstract-color-1);
-
+    border: 1px solid rgba(35, 91, 133, 0.22);
+    border-left: 3px solid var(--color-accent);
     border-radius: 5px;
 
-    background-color:
-        rgba(132, 184, 125, 0.11);
+    background-color: rgba(35, 91, 133, 0.045);
 
-    color: var(--abstract-color-4);
+    color: var(--color-muted);
 
     font-size: 0.86rem;
     line-height: 1.68;
