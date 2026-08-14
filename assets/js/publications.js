@@ -1,1447 +1,2804 @@
-(() => {
+/* ---------------------------------
+   Design system
+---------------------------------- */
 
-    const app = document.getElementById("publications-app");
+:root {
+    --color-background: #f5f3ee;
+    --color-surface: #ffffff;
 
-    if (!app) {
-        return;
+    --color-text: #192f4f;
+    --color-muted: #486c78;
+
+    --color-primary: #235b85;
+    --color-accent: #308db6;
+
+    --color-green: #445d4b;
+    --color-warm: #bb9e76;
+
+    --color-border: #b7c2c8;
+
+    --content-width: 1180px;
+    --reading-width: 760px;
+}
+
+
+/* ---------------------------------
+   Base
+---------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--color-primary);
+
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+
+a:hover {
+    color: var(--color-text);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+
+/* ---------------------------------
+   General layout
+---------------------------------- */
+
+.container {
+    width: min(calc(100% - 3rem), var(--content-width));
+    margin-inline: auto;
+}
+
+
+/* ---------------------------------
+   Header
+---------------------------------- */
+
+.site-header {
+    background-color: var(--color-background);
+}
+
+.site-header-inner {
+    padding-top: 1.75rem;
+    padding-bottom: 1.15rem;
+}
+
+.site-identity {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    gap: 2rem;
+}
+
+.site-title {
+    color: var(--color-text);
+
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    letter-spacing: -0.01em;
+
+    text-decoration: none;
+}
+
+.site-title:hover {
+    color: var(--color-primary);
+}
+
+.site-subtitle {
+    margin: 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* ---------------------------------
+   Navigation
+---------------------------------- */
+
+.site-navigation {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.55rem 1.3rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.navigation-item a {
+    display: inline-block;
+
+    padding-bottom: 0.15rem;
+
+    border-bottom: 2px solid transparent;
+
+    color: var(--color-muted);
+
+    font-size: 0.88rem;
+    line-height: 1.4;
+
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navigation-item a:hover {
+    color: var(--color-primary);
+}
+
+.navigation-item a[aria-current="page"] {
+    border-bottom-color: var(--color-primary);
+
+    color: var(--color-text);
+}
+
+
+/* ---------------------------------
+   Main
+---------------------------------- */
+
+.site-main {
+    min-height: 65vh;
+
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+}
+
+
+/* ---------------------------------
+   Standard pages
+---------------------------------- */
+
+.page {
+    max-width: var(--reading-width);
+}
+
+.page-header {
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 500;
+
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+}
+
+.page-content {
+    max-width: var(--reading-width);
+}
+
+
+/* ---------------------------------
+   Home
+---------------------------------- */
+
+.home-fields {
+    margin: 0;
+
+    color: var(--color-primary);
+
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    line-height: 1.5;
+}
+
+.home-intro {
+    max-width: var(--reading-width);
+
+    margin: 2.5rem 0 0;
+
+    font-size: 1.15rem;
+    line-height: 1.75;
+}
+
+
+/* ---------------------------------
+   Home sections
+---------------------------------- */
+
+.home-overview {
+    max-width: 960px;
+}
+
+.home-section {
+    display: grid;
+
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 2.5rem;
+
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.home-section-title {
+    display: flex;
+    align-items: baseline;
+
+    gap: 0.65rem;
+
+    margin: 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.home-section-title::before {
+    content: "";
+
+    width: 0.5rem;
+    height: 0.5rem;
+
+    flex: 0 0 auto;
+
+    background-color: var(--color-primary);
+}
+
+.home-section-content {
+    max-width: var(--reading-width);
+}
+
+.home-section-content > :first-child {
+    margin-top: 0;
+}
+
+.home-section-content > :last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------------------------------
+   Curriculum Vitae
+---------------------------------- */
+
+.cv-section + .cv-section {
+    margin-top: 4rem;
+}
+
+.cv-section-title {
+    margin: 0 0 1.75rem;
+
+    color: var(--color-text);
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+.cv-subsection {
+    margin-top: 2.5rem;
+}
+
+.cv-subsection-title {
+    margin: 0 0 1.25rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.cv-entry {
+    display: grid;
+
+    grid-template-columns: 125px minmax(0, 1fr);
+    gap: 1.5rem;
+
+    padding: 1.15rem 0;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.cv-entry-date {
+    color: var(--color-muted);
+
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.cv-entry-content {
+    min-width: 0;
+}
+
+.cv-entry-title {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.cv-entry-meta {
+    margin: 0.2rem 0 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.cv-entry-thesis {
+    margin: 0.55rem 0 0;
+
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.cv-entry-thesis-label {
+    color: var(--color-muted);
+}
+
+
+/* ---------------------------------
+   Curriculum Vitae responsive
+---------------------------------- */
+
+@media (max-width: 600px) {
+
+    .cv-entry {
+        grid-template-columns: 1fr;
+
+        gap: 0.35rem;
     }
 
-
-    /* ---------------------------------
-       Configuration
-    ---------------------------------- */
-
-    const USER_ID = app.dataset.zoteroUserId;
-    const ZOTERO_URL = app.dataset.zoteroUrl;
-
-    const CATEGORY_ORDER = [
-        "Books",
-        "Edited Journal Issues",
-        "Journal Articles",
-        "Book Chapters",
-        "Conference Publications",
-        "Datasets & Software",
-        "Blog Posts",
-        "Other Publications"
-    ];
-
-    const WEBSITE_TAGS = {
-        upcoming: "website:upcoming",
-        inPreparation: "website:in-preparation",
-        forthcoming: "website:forthcoming",
-        editedJournalIssue: "website:edited-journal-issue"
-    };
-
-    let allItems = [];
-
-    let websiteTagKeys = {
-        upcoming: new Set(),
-        inPreparation: new Set(),
-        forthcoming: new Set(),
-        editedJournalIssue: new Set()
-    };
+}
 
 
-    /* ---------------------------------
-       Elements
-    ---------------------------------- */
+/* ---------------------------------
+   Publications
+---------------------------------- */
 
-    const bibliography =
-        document.getElementById("bibliography");
+.publications-intro {
+    margin: 0 0 2rem;
 
-    const status =
-        document.getElementById("pub-status");
+    color: var(--color-muted);
 
-    const searchInput =
-        document.getElementById("pub-search");
-
-    const yearSelect =
-        document.getElementById("pub-year");
-
-    const categorySelect =
-        document.getElementById("pub-category");
-
-    const resetButton =
-        document.getElementById("pub-reset");
-
-    const printButton =
-        document.getElementById("pub-print");
+    font-size: 0.95rem;
+}
 
 
-    /* ---------------------------------
-       Helpers
-    ---------------------------------- */
+/* ---------------------------------
+   Publications toolbar
+---------------------------------- */
 
-    function escapeHTML(value) {
+.pub-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
-        const characters = {
-            "&": "&amp;",
-            "<": "&lt;",
-            ">": "&gt;",
-            "\"": "&quot;",
-            "'": "&#039;"
-        };
+    gap: 0.65rem;
 
-        return String(value ?? "").replace(
-            /[&<>"']/g,
-            character => characters[character]
+    margin-bottom: 2.5rem;
+}
+
+.pub-toolbar input,
+.pub-toolbar select,
+.pub-toolbar button {
+    min-height: 2.5rem;
+
+    padding: 0.5rem 0.7rem;
+
+    border: 1px solid var(--color-border);
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font: inherit;
+    font-size: 0.85rem;
+}
+
+.pub-toolbar input[type="search"] {
+    flex: 1 1 220px;
+
+    min-width: 180px;
+}
+
+.pub-toolbar select {
+    cursor: pointer;
+}
+
+.pub-toolbar button {
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.pub-toolbar button:hover {
+    border-color: var(--color-primary);
+
+    color: var(--color-primary);
+}
+
+.pub-toolbar input:focus,
+.pub-toolbar select:focus,
+.pub-toolbar button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Publications status
+---------------------------------- */
+
+.pub-status {
+    margin: 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* ---------------------------------
+   Publication sections
+---------------------------------- */
+
+.pub-section {
+    margin-top: 3.5rem;
+}
+
+.pub-section-title {
+    margin: 0 0 1.25rem;
+
+    color: var(--color-text);
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+
+/* ---------------------------------
+   Publication list
+---------------------------------- */
+
+.pub-list {
+    display: grid;
+
+    gap: 0.9rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* ---------------------------------
+   Publication card
+---------------------------------- */
+
+.pub-item {
+    display: grid;
+
+    grid-template-columns:
+        64px
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 1rem;
+
+    min-width: 0;
+
+    padding:
+        1rem
+        1.1rem
+        0.8rem
+        1.3rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.34);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.pub-item:hover {
+    border-color:
+        rgba(35, 91, 133, 0.58);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.055);
+}
+
+.pub-item:focus-within {
+    border-color:
+        var(--color-primary);
+}
+
+
+/* ---------------------------------
+   Publication resource column
+---------------------------------- */
+
+.pub-actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    min-width: 0;
+}
+
+
+/* ---------------------------------
+   Publication content
+---------------------------------- */
+
+.pub-content {
+    min-width: 0;
+}
+
+
+/* ---------------------------------
+   Publication title
+---------------------------------- */
+
+.pub-title {
+    display: block;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+    letter-spacing: -0.006em;
+}
+
+.pub-editors {
+    color: var(--color-muted);
+
+    font-weight: 400;
+}
+
+
+/* ---------------------------------
+   Publication metadata
+---------------------------------- */
+
+.pub-meta {
+    display: block;
+
+    margin-top: 0.25rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.pub-meta em {
+    color: var(--color-text);
+}
+
+
+/* ---------------------------------
+   Publication DOI / Link
+---------------------------------- */
+
+.pub-link,
+.pub-resource-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-width: 3.5rem;
+    min-height: 1.75rem;
+
+    margin: 0;
+
+    padding:
+        0.28rem
+        0.5rem;
+
+    border:
+        1px solid
+        rgba(35, 91, 133, 0.42);
+
+    border-radius: 4px;
+
+    background-color:
+        rgba(35, 91, 133, 0.05);
+
+    color: var(--color-primary);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        border-color 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.pub-link:hover,
+.pub-resource-button:hover {
+    border-color:
+        var(--color-primary);
+
+    background-color:
+        rgba(35, 91, 133, 0.09);
+
+    color: var(--color-text);
+
+    text-decoration: none;
+
+    transform:
+        translateY(-1px);
+}
+
+.pub-link:focus-visible,
+.pub-resource-button:focus-visible {
+    outline:
+        2px solid
+        var(--color-primary);
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Publication status label
+---------------------------------- */
+
+.pub-publication-status {
+    display: inline-block;
+
+    margin-left: 0.55rem;
+
+    padding:
+        0.08rem
+        0.4rem;
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius: 3px;
+
+    background-color:
+        rgba(50, 88, 107, 0.035);
+
+    color: var(--color-muted);
+
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    line-height: 1.35;
+    vertical-align: 0.08em;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------
+   Publications empty state
+---------------------------------- */
+
+.pub-empty {
+    margin-top: 2rem;
+
+    color: var(--color-muted);
+}
+
+
+/* ---------------------------------
+   Publications responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .pub-list {
+        gap: 0.8rem;
+    }
+
+    .pub-item {
+        padding:
+            0.95rem
+            0.9rem
+            0.75rem
+            1.1rem;
+    }
+
+    .pub-title {
+        font-size: 0.96rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .pub-item {
+        grid-template-columns: 1fr;
+
+        gap: 0.6rem;
+    }
+
+    .pub-actions {
+        width: fit-content;
+    }
+
+    .pub-link,
+    .pub-resource-button {
+        width: auto;
+
+        min-width: 3.75rem;
+    }
+
+    .pub-publication-status {
+        margin-left: 0.35rem;
+    }
+
+}
+
+
+/* ---------------------------------
+   Publications print
+---------------------------------- */
+
+@media print {
+
+    .site-header,
+    .site-footer,
+    .publications-intro,
+    .pub-toolbar,
+    .pub-status {
+        display: none;
+    }
+
+    .site-main {
+        padding: 0;
+    }
+
+    .page {
+        max-width: none;
+    }
+
+    .page-header {
+        margin-bottom: 2rem;
+    }
+
+    .pub-section,
+    .pub-item {
+        break-inside: avoid;
+    }
+
+    .pub-item {
+        grid-template-columns:
+            55px
+            minmax(0, 1fr);
+
+        box-shadow: none;
+    }
+
+}
+
+
+/* ---------------------------------
+   Organized Events
+---------------------------------- */
+
+.events {
+    width: 100%;
+
+    --events-color-1: #17525b;
+    --events-color-2: #19405d;
+    --events-color-3: #32586b;
+    --events-color-4: #123348;
+}
+
+
+/* ---------------------------------
+   Events toolbar
+---------------------------------- */
+
+.events-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.65rem;
+
+    margin-bottom: 0.7rem;
+}
+
+.events-toolbar input,
+.events-toolbar select,
+.events-toolbar button {
+    min-height: 2.5rem;
+
+    padding: 0.5rem 0.7rem;
+
+    border: 1px solid var(--color-border);
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font: inherit;
+    font-size: 0.85rem;
+}
+
+.events-toolbar input[type="search"] {
+    flex: 1 1 220px;
+
+    min-width: 180px;
+}
+
+.events-toolbar select {
+    cursor: pointer;
+}
+
+.events-toolbar button {
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.events-toolbar button:hover {
+    border-color: var(--events-color-1);
+
+    color: var(--events-color-1);
+}
+
+.events-toolbar input:focus,
+.events-toolbar select:focus,
+.events-toolbar button:focus-visible {
+    outline: 2px solid var(--events-color-1);
+    outline-offset: 2px;
+}
+
+.events-filter-status {
+    min-height: 1.3rem;
+
+    margin:
+        0
+        0
+        1.5rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* ---------------------------------
+   Event list
+---------------------------------- */
+
+.events-list {
+    display: grid;
+
+    gap: 1rem;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------
+   Main event
+---------------------------------- */
+
+.event-item {
+    display: grid;
+
+    grid-template-columns:
+        125px
+        minmax(0, 1fr);
+
+    gap: 1.5rem;
+
+    padding: 1.4rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.3);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.event-item:hover {
+    border-color:
+        rgba(23, 82, 91, 0.58);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.055);
+}
+
+.event-item:focus-within {
+    border-color:
+        var(--events-color-1);
+}
+
+.event-item-date {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.05rem;
+
+    color: var(--events-color-3);
+
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+.event-item-date strong {
+    color: var(--events-color-4);
+
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.event-item-content {
+    min-width: 0;
+}
+
+.event-item-type {
+    margin:
+        0
+        0
+        0.25rem;
+
+    color: var(--events-color-1);
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.event-item-title {
+    margin: 0;
+
+    color: var(--events-color-4);
+
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+    letter-spacing: -0.008em;
+}
+
+.event-item-title a {
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease;
+}
+
+.event-item-title a:hover {
+    color: var(--events-color-1);
+}
+
+.event-item-title a:focus-visible {
+    color: var(--events-color-1);
+
+    outline:
+        2px solid
+        var(--events-color-1);
+
+    outline-offset: 3px;
+}
+
+.event-item-location {
+    margin:
+        0.3rem
+        0
+        0;
+
+    color: var(--events-color-3);
+
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+.event-item-description {
+    max-width: 650px;
+
+    margin:
+        0.7rem
+        0
+        0;
+
+    color: var(--color-muted);
+
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+
+/* ---------------------------------
+   Event roles
+---------------------------------- */
+
+.event-roles {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.25rem;
+
+    max-width: 650px;
+
+    margin-top: 0.7rem;
+    padding-left: 0.75rem;
+
+    border-left:
+        3px solid
+        var(--events-color-1);
+}
+
+.event-role {
+    margin: 0;
+
+    color: var(--events-color-4);
+
+    font-size: 0.84rem;
+    line-height: 1.5;
+}
+
+.event-role-name {
+    color: var(--events-color-1);
+
+    font-weight: 600;
+}
+
+.event-role-detail {
+    color: var(--color-muted);
+
+    font-weight: 400;
+}
+
+
+/* ---------------------------------
+   Event resource links
+---------------------------------- */
+
+.event-item-links,
+.event-series-edition-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.4rem;
+
+    margin:
+        0.55rem
+        0
+        0;
+}
+
+
+/* ---------------------------------
+   Event resource buttons
+---------------------------------- */
+
+.event-resource-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 1.75rem;
+
+    padding:
+        0.28rem
+        0.55rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.42);
+
+    border-radius: 4px;
+
+    background-color:
+        rgba(50, 88, 107, 0.045);
+
+    color: var(--events-color-1);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.event-resource-button:hover {
+    border-color:
+        var(--events-color-1);
+
+    background-color:
+        rgba(23, 82, 91, 0.08);
+
+    color:
+        var(--events-color-4);
+
+    text-decoration: none;
+
+    transform: translateY(-1px);
+}
+
+.event-resource-button:focus-visible {
+    outline:
+        2px solid
+        var(--events-color-1);
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Recurring series
+---------------------------------- */
+
+.event-item-series {
+    padding-bottom: 1.5rem;
+}
+
+.event-series-editions {
+    position: relative;
+
+    max-width: 650px;
+
+    margin-top: 1.4rem;
+    padding-left: 1.25rem;
+}
+
+
+/* Vertical timeline */
+
+.event-series-editions::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0.45rem;
+    bottom: 0.45rem;
+    left: 0;
+
+    width: 1px;
+
+    background:
+        rgba(50, 88, 107, 0.42);
+}
+
+
+/* Individual edition */
+
+.event-series-edition {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        135px
+        minmax(0, 1fr);
+
+    gap: 1rem;
+
+    padding:
+        0.65rem
+        0;
+}
+
+
+/* Timeline marker */
+
+.event-series-edition::before {
+    content: "";
+
+    position: absolute;
+
+    top: 1rem;
+    left: -1.25rem;
+
+    width: 0.48rem;
+    height: 0.48rem;
+
+    border:
+        2px solid
+        var(--events-color-1);
+
+    border-radius: 50%;
+
+    background-color:
+        var(--color-surface);
+
+    transform:
+        translateX(-50%);
+}
+
+.event-series-edition:first-child::before {
+    background-color:
+        var(--events-color-1);
+}
+
+.event-series-edition-term {
+    color: var(--events-color-4);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+.event-series-edition-content {
+    min-width: 0;
+}
+
+.event-series-edition-meta {
+    margin: 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------
+   Filtered events
+---------------------------------- */
+
+.event-item[hidden],
+.event-series-edition[hidden] {
+    display: none;
+}
+
+
+/* ---------------------------------
+   Events responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .event-item {
+        grid-template-columns: 1fr;
+
+        gap: 0.35rem;
+
+        padding: 1.15rem;
+    }
+
+    .event-item-date {
+        flex-direction: row;
+
+        gap: 0.3rem;
+
+        margin-bottom: 0.25rem;
+    }
+
+    .event-item-date strong {
+        font-size: inherit;
+    }
+
+    .event-series-editions {
+        margin-top: 1.2rem;
+    }
+
+    .event-series-edition {
+        grid-template-columns: 1fr;
+
+        gap: 0.15rem;
+
+        padding:
+            0.65rem
+            0;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .events-toolbar {
+        align-items: stretch;
+    }
+
+    .events-toolbar input[type="search"] {
+        flex-basis: 100%;
+    }
+
+    .events-toolbar select {
+        flex:
+            1 1
+            calc(50% - 0.65rem);
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .events-toolbar select,
+    .events-toolbar button {
+        width: 100%;
+    }
+
+    .events-toolbar select {
+        flex-basis: 100%;
+    }
+
+    .event-series-editions {
+        padding-left: 1rem;
+    }
+
+    .event-series-edition::before {
+        left: -1rem;
+    }
+
+}
+
+
+/* ---------------------------------
+   Footer
+---------------------------------- */
+
+.site-footer {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 170px;
+
+    border-top: 1px solid var(--color-border);
+
+    background-color: var(--color-text);
+    color: #f7f5f0;
+}
+
+
+/* ---------------------------------
+   Footer mosaic
+---------------------------------- */
+
+.site-footer-mosaic {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+}
+
+.site-footer-mosaic-tile {
+    min-width: 0;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.site-footer-mosaic-1 {
+    background-image:
+        url("../imgs/footer-1.webp");
+}
+
+.site-footer-mosaic-2 {
+    background-image:
+        url("../imgs/footer-2.webp");
+}
+
+
+/* Different crops for the repeated images */
+
+.site-footer-mosaic-tile:nth-child(1) {
+    background-position: 30% 45%;
+}
+
+.site-footer-mosaic-tile:nth-child(2) {
+    background-position: 55% 55%;
+}
+
+.site-footer-mosaic-tile:nth-child(3) {
+    background-position: 70% 60%;
+}
+
+.site-footer-mosaic-tile:nth-child(4) {
+    background-position: 35% 40%;
+}
+
+
+/* Dark layer for reliable text contrast */
+
+.site-footer::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 36, 61, 0.88) 0%,
+            rgba(19, 55, 69, 0.78) 50%,
+            rgba(15, 42, 59, 0.86) 100%
         );
 
+    pointer-events: none;
+}
+
+
+/* ---------------------------------
+   Footer content
+---------------------------------- */
+
+.site-footer-inner {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+}
+
+.site-footer-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.3rem;
+}
+
+.site-footer-copyright,
+.site-footer-email {
+    margin: 0;
+
+    color: #f7f5f0;
+
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.site-footer-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.35rem;
+
+    color: rgba(247, 245, 240, 0.82);
+
+    font-size: 0.78rem;
+}
+
+.site-footer-meta a {
+    color: rgba(247, 245, 240, 0.92);
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease,
+        text-decoration-color 0.18s ease;
+}
+
+.site-footer-meta a:hover {
+    color: #ffffff;
+
+    text-decoration: underline;
+    text-decoration-color: var(--color-warm);
+    text-underline-offset: 0.2em;
+}
+
+.site-footer-meta a:focus-visible {
+    outline-color: #ffffff;
+}
+
+
+/* ---------------------------------
+   Footer contact
+---------------------------------- */
+
+.site-footer-contact {
+    display: flex;
+    align-items: center;
+
+    gap: 1.25rem;
+}
+
+.site-footer-profiles {
+    display: flex;
+    align-items: center;
+
+    gap: 0.75rem;
+}
+
+.site-footer-profile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(247, 245, 240, 0.92);
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.site-footer-profile:hover {
+    color: var(--color-warm);
+
+    transform: translateY(-2px);
+}
+
+.site-footer-profile:focus-visible {
+    color: #ffffff;
+
+    outline-color: #ffffff;
+}
+
+
+/* ---------------------------------
+   Footer icons
+---------------------------------- */
+
+.site-footer-icon {
+    display: block;
+
+    width: 1.15rem;
+    height: 1.15rem;
+
+    background-color: currentColor;
+
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+}
+
+.site-footer-icon-github {
+    mask-image:
+        url("../icons/github.svg");
+
+    -webkit-mask-image:
+        url("../icons/github.svg");
+}
+
+.site-footer-icon-orcid {
+    mask-image:
+        url("../icons/orcid.svg");
+
+    -webkit-mask-image:
+        url("../icons/orcid.svg");
+}
+
+.site-footer-icon-mastodon {
+    mask-image:
+        url("../icons/mastodon.svg");
+
+    -webkit-mask-image:
+        url("../icons/mastodon.svg");
+}
+
+
+/* ---------------------------------
+   Footer responsive
+---------------------------------- */
+
+@media (max-width: 800px) {
+
+    .site-footer-mosaic {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        grid-template-rows:
+            repeat(2, minmax(0, 1fr));
     }
 
+    .site-footer-inner {
+        flex-direction: column;
 
-    function yearOf(data) {
+        gap: 1.25rem;
 
-        const match = String(data?.date || "")
-            .match(/\b(?:19|20)\d{2}\b/);
-
-        return match
-            ? Number(match[0])
-            : 0;
-
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
+    .site-footer-contact {
+        align-items: flex-start;
+        flex-direction: column;
 
-    function creatorName(creator) {
-
-        if (creator.name) {
-            return creator.name;
-        }
-
-        return [
-            creator.lastName,
-            creator.firstName
-        ]
-            .filter(Boolean)
-            .join(", ");
-
+        gap: 0.75rem;
     }
 
+}
 
-    function joinCreators(creators = []) {
 
-        return creators
-            .map(creatorName)
-            .filter(Boolean)
-            .join("; ");
+/* ---------------------------------
+   General responsive
+---------------------------------- */
 
+@media (max-width: 800px) {
+
+    .container {
+        width: min(
+            calc(100% - 2rem),
+            var(--content-width)
+        );
     }
 
+    .site-identity {
+        align-items: flex-start;
+        flex-direction: column;
 
-    function creatorsByType(data, creatorType) {
-
-        return (data.creators || [])
-            .filter(
-                creator =>
-                    creator.creatorType === creatorType
-            );
-
+        gap: 0.2rem;
     }
 
-
-    function getTags(data) {
-
-        return (data.tags || [])
-            .map(
-                tag =>
-                    String(tag.tag || "")
-                        .trim()
-                        .toLowerCase()
-            );
-
+    .navigation-list {
+        gap: 0.7rem 1rem;
     }
 
-
-    function itemKey(item) {
-
-        return item.key ||
-            item.data?.key ||
-            "";
-
+    .navigation-item a {
+        white-space: normal;
     }
 
+    .site-main {
+        padding-top: 3.5rem;
+        padding-bottom: 4rem;
+    }
 
-    function hasWebsiteTag(item, tagName) {
+    .home-section {
+        grid-template-columns: 1fr;
 
-        /*
-         * First try the tags included directly
-         * in the Zotero item.
-         */
+        gap: 1rem;
+    }
 
-        const directTags =
-            getTags(item.data);
-
-        if (
-            directTags.includes(
-                WEBSITE_TAGS[tagName]
-            )
-        ) {
-            return true;
-        }
+}
 
 
-        /*
-         * Fallback: use the separately queried
-         * item keys for the tag.
-         */
+/* ---------------------------------
+   Teaching
+---------------------------------- */
 
-        const key =
-            itemKey(item);
+.teaching {
+    width: 100%;
 
-        return (
-            key &&
-            websiteTagKeys[tagName] &&
-            websiteTagKeys[tagName].has(key)
+    --teaching-color-1: #17525b;
+    --teaching-color-2: #19405d;
+    --teaching-color-3: #32586b;
+    --teaching-color-4: #123348;
+
+    --abstract-color-1: #43741a;
+    --abstract-color-2: #84b87d;
+    --abstract-color-3: #549291;
+    --abstract-color-4: #164319;
+}
+
+
+/* ---------------------------------
+   Teaching toolbar
+---------------------------------- */
+
+.teaching-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.65rem;
+
+    margin-bottom: 0.7rem;
+}
+
+.teaching-toolbar input,
+.teaching-toolbar select,
+.teaching-toolbar button {
+    min-height: 2.5rem;
+
+    padding: 0.5rem 0.7rem;
+
+    border: 1px solid var(--color-border);
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font: inherit;
+    font-size: 0.85rem;
+}
+
+.teaching-toolbar input[type="search"] {
+    flex: 1 1 220px;
+
+    min-width: 180px;
+}
+
+.teaching-toolbar select {
+    cursor: pointer;
+}
+
+.teaching-toolbar button {
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.teaching-toolbar button:hover {
+    border-color: var(--teaching-color-1);
+
+    color: var(--teaching-color-1);
+}
+
+.teaching-toolbar input:focus,
+.teaching-toolbar select:focus,
+.teaching-toolbar button:focus-visible {
+    outline: 2px solid var(--teaching-color-1);
+    outline-offset: 2px;
+}
+
+.teaching-filter-status {
+    min-height: 1.3rem;
+
+    margin:
+        0
+        0
+        1.5rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* ---------------------------------
+   Teaching list
+---------------------------------- */
+
+.teaching-list {
+    display: grid;
+
+    gap: 0.9rem;
+}
+
+
+/* ---------------------------------
+   Teaching course
+---------------------------------- */
+
+.teaching-course {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.34);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.teaching-course:hover {
+    border-color:
+        rgba(23, 82, 91, 0.72);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.07);
+}
+
+.teaching-course:focus-within {
+    border-color:
+        var(--teaching-color-1);
+}
+
+.teaching-course::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--color-primary),
+            var(--color-accent)
         );
 
+    opacity: 0.9;
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------
+   Teaching title
+---------------------------------- */
+
+.teaching-course-header {
+    padding:
+        1rem
+        1.1rem
+        0.8rem
+        1.3rem;
+}
+
+.teaching-course-title {
+    margin: 0;
+
+    color: var(--teaching-color-4);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+    letter-spacing: -0.006em;
+}
+
+.teaching-course-title a {
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease;
+}
+
+.teaching-course-title a:hover {
+    color: var(--teaching-color-1);
+}
+
+.teaching-course-title a:focus-visible {
+    color: var(--teaching-color-1);
+
+    outline:
+        2px solid
+        var(--teaching-color-1);
+
+    outline-offset: 3px;
+}
+
+
+/* ---------------------------------
+   Teaching badges
+---------------------------------- */
+
+.teaching-badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.45rem;
+
+    margin-top: 0.7rem;
+}
+
+.teaching-badge {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.35rem;
+
+    min-height: 1.75rem;
+
+    padding:
+        0.28rem
+        0.55rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.32);
+
+    border-radius: 999px;
+
+    background-color:
+        rgba(50, 88, 107, 0.055);
+
+    color:
+        var(--teaching-color-4);
+
+    font-size: 0.73rem;
+    line-height: 1.3;
+
+    white-space: nowrap;
+}
+
+.teaching-badge-label {
+    color:
+        var(--teaching-color-3);
+
+    font-size: 0.62rem;
+    font-weight: 600;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+}
+
+.teaching-badge-value {
+    color:
+        var(--teaching-color-4);
+
+    font-weight: 500;
+}
+
+
+/* Location */
+
+.teaching-badge:nth-child(1) {
+    border-color:
+        rgba(23, 82, 91, 0.34);
+
+    background-color:
+        rgba(23, 82, 91, 0.07);
+}
+
+
+/* Term */
+
+.teaching-badge:nth-child(2) {
+    border-color:
+        rgba(25, 64, 93, 0.32);
+
+    background-color:
+        rgba(25, 64, 93, 0.065);
+}
+
+
+/* Type */
+
+.teaching-badge:nth-child(3) {
+    border-color:
+        rgba(50, 88, 107, 0.34);
+
+    background-color:
+        rgba(50, 88, 107, 0.065);
+}
+
+
+/* SWS */
+
+.teaching-badge:nth-child(4) {
+    border-color:
+        rgba(23, 82, 91, 0.26);
+
+    background-color:
+        rgba(23, 82, 91, 0.045);
+}
+
+
+/* Language */
+
+.teaching-badge:nth-child(5) {
+    border-color:
+        rgba(18, 51, 72, 0.28);
+
+    background-color:
+        rgba(18, 51, 72, 0.05);
+}
+
+
+/* ---------------------------------
+   Teaching abstract
+---------------------------------- */
+
+.teaching-abstract {
+    padding:
+        0
+        1.1rem
+        0.95rem
+        1.3rem;
+}
+
+.teaching-abstract summary {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.45rem;
+
+    width: fit-content;
+
+    margin: 0;
+
+    padding:
+        0.34rem
+        0.6rem;
+
+    border:
+        1px solid
+        var(--abstract-color-1);
+
+    border-radius: 4px;
+
+    background-color: transparent;
+    color: var(--abstract-color-4);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+
+    transition:
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease;
+}
+
+.teaching-abstract summary::-webkit-details-marker {
+    display: none;
+}
+
+.teaching-abstract summary::after {
+    content: "+";
+
+    color: var(--abstract-color-1);
+
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.teaching-abstract summary:hover {
+    border-color:
+        var(--abstract-color-1);
+
+    background-color:
+        rgba(132, 184, 125, 0.16);
+
+    color:
+        var(--abstract-color-4);
+}
+
+.teaching-abstract summary:focus-visible {
+    outline:
+        2px solid
+        var(--abstract-color-1);
+
+    outline-offset: 3px;
+}
+
+.teaching-abstract[open] summary {
+    border-color:
+        var(--color-primary);
+
+    background-color:
+        var(--color-primary);
+
+    color: #ffffff;
+}
+
+.teaching-abstract[open] summary::after {
+    content: "−";
+
+    color: #ffffff;
+}
+
+
+/* ---------------------------------
+   Teaching abstract panel
+---------------------------------- */
+
+.teaching-abstract-panel {
+    margin-top: 0.75rem;
+
+    padding:
+        0.9rem
+        1rem;
+
+    border:
+        1px solid
+        rgba(35, 91, 133, 0.22);
+
+    border-left:
+        3px solid
+        var(--color-accent);
+
+    border-radius: 5px;
+
+    background-color:
+        rgba(35, 91, 133, 0.045);
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.86rem;
+    line-height: 1.68;
+}
+
+.teaching-abstract-panel a {
+    color:
+        var(--abstract-color-1);
+}
+
+.teaching-abstract-panel a:hover {
+    color:
+        var(--abstract-color-4);
+}
+
+.teaching-abstract-panel > :first-child {
+    margin-top: 0;
+}
+
+.teaching-abstract-panel > :last-child {
+    margin-bottom: 0;
+}
+
+.teaching-course:has(.teaching-abstract[open]) {
+    border-color:
+        rgba(67, 116, 26, 0.58);
+
+    box-shadow:
+        0 6px 20px
+        rgba(22, 67, 25, 0.065);
+}
+
+
+/* ---------------------------------
+   Filtered courses
+---------------------------------- */
+
+.teaching-course[hidden] {
+    display: none;
+}
+
+
+/* ---------------------------------
+   Teaching responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .teaching-list {
+        gap: 0.8rem;
     }
 
-
-    /* ---------------------------------
-       Publication status
-    ---------------------------------- */
-
-    function publicationStatus(item) {
-
-        if (
-            hasWebsiteTag(
-                item,
-                "inPreparation"
-            )
-        ) {
-            return "In preparation";
-        }
-
-        if (
-            hasWebsiteTag(
-                item,
-                "upcoming"
-            )
-        ) {
-            return "Upcoming";
-        }
-
-        if (
-            hasWebsiteTag(
-                item,
-                "forthcoming"
-            )
-        ) {
-            return "Forthcoming";
-        }
-
-        return "";
-
+    .teaching-course-header {
+        padding:
+            0.95rem
+            0.9rem
+            0.75rem
+            1.1rem;
     }
 
-
-    /* ---------------------------------
-       Categories
-    ---------------------------------- */
-
-    function detectCategory(item) {
-
-        const data = item.data;
-        const type = data.itemType;
-
-
-        /*
-         * Special category:
-         * edited journal issues
-         */
-
-        if (
-            hasWebsiteTag(
-                item,
-                "editedJournalIssue"
-            )
-        ) {
-            return "Edited Journal Issues";
-        }
-
-
-        /*
-         * Books and edited books
-         */
-
-        if (type === "book") {
-            return "Books";
-        }
-
-
-        /*
-         * Journal articles
-         */
-
-        if (type === "journalArticle") {
-            return "Journal Articles";
-        }
-
-
-        /*
-         * Book chapters
-         */
-
-        if (
-            type === "bookSection" ||
-            type === "encyclopediaArticle"
-        ) {
-            return "Book Chapters";
-        }
-
-
-        /*
-         * Conference publications
-         */
-
-        if (type === "conferencePaper") {
-            return "Conference Publications";
-        }
-
-
-        /*
-         * Datasets and software
-         */
-
-        if (
-            type === "dataset" ||
-            type === "computerProgram" ||
-            type === "software"
-        ) {
-            return "Datasets & Software";
-        }
-
-
-        /*
-         * Blog posts
-         */
-
-        if (
-            type === "blogPost" ||
-            type === "webpage"
-        ) {
-            return "Blog Posts";
-        }
-
-
-        return "Other Publications";
-
+    .teaching-course::before {
+        width: 3px;
     }
 
-
-    /* ---------------------------------
-       Publication metadata
-    ---------------------------------- */
-
-    function buildVenue(data) {
-
-        const publicationTitle =
-            escapeHTML(
-                data.publicationTitle || ""
-            );
-
-        const bookTitle =
-            escapeHTML(
-                data.bookTitle || ""
-            );
-
-        const proceedingsTitle =
-            escapeHTML(
-                data.proceedingsTitle ||
-                data.conferenceName ||
-                ""
-            );
-
-        const websiteTitle =
-            escapeHTML(
-                data.websiteTitle || ""
-            );
-
-        const publisher =
-            escapeHTML(
-                data.publisher || ""
-            );
-
-        const place =
-            escapeHTML(
-                data.place || ""
-            );
-
-        const repository =
-            escapeHTML(
-                data.repository ||
-                data.archive ||
-                ""
-            );
-
-        const volume =
-            escapeHTML(
-                data.volume || ""
-            );
-
-        const issue =
-            escapeHTML(
-                data.issue || ""
-            );
-
-        const pages =
-            escapeHTML(
-                data.pages || ""
-            );
-
-        const series =
-            escapeHTML(
-                data.series || ""
-            );
-
-        const seriesNumber =
-            escapeHTML(
-                data.seriesNumber || ""
-            );
-
-        const version =
-            escapeHTML(
-                data.versionNumber ||
-                data.version ||
-                ""
-            );
-
-        const editors =
-            joinCreators(
-                creatorsByType(
-                    data,
-                    "editor"
-                )
-            );
-
-
-        /* Journal articles */
-
-        if (data.itemType === "journalArticle") {
-
-            let venue = "";
-
-            if (publicationTitle) {
-                venue +=
-                    `<em>${publicationTitle}</em>`;
-            }
-
-            if (volume) {
-                venue += ` ${volume}`;
-            }
-
-            if (issue) {
-                venue += `(${issue})`;
-            }
-
-            if (pages) {
-                venue += `, ${pages}`;
-            }
-
-            return venue;
-
-        }
-
-
-        /* Book chapters */
-
-        if (
-            data.itemType === "bookSection" ||
-            data.itemType === "encyclopediaArticle"
-        ) {
-
-            const parts = [];
-
-            if (bookTitle) {
-
-                let book =
-                    `In: <em>${bookTitle}</em>`;
-
-                if (editors) {
-
-                    const editorCount =
-                        creatorsByType(
-                            data,
-                            "editor"
-                        ).length;
-
-                    const editorLabel =
-                        editorCount > 1
-                            ? "eds."
-                            : "ed.";
-
-                    book +=
-                        ` (${editorLabel} ${escapeHTML(editors)})`;
-
-                }
-
-                parts.push(book);
-
-            }
-
-
-            const publicationPlace = [
-                place,
-                publisher
-            ]
-                .filter(Boolean)
-                .join(": ");
-
-            if (publicationPlace) {
-                parts.push(publicationPlace);
-            }
-
-
-            if (series) {
-
-                let seriesText =
-                    series;
-
-                if (seriesNumber) {
-                    seriesText +=
-                        ` ${seriesNumber}`;
-                }
-
-                parts.push(seriesText);
-
-            }
-
-
-            if (pages) {
-                parts.push(
-                    `pp. ${pages}`
-                );
-            }
-
-            return parts.join(" — ");
-
-        }
-
-
-        /* Conference publications */
-
-        if (data.itemType === "conferencePaper") {
-
-            const parts = [];
-
-            if (proceedingsTitle) {
-
-                parts.push(
-                    `<em>${proceedingsTitle}</em>`
-                );
-
-            }
-
-
-            const publicationPlace = [
-                place,
-                publisher
-            ]
-                .filter(Boolean)
-                .join(": ");
-
-            if (publicationPlace) {
-                parts.push(publicationPlace);
-            }
-
-
-            if (pages) {
-                parts.push(
-                    `pp. ${pages}`
-                );
-            }
-
-            return parts.join(" — ");
-
-        }
-
-
-        /* Books */
-
-        if (data.itemType === "book") {
-
-            const parts = [];
-
-
-            const publicationPlace = [
-                place,
-                publisher
-            ]
-                .filter(Boolean)
-                .join(": ");
-
-            if (publicationPlace) {
-                parts.push(publicationPlace);
-            }
-
-
-            if (series) {
-
-                let seriesText =
-                    series;
-
-                if (seriesNumber) {
-                    seriesText +=
-                        ` ${seriesNumber}`;
-                }
-
-                parts.push(seriesText);
-
-            }
-
-            return parts.join(" — ");
-
-        }
-
-
-        /* Datasets */
-
-        if (data.itemType === "dataset") {
-
-            return [
-                repository,
-                publisher,
-                place
-            ]
-                .filter(Boolean)
-                .join(" — ");
-
-        }
-
-
-        /* Software */
-
-        if (
-            data.itemType === "computerProgram" ||
-            data.itemType === "software"
-        ) {
-
-            const parts = [];
-
-            if (version) {
-                parts.push(
-                    `Version ${version}`
-                );
-            }
-
-            if (repository) {
-                parts.push(repository);
-            }
-
-            if (publisher) {
-                parts.push(publisher);
-            }
-
-            return parts.join(" — ");
-
-        }
-
-
-        /*
-         * Edited journal issues and
-         * other publication types
-         */
-
-        return [
-            publicationTitle,
-            websiteTitle,
-            publisher,
-            place
-        ]
-            .filter(Boolean)
-            .join(", ");
-
+    .teaching-course-title {
+        font-size: 0.96rem;
     }
 
-
-    /* ---------------------------------
-       Links
-    ---------------------------------- */
-
-    function itemLink(data) {
-
-        if (data.DOI) {
-
-            return {
-                url:
-                    `https://doi.org/${data.DOI}`,
-                label:
-                    "DOI"
-            };
-
-        }
-
-
-        if (
-            data.url &&
-            /^https?:\/\//i.test(data.url)
-        ) {
-
-            return {
-                url: data.url,
-                label: "Link"
-            };
-
-        }
-
-
-        return null;
-
+    .teaching-badges {
+        gap: 0.4rem;
     }
 
-
-    /* ---------------------------------
-       Rendering
-    ---------------------------------- */
-
-    function renderItem(item, category) {
-
-        const data =
-            item.data;
-
-        const year =
-            yearOf(data);
-
-        const authors =
-            joinCreators(
-                creatorsByType(
-                    data,
-                    "author"
-                )
-            );
-
-        const editors =
-            joinCreators(
-                creatorsByType(
-                    data,
-                    "editor"
-                )
-            );
-
-        const editorCount =
-            creatorsByType(
-                data,
-                "editor"
-            ).length;
-
-        const title =
-            escapeHTML(
-                data.title ||
-                "(Untitled)"
-            );
-
-        const venue =
-            buildVenue(data);
-
-        const link =
-            itemLink(data);
-
-        const statusLabel =
-            publicationStatus(item);
-
-        const meta = [];
-
-
-        /* Authors */
-
-        if (authors) {
-
-            meta.push(
-                escapeHTML(authors)
-            );
-
-        }
-
-
-        /* Editors */
-
-        if (
-            !authors &&
-            editors &&
-            (
-                category === "Books" ||
-                category === "Edited Journal Issues"
-            )
-        ) {
-
-            const editorLabel =
-                editorCount > 1
-                    ? "eds."
-                    : "ed.";
-
-            meta.push(
-                `${escapeHTML(editors)} (${editorLabel})`
-            );
-
-        }
-
-
-        /* Venue */
-
-        if (venue) {
-            meta.push(venue);
-        }
-
-
-        /* Year */
-
-        if (year) {
-            meta.push(
-                String(year)
-            );
-        }
-
-
-        /* Link */
-
-        const linkHTML = link
-            ? `
-                <a
-                    class="pub-link"
-                    href="${escapeHTML(link.url)}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    ${escapeHTML(link.label)}
-                </a>
-            `
-            : "";
-
-
-        /* Status */
-
-        const statusHTML =
-            statusLabel
-                ? `
-                    <span class="pub-publication-status">
-                        ${escapeHTML(statusLabel)}
-                    </span>
-                `
-                : "";
-
-
-        return `
-            <li class="pub-item">
-
-                <span class="pub-title">
-                    ${title}
-                    ${statusHTML}
-                </span>
-
-                <span class="pub-meta">
-                    ${meta.join(" — ")}
-                    ${linkHTML}
-                </span>
-
-            </li>
-        `;
-
+    .teaching-badge {
+        white-space: normal;
     }
 
-
-    /* ---------------------------------
-       Grouping and sorting
-    ---------------------------------- */
-
-    function groupItems(items) {
-
-        const groups = {};
-
-
-        items.forEach(item => {
-
-            const category =
-                detectCategory(item);
-
-            if (!groups[category]) {
-                groups[category] = [];
-            }
-
-            groups[category].push(item);
-
-        });
-
-
-        Object.values(groups)
-            .forEach(group => {
-
-                group.sort(
-                    (a, b) => {
-
-                        const yearDifference =
-                            yearOf(b.data) -
-                            yearOf(a.data);
-
-                        if (
-                            yearDifference !== 0
-                        ) {
-                            return yearDifference;
-                        }
-
-                        return String(
-                            a.data.title || ""
-                        )
-                            .localeCompare(
-                                String(
-                                    b.data.title || ""
-                                ),
-                                "en"
-                            );
-
-                    }
-                );
-
-            });
-
-
-        return groups;
-
+    .teaching-abstract {
+        padding:
+            0
+            0.9rem
+            0.9rem
+            1.1rem;
     }
 
-
-    function render(items) {
-
-        const groups =
-            groupItems(items);
-
-
-        const html =
-            CATEGORY_ORDER
-                .filter(
-                    category =>
-                        groups[category] &&
-                        groups[category].length
-                )
-                .map(
-                    category => `
-
-                        <section
-                            class="pub-section"
-                            data-category="${escapeHTML(category)}"
-                        >
-
-                            <h2 class="pub-section-title">
-                                ${escapeHTML(category)}
-                            </h2>
-
-                            <ul class="pub-list">
-
-                                ${groups[category]
-                                    .map(
-                                        item =>
-                                            renderItem(
-                                                item,
-                                                category
-                                            )
-                                    )
-                                    .join("")}
-
-                            </ul>
-
-                        </section>
-
-                    `
-                )
-                .join("");
-
-
-        bibliography.innerHTML =
-            html ||
-            `
-                <p class="pub-empty">
-                    No publications found.
-                </p>
-            `;
-
+    .teaching-abstract-panel {
+        font-size: 0.84rem;
     }
 
-
-    /* ---------------------------------
-       Filters
-    ---------------------------------- */
-
-    function buildFilters() {
-
-        yearSelect.innerHTML =
-            `<option value="">All years</option>`;
-
-        categorySelect.innerHTML =
-            `<option value="">All categories</option>`;
+}
 
 
-        const years = [
-            ...new Set(
-                allItems
-                    .map(
-                        item =>
-                            yearOf(
-                                item.data
-                            )
-                    )
-                    .filter(Boolean)
-            )
-        ]
-            .sort(
-                (a, b) =>
-                    b - a
-            );
+@media (max-width: 600px) {
 
-
-        years.forEach(year => {
-
-            const option =
-                document.createElement(
-                    "option"
-                );
-
-            option.value =
-                String(year);
-
-            option.textContent =
-                String(year);
-
-            yearSelect.appendChild(
-                option
-            );
-
-        });
-
-
-        const availableCategories =
-            new Set(
-                allItems.map(
-                    detectCategory
-                )
-            );
-
-
-        CATEGORY_ORDER
-            .filter(
-                category =>
-                    availableCategories
-                        .has(category)
-            )
-            .forEach(category => {
-
-                const option =
-                    document.createElement(
-                        "option"
-                    );
-
-                option.value =
-                    category;
-
-                option.textContent =
-                    category;
-
-                categorySelect.appendChild(
-                    option
-                );
-
-            });
-
+    .teaching-toolbar {
+        align-items: stretch;
     }
 
-
-    function searchableText(item) {
-
-        const data =
-            item.data;
-
-
-        return [
-            data.title,
-            joinCreators(
-                data.creators || []
-            ),
-            data.publicationTitle,
-            data.bookTitle,
-            data.proceedingsTitle,
-            data.conferenceName,
-            data.websiteTitle,
-            data.publisher,
-            data.place,
-            data.repository,
-            data.series,
-            data.seriesNumber,
-            data.DOI,
-            data.date,
-            publicationStatus(item),
-            detectCategory(item)
-        ]
-            .filter(Boolean)
-            .join(" ")
-            .toLowerCase();
-
+    .teaching-toolbar input[type="search"] {
+        flex-basis: 100%;
     }
 
-
-    function applyFilters() {
-
-        const query =
-            searchInput.value
-                .trim()
-                .toLowerCase();
-
-        const year =
-            yearSelect.value;
-
-        const category =
-            categorySelect.value;
-
-
-        const filteredItems =
-            allItems.filter(item => {
-
-                if (
-                    year &&
-                    String(
-                        yearOf(
-                            item.data
-                        )
-                    ) !== year
-                ) {
-                    return false;
-                }
-
-
-                if (
-                    category &&
-                    detectCategory(item)
-                        !== category
-                ) {
-                    return false;
-                }
-
-
-                if (
-                    query &&
-                    !searchableText(item)
-                        .includes(query)
-                ) {
-                    return false;
-                }
-
-
-                return true;
-
-            });
-
-
-        render(filteredItems);
-
+    .teaching-toolbar select {
+        flex:
+            1 1
+            calc(50% - 0.65rem);
     }
 
+}
 
-    function resetFilters() {
 
-        searchInput.value = "";
-        yearSelect.value = "";
-        categorySelect.value = "";
+@media (max-width: 420px) {
 
-        render(allItems);
-
+    .teaching-toolbar select,
+    .teaching-toolbar button {
+        width: 100%;
     }
 
-
-    /* ---------------------------------
-       Zotero API
-    ---------------------------------- */
-
-    async function fetchPublications() {
-
-        const items = [];
-        const limit = 100;
-
-        let start = 0;
-
-
-        while (true) {
-
-            const url =
-                new URL(
-                    `https://api.zotero.org/users/${USER_ID}/publications/items`
-                );
-
-            url.searchParams.set(
-                "format",
-                "json"
-            );
-
-            url.searchParams.set(
-                "sort",
-                "date"
-            );
-
-            url.searchParams.set(
-                "direction",
-                "desc"
-            );
-
-            url.searchParams.set(
-                "limit",
-                String(limit)
-            );
-
-            url.searchParams.set(
-                "start",
-                String(start)
-            );
-
-
-            const response =
-                await fetch(
-                    url.toString(),
-                    {
-                        headers: {
-                            "Zotero-API-Version":
-                                "3"
-                        }
-                    }
-                );
-
-
-            if (!response.ok) {
-
-                throw new Error(
-                    `Zotero API returned ${response.status}`
-                );
-
-            }
-
-
-            const batch =
-                await response.json();
-
-            items.push(...batch);
-
-
-            if (batch.length < limit) {
-                break;
-            }
-
-            start += limit;
-
-        }
-
-
-        return items.filter(item => {
-
-            const type =
-                item?.data?.itemType;
-
-            return (
-                item?.data &&
-                type !== "attachment" &&
-                type !== "note" &&
-                type !== "annotation"
-            );
-
-        });
-
+    .teaching-toolbar select {
+        flex-basis: 100%;
     }
 
+}
 
-    /*
-     * Fetch item keys for one specific
-     * Zotero tag.
-     */
 
-    async function fetchTaggedItemKeys(tag) {
+/* ---------------------------------
+   Thesis Supervisions
+---------------------------------- */
 
-        const url =
-            new URL(
-                `https://api.zotero.org/users/${USER_ID}/publications/items`
-            );
+.thesis-supervisions {
+    width: 100%;
 
-        url.searchParams.set(
-            "format",
-            "keys"
+    margin-top: 4rem;
+
+    --thesis-color-1: #43741a;
+    --thesis-color-2: #549291;
+    --thesis-color-3: #32586b;
+    --thesis-color-4: #164319;
+}
+
+
+/* ---------------------------------
+   Thesis section title
+---------------------------------- */
+
+.thesis-supervisions-title {
+    margin:
+        0
+        0
+        1.5rem;
+
+    color:
+        var(--color-text);
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+
+/* ---------------------------------
+   Thesis toolbar
+---------------------------------- */
+
+.thesis-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.65rem;
+
+    margin-bottom: 0.7rem;
+}
+
+.thesis-toolbar input,
+.thesis-toolbar select,
+.thesis-toolbar button {
+    min-height: 2.5rem;
+
+    padding:
+        0.5rem
+        0.7rem;
+
+    border:
+        1px solid
+        var(--color-border);
+
+    background-color:
+        var(--color-background);
+
+    color:
+        var(--color-text);
+
+    font: inherit;
+    font-size: 0.85rem;
+}
+
+.thesis-toolbar input[type="search"] {
+    flex:
+        1 1
+        220px;
+
+    min-width: 180px;
+}
+
+.thesis-toolbar select {
+    cursor: pointer;
+}
+
+.thesis-toolbar button {
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.thesis-toolbar button:hover {
+    border-color:
+        var(--thesis-color-1);
+
+    color:
+        var(--thesis-color-1);
+}
+
+.thesis-toolbar input:focus,
+.thesis-toolbar select:focus,
+.thesis-toolbar button:focus-visible {
+    outline:
+        2px solid
+        var(--thesis-color-1);
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Thesis filter status
+---------------------------------- */
+
+.thesis-filter-status {
+    min-height: 1.3rem;
+
+    margin:
+        0
+        0
+        1.5rem;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* ---------------------------------
+   Thesis list
+---------------------------------- */
+
+.thesis-list {
+    display: grid;
+
+    gap: 0.9rem;
+}
+
+
+/* ---------------------------------
+   Thesis entry
+---------------------------------- */
+
+.thesis-entry {
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        1rem
+        1.1rem
+        0.8rem
+        1.3rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.34);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.thesis-entry:hover {
+    border-color:
+        rgba(67, 116, 26, 0.58);
+
+    box-shadow:
+        0 5px 17px
+        rgba(22, 67, 25, 0.055);
+}
+
+.thesis-entry:focus-within {
+    border-color:
+        var(--thesis-color-1);
+}
+
+
+/* ---------------------------------
+   Thesis color edge
+---------------------------------- */
+
+.thesis-entry::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--thesis-color-1),
+            var(--thesis-color-2)
         );
 
-        url.searchParams.set(
-            "tag",
-            tag
-        );
+    opacity: 0.88;
+
+    pointer-events: none;
+}
 
 
-        const response =
-            await fetch(
-                url.toString(),
-                {
-                    headers: {
-                        "Zotero-API-Version":
-                            "3"
-                    }
-                }
-            );
+/* ---------------------------------
+   Thesis title
+---------------------------------- */
+
+.thesis-title {
+    margin: 0;
+
+    color:
+        var(--color-text);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+    letter-spacing: -0.006em;
+}
+
+.thesis-title em {
+    font-weight: inherit;
+}
 
 
-        if (!response.ok) {
+/* ---------------------------------
+   Thesis badges
+---------------------------------- */
 
-            throw new Error(
-                `Could not retrieve Zotero tag "${tag}".`
-            );
+.thesis-badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
-        }
+    gap: 0.45rem;
+
+    margin-top: 0.7rem;
+}
+
+.thesis-badge {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.35rem;
+
+    min-height: 1.75rem;
+
+    padding:
+        0.28rem
+        0.55rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.3);
+
+    border-radius: 999px;
+
+    background-color:
+        rgba(50, 88, 107, 0.045);
+
+    color:
+        var(--color-text);
+
+    font-size: 0.73rem;
+    line-height: 1.3;
+
+    white-space: nowrap;
+}
+
+.thesis-badge-label {
+    color:
+        var(--color-muted);
+
+    font-size: 0.62rem;
+    font-weight: 600;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+}
+
+.thesis-badge-value {
+    color:
+        var(--color-text);
+
+    font-weight: 500;
+}
 
 
-        const text =
-            await response.text();
+/* Role */
+
+.thesis-badge:nth-child(1) {
+    border-color:
+        rgba(67, 116, 26, 0.3);
+
+    background-color:
+        rgba(67, 116, 26, 0.055);
+}
 
 
-        return new Set(
-            text
-                .split(/\s+/)
-                .map(key => key.trim())
-                .filter(Boolean)
-        );
+/* Second Supervisor */
 
+.thesis-badge:nth-child(2) {
+    border-color:
+        rgba(84, 146, 145, 0.32);
+
+    background-color:
+        rgba(84, 146, 145, 0.055);
+}
+
+
+/* Location */
+
+.thesis-badge:nth-child(3) {
+    border-color:
+        rgba(50, 88, 107, 0.32);
+
+    background-color:
+        rgba(50, 88, 107, 0.055);
+}
+
+
+/* Term */
+
+.thesis-badge:nth-child(4) {
+    border-color:
+        rgba(67, 116, 26, 0.24);
+
+    background-color:
+        rgba(67, 116, 26, 0.04);
+}
+
+
+/* Type */
+
+.thesis-badge:nth-child(5) {
+    border-color:
+        rgba(84, 146, 145, 0.27);
+
+    background-color:
+        rgba(84, 146, 145, 0.045);
+}
+
+
+/* Language */
+
+.thesis-badge:nth-child(6) {
+    border-color:
+        rgba(22, 67, 25, 0.22);
+
+    background-color:
+        rgba(22, 67, 25, 0.035);
+}
+
+
+/* ---------------------------------
+   Filtered theses
+---------------------------------- */
+
+.thesis-entry[hidden] {
+    display: none;
+}
+
+
+/* ---------------------------------
+   Thesis responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .thesis-supervisions {
+        margin-top: 3.5rem;
     }
 
-
-    /*
-     * Fetch all website-specific tags
-     * independently from the item JSON.
-     */
-
-    async function fetchWebsiteTags() {
-
-        const [
-            upcoming,
-            inPreparation,
-            forthcoming,
-            editedJournalIssue
-        ] = await Promise.all([
-
-            fetchTaggedItemKeys(
-                WEBSITE_TAGS.upcoming
-            ),
-
-            fetchTaggedItemKeys(
-                WEBSITE_TAGS.inPreparation
-            ),
-
-            fetchTaggedItemKeys(
-                WEBSITE_TAGS.forthcoming
-            ),
-
-            fetchTaggedItemKeys(
-                WEBSITE_TAGS.editedJournalIssue
-            )
-
-        ]);
-
-
-        return {
-            upcoming,
-            inPreparation,
-            forthcoming,
-            editedJournalIssue
-        };
-
+    .thesis-list {
+        gap: 0.8rem;
     }
 
-
-    /* ---------------------------------
-       Initialise
-    ---------------------------------- */
-
-    async function loadPublications() {
-
-        if (!USER_ID) {
-
-            status.textContent =
-                "Zotero User ID is not configured.";
-
-            return;
-
-        }
-
-
-        try {
-
-            /*
-             * Publications and website tags
-             * are loaded separately.
-             */
-
-            const [
-                publications,
-                tagKeys
-            ] = await Promise.all([
-
-                fetchPublications(),
-                fetchWebsiteTags()
-
-            ]);
-
-
-            allItems =
-                publications;
-
-            websiteTagKeys =
-                tagKeys;
-
-
-            buildFilters();
-            render(allItems);
-
-            status.textContent = "";
-
-        }
-        catch (error) {
-
-            console.error(error);
-
-
-            status.innerHTML = `
-                Publications could not be loaded.
-                You can view them directly on
-                <a
-                    href="${escapeHTML(ZOTERO_URL)}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Zotero
-                </a>.
-            `;
-
-        }
-
+    .thesis-entry {
+        padding:
+            0.95rem
+            0.9rem
+            0.75rem
+            1.1rem;
     }
 
+    .thesis-entry::before {
+        width: 3px;
+    }
 
-    /* ---------------------------------
-       Events
-    ---------------------------------- */
+    .thesis-title {
+        font-size: 0.96rem;
+    }
 
-    searchInput.addEventListener(
-        "input",
-        applyFilters
-    );
+    .thesis-badges {
+        gap: 0.4rem;
+    }
 
-    yearSelect.addEventListener(
-        "change",
-        applyFilters
-    );
+    .thesis-badge {
+        white-space: normal;
+    }
 
-    categorySelect.addEventListener(
-        "change",
-        applyFilters
-    );
-
-    resetButton.addEventListener(
-        "click",
-        resetFilters
-    );
-
-    printButton.addEventListener(
-        "click",
-        () => window.print()
-    );
+}
 
 
-    loadPublications();
+@media (max-width: 600px) {
 
-})();
+    .thesis-toolbar {
+        align-items: stretch;
+    }
+
+    .thesis-toolbar input[type="search"] {
+        flex-basis: 100%;
+    }
+
+    .thesis-toolbar select {
+        flex:
+            1 1
+            calc(50% - 0.65rem);
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .thesis-toolbar select,
+    .thesis-toolbar button {
+        width: 100%;
+    }
+
+    .thesis-toolbar select {
+        flex-basis: 100%;
+    }
+
+}

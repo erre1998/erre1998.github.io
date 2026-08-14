@@ -468,7 +468,7 @@ description: "Teaching and thesis supervision by Erik Renz."
                 <div class="teaching-abstract-panel">
 
                     <p>
-                        Die Übung begleitet die interdisziplinäre Ringvorlesung „<a href="https://www.germanistik.uni-rostock.de/forschung/digital-humanities/rosdh/ringvorlesung/">Digital Humanities im Fokus: Methoden, Anwendungen und Perspektiven</a>“ 
+                        Die Übung begleitet die interdisziplinäre Ringvorlesung „<a href="https://www.germanistik.uni-rostock.de/forschung/digital-humanities/rosdh/ringvorlesung/">Digital Humanities im Fokus: Methoden, Anwendungen und Perspektiven</a>“
                         und vertieft deren zentrale Inhalte.
                     </p>
 
@@ -559,6 +559,8 @@ description: "Teaching and thesis supervision by Erik Renz."
 
     </div>
 
+
+
     <!-- =========================================
          Thesis Supervisions
     ========================================== -->
@@ -570,64 +572,103 @@ description: "Teaching and thesis supervision by Erik Renz."
         </h2>
 
 
+        <!-- ---------------------------------
+             Thesis search and filters
+        ---------------------------------- -->
+
+        <div
+            class="thesis-toolbar"
+            aria-label="Search and filter thesis supervisions"
+        >
+
+            <input
+                id="thesis-search"
+                type="search"
+                placeholder="Search"
+                aria-label="Search thesis supervisions"
+            >
+
+
+            <select
+                id="thesis-filter-role"
+                aria-label="Filter by role"
+            >
+                <option value="">All roles</option>
+            </select>
+
+
+            <select
+                id="thesis-filter-supervisor"
+                aria-label="Filter by second supervisor"
+            >
+                <option value="">All second supervisors</option>
+            </select>
+
+
+            <select
+                id="thesis-filter-location"
+                aria-label="Filter by location"
+            >
+                <option value="">All locations</option>
+            </select>
+
+
+            <select
+                id="thesis-filter-term"
+                aria-label="Filter by term"
+            >
+                <option value="">All terms</option>
+            </select>
+
+
+            <select
+                id="thesis-filter-type"
+                aria-label="Filter by thesis type"
+            >
+                <option value="">All types</option>
+            </select>
+
+
+            <select
+                id="thesis-filter-language"
+                aria-label="Filter by language"
+            >
+                <option value="">All languages</option>
+            </select>
+
+
+            <button
+                id="thesis-filter-reset"
+                type="button"
+            >
+                Reset
+            </button>
+
+        </div>
+
+
+        <p
+            class="thesis-filter-status"
+            id="thesis-filter-status"
+            aria-live="polite"
+        ></p>
+
+
+
+        <!-- ---------------------------------
+             Thesis list
+        ---------------------------------- -->
+
         <div class="thesis-list">
 
 
-            <!-- Ehekonzepte -->
+            <!-- Das Frauenbild in der Aufklärung -->
 
             <article
                 class="thesis-entry"
                 data-role="First Supervisor"
                 data-supervisor="Ulrike Henny-Krahmer"
-                data-term="Winter 2026/27"
-                data-type="Bachelor's Thesis"
-                data-language="German"
-            >
-
-                <h3 class="thesis-title">
-                    Ehekonzepte in den Dramen des 19. Jahrhunderts am Beispiel von Charlotte Birch-Pfeiffer und Marie von Ebner-Eschenbach
-                </h3>
-
-
-                <div class="thesis-badges">
-
-                    <span class="thesis-badge">
-                        <span class="thesis-badge-label">Role</span>
-                        <span class="thesis-badge-value">First Supervisor</span>
-                    </span>
-
-                    <span class="thesis-badge">
-                        <span class="thesis-badge-label">Other Supervisor</span>
-                        <span class="thesis-badge-value">Ulrike Henny-Krahmer</span>
-                    </span>
-
-                    <span class="thesis-badge">
-                        <span class="thesis-badge-label">Term</span>
-                        <span class="thesis-badge-value">Winter 2026/27</span>
-                    </span>
-
-                    <span class="thesis-badge">
-                        <span class="thesis-badge-label">Type</span>
-                        <span class="thesis-badge-value">Bachelor's Thesis</span>
-                    </span>
-
-                    <span class="thesis-badge">
-                        <span class="thesis-badge-label">Language</span>
-                        <span class="thesis-badge-value">German</span>
-                    </span>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- Frauenbild in der Aufklärung -->
-
-            <article
-                class="thesis-entry"
-                data-role="First Supervisor"
-                data-supervisor="Ulrike Henny-Krahmer"
+                data-location="University of Rostock"
                 data-term="Winter 2025/26"
                 data-type="Bachelor's Thesis"
                 data-language="German"
@@ -646,8 +687,13 @@ description: "Teaching and thesis supervision by Erik Renz."
                     </span>
 
                     <span class="thesis-badge">
-                        <span class="thesis-badge-label">Other Supervisor</span>
+                        <span class="thesis-badge-label">Second Supervisor</span>
                         <span class="thesis-badge-value">Ulrike Henny-Krahmer</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Location</span>
+                        <span class="thesis-badge-value">University of Rostock</span>
                     </span>
 
                     <span class="thesis-badge">
@@ -671,12 +717,13 @@ description: "Teaching and thesis supervision by Erik Renz."
 
 
 
-            <!-- Gestaltung des Chores -->
+            <!-- Die Gestaltung des Chores -->
 
             <article
                 class="thesis-entry"
                 data-role="First Supervisor"
-                data-supervisor="Ulrike Henny-Krahmer"
+                data-supervisor="Magdalena Victoria Basedow"
+                data-location="University of Rostock"
                 data-term="Winter 2026/27"
                 data-type="Bachelor's Thesis"
                 data-language="German"
@@ -695,8 +742,68 @@ description: "Teaching and thesis supervision by Erik Renz."
                     </span>
 
                     <span class="thesis-badge">
-                        <span class="thesis-badge-label">Other Supervisor</span>
+                        <span class="thesis-badge-label">Second Supervisor</span>
+                        <span class="thesis-badge-value">Magdalena Victoria Basedow</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Location</span>
+                        <span class="thesis-badge-value">University of Rostock</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Term</span>
+                        <span class="thesis-badge-value">Winter 2026/27</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Type</span>
+                        <span class="thesis-badge-value">Bachelor's Thesis</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Language</span>
+                        <span class="thesis-badge-value">German</span>
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Ehekonzepte -->
+
+            <article
+                class="thesis-entry"
+                data-role="First Supervisor"
+                data-supervisor="Ulrike Henny-Krahmer"
+                data-location="University of Rostock"
+                data-term="Winter 2026/27"
+                data-type="Bachelor's Thesis"
+                data-language="German"
+            >
+
+                <h3 class="thesis-title">
+                    Ehekonzepte in den Dramen des 19. Jahrhunderts am Beispiel von Charlotte Birch-Pfeiffer und Marie von Ebner-Eschenbach
+                </h3>
+
+
+                <div class="thesis-badges">
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Role</span>
+                        <span class="thesis-badge-value">First Supervisor</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Second Supervisor</span>
                         <span class="thesis-badge-value">Ulrike Henny-Krahmer</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Location</span>
+                        <span class="thesis-badge-value">University of Rostock</span>
                     </span>
 
                     <span class="thesis-badge">
@@ -726,6 +833,7 @@ description: "Teaching and thesis supervision by Erik Renz."
                 class="thesis-entry"
                 data-role="First Supervisor"
                 data-supervisor="Ulrike Henny-Krahmer"
+                data-location="University of Rostock"
                 data-term="Winter 2026/27"
                 data-type="Master's Thesis"
                 data-language="German"
@@ -744,8 +852,13 @@ description: "Teaching and thesis supervision by Erik Renz."
                     </span>
 
                     <span class="thesis-badge">
-                        <span class="thesis-badge-label">Other Supervisor</span>
+                        <span class="thesis-badge-label">Second Supervisor</span>
                         <span class="thesis-badge-value">Ulrike Henny-Krahmer</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Location</span>
+                        <span class="thesis-badge-value">University of Rostock</span>
                     </span>
 
                     <span class="thesis-badge">
@@ -771,11 +884,16 @@ description: "Teaching and thesis supervision by Erik Renz."
         </div>
 
     </section>
-    
+
 </div>
 
 
 <script
     src="{{ '/assets/js/teaching.js' | relative_url }}"
+    defer
+></script>
+
+<script
+    src="{{ '/assets/js/theses.js' | relative_url }}"
     defer
 ></script>
