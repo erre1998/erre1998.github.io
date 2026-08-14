@@ -936,13 +936,22 @@ a:focus-visible {
 
 
 /* ---------------------------------
+   Teaching
+---------------------------------- */
+
+.teaching {
+    width: 100%;
+}
+
+
+/* ---------------------------------
    Teaching list
 ---------------------------------- */
 
 .teaching-list {
     display: grid;
 
-    gap: 1.15rem;
+    gap: 0.9rem;
 }
 
 
@@ -951,10 +960,12 @@ a:focus-visible {
 ---------------------------------- */
 
 .teaching-course {
+    position: relative;
+
     overflow: hidden;
 
     border: 1px solid var(--color-border);
-    border-radius: 6px;
+    border-radius: 7px;
 
     background-color: var(--color-surface);
 
@@ -964,37 +975,65 @@ a:focus-visible {
 }
 
 .teaching-course:hover {
-    border-color: rgba(35, 91, 133, 0.55);
+    border-color: rgba(35, 91, 133, 0.62);
 
     box-shadow:
-        0 5px 18px rgba(25, 47, 79, 0.055);
+        0 5px 16px rgba(25, 47, 79, 0.05);
 }
 
 .teaching-course:focus-within {
-    border-color: rgba(35, 91, 133, 0.7);
+    border-color: var(--color-primary);
+}
+
+
+/* Colored edge surrounding the course visually */
+
+.teaching-course::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--color-primary),
+            var(--color-accent)
+        );
+
+    opacity: 0.85;
+
+    pointer-events: none;
 }
 
 
 /* ---------------------------------
-   Teaching course title
+   Teaching course header
 ---------------------------------- */
 
 .teaching-course-header {
-    padding: 1.2rem 1.25rem 1.05rem;
+    padding:
+        1rem
+        1.1rem
+        0.8rem
+        1.3rem;
 }
 
 .teaching-course-title {
-    max-width: 680px;
-
     margin: 0;
 
     color: var(--color-text);
 
-    font-size: clamp(0.98rem, 1.2vw, 1.06rem);
+    font-size: 1rem;
     font-weight: 600;
 
-    line-height: 1.48;
-    letter-spacing: -0.008em;
+    line-height: 1.45;
+    letter-spacing: -0.006em;
 }
 
 .teaching-course-title a {
@@ -1002,90 +1041,95 @@ a:focus-visible {
 
     text-decoration: none;
 
-    background-image:
-        linear-gradient(
-            var(--color-accent),
-            var(--color-accent)
-        );
-
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    background-size: 0 1px;
-
-    transition:
-        color 0.18s ease,
-        background-size 0.2s ease;
+    transition: color 0.18s ease;
 }
 
 .teaching-course-title a:hover {
     color: var(--color-primary);
-
-    background-size: 100% 1px;
 }
 
 .teaching-course-title a:focus-visible {
     color: var(--color-primary);
 
     outline: 2px solid var(--color-primary);
-    outline-offset: 4px;
+    outline-offset: 3px;
 }
 
 
 /* ---------------------------------
-   Teaching metadata
+   Teaching badges
 ---------------------------------- */
 
-.teaching-meta {
-    display: grid;
+.teaching-badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
-    grid-template-columns:
-        minmax(0, 1.55fr)
-        minmax(0, 0.85fr)
-        minmax(0, 1.15fr)
-        minmax(55px, 0.5fr)
-        minmax(0, 1fr);
+    gap: 0.45rem;
 
-    margin: 0;
-
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-
-    background-color: rgba(48, 141, 182, 0.045);
+    margin-top: 0.7rem;
 }
 
-.teaching-meta-item {
-    min-width: 0;
+.teaching-badge {
+    display: inline-flex;
+    align-items: center;
 
-    padding: 0.75rem 0.85rem;
-}
+    gap: 0.35rem;
 
-.teaching-meta-item + .teaching-meta-item {
-    border-left: 1px solid rgba(183, 194, 200, 0.7);
-}
+    min-height: 1.75rem;
 
-.teaching-meta dt {
-    margin: 0 0 0.15rem;
+    padding: 0.28rem 0.55rem;
 
-    color: var(--color-muted);
+    border: 1px solid rgba(72, 108, 120, 0.32);
+    border-radius: 999px;
 
-    font-size: 0.65rem;
-    font-weight: 600;
-
-    line-height: 1.35;
-
-    letter-spacing: 0.075em;
-    text-transform: uppercase;
-}
-
-.teaching-meta dd {
-    margin: 0;
+    background-color: rgba(48, 141, 182, 0.055);
 
     color: var(--color-text);
 
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: 0.73rem;
+    line-height: 1.3;
 
-    line-height: 1.45;
+    white-space: nowrap;
+}
+
+.teaching-badge-label {
+    color: var(--color-muted);
+
+    font-size: 0.62rem;
+    font-weight: 600;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+}
+
+.teaching-badge-value {
+    color: var(--color-text);
+
+    font-weight: 500;
+}
+
+
+/* Subtle distinction between metadata types */
+
+.teaching-badge:nth-child(1) {
+    background-color: rgba(48, 141, 182, 0.055);
+}
+
+.teaching-badge:nth-child(2) {
+    background-color: rgba(187, 158, 118, 0.08);
+}
+
+.teaching-badge:nth-child(3) {
+    background-color: rgba(68, 93, 75, 0.06);
+}
+
+.teaching-badge:nth-child(4) {
+    background-color: rgba(48, 141, 182, 0.045);
+}
+
+.teaching-badge:nth-child(5) {
+    background-color: rgba(35, 91, 133, 0.055);
 }
 
 
@@ -1094,19 +1138,23 @@ a:focus-visible {
 ---------------------------------- */
 
 .teaching-abstract {
-    padding: 0.9rem 1.25rem 1.1rem;
+    padding:
+        0
+        1.1rem
+        0.95rem
+        1.3rem;
 }
 
 .teaching-abstract summary {
     display: inline-flex;
     align-items: center;
 
-    gap: 0.5rem;
+    gap: 0.45rem;
 
     width: fit-content;
 
     margin: 0;
-    padding: 0.38rem 0.68rem;
+    padding: 0.34rem 0.6rem;
 
     border: 1px solid var(--color-primary);
     border-radius: 4px;
@@ -1114,10 +1162,10 @@ a:focus-visible {
     background-color: transparent;
     color: var(--color-primary);
 
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 600;
 
-    line-height: 1.4;
+    line-height: 1.3;
 
     cursor: pointer;
     list-style: none;
@@ -1136,16 +1184,9 @@ a:focus-visible {
 .teaching-abstract summary::after {
     content: "+";
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 0.9rem;
-    height: 0.9rem;
-
     color: var(--color-accent);
 
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 400;
 
     line-height: 1;
@@ -1155,6 +1196,7 @@ a:focus-visible {
     border-color: var(--color-accent);
 
     background-color: rgba(48, 141, 182, 0.07);
+
     color: var(--color-text);
 }
 
@@ -1182,19 +1224,19 @@ a:focus-visible {
 ---------------------------------- */
 
 .teaching-abstract-panel {
-    margin-top: 0.9rem;
-    padding: 1rem 1.05rem;
+    margin-top: 0.75rem;
+    padding: 0.9rem 1rem;
 
     border: 1px solid var(--color-border);
     border-left: 3px solid var(--color-warm);
-    border-radius: 4px;
+    border-radius: 5px;
 
-    background-color: rgba(187, 158, 118, 0.09);
+    background-color: rgba(187, 158, 118, 0.08);
 
     color: var(--color-muted);
 
-    font-size: 0.88rem;
-    line-height: 1.72;
+    font-size: 0.86rem;
+    line-height: 1.68;
 }
 
 .teaching-abstract-panel > :first-child {
@@ -1205,8 +1247,11 @@ a:focus-visible {
     margin-bottom: 0;
 }
 
+
+/* Visually emphasize an opened course */
+
 .teaching-course:has(.teaching-abstract[open]) {
-    border-color: rgba(35, 91, 133, 0.7);
+    border-color: rgba(35, 91, 133, 0.72);
 
     box-shadow:
         0 6px 20px rgba(25, 47, 79, 0.06);
@@ -1220,76 +1265,57 @@ a:focus-visible {
 @media (max-width: 700px) {
 
     .teaching-list {
-        gap: 1rem;
+        gap: 0.8rem;
     }
 
     .teaching-course-header {
         padding:
-            1.05rem
-            1rem
-            0.95rem;
+            0.95rem
+            0.9rem
+            0.75rem
+            1.1rem;
     }
 
-    .teaching-meta {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+    .teaching-course::before {
+        width: 3px;
     }
 
-    .teaching-meta-item {
-        padding: 0.7rem 0.8rem;
-
-        border-top: 1px solid rgba(183, 194, 200, 0.7);
+    .teaching-course-title {
+        font-size: 0.96rem;
     }
 
-    .teaching-meta-item:nth-child(-n + 2) {
-        border-top: 0;
+    .teaching-badges {
+        gap: 0.4rem;
     }
 
-    .teaching-meta-item + .teaching-meta-item {
-        border-left: 0;
-    }
-
-    .teaching-meta-item:nth-child(even) {
-        border-left: 1px solid rgba(183, 194, 200, 0.7);
-    }
-
-    .teaching-meta-item:last-child {
-        grid-column: 1 / -1;
-
-        border-left: 0;
+    .teaching-badge {
+        white-space: normal;
     }
 
     .teaching-abstract {
         padding:
-            0.85rem
-            1rem
-            1rem;
+            0
+            0.9rem
+            0.9rem
+            1.1rem;
     }
 
     .teaching-abstract-panel {
-        padding: 0.9rem;
-
-        font-size: 0.86rem;
+        font-size: 0.84rem;
     }
 
 }
 
 @media (max-width: 420px) {
 
-    .teaching-course-title {
-        font-size: 0.96rem;
+    .teaching-badge {
+        padding: 0.26rem 0.5rem;
+
+        font-size: 0.7rem;
     }
 
-    .teaching-meta dt {
-        font-size: 0.62rem;
-    }
-
-    .teaching-meta dd {
-        font-size: 0.77rem;
-    }
-
-    .teaching-abstract summary {
-        font-size: 0.73rem;
+    .teaching-badge-label {
+        font-size: 0.59rem;
     }
 
 }
@@ -1622,6 +1648,194 @@ a:focus-visible {
         grid-template-columns: 1fr;
 
         gap: 1rem;
+    }
+
+}
+
+/* ---------------------------------
+   Teaching filter
+---------------------------------- */
+
+.teaching-filter {
+    margin-bottom: 1.5rem;
+    padding: 0.9rem 1rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+
+.teaching-filter-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 0.7rem;
+}
+
+
+.teaching-filter-title {
+    color: var(--color-muted);
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+}
+
+
+.teaching-filter-reset {
+    padding: 0;
+
+    border: 0;
+
+    background: none;
+    color: var(--color-primary);
+
+    font: inherit;
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+
+.teaching-filter-reset:hover {
+    color: var(--color-text);
+
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+
+.teaching-filter-reset:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+
+/* Filter controls */
+
+.teaching-filter-controls {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+}
+
+
+.teaching-filter-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.2rem;
+}
+
+
+.teaching-filter-field > span {
+    padding-left: 0.15rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.6rem;
+    font-weight: 600;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+}
+
+
+.teaching-filter-field select {
+    min-height: 2rem;
+
+    max-width: 190px;
+
+    padding: 0.32rem 1.8rem 0.32rem 0.6rem;
+
+    border: 1px solid rgba(72, 108, 120, 0.4);
+    border-radius: 999px;
+
+    background-color: var(--color-surface);
+    color: var(--color-text);
+
+    font: inherit;
+    font-size: 0.72rem;
+
+    cursor: pointer;
+}
+
+
+.teaching-filter-field select:hover {
+    border-color: var(--color-primary);
+}
+
+
+.teaching-filter-field select:focus {
+    border-color: var(--color-primary);
+
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+
+/* Result count */
+
+.teaching-filter-status {
+    margin: 0.65rem 0 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.7rem;
+    line-height: 1.4;
+}
+
+
+/* Hidden courses */
+
+.teaching-course[hidden] {
+    display: none;
+}
+
+
+/* ---------------------------------
+   Teaching filter responsive
+---------------------------------- */
+
+@media (max-width: 600px) {
+
+    .teaching-filter {
+        padding: 0.85rem;
+    }
+
+
+    .teaching-filter-controls {
+        align-items: stretch;
+    }
+
+
+    .teaching-filter-field {
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+
+
+    .teaching-filter-field select {
+        width: 100%;
+        max-width: none;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .teaching-filter-field {
+        flex-basis: 100%;
     }
 
 }
