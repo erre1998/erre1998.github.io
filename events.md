@@ -141,12 +141,15 @@ description: "Academic events organized by Erik Renz."
                 <div class="event-roles">
 
                     <p class="event-role">
+
                         <span class="event-role-name">
                             Co-organiser
                         </span>
+
                         <span class="event-role-detail">
                             since the first edition
                         </span>
+
                     </p>
 
                 </div>
@@ -179,9 +182,10 @@ description: "Academic events organized by Erik Renz."
                             </p>
 
 
-                            <p class="event-series-edition-links">
+                            <div class="event-series-edition-links">
 
                                 <a
+                                    class="event-resource-button"
                                     href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/2026-27/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -189,7 +193,7 @@ description: "Academic events organized by Erik Renz."
                                     Program
                                 </a>
 
-                            </p>
+                            </div>
 
                         </div>
 
@@ -216,9 +220,10 @@ description: "Academic events organized by Erik Renz."
                             </p>
 
 
-                            <p class="event-series-edition-links">
+                            <div class="event-series-edition-links">
 
                                 <a
+                                    class="event-resource-button"
                                     href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/suse-2026/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -226,17 +231,17 @@ description: "Academic events organized by Erik Renz."
                                     Program
                                 </a>
 
-                                <span aria-hidden="true">·</span>
 
                                 <a
-                                    href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2026/Plakat_SoSe_26.pdf"
+                                    class="event-resource-button"
+                                    href="{{ '/assets/imgs/2026_poster-dh-im-fokus.png' | relative_url }}"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     Poster
                                 </a>
 
-                            </p>
+                            </div>
 
                         </div>
 
@@ -263,9 +268,10 @@ description: "Academic events organized by Erik Renz."
                             </p>
 
 
-                            <p class="event-series-edition-links">
+                            <div class="event-series-edition-links">
 
                                 <a
+                                    class="event-resource-button"
                                     href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/2025-26/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -273,17 +279,17 @@ description: "Academic events organized by Erik Renz."
                                     Program
                                 </a>
 
-                                <span aria-hidden="true">·</span>
 
                                 <a
-                                    href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2025-26/Plakat_WiSe_25-26.ai.pdf"
+                                    class="event-resource-button"
+                                    href="{{ '/assets/imgs/2025-26_poster-dh-im-fokus.png' | relative_url }}"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     Poster
                                 </a>
 
-                            </p>
+                            </div>
 
                         </div>
 
@@ -310,9 +316,10 @@ description: "Academic events organized by Erik Renz."
                             </p>
 
 
-                            <p class="event-series-edition-links">
+                            <div class="event-series-edition-links">
 
                                 <a
+                                    class="event-resource-button"
                                     href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/suse-2025/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -320,17 +327,17 @@ description: "Academic events organized by Erik Renz."
                                     Program
                                 </a>
 
-                                <span aria-hidden="true">·</span>
 
                                 <a
-                                    href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2025/Plakat_SoSe_25.pdf"
+                                    class="event-resource-button"
+                                    href="{{ '/assets/imgs/2025_poster-dh-im-fokus.png' | relative_url }}"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     Poster
                                 </a>
 
-                            </p>
+                            </div>
 
                         </div>
 
@@ -357,9 +364,10 @@ description: "Academic events organized by Erik Renz."
                             </p>
 
 
-                            <p class="event-series-edition-links">
+                            <div class="event-series-edition-links">
 
                                 <a
+                                    class="event-resource-button"
                                     href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/2024-25/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -367,17 +375,17 @@ description: "Academic events organized by Erik Renz."
                                     Program
                                 </a>
 
-                                <span aria-hidden="true">·</span>
 
                                 <a
-                                    href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2024-25/NEU_Plakat_WiSe_24-25.pdf"
+                                    class="event-resource-button"
+                                    href="{{ '/assets/imgs/2024-25_poster-dh-im-fokus.png' | relative_url }}"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     Poster
                                 </a>
 
-                            </p>
+                            </div>
 
                         </div>
 
@@ -404,9 +412,10 @@ description: "Academic events organized by Erik Renz."
                             </p>
 
 
-                            <p class="event-series-edition-links">
+                            <div class="event-series-edition-links">
 
                                 <a
+                                    class="event-resource-button"
                                     href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/2024/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -414,17 +423,17 @@ description: "Academic events organized by Erik Renz."
                                     Program
                                 </a>
 
-                                <span aria-hidden="true">·</span>
 
                                 <a
-                                    href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2024/Plakat_SoSe_24.pdf"
+                                    class="event-resource-button"
+                                    href="{{ '/assets/imgs/2024_poster-dh-im-fokus.png' | relative_url }}"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     Poster
                                 </a>
 
-                            </p>
+                            </div>
 
                         </div>
 
@@ -451,9 +460,10 @@ description: "Academic events organized by Erik Renz."
                             </p>
 
 
-                            <p class="event-series-edition-links">
+                            <div class="event-series-edition-links">
 
                                 <a
+                                    class="event-resource-button"
                                     href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/2023-24/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -461,17 +471,17 @@ description: "Academic events organized by Erik Renz."
                                     Program
                                 </a>
 
-                                <span aria-hidden="true">·</span>
 
                                 <a
-                                    href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2023-24/Plakat_WiSe_23-24.pdf"
+                                    class="event-resource-button"
+                                    href="{{ '/assets/imgs/2023-24_poster-dh-im-fokus.png' | relative_url }}"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     Poster
                                 </a>
 
-                            </p>
+                            </div>
 
                         </div>
 
@@ -498,9 +508,10 @@ description: "Academic events organized by Erik Renz."
                             </p>
 
 
-                            <p class="event-series-edition-links">
+                            <div class="event-series-edition-links">
 
                                 <a
+                                    class="event-resource-button"
                                     href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/lecture-series/2023/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -508,17 +519,17 @@ description: "Academic events organized by Erik Renz."
                                     Program
                                 </a>
 
-                                <span aria-hidden="true">·</span>
 
                                 <a
-                                    href="https://www.germanistik.uni-rostock.de/storages/uni-rostock/Alle_PHF/Germanistik/Forschung/Arbeitskreis_RosDH/Ringvorlesung/2023/Plakat_Ringvorlesung_SS23_updated2.pdf"
+                                    class="event-resource-button"
+                                    href="{{ '/assets/imgs/2023_poster-dh-im-fokus.png' | relative_url }}"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     Poster
                                 </a>
 
-                            </p>
+                            </div>
 
                         </div>
 
@@ -600,19 +611,20 @@ description: "Academic events organized by Erik Renz."
                 </div>
 
 
-                <p class="event-item-links">
+                <div class="event-item-links">
 
                     <a
+                        class="event-resource-button"
                         href="https://dhd-blog.org/?p=23996"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Event page
+                        Event Page
                     </a>
 
-                    <span aria-hidden="true">·</span>
 
                     <a
+                        class="event-resource-button"
                         href="{{ '/assets/imgs/2026_dracor-hackathon.png' | relative_url }}"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -620,7 +632,7 @@ description: "Academic events organized by Erik Renz."
                         Poster
                     </a>
 
-                </p>
+                </div>
 
             </div>
 
@@ -635,7 +647,7 @@ description: "Academic events organized by Erik Renz."
         <article
             class="event-item"
             data-years="2025"
-            data-roles="Co-organiser|Member of the Local Organisers' Team|Session Chair"
+            data-roles="Co-organiser|Program Committee Member|Member of the Local Organisers' Team|Session Chair"
             data-location="University of Rostock"
             data-type="Conference"
         >
@@ -696,11 +708,21 @@ description: "Academic events organized by Erik Renz."
                     <p class="event-role">
 
                         <span class="event-role-name">
+                            Program Committee Member
+                        </span>
+
+                    </p>
+
+
+                    <p class="event-role">
+
+                        <span class="event-role-name">
                             Member of the Local Organisers' Team
                         </span>
 
                     </p>
-                    
+
+
                     <p class="event-role">
 
                         <span class="event-role-name">
@@ -712,17 +734,18 @@ description: "Academic events organized by Erik Renz."
                 </div>
 
 
-                <p class="event-item-links">
+                <div class="event-item-links">
 
                     <a
+                        class="event-resource-button"
                         href="https://www.forge25.uni-rostock.de/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Conference website
+                        Conference Website
                     </a>
 
-                </p>
+                </div>
 
             </div>
 

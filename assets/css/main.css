@@ -625,6 +625,7 @@ a:focus-visible {
 
 }
 
+
 /* ---------------------------------
    Organized Events
 ---------------------------------- */
@@ -727,17 +728,11 @@ a:focus-visible {
 ---------------------------------- */
 
 .events-list {
+    display: grid;
+
+    gap: 1rem;
+
     margin: 0;
-}
-
-
-/*
- * No line immediately underneath
- * the search/filter area.
- */
-
-.event-item:first-child {
-    border-top: 0;
 }
 
 
@@ -754,18 +749,36 @@ a:focus-visible {
 
     gap: 1.5rem;
 
-    padding:
-        1.65rem
-        0;
+    padding: 1.4rem;
 
-    border-top:
+    border:
         1px solid
-        var(--color-border);
+        rgba(50, 88, 107, 0.3);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
 }
 
 
-.event-item:first-child {
-    padding-top: 0.25rem;
+.event-item:hover {
+    border-color:
+        rgba(23, 82, 91, 0.58);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.055);
+}
+
+
+.event-item:focus-within {
+    border-color:
+        var(--events-color-1);
 }
 
 
@@ -923,29 +936,8 @@ a:focus-visible {
 }
 
 
-/*
- * Backwards compatibility for the
- * lecture-series role block.
- */
-
-.event-item > .event-item-content > .event-role {
-    max-width: 650px;
-
-    margin:
-        0.7rem
-        0
-        0;
-
-    padding-left: 0.7rem;
-
-    border-left:
-        3px solid
-        var(--events-color-1);
-}
-
-
 /* ---------------------------------
-   Event links
+   Event resource links
 ---------------------------------- */
 
 .event-item-links,
@@ -954,45 +946,78 @@ a:focus-visible {
     align-items: center;
     flex-wrap: wrap;
 
-    gap: 0.35rem;
+    gap: 0.4rem;
 
     margin:
         0.55rem
         0
         0;
-
-    color: var(--color-border);
-
-    font-size: 0.76rem;
-    line-height: 1.4;
 }
 
 
-.event-item-links a,
-.event-series-edition-links a {
-    display: inline-block;
+/* ---------------------------------
+   Event resource buttons
+---------------------------------- */
+
+.event-resource-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 1.75rem;
 
     padding:
-        0.12rem
-        0;
+        0.28rem
+        0.55rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.42);
+
+    border-radius: 4px;
+
+    background-color:
+        rgba(50, 88, 107, 0.045);
 
     color: var(--events-color-1);
 
-    font-weight: 500;
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    line-height: 1.3;
 
     text-decoration: none;
 
     transition:
-        color 0.18s ease;
+        border-color 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
 }
 
 
-.event-item-links a:hover,
-.event-series-edition-links a:hover {
-    color: var(--events-color-4);
+.event-resource-button:hover {
+    border-color:
+        var(--events-color-1);
 
-    text-decoration: underline;
-    text-underline-offset: 0.18em;
+    background-color:
+        rgba(23, 82, 91, 0.08);
+
+    color:
+        var(--events-color-4);
+
+    text-decoration: none;
+
+    transform: translateY(-1px);
+}
+
+
+.event-resource-button:focus-visible {
+    outline:
+        2px solid
+        var(--events-color-1);
+
+    outline-offset: 2px;
 }
 
 
@@ -1001,7 +1026,7 @@ a:focus-visible {
 ---------------------------------- */
 
 .event-item-series {
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 
@@ -1024,7 +1049,7 @@ a:focus-visible {
 
     top: 0.45rem;
     bottom: 0.45rem;
-    left: 0.24rem;
+    left: 0;
 
     width: 1px;
 
@@ -1052,16 +1077,7 @@ a:focus-visible {
 }
 
 
-/*
- * Timeline marker.
- *
- * Parent padding-left = 1.25rem
- * Timeline position = 0.24rem
- * Marker width = 0.48rem
- *
- * This calculation places the exact
- * centre of the marker on the line.
- */
+/* Timeline marker */
 
 .event-series-edition::before {
     content: "";
@@ -1069,13 +1085,7 @@ a:focus-visible {
     position: absolute;
 
     top: 1rem;
-
-    left:
-        calc(
-            -1.25rem
-            + 0.24rem
-            - 0.24rem
-        );
+    left: -1.25rem;
 
     width: 0.48rem;
     height: 0.48rem;
@@ -1087,7 +1097,10 @@ a:focus-visible {
     border-radius: 50%;
 
     background-color:
-        var(--color-background);
+        var(--color-surface);
+
+    transform:
+        translateX(-50%);
 }
 
 
@@ -1143,14 +1156,7 @@ a:focus-visible {
 
         gap: 0.35rem;
 
-        padding:
-            1.4rem
-            0;
-    }
-
-
-    .event-item:first-child {
-        padding-top: 0.25rem;
+        padding: 1.15rem;
     }
 
 
@@ -1226,15 +1232,11 @@ a:focus-visible {
 
 
     .event-series-edition::before {
-        left:
-            calc(
-                -1rem
-                + 0.24rem
-                - 0.24rem
-            );
+        left: -1rem;
     }
 
 }
+
 
 /* ---------------------------------
    Footer
