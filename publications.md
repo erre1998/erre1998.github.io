@@ -16,7 +16,7 @@ description: "Publications by Erik Renz."
         <input
             id="pub-search"
             type="search"
-            placeholder="Search publications"
+            placeholder="Search"
             aria-label="Search publications"
         >
 

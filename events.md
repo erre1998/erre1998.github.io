@@ -9,53 +9,69 @@ description: "Academic events organized by Erik Renz."
 
 
     <!-- =========================================
-         Filter
+         Search & filter
     ========================================== -->
 
     <div
-        class="events-filter"
-        aria-label="Filter events by year"
+        class="events-toolbar"
+        aria-label="Search and filter events"
     >
 
-        <div class="events-filter-header">
-
-            <span class="events-filter-title">
-                Filter
-            </span>
-
-            <button
-                class="events-filter-reset"
-                id="events-filter-reset"
-                type="button"
-            >
-                Reset
-            </button>
-
-        </div>
+        <input
+            id="events-search"
+            type="search"
+            placeholder="Search"
+            aria-label="Search events"
+        >
 
 
-        <div class="events-filter-controls">
-
-            <label class="events-filter-field">
-
-                <span>Year</span>
-
-                <select id="events-filter-year">
-                    <option value="">All years</option>
-                </select>
-
-            </label>
-
-        </div>
+        <select
+            id="events-filter-year"
+            aria-label="Filter by year"
+        >
+            <option value="">All years</option>
+        </select>
 
 
-        <p
-            class="events-filter-status"
-            id="events-filter-status"
-            aria-live="polite"
-        ></p>
+        <select
+            id="events-filter-role"
+            aria-label="Filter by role"
+        >
+            <option value="">All roles</option>
+        </select>
+
+
+        <select
+            id="events-filter-location"
+            aria-label="Filter by location"
+        >
+            <option value="">All locations</option>
+        </select>
+
+
+        <select
+            id="events-filter-type"
+            aria-label="Filter by event type"
+        >
+            <option value="">All types</option>
+        </select>
+
+
+        <button
+            id="events-filter-reset"
+            type="button"
+        >
+            Reset
+        </button>
 
     </div>
+
+
+    <p
+        class="events-filter-status"
+        id="events-filter-status"
+        aria-live="polite"
+    ></p>
 
 
 
@@ -73,6 +89,9 @@ description: "Academic events organized by Erik Renz."
         <article
             class="event-item event-item-series"
             data-years="2023 2024 2025 2026 2027"
+            data-roles="Co-organiser"
+            data-location="University of Rostock"
+            data-type="Lecture Series"
         >
 
             <div class="event-item-date">
@@ -119,15 +138,18 @@ description: "Academic events organized by Erik Renz."
                 </p>
 
 
-                <p class="event-role">
+                <div class="event-roles">
 
-                    <span class="event-role-label">
-                        Role:
-                    </span>
+                    <p class="event-role">
+                        <span class="event-role-name">
+                            Co-organiser
+                        </span>
+                        <span class="event-role-detail">
+                            since the first edition
+                        </span>
+                    </p>
 
-                    Co-organiser since the first edition
-
-                </p>
+                </div>
 
 
 
@@ -153,7 +175,7 @@ description: "Academic events organized by Erik Renz."
                         <div class="event-series-edition-content">
 
                             <p class="event-series-edition-meta">
-                                Organised with Ulrike Henny-Krahmer
+                                Organised with Ulrike Henny-Krahmer and Karsten Labahn
                             </p>
 
 
@@ -518,6 +540,9 @@ description: "Academic events organized by Erik Renz."
         <article
             class="event-item"
             data-years="2026"
+            data-roles="Co-organiser"
+            data-location="University of Rostock"
+            data-type="Hackathon"
         >
 
             <div class="event-item-date">
@@ -558,20 +583,21 @@ description: "Academic events organized by Erik Renz."
                 </p>
 
 
-                <p class="event-role">
+                <div class="event-roles">
 
-                    <span class="event-role-label">
-                        Role:
-                    </span>
+                    <p class="event-role">
 
-                    Organiser
+                        <span class="event-role-name">
+                            Co-organiser
+                        </span>
 
-                </p>
+                        <span class="event-role-detail">
+                            (organised with Ulrike Henny-Krahmer)
+                        </span>
 
+                    </p>
 
-                <p class="event-item-meta">
-                    Organised with Ulrike Henny-Krahmer
-                </p>
+                </div>
 
 
                 <p class="event-item-links">
@@ -609,6 +635,9 @@ description: "Academic events organized by Erik Renz."
         <article
             class="event-item"
             data-years="2025"
+            data-roles="Co-organiser|Member of the Local Organisers' Team|Session Chair"
+            data-location="University of Rostock"
+            data-type="Conference"
         >
 
             <div class="event-item-date">
@@ -649,20 +678,38 @@ description: "Academic events organized by Erik Renz."
                 </p>
 
 
-                <p class="event-role">
+                <div class="event-roles">
 
-                    <span class="event-role-label">
-                        Role:
-                    </span>
+                    <p class="event-role">
 
-                    Main organiser of the local organisers' team; session chair
+                        <span class="event-role-name">
+                            Co-organiser
+                        </span>
 
-                </p>
+                        <span class="event-role-detail">
+                            (organised with Ulrike Henny-Krahmer and Karsten Labahn)
+                        </span>
+
+                    </p>
 
 
-                <p class="event-item-meta">
-                    Organised with Ulrike Henny-Krahmer and Karsten Labahn
-                </p>
+                    <p class="event-role">
+
+                        <span class="event-role-name">
+                            Member of the Local Organisers' Team
+                        </span>
+
+                    </p>
+                    
+                    <p class="event-role">
+
+                        <span class="event-role-name">
+                            Session Chair
+                        </span>
+
+                    </p>
+
+                </div>
 
 
                 <p class="event-item-links">

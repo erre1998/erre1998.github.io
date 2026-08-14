@@ -4,8 +4,24 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".event-item")
     );
 
+    const searchInput = document.querySelector(
+        "#events-search"
+    );
+
     const yearFilter = document.querySelector(
         "#events-filter-year"
+    );
+
+    const roleFilter = document.querySelector(
+        "#events-filter-role"
+    );
+
+    const locationFilter = document.querySelector(
+        "#events-filter-location"
+    );
+
+    const typeFilter = document.querySelector(
+        "#events-filter-type"
     );
 
     const resetButton = document.querySelector(
@@ -17,109 +33,257 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 
-    if (!events.length || !yearFilter) {
+    if (!events.length) {
         return;
     }
 
 
     /*
-     * Convert a data-years value such as
-     * "2025 2026" into an array:
-     *
-     * ["2025", "2026"]
+     * Helpers
      */
 
     function getYears(element) {
 
         return (element.dataset.years || "")
             .split(/\s+/)
-            .map(year => year.trim())
+            .map(value => value.trim())
             .filter(Boolean);
 
     }
 
 
-    /*
-     * Determine whether an element belongs
-     * to the selected year.
-     */
+    function getRoles(element) {
 
-    function matchesYear(element, selectedYear) {
+        return (element.dataset.roles || "")
+            .split("|")
+            .map(value => value.trim())
+            .filter(Boolean);
 
-        if (!selectedYear) {
-            return true;
-        }
+    }
 
-        return getYears(element).includes(selectedYear);
+
+    function normalize(value) {
+
+        return (value || "")
+            .toLocaleLowerCase()
+            .trim();
 
     }
 
 
     /*
-     * Collect all available years.
-     *
-     * We read years both from main events
-     * and from individual editions of
-     * recurring series.
+     * Build year filter
      */
 
-    const allYears = new Set();
+    if (yearFilter) {
+
+        const years = new Set();
 
 
-    events.forEach(event => {
+        events.forEach(event => {
 
-        getYears(event).forEach(year => {
-            allYears.add(year);
+            getYears(event).forEach(year => {
+                years.add(year);
+            });
+
+
+            event
+                .querySelectorAll(".event-series-edition")
+                .forEach(edition => {
+
+                    getYears(edition).forEach(year => {
+                        years.add(year);
+                    });
+
+                });
+
         });
 
 
-        const editions = event.querySelectorAll(
-            ".event-series-edition"
-        );
+        Array.from(years)
+            .sort((a, b) => Number(b) - Number(a))
+            .forEach(year => {
+
+                const option =
+                    document.createElement("option");
+
+                option.value = year;
+                option.textContent = year;
+
+                yearFilter.appendChild(option);
+
+            });
+
+    }
 
 
-        editions.forEach(edition => {
+    /*
+     * Build role filter
+     */
 
-            getYears(edition).forEach(year => {
-                allYears.add(year);
+    if (roleFilter) {
+
+        const roles = new Set();
+
+
+        events.forEach(event => {
+
+            getRoles(event).forEach(role => {
+                roles.add(role);
             });
 
         });
 
-    });
+
+        Array.from(roles)
+            .sort((a, b) =>
+                a.localeCompare(b, "en")
+            )
+            .forEach(role => {
+
+                const option =
+                    document.createElement("option");
+
+                option.value = role;
+                option.textContent = role;
+
+                roleFilter.appendChild(option);
+
+            });
+
+    }
 
 
     /*
-     * Add years to the filter automatically,
-     * newest first.
+     * Build location filter
      */
 
-    Array.from(allYears)
-        .sort((a, b) => Number(b) - Number(a))
-        .forEach(year => {
+    if (locationFilter) {
 
-            const option = document.createElement("option");
+        const locations = [
+            ...new Set(
+                events
+                    .map(event =>
+                        event.dataset.location
+                    )
+                    .filter(Boolean)
+            )
+        ];
 
-            option.value = year;
-            option.textContent = year;
 
-            yearFilter.appendChild(option);
+        locations
+            .sort((a, b) =>
+                a.localeCompare(b, "en")
+            )
+            .forEach(location => {
 
-        });
+                const option =
+                    document.createElement("option");
+
+                option.value = location;
+                option.textContent = location;
+
+                locationFilter.appendChild(option);
+
+            });
+
+    }
 
 
     /*
-     * Filter the page.
+     * Build event type filter
      */
 
-    function applyFilter() {
+    if (typeFilter) {
 
-        const selectedYear = yearFilter.value;
+        const types = [
+            ...new Set(
+                events
+                    .map(event =>
+                        event.dataset.type
+                    )
+                    .filter(Boolean)
+            )
+        ];
+
+
+        types
+            .sort((a, b) =>
+                a.localeCompare(b, "en")
+            )
+            .forEach(type => {
+
+                const option =
+                    document.createElement("option");
+
+                option.value = type;
+                option.textContent = type;
+
+                typeFilter.appendChild(option);
+
+            });
+
+    }
+
+
+    /*
+     * Apply filters
+     */
+
+    function applyFilters() {
+
+        const searchTerm =
+            normalize(searchInput?.value);
+
+        const selectedYear =
+            yearFilter?.value || "";
+
+        const selectedRole =
+            roleFilter?.value || "";
+
+        const selectedLocation =
+            locationFilter?.value || "";
+
+        const selectedType =
+            typeFilter?.value || "";
+
 
         let visibleEvents = 0;
 
 
         events.forEach(event => {
+
+            const eventText =
+                normalize(event.textContent);
+
+
+            const matchesSearch =
+                !searchTerm ||
+                eventText.includes(searchTerm);
+
+
+            const matchesRole =
+                !selectedRole ||
+                getRoles(event).includes(
+                    selectedRole
+                );
+
+
+            const matchesLocation =
+                !selectedLocation ||
+                event.dataset.location ===
+                    selectedLocation;
+
+
+            const matchesType =
+                !selectedType ||
+                event.dataset.type ===
+                    selectedType;
+
+
+            /*
+             * Recurring series editions
+             */
 
             const editions = Array.from(
                 event.querySelectorAll(
@@ -128,108 +292,77 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
 
-            /*
-             * ---------------------------------
-             * Standalone events
-             * ---------------------------------
-             *
-             * Examples:
-             * DraCor Hackathon
-             * FORGE 2025
-             */
+            let matchesYear = true;
 
-            if (!editions.length) {
 
-                const eventMatches =
-                    matchesYear(
-                        event,
+            if (editions.length) {
+
+                let visibleEditions = 0;
+
+
+                editions.forEach(edition => {
+
+                    const editionMatchesYear =
+                        !selectedYear ||
+                        getYears(edition).includes(
+                            selectedYear
+                        );
+
+
+                    edition.hidden =
+                        !editionMatchesYear;
+
+
+                    if (editionMatchesYear) {
+                        visibleEditions += 1;
+                    }
+
+                });
+
+
+                matchesYear =
+                    !selectedYear ||
+                    visibleEditions > 0;
+
+            } else {
+
+                matchesYear =
+                    !selectedYear ||
+                    getYears(event).includes(
                         selectedYear
                     );
-
-
-                event.hidden = !eventMatches;
-
-
-                if (eventMatches) {
-                    visibleEvents += 1;
-                }
-
-
-                return;
 
             }
 
 
-            /*
-             * ---------------------------------
-             * Recurring event / lecture series
-             * ---------------------------------
-             *
-             * Filter individual editions first.
-             */
-
-            let visibleEditions = 0;
+            const matches =
+                matchesSearch &&
+                matchesYear &&
+                matchesRole &&
+                matchesLocation &&
+                matchesType;
 
 
-            editions.forEach(edition => {
-
-                const editionMatches =
-                    matchesYear(
-                        edition,
-                        selectedYear
-                    );
+            event.hidden = !matches;
 
 
-                edition.hidden = !editionMatches;
-
-
-                if (editionMatches) {
-                    visibleEditions += 1;
-                }
-
-            });
-
-
-            /*
-             * The main lecture-series entry remains
-             * visible if:
-             *
-             * 1. no year filter is active, or
-             * 2. at least one edition belongs
-             *    to the selected year.
-             */
-
-            const eventMatches =
-                !selectedYear ||
-                visibleEditions > 0;
-
-
-            event.hidden = !eventMatches;
-
-
-            if (eventMatches) {
+            if (matches) {
                 visibleEvents += 1;
             }
 
         });
 
 
-        updateStatus(
-            selectedYear,
-            visibleEvents
-        );
+        updateStatus(visibleEvents);
 
     }
 
 
     /*
-     * Update the small result indicator.
+     * Status
      */
 
-    function updateStatus(
-        selectedYear,
-        visibleEvents
-    ) {
+    function updateStatus(visibleEvents) {
 
         if (!status) {
             return;
@@ -239,34 +372,56 @@ document.addEventListener("DOMContentLoaded", () => {
         const totalEvents = events.length;
 
 
-        if (!selectedYear) {
+        if (visibleEvents === totalEvents) {
 
             status.textContent =
                 `${totalEvents} events`;
 
-            return;
+        } else {
+
+            status.textContent =
+                `${visibleEvents} of ${totalEvents} events`;
 
         }
-
-
-        status.textContent =
-            `${visibleEvents} of ${totalEvents} events in ${selectedYear}`;
 
     }
 
 
     /*
-     * Apply filter when year changes.
+     * Listeners
      */
 
-    yearFilter.addEventListener(
-        "change",
-        applyFilter
-    );
+    if (searchInput) {
+
+        searchInput.addEventListener(
+            "input",
+            applyFilters
+        );
+
+    }
+
+
+    [
+        yearFilter,
+        roleFilter,
+        locationFilter,
+        typeFilter
+    ].forEach(filter => {
+
+        if (filter) {
+
+            filter.addEventListener(
+                "change",
+                applyFilters
+            );
+
+        }
+
+    });
 
 
     /*
-     * Reset.
+     * Reset
      */
 
     if (resetButton) {
@@ -275,11 +430,33 @@ document.addEventListener("DOMContentLoaded", () => {
             "click",
             () => {
 
-                yearFilter.value = "";
+                if (searchInput) {
+                    searchInput.value = "";
+                }
 
-                applyFilter();
+                if (yearFilter) {
+                    yearFilter.value = "";
+                }
 
-                yearFilter.focus();
+                if (roleFilter) {
+                    roleFilter.value = "";
+                }
+
+                if (locationFilter) {
+                    locationFilter.value = "";
+                }
+
+                if (typeFilter) {
+                    typeFilter.value = "";
+                }
+
+
+                applyFilters();
+
+
+                if (searchInput) {
+                    searchInput.focus();
+                }
 
             }
         );
@@ -288,9 +465,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /*
-     * Initial state.
+     * Initial state
      */
 
-    applyFilter();
+    applyFilters();
 
 });

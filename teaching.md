@@ -19,7 +19,7 @@ description: "Teaching and thesis supervision by Erik Renz."
         <input
             id="teaching-search"
             type="search"
-            placeholder="Search courses..."
+            placeholder="Search"
             aria-label="Search courses"
         >
 
