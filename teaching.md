@@ -468,10 +468,7 @@ description: "Teaching and thesis supervision by Erik Renz."
                 <div class="teaching-abstract-panel">
 
                     <p>
-                        Die Übung begleitet die interdisziplinäre Ringvorlesung
-                        <a href="https://www.germanistik.uni-rostock.de/forschung/digital-humanities/rosdh/ringvorlesung/">
-                            „Digital Humanities im Fokus: Methoden, Anwendungen und Perspektiven“
-                        </a>
+                        Die Übung begleitet die interdisziplinäre Ringvorlesung „<a href="https://www.germanistik.uni-rostock.de/forschung/digital-humanities/rosdh/ringvorlesung/">Digital Humanities im Fokus: Methoden, Anwendungen und Perspektiven</a>“ 
                         und vertieft deren zentrale Inhalte.
                     </p>
 
