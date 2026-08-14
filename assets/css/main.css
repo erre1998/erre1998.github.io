@@ -934,393 +934,6 @@ a:focus-visible {
 
 }
 
-
-/* ---------------------------------
-   Teaching
----------------------------------- */
-
-.teaching {
-    width: 100%;
-}
-
-
-/* ---------------------------------
-   Teaching list
----------------------------------- */
-
-.teaching-list {
-    display: grid;
-
-    gap: 0.9rem;
-}
-
-
-/* ---------------------------------
-   Teaching course
----------------------------------- */
-
-.teaching-course {
-    position: relative;
-
-    overflow: hidden;
-
-    border: 1px solid var(--color-border);
-    border-radius: 7px;
-
-    background-color: var(--color-surface);
-
-    transition:
-        border-color 0.18s ease,
-        box-shadow 0.18s ease;
-}
-
-.teaching-course:hover {
-    border-color: rgba(35, 91, 133, 0.62);
-
-    box-shadow:
-        0 5px 16px rgba(25, 47, 79, 0.05);
-}
-
-.teaching-course:focus-within {
-    border-color: var(--color-primary);
-}
-
-
-/* Colored edge surrounding the course visually */
-
-.teaching-course::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    bottom: 0;
-    left: 0;
-
-    width: 4px;
-
-    background:
-        linear-gradient(
-            180deg,
-            var(--color-primary),
-            var(--color-accent)
-        );
-
-    opacity: 0.85;
-
-    pointer-events: none;
-}
-
-
-/* ---------------------------------
-   Teaching course header
----------------------------------- */
-
-.teaching-course-header {
-    padding:
-        1rem
-        1.1rem
-        0.8rem
-        1.3rem;
-}
-
-.teaching-course-title {
-    margin: 0;
-
-    color: var(--color-text);
-
-    font-size: 1rem;
-    font-weight: 600;
-
-    line-height: 1.45;
-    letter-spacing: -0.006em;
-}
-
-.teaching-course-title a {
-    color: inherit;
-
-    text-decoration: none;
-
-    transition: color 0.18s ease;
-}
-
-.teaching-course-title a:hover {
-    color: var(--color-primary);
-}
-
-.teaching-course-title a:focus-visible {
-    color: var(--color-primary);
-
-    outline: 2px solid var(--color-primary);
-    outline-offset: 3px;
-}
-
-
-/* ---------------------------------
-   Teaching badges
----------------------------------- */
-
-.teaching-badges {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
-    gap: 0.45rem;
-
-    margin-top: 0.7rem;
-}
-
-.teaching-badge {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 0.35rem;
-
-    min-height: 1.75rem;
-
-    padding: 0.28rem 0.55rem;
-
-    border: 1px solid rgba(72, 108, 120, 0.32);
-    border-radius: 999px;
-
-    background-color: rgba(48, 141, 182, 0.055);
-
-    color: var(--color-text);
-
-    font-size: 0.73rem;
-    line-height: 1.3;
-
-    white-space: nowrap;
-}
-
-.teaching-badge-label {
-    color: var(--color-muted);
-
-    font-size: 0.62rem;
-    font-weight: 600;
-
-    letter-spacing: 0.055em;
-    text-transform: uppercase;
-}
-
-.teaching-badge-value {
-    color: var(--color-text);
-
-    font-weight: 500;
-}
-
-
-/* Subtle distinction between metadata types */
-
-.teaching-badge:nth-child(1) {
-    background-color: rgba(48, 141, 182, 0.055);
-}
-
-.teaching-badge:nth-child(2) {
-    background-color: rgba(187, 158, 118, 0.08);
-}
-
-.teaching-badge:nth-child(3) {
-    background-color: rgba(68, 93, 75, 0.06);
-}
-
-.teaching-badge:nth-child(4) {
-    background-color: rgba(48, 141, 182, 0.045);
-}
-
-.teaching-badge:nth-child(5) {
-    background-color: rgba(35, 91, 133, 0.055);
-}
-
-
-/* ---------------------------------
-   Teaching abstract
----------------------------------- */
-
-.teaching-abstract {
-    padding:
-        0
-        1.1rem
-        0.95rem
-        1.3rem;
-}
-
-.teaching-abstract summary {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 0.45rem;
-
-    width: fit-content;
-
-    margin: 0;
-    padding: 0.34rem 0.6rem;
-
-    border: 1px solid var(--color-primary);
-    border-radius: 4px;
-
-    background-color: transparent;
-    color: var(--color-primary);
-
-    font-size: 0.72rem;
-    font-weight: 600;
-
-    line-height: 1.3;
-
-    cursor: pointer;
-    list-style: none;
-    user-select: none;
-
-    transition:
-        background-color 0.18s ease,
-        border-color 0.18s ease,
-        color 0.18s ease;
-}
-
-.teaching-abstract summary::-webkit-details-marker {
-    display: none;
-}
-
-.teaching-abstract summary::after {
-    content: "+";
-
-    color: var(--color-accent);
-
-    font-size: 0.9rem;
-    font-weight: 400;
-
-    line-height: 1;
-}
-
-.teaching-abstract summary:hover {
-    border-color: var(--color-accent);
-
-    background-color: rgba(48, 141, 182, 0.07);
-
-    color: var(--color-text);
-}
-
-.teaching-abstract summary:focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 3px;
-}
-
-.teaching-abstract[open] summary {
-    border-color: var(--color-text);
-
-    background-color: var(--color-text);
-    color: var(--color-surface);
-}
-
-.teaching-abstract[open] summary::after {
-    content: "−";
-
-    color: var(--color-surface);
-}
-
-
-/* ---------------------------------
-   Teaching abstract panel
----------------------------------- */
-
-.teaching-abstract-panel {
-    margin-top: 0.75rem;
-    padding: 0.9rem 1rem;
-
-    border: 1px solid var(--color-border);
-    border-left: 3px solid var(--color-warm);
-    border-radius: 5px;
-
-    background-color: rgba(187, 158, 118, 0.08);
-
-    color: var(--color-muted);
-
-    font-size: 0.86rem;
-    line-height: 1.68;
-}
-
-.teaching-abstract-panel > :first-child {
-    margin-top: 0;
-}
-
-.teaching-abstract-panel > :last-child {
-    margin-bottom: 0;
-}
-
-
-/* Visually emphasize an opened course */
-
-.teaching-course:has(.teaching-abstract[open]) {
-    border-color: rgba(35, 91, 133, 0.72);
-
-    box-shadow:
-        0 6px 20px rgba(25, 47, 79, 0.06);
-}
-
-
-/* ---------------------------------
-   Teaching responsive
----------------------------------- */
-
-@media (max-width: 700px) {
-
-    .teaching-list {
-        gap: 0.8rem;
-    }
-
-    .teaching-course-header {
-        padding:
-            0.95rem
-            0.9rem
-            0.75rem
-            1.1rem;
-    }
-
-    .teaching-course::before {
-        width: 3px;
-    }
-
-    .teaching-course-title {
-        font-size: 0.96rem;
-    }
-
-    .teaching-badges {
-        gap: 0.4rem;
-    }
-
-    .teaching-badge {
-        white-space: normal;
-    }
-
-    .teaching-abstract {
-        padding:
-            0
-            0.9rem
-            0.9rem
-            1.1rem;
-    }
-
-    .teaching-abstract-panel {
-        font-size: 0.84rem;
-    }
-
-}
-
-@media (max-width: 420px) {
-
-    .teaching-badge {
-        padding: 0.26rem 0.5rem;
-
-        font-size: 0.7rem;
-    }
-
-    .teaching-badge-label {
-        font-size: 0.59rem;
-    }
-
-}
-
-
 /* ---------------------------------
    Footer
 ---------------------------------- */
@@ -1653,97 +1266,274 @@ a:focus-visible {
 }
 
 /* ---------------------------------
-   Teaching filter
+   Teaching
 ---------------------------------- */
 
-.teaching-filter {
-    margin-bottom: 1.5rem;
-    padding: 0.9rem 1rem;
+.teaching {
+    width: 100%;
 
-    border: 1px solid var(--color-border);
-    border-radius: 7px;
+    --teaching-color-1: #17525b;
+    --teaching-color-2: #19405d;
+    --teaching-color-3: #32586b;
+    --teaching-color-4: #123348;
 
-    background-color: rgba(255, 255, 255, 0.45);
+    --abstract-color-1: #43741a;
+    --abstract-color-2: #84b87d;
+    --abstract-color-3: #549291;
+    --abstract-color-4: #164319;
 }
 
 
-.teaching-filter-header {
+/* ---------------------------------
+   Teaching toolbar
+---------------------------------- */
+
+.teaching-toolbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
 
-    gap: 1rem;
+    gap: 0.65rem;
 
     margin-bottom: 0.7rem;
 }
 
 
-.teaching-filter-title {
-    color: var(--color-muted);
+.teaching-toolbar input,
+.teaching-toolbar select,
+.teaching-toolbar button {
+    min-height: 2.5rem;
 
-    font-size: 0.68rem;
-    font-weight: 600;
+    padding: 0.5rem 0.7rem;
 
-    letter-spacing: 0.075em;
-    text-transform: uppercase;
+    border: 1px solid var(--color-border);
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font: inherit;
+    font-size: 0.85rem;
 }
 
 
-.teaching-filter-reset {
-    padding: 0;
+.teaching-toolbar input[type="search"] {
+    flex: 1 1 220px;
 
-    border: 0;
+    min-width: 180px;
+}
 
-    background: none;
-    color: var(--color-primary);
 
-    font: inherit;
-    font-size: 0.72rem;
-    font-weight: 500;
-
+.teaching-toolbar select {
     cursor: pointer;
 }
 
 
-.teaching-filter-reset:hover {
-    color: var(--color-text);
+.teaching-toolbar button {
+    cursor: pointer;
 
-    text-decoration: underline;
-    text-underline-offset: 0.18em;
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background-color 0.18s ease;
 }
 
 
-.teaching-filter-reset:focus-visible {
-    outline: 2px solid var(--color-primary);
+.teaching-toolbar button:hover {
+    border-color: var(--teaching-color-1);
+
+    color: var(--teaching-color-1);
+}
+
+
+.teaching-toolbar input:focus,
+.teaching-toolbar select:focus,
+.teaching-toolbar button:focus-visible {
+    outline: 2px solid var(--teaching-color-1);
+    outline-offset: 2px;
+}
+
+
+.teaching-filter-status {
+    min-height: 1.3rem;
+
+    margin:
+        0
+        0
+        1.5rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* ---------------------------------
+   Teaching list
+---------------------------------- */
+
+.teaching-list {
+    display: grid;
+
+    gap: 0.9rem;
+}
+
+
+/* ---------------------------------
+   Teaching course
+---------------------------------- */
+
+.teaching-course {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(50, 88, 107, 0.34);
+    border-radius: 7px;
+
+    background-color: var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+.teaching-course:hover {
+    border-color: rgba(23, 82, 91, 0.72);
+
+    box-shadow:
+        0 5px 17px rgba(18, 51, 72, 0.07);
+}
+
+
+.teaching-course:focus-within {
+    border-color: var(--teaching-color-1);
+}
+
+
+.teaching-course::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--teaching-color-1),
+            var(--teaching-color-2)
+        );
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------
+   Teaching title
+---------------------------------- */
+
+.teaching-course-header {
+    padding:
+        1rem
+        1.1rem
+        0.8rem
+        1.3rem;
+}
+
+
+.teaching-course-title {
+    margin: 0;
+
+    color: var(--teaching-color-4);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+    letter-spacing: -0.006em;
+}
+
+
+.teaching-course-title a {
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease;
+}
+
+
+.teaching-course-title a:hover {
+    color: var(--teaching-color-1);
+}
+
+
+.teaching-course-title a:focus-visible {
+    color: var(--teaching-color-1);
+
+    outline:
+        2px solid
+        var(--teaching-color-1);
+
     outline-offset: 3px;
 }
 
 
-/* Filter controls */
+/* ---------------------------------
+   Teaching badges
+---------------------------------- */
 
-.teaching-filter-controls {
+.teaching-badges {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     flex-wrap: wrap;
 
-    gap: 0.5rem;
+    gap: 0.45rem;
+
+    margin-top: 0.7rem;
 }
 
 
-.teaching-filter-field {
-    display: flex;
-    flex-direction: column;
+.teaching-badge {
+    display: inline-flex;
+    align-items: center;
 
-    gap: 0.2rem;
+    gap: 0.35rem;
+
+    min-height: 1.75rem;
+
+    padding:
+        0.28rem
+        0.55rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.32);
+
+    border-radius: 999px;
+
+    background-color:
+        rgba(50, 88, 107, 0.055);
+
+    color: var(--teaching-color-4);
+
+    font-size: 0.73rem;
+    line-height: 1.3;
+
+    white-space: nowrap;
 }
 
 
-.teaching-filter-field > span {
-    padding-left: 0.15rem;
+.teaching-badge-label {
+    color: var(--teaching-color-3);
 
-    color: var(--color-muted);
-
-    font-size: 0.6rem;
+    font-size: 0.62rem;
     font-weight: 600;
 
     letter-spacing: 0.055em;
@@ -1751,52 +1541,238 @@ a:focus-visible {
 }
 
 
-.teaching-filter-field select {
-    min-height: 2rem;
+.teaching-badge-value {
+    color: var(--teaching-color-4);
 
-    max-width: 190px;
+    font-weight: 500;
+}
 
-    padding: 0.32rem 1.8rem 0.32rem 0.6rem;
 
-    border: 1px solid rgba(72, 108, 120, 0.4);
-    border-radius: 999px;
+/* Location */
 
-    background-color: var(--color-surface);
-    color: var(--color-text);
+.teaching-badge:nth-child(1) {
+    border-color:
+        rgba(23, 82, 91, 0.34);
 
-    font: inherit;
+    background-color:
+        rgba(23, 82, 91, 0.07);
+}
+
+
+/* Term */
+
+.teaching-badge:nth-child(2) {
+    border-color:
+        rgba(25, 64, 93, 0.32);
+
+    background-color:
+        rgba(25, 64, 93, 0.065);
+}
+
+
+/* Type */
+
+.teaching-badge:nth-child(3) {
+    border-color:
+        rgba(50, 88, 107, 0.34);
+
+    background-color:
+        rgba(50, 88, 107, 0.065);
+}
+
+
+/* SWS */
+
+.teaching-badge:nth-child(4) {
+    border-color:
+        rgba(18, 51, 72, 0.28);
+
+    background-color:
+        rgba(18, 51, 72, 0.05);
+}
+
+
+/* Language */
+
+.teaching-badge:nth-child(5) {
+    border-color:
+        rgba(23, 82, 91, 0.26);
+
+    background-color:
+        rgba(23, 82, 91, 0.045);
+}
+
+
+/* ---------------------------------
+   Teaching abstract
+---------------------------------- */
+
+.teaching-abstract {
+    padding:
+        0
+        1.1rem
+        0.95rem
+        1.3rem;
+}
+
+
+.teaching-abstract summary {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.45rem;
+
+    width: fit-content;
+
+    margin: 0;
+
+    padding:
+        0.34rem
+        0.6rem;
+
+    border:
+        1px solid
+        var(--abstract-color-1);
+
+    border-radius: 4px;
+
+    background-color: transparent;
+    color: var(--abstract-color-4);
+
     font-size: 0.72rem;
+    font-weight: 600;
+
+    line-height: 1.3;
 
     cursor: pointer;
+    list-style: none;
+    user-select: none;
+
+    transition:
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease;
 }
 
 
-.teaching-filter-field select:hover {
-    border-color: var(--color-primary);
+.teaching-abstract summary::-webkit-details-marker {
+    display: none;
 }
 
 
-.teaching-filter-field select:focus {
-    border-color: var(--color-primary);
+.teaching-abstract summary::after {
+    content: "+";
 
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
+    color: var(--abstract-color-1);
+
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    line-height: 1;
 }
 
 
-/* Result count */
+.teaching-abstract summary:hover {
+    border-color: var(--abstract-color-1);
 
-.teaching-filter-status {
-    margin: 0.65rem 0 0;
+    background-color:
+        rgba(132, 184, 125, 0.16);
 
-    color: var(--color-muted);
-
-    font-size: 0.7rem;
-    line-height: 1.4;
+    color: var(--abstract-color-4);
 }
 
 
-/* Hidden courses */
+.teaching-abstract summary:focus-visible {
+    outline:
+        2px solid
+        var(--abstract-color-1);
+
+    outline-offset: 3px;
+}
+
+
+.teaching-abstract[open] summary {
+    border-color:
+        var(--abstract-color-4);
+
+    background-color:
+        var(--abstract-color-4);
+
+    color: #ffffff;
+}
+
+
+.teaching-abstract[open] summary::after {
+    content: "−";
+
+    color: #ffffff;
+}
+
+
+/* ---------------------------------
+   Teaching abstract panel
+---------------------------------- */
+
+.teaching-abstract-panel {
+    margin-top: 0.75rem;
+
+    padding:
+        0.95rem
+        1rem;
+
+    border:
+        1px solid
+        rgba(84, 146, 145, 0.42);
+
+    border-left:
+        3px solid
+        var(--abstract-color-1);
+
+    border-radius: 5px;
+
+    background-color:
+        rgba(132, 184, 125, 0.11);
+
+    color: var(--abstract-color-4);
+
+    font-size: 0.86rem;
+    line-height: 1.68;
+}
+
+
+.teaching-abstract-panel a {
+    color: var(--abstract-color-1);
+}
+
+
+.teaching-abstract-panel a:hover {
+    color: var(--abstract-color-4);
+}
+
+
+.teaching-abstract-panel > :first-child {
+    margin-top: 0;
+}
+
+
+.teaching-abstract-panel > :last-child {
+    margin-bottom: 0;
+}
+
+
+.teaching-course:has(.teaching-abstract[open]) {
+    border-color:
+        rgba(67, 116, 26, 0.58);
+
+    box-shadow:
+        0 6px 20px
+        rgba(22, 67, 25, 0.065);
+}
+
+
+/* ---------------------------------
+   Filtered courses
+---------------------------------- */
 
 .teaching-course[hidden] {
     display: none;
@@ -1804,37 +1780,91 @@ a:focus-visible {
 
 
 /* ---------------------------------
-   Teaching filter responsive
+   Teaching responsive
 ---------------------------------- */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
-    .teaching-filter {
-        padding: 0.85rem;
+    .teaching-list {
+        gap: 0.8rem;
     }
 
 
-    .teaching-filter-controls {
-        align-items: stretch;
+    .teaching-course-header {
+        padding:
+            0.95rem
+            0.9rem
+            0.75rem
+            1.1rem;
     }
 
 
-    .teaching-filter-field {
-        flex: 1 1 calc(50% - 0.5rem);
+    .teaching-course::before {
+        width: 3px;
     }
 
 
-    .teaching-filter-field select {
-        width: 100%;
-        max-width: none;
+    .teaching-course-title {
+        font-size: 0.96rem;
+    }
+
+
+    .teaching-badges {
+        gap: 0.4rem;
+    }
+
+
+    .teaching-badge {
+        white-space: normal;
+    }
+
+
+    .teaching-abstract {
+        padding:
+            0
+            0.9rem
+            0.9rem
+            1.1rem;
+    }
+
+
+    .teaching-abstract-panel {
+        font-size: 0.84rem;
     }
 
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
 
-    .teaching-filter-field {
+    .teaching-toolbar {
+        align-items: stretch;
+    }
+
+
+    .teaching-toolbar input[type="search"] {
+        flex-basis: 100%;
+    }
+
+
+    .teaching-toolbar select {
+        flex:
+            1 1
+            calc(50% - 0.65rem);
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .teaching-toolbar select,
+    .teaching-toolbar button {
+        width: 100%;
+    }
+
+
+    .teaching-toolbar select {
         flex-basis: 100%;
     }
 

@@ -9,83 +9,147 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    /* ---------------------------------
+       Elements
+    ---------------------------------- */
+
+    const searchInput =
+        document.querySelector("#teaching-search");
+
     const filters = {
-        location: document.querySelector("#filter-location"),
-        term: document.querySelector("#filter-term"),
-        type: document.querySelector("#filter-type"),
-        language: document.querySelector("#filter-language"),
-        sws: document.querySelector("#filter-sws")
+        location:
+            document.querySelector("#filter-location"),
+
+        term:
+            document.querySelector("#filter-term"),
+
+        type:
+            document.querySelector("#filter-type"),
+
+        sws:
+            document.querySelector("#filter-sws"),
+
+        language:
+            document.querySelector("#filter-language")
     };
 
+    const resetButton =
+        document.querySelector("#teaching-filter-reset");
 
-    const resetButton = document.querySelector(
-        "#teaching-filter-reset"
-    );
-
-    const status = document.querySelector(
-        "#teaching-filter-status"
-    );
+    const status =
+        document.querySelector("#teaching-filter-status");
 
 
-    /*
-     * Build filter options automatically
-     * from course metadata.
-     */
+    /* ---------------------------------
+       Build filter options
+    ---------------------------------- */
 
-    Object.entries(filters).forEach(([key, select]) => {
+    Object.entries(filters)
+        .forEach(([key, select]) => {
 
-        if (!select) {
-            return;
-        }
+            if (!select) {
+                return;
+            }
 
-
-        const values = [
-            ...new Set(
-                courses
-                    .map(course => course.dataset[key])
-                    .filter(Boolean)
-            )
-        ];
-
-
-        /*
-         * Terms stay in the same chronological
-         * order as the courses.
-         * Other values are sorted alphabetically.
-         */
-
-        if (key !== "term") {
-            values.sort((a, b) =>
-                a.localeCompare(b, "en")
-            );
-        }
+            const values = [
+                ...new Set(
+                    courses
+                        .map(
+                            course =>
+                                course.dataset[key]
+                        )
+                        .filter(Boolean)
+                )
+            ];
 
 
-        values.forEach(value => {
+            /*
+             * Terms retain the chronological
+             * order of the course list.
+             */
 
-            const option = document.createElement("option");
+            if (key !== "term") {
 
-            option.value = value;
-            option.textContent = value;
+                values.sort(
+                    (a, b) =>
+                        a.localeCompare(
+                            b,
+                            "en"
+                        )
+                );
 
-            select.appendChild(option);
+            }
+
+
+            values.forEach(value => {
+
+                const option =
+                    document.createElement(
+                        "option"
+                    );
+
+                option.value =
+                    value;
+
+                option.textContent =
+                    value;
+
+                select.appendChild(
+                    option
+                );
+
+            });
 
         });
 
-    });
 
+    /* ---------------------------------
+       Searchable course text
+    ---------------------------------- */
+
+    function searchableText(course) {
+
+        return [
+            course.textContent,
+            course.dataset.location,
+            course.dataset.term,
+            course.dataset.type,
+            course.dataset.sws,
+            course.dataset.language
+        ]
+            .filter(Boolean)
+            .join(" ")
+            .replace(/\s+/g, " ")
+            .toLowerCase();
+
+    }
+
+
+    /* ---------------------------------
+       Apply filters
+    ---------------------------------- */
 
     function applyFilters() {
 
-        const activeFilters = {};
-
-        Object.entries(filters).forEach(([key, select]) => {
-
-            activeFilters[key] = select
-                ? select.value
+        const query =
+            searchInput
+                ? searchInput.value
+                    .trim()
+                    .toLowerCase()
                 : "";
 
-        });
+
+        const activeFilters = {};
+
+        Object.entries(filters)
+            .forEach(([key, select]) => {
+
+                activeFilters[key] =
+                    select
+                        ? select.value
+                        : "";
+
+            });
 
 
         let visibleCount = 0;
@@ -93,19 +157,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
         courses.forEach(course => {
 
-            const matches = Object.entries(activeFilters)
-                .every(([key, value]) => {
+            const matchesMetadata =
+                Object.entries(activeFilters)
+                    .every(
+                        ([key, value]) => {
 
-                    if (!value) {
-                        return true;
-                    }
+                            if (!value) {
+                                return true;
+                            }
 
-                    return course.dataset[key] === value;
+                            return (
+                                course.dataset[key] ===
+                                value
+                            );
 
-                });
+                        }
+                    );
 
 
-            course.hidden = !matches;
+            const matchesSearch =
+                !query ||
+                searchableText(course)
+                    .includes(query);
+
+
+            const matches =
+                matchesMetadata &&
+                matchesSearch;
+
+
+            course.hidden =
+                !matches;
 
 
             if (matches) {
@@ -115,46 +197,67 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-        if (status) {
-
-            const total = courses.length;
-
-            if (visibleCount === total) {
-
-                status.textContent =
-                    `${total} courses`;
-
-            } else {
-
-                status.textContent =
-                    `${visibleCount} of ${total} courses`;
-
-            }
-
-        }
+        updateStatus(
+            visibleCount
+        );
 
     }
 
 
-    Object.values(filters).forEach(select => {
+    /* ---------------------------------
+       Status
+    ---------------------------------- */
 
-        if (!select) {
+    function updateStatus(visibleCount) {
+
+        if (!status) {
             return;
         }
 
-        select.addEventListener(
-            "change",
-            applyFilters
-        );
 
-    });
+        const total =
+            courses.length;
 
 
-    if (resetButton) {
+        if (visibleCount === total) {
 
-        resetButton.addEventListener("click", () => {
+            status.textContent =
+                `${total} courses`;
 
-            Object.values(filters).forEach(select => {
+            return;
+
+        }
+
+
+        if (visibleCount === 0) {
+
+            status.textContent =
+                "No courses found.";
+
+            return;
+
+        }
+
+
+        status.textContent =
+            `${visibleCount} of ${total} courses`;
+
+    }
+
+
+    /* ---------------------------------
+       Reset
+    ---------------------------------- */
+
+    function resetFilters() {
+
+        if (searchInput) {
+            searchInput.value = "";
+        }
+
+
+        Object.values(filters)
+            .forEach(select => {
 
                 if (select) {
                     select.value = "";
@@ -163,12 +266,53 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
 
-            applyFilters();
-
-        });
+        applyFilters();
 
     }
 
+
+    /* ---------------------------------
+       Events
+    ---------------------------------- */
+
+    if (searchInput) {
+
+        searchInput.addEventListener(
+            "input",
+            applyFilters
+        );
+
+    }
+
+
+    Object.values(filters)
+        .forEach(select => {
+
+            if (!select) {
+                return;
+            }
+
+            select.addEventListener(
+                "change",
+                applyFilters
+            );
+
+        });
+
+
+    if (resetButton) {
+
+        resetButton.addEventListener(
+            "click",
+            resetFilters
+        );
+
+    }
+
+
+    /* ---------------------------------
+       Initialise
+    ---------------------------------- */
 
     applyFilters();
 

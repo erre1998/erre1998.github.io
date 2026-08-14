@@ -1,100 +1,84 @@
 ---
 layout: page
-title: Teaching &
+title: Teaching
 permalink: /teaching/
 description: "Teaching and thesis supervision by Erik Renz."
 ---
 
 <div class="teaching">
 
+    <!-- ---------------------------------
+         Search and filters
+    ---------------------------------- -->
+
     <div
-        class="teaching-filter"
-        aria-label="Filter courses"
+        class="teaching-toolbar"
+        aria-label="Search and filter courses"
     >
 
-        <div class="teaching-filter-header">
-
-            <span class="teaching-filter-title">
-                Filter
-            </span>
-
-            <button
-                class="teaching-filter-reset"
-                id="teaching-filter-reset"
-                type="button"
-            >
-                Reset
-            </button>
-
-        </div>
+        <input
+            id="teaching-search"
+            type="search"
+            placeholder="Search courses..."
+            aria-label="Search courses"
+        >
 
 
-        <div class="teaching-filter-controls">
-
-            <label class="teaching-filter-field">
-
-                <span>Location</span>
-
-                <select id="filter-location">
-                    <option value="">All locations</option>
-                </select>
-
-            </label>
+        <select
+            id="filter-location"
+            aria-label="Filter by location"
+        >
+            <option value="">All locations</option>
+        </select>
 
 
-            <label class="teaching-filter-field">
-
-                <span>Term</span>
-
-                <select id="filter-term">
-                    <option value="">All terms</option>
-                </select>
-
-            </label>
+        <select
+            id="filter-term"
+            aria-label="Filter by term"
+        >
+            <option value="">All terms</option>
+        </select>
 
 
-            <label class="teaching-filter-field">
-
-                <span>Type</span>
-
-                <select id="filter-type">
-                    <option value="">All types</option>
-                </select>
-
-            </label>
+        <select
+            id="filter-type"
+            aria-label="Filter by type"
+        >
+            <option value="">All types</option>
+        </select>
 
 
-            <label class="teaching-filter-field">
-
-                <span>Language</span>
-
-                <select id="filter-language">
-                    <option value="">All languages</option>
-                </select>
-
-            </label>
+        <select
+            id="filter-sws"
+            aria-label="Filter by SWS"
+        >
+            <option value="">All SWS</option>
+        </select>
 
 
-            <label class="teaching-filter-field">
-
-                <span>SWS</span>
-
-                <select id="filter-sws">
-                    <option value="">All</option>
-                </select>
-
-            </label>
-
-        </div>
+        <select
+            id="filter-language"
+            aria-label="Filter by language"
+        >
+            <option value="">All languages</option>
+        </select>
 
 
-        <p
-            class="teaching-filter-status"
-            id="teaching-filter-status"
-            aria-live="polite"
-        ></p>
+        <button
+            id="teaching-filter-reset"
+            type="button"
+        >
+            Reset
+        </button>
 
     </div>
+
+
+    <p
+        class="teaching-filter-status"
+        id="teaching-filter-status"
+        aria-live="polite"
+    ></p>
 
 
 
@@ -112,8 +96,8 @@ description: "Teaching and thesis supervision by Erik Renz."
             data-location="University of Rostock"
             data-term="Winter 2026/27"
             data-type="Exercise / Seminar"
-            data-language="German"
             data-sws="2"
+            data-language="German"
         >
 
             <div class="teaching-course-header">
@@ -145,13 +129,13 @@ description: "Teaching and thesis supervision by Erik Renz."
                     </span>
 
                     <span class="teaching-badge">
-                        <span class="teaching-badge-label">Language</span>
-                        <span class="teaching-badge-value">German</span>
+                        <span class="teaching-badge-label">SWS</span>
+                        <span class="teaching-badge-value">2</span>
                     </span>
 
                     <span class="teaching-badge">
-                        <span class="teaching-badge-label">SWS</span>
-                        <span class="teaching-badge-value">2</span>
+                        <span class="teaching-badge-label">Language</span>
+                        <span class="teaching-badge-value">German</span>
                     </span>
 
                 </div>
@@ -190,8 +174,8 @@ description: "Teaching and thesis supervision by Erik Renz."
             data-location="University of Rostock"
             data-term="Summer 2026"
             data-type="Seminar"
-            data-language="German"
             data-sws="2"
+            data-language="German"
         >
 
             <div class="teaching-course-header">
@@ -223,13 +207,13 @@ description: "Teaching and thesis supervision by Erik Renz."
                     </span>
 
                     <span class="teaching-badge">
-                        <span class="teaching-badge-label">Language</span>
-                        <span class="teaching-badge-value">German</span>
+                        <span class="teaching-badge-label">SWS</span>
+                        <span class="teaching-badge-value">2</span>
                     </span>
 
                     <span class="teaching-badge">
-                        <span class="teaching-badge-label">SWS</span>
-                        <span class="teaching-badge-value">2</span>
+                        <span class="teaching-badge-label">Language</span>
+                        <span class="teaching-badge-value">German</span>
                     </span>
 
                 </div>
@@ -272,8 +256,8 @@ description: "Teaching and thesis supervision by Erik Renz."
             data-location="University of Rostock"
             data-term="Summer 2026"
             data-type="Exercise / Seminar"
-            data-language="German"
             data-sws="2"
+            data-language="German"
         >
 
             <div class="teaching-course-header">
@@ -305,13 +289,13 @@ description: "Teaching and thesis supervision by Erik Renz."
                     </span>
 
                     <span class="teaching-badge">
-                        <span class="teaching-badge-label">Language</span>
-                        <span class="teaching-badge-value">German</span>
+                        <span class="teaching-badge-label">SWS</span>
+                        <span class="teaching-badge-value">2</span>
                     </span>
 
                     <span class="teaching-badge">
-                        <span class="teaching-badge-label">SWS</span>
-                        <span class="teaching-badge-value">2</span>
+                        <span class="teaching-badge-label">Language</span>
+                        <span class="teaching-badge-value">German</span>
                     </span>
 
                 </div>
@@ -350,8 +334,8 @@ description: "Teaching and thesis supervision by Erik Renz."
             data-location="University of Rostock"
             data-term="Winter 2025/26"
             data-type="Seminar"
-            data-language="German"
             data-sws="2"
+            data-language="German"
         >
 
             <div class="teaching-course-header">
@@ -383,13 +367,13 @@ description: "Teaching and thesis supervision by Erik Renz."
                     </span>
 
                     <span class="teaching-badge">
-                        <span class="teaching-badge-label">Language</span>
-                        <span class="teaching-badge-value">German</span>
+                        <span class="teaching-badge-label">SWS</span>
+                        <span class="teaching-badge-value">2</span>
                     </span>
 
                     <span class="teaching-badge">
-                        <span class="teaching-badge-label">SWS</span>
-                        <span class="teaching-badge-value">2</span>
+                        <span class="teaching-badge-label">Language</span>
+                        <span class="teaching-badge-value">German</span>
                     </span>
 
                 </div>
@@ -428,8 +412,8 @@ description: "Teaching and thesis supervision by Erik Renz."
             data-location="University of Rostock"
             data-term="Winter 2025/26"
             data-type="Exercise"
-            data-language="German"
             data-sws="2"
+            data-language="German"
         >
 
             <div class="teaching-course-header">
@@ -461,13 +445,13 @@ description: "Teaching and thesis supervision by Erik Renz."
                     </span>
 
                     <span class="teaching-badge">
-                        <span class="teaching-badge-label">Language</span>
-                        <span class="teaching-badge-value">German</span>
+                        <span class="teaching-badge-label">SWS</span>
+                        <span class="teaching-badge-value">2</span>
                     </span>
 
                     <span class="teaching-badge">
-                        <span class="teaching-badge-label">SWS</span>
-                        <span class="teaching-badge-value">2</span>
+                        <span class="teaching-badge-label">Language</span>
+                        <span class="teaching-badge-value">German</span>
                     </span>
 
                 </div>
@@ -484,16 +468,89 @@ description: "Teaching and thesis supervision by Erik Renz."
                 <div class="teaching-abstract-panel">
 
                     <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                        et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                        et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Die Übung begleitet die interdisziplinäre Ringvorlesung
+                        <a href="https://www.germanistik.uni-rostock.de/forschung/digital-humanities/rosdh/ringvorlesung/">
+                            „Digital Humanities im Fokus: Methoden, Anwendungen und Perspektiven“
+                        </a>
+                        und vertieft deren zentrale Inhalte.
+                    </p>
+
+                    <p>
+                        Die Teilnehmerinnen und Teilnehmer setzen sich mit aktuellen Forschungsthemen aus dem Bereich der digitalen Geisteswissenschaften, vornehmlich der Computational Literary Studies (CLS), auseinander und entwickeln im Zuge dessen eigene Ideen, die sie etwa in einem Blogpost aufarbeiten. Darüber hinaus bietet die Übung Raum für die Konzeption und Umsetzung eigener Projekte, in denen digitale Methoden praktisch erprobt werden können, welche beispielhaft im Rahmen von Abschlussarbeiten nachgenutzt werden können. So erweitern die Teilnehmenden ihre Fähigkeit, sich in neue theoretische und methodische Zusammenhänge einzuarbeiten, diese im Kontext der eigenen Disziplin kritisch zu reflektieren und gezielt auf selbst entwickelte wissenschaftliche Fragestellungen anzuwenden.
+                    </p>
+
+                </div>
+
+            </details>
+
+        </article>
+
+
+
+        <!-- Tutorium Einführung in die Digital Humanities -->
+
+        <article
+            class="teaching-course"
+            data-location="University of Rostock"
+            data-term="Winter 2023/24"
+            data-type="Tutorial"
+            data-sws="2"
+            data-language="German"
+        >
+
+            <div class="teaching-course-header">
+
+                <h2 class="teaching-course-title">
+                    Einführung in die Digital Humanities
+                </h2>
+
+
+                <div class="teaching-badges">
+
+                    <span class="teaching-badge">
+                        <span class="teaching-badge-label">Location</span>
+                        <span class="teaching-badge-value">University of Rostock</span>
+                    </span>
+
+                    <span class="teaching-badge">
+                        <span class="teaching-badge-label">Term</span>
+                        <span class="teaching-badge-value">Winter 2023/24</span>
+                    </span>
+
+                    <span class="teaching-badge">
+                        <span class="teaching-badge-label">Type</span>
+                        <span class="teaching-badge-value">Tutorial</span>
+                    </span>
+
+                    <span class="teaching-badge">
+                        <span class="teaching-badge-label">SWS</span>
+                        <span class="teaching-badge-value">2</span>
+                    </span>
+
+                    <span class="teaching-badge">
+                        <span class="teaching-badge-label">Language</span>
+                        <span class="teaching-badge-value">German</span>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <details class="teaching-abstract">
+
+                <summary>
+                    Abstract
+                </summary>
+
+                <div class="teaching-abstract-panel">
+
+                    <p>
+                        Das Tutorium ergänzt die Einführungsvorlesung „Einführung in die Digital Humanities“ als fakultatives Angebot. Es dient dazu, die in der Vorlesung behandelten Themen vertiefend nachzubereiten und sich auf die Prüfungsleistung, insbesondere Klausur und Testat, vorzubereiten. Neben einer Wiederholung zentraler Inhalte aus der Vorlesung erfolgt dies u. a. durch den Austausch über die empfohlene Fachliteratur, gemeinsame Lektüre, bedarfsorientierte Diskussionen sowie vereinzelte praktische Übungen.
+                    </p>
+
+                    <p>
+                        Für Studierende der Bachelorstudiengänge, die im Rahmen des Interdisziplinären Wahlbereichs (IDWB) neben der Vorlesung auch die Übung „Einführung in die Digital Humanities“ besuchen, bietet das Tutorium außerdem Unterstützung bei der Installation von Programmen und Tools, die in der Übung Anwendung finden.
                     </p>
 
                 </div>
@@ -508,4 +565,7 @@ description: "Teaching and thesis supervision by Erik Renz."
 </div>
 
 
-<script src="{{ '/assets/js/teaching.js' | relative_url }}" defer></script>
+<script
+    src="{{ '/assets/js/teaching.js' | relative_url }}"
+    defer
+></script>
