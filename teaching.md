@@ -559,6 +559,219 @@ description: "Teaching and thesis supervision by Erik Renz."
 
     </div>
 
+    <!-- =========================================
+         Thesis Supervisions
+    ========================================== -->
+
+    <section class="thesis-supervisions">
+
+        <h2 class="thesis-supervisions-title">
+            Thesis Supervisions
+        </h2>
+
+
+        <div class="thesis-list">
+
+
+            <!-- Ehekonzepte -->
+
+            <article
+                class="thesis-entry"
+                data-role="First Supervisor"
+                data-supervisor="Ulrike Henny-Krahmer"
+                data-term="Winter 2026/27"
+                data-type="Bachelor's Thesis"
+                data-language="German"
+            >
+
+                <h3 class="thesis-title">
+                    Ehekonzepte in den Dramen des 19. Jahrhunderts am Beispiel von Charlotte Birch-Pfeiffer und Marie von Ebner-Eschenbach
+                </h3>
+
+
+                <div class="thesis-badges">
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Role</span>
+                        <span class="thesis-badge-value">First Supervisor</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Other Supervisor</span>
+                        <span class="thesis-badge-value">Ulrike Henny-Krahmer</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Term</span>
+                        <span class="thesis-badge-value">Winter 2026/27</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Type</span>
+                        <span class="thesis-badge-value">Bachelor's Thesis</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Language</span>
+                        <span class="thesis-badge-value">German</span>
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Frauenbild in der Aufklärung -->
+
+            <article
+                class="thesis-entry"
+                data-role="First Supervisor"
+                data-supervisor="Ulrike Henny-Krahmer"
+                data-term="Winter 2025/26"
+                data-type="Bachelor's Thesis"
+                data-language="German"
+            >
+
+                <h3 class="thesis-title">
+                    Das Frauenbild in der Aufklärung am Beispiel der <em>Emilia Galotti</em> von Gotthold Ephraim Lessing
+                </h3>
+
+
+                <div class="thesis-badges">
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Role</span>
+                        <span class="thesis-badge-value">First Supervisor</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Other Supervisor</span>
+                        <span class="thesis-badge-value">Ulrike Henny-Krahmer</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Term</span>
+                        <span class="thesis-badge-value">Winter 2025/26</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Type</span>
+                        <span class="thesis-badge-value">Bachelor's Thesis</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Language</span>
+                        <span class="thesis-badge-value">German</span>
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Gestaltung des Chores -->
+
+            <article
+                class="thesis-entry"
+                data-role="First Supervisor"
+                data-supervisor="Ulrike Henny-Krahmer"
+                data-term="Winter 2026/27"
+                data-type="Bachelor's Thesis"
+                data-language="German"
+            >
+
+                <h3 class="thesis-title">
+                    Die Gestaltung des Chores in Dramen der deutschen Klassik am Beispiel von Schillers <em>Die Braut von Messina</em>
+                </h3>
+
+
+                <div class="thesis-badges">
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Role</span>
+                        <span class="thesis-badge-value">First Supervisor</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Other Supervisor</span>
+                        <span class="thesis-badge-value">Ulrike Henny-Krahmer</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Term</span>
+                        <span class="thesis-badge-value">Winter 2026/27</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Type</span>
+                        <span class="thesis-badge-value">Bachelor's Thesis</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Language</span>
+                        <span class="thesis-badge-value">German</span>
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Körper, Krankheit und Phantastik -->
+
+            <article
+                class="thesis-entry"
+                data-role="First Supervisor"
+                data-supervisor="Ulrike Henny-Krahmer"
+                data-term="Winter 2026/27"
+                data-type="Master's Thesis"
+                data-language="German"
+            >
+
+                <h3 class="thesis-title">
+                    Körper, Krankheit und Phantastik: Eine digital gestützte Analyse subjektiver Krankheitserfahrung in Walter Moers’ <em>Prinzessin Insomnia</em>
+                </h3>
+
+
+                <div class="thesis-badges">
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Role</span>
+                        <span class="thesis-badge-value">First Supervisor</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Other Supervisor</span>
+                        <span class="thesis-badge-value">Ulrike Henny-Krahmer</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Term</span>
+                        <span class="thesis-badge-value">Winter 2026/27</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Type</span>
+                        <span class="thesis-badge-value">Master's Thesis</span>
+                    </span>
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">Language</span>
+                        <span class="thesis-badge-value">German</span>
+                    </span>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+    
 </div>
 
 
