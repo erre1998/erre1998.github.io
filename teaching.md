@@ -1,465 +1,396 @@
 ---
 layout: page
-title: Teaching & Thesis Supervision
+title: Teaching
 permalink: /teaching/
 description: "Teaching and thesis supervision by Erik Renz."
 ---
 
 <div class="teaching">
 
-    <p class="teaching-intro">
-        Selected courses taught at university level.
-    </p>
+    <div class="teaching-list">
 
 
-    <!-- Winter Semester 2026/27 -->
+        <!-- Dramen von Autorinnen -->
 
-    <section class="teaching-term">
+        <article class="teaching-course">
 
-        <header class="teaching-term-header">
+            <div class="teaching-course-header">
 
-            <span class="teaching-term-marker" aria-hidden="true"></span>
+                <h2 class="teaching-course-title">
 
-            <h2 class="teaching-term-title">
-                Winter Semester 2026/27
-            </h2>
+                    <a href="https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;publishid=186801&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung">
+                        Dramen von Autorinnen des 19. Jahrhunderts:
+                        Digitale Erschließung und korpusbasierte Analyse
+                    </a>
 
-        </header>
+                </h2>
 
-
-        <div class="teaching-courses">
-
-            <article class="teaching-course">
-
-                <div class="teaching-course-main">
-
-                    <h3 class="teaching-course-title">
-
-                        <a
-                            href="https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&status=init&vmfile=no&publishid=186801&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Dramen von Autorinnen des 19. Jahrhunderts:
-                            Digitale Erschließung und korpusbasierte Analyse
-
-                            <span class="teaching-external" aria-hidden="true">
-                                ↗
-                            </span>
-
-                            <span class="sr-only">
-                                (opens in a new tab)
-                            </span>
-                        </a>
-
-                    </h3>
+            </div>
 
 
-                    <p class="teaching-course-institution">
-                        University of Rostock
+            <dl class="teaching-meta">
+
+                <div class="teaching-meta-item">
+                    <dt>Location</dt>
+                    <dd>University of Rostock</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Language</dt>
+                    <dd>German</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Type</dt>
+                    <dd>Exercise / Seminar</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>SWS</dt>
+                    <dd>2</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Term</dt>
+                    <dd>Winter 2026/27</dd>
+                </div>
+
+            </dl>
+
+
+            <details class="teaching-abstract">
+
+                <summary>
+                    Abstract
+                </summary>
+
+                <div class="teaching-abstract-panel">
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                        et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                        et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
                     </p>
-
-
-                    <div class="teaching-course-meta">
-
-                        <span class="teaching-course-type">
-                            Exercise / Seminar
-                        </span>
-
-                        <span class="teaching-course-separator" aria-hidden="true">
-                            ·
-                        </span>
-
-                        <span>
-                            2 SWS
-                        </span>
-
-                    </div>
-
-
-                    <details class="teaching-abstract">
-
-                        <summary>
-                            <span>Abstract</span>
-                        </summary>
-
-                        <div class="teaching-abstract-content">
-
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                                no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                                no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                            </p>
-
-                        </div>
-
-                    </details>
 
                 </div>
 
-            </article>
+            </details>
 
-        </div>
-
-    </section>
+        </article>
 
 
-    <!-- Summer Semester 2026 -->
 
-    <section class="teaching-term">
+        <!-- Büchner -->
 
-        <header class="teaching-term-header">
+        <article class="teaching-course">
 
-            <span class="teaching-term-marker" aria-hidden="true"></span>
+            <div class="teaching-course-header">
 
-            <h2 class="teaching-term-title">
-                Summer Semester 2026
-            </h2>
+                <h2 class="teaching-course-title">
 
-        </header>
+                    <a href="https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;navigationPosition=lectures%2Csearch&amp;breadcrumb=searchLectures&amp;topitem=lectures&amp;subitem=search&amp;veranstaltung.veranstid=183301">
+                        „Ein guter Mord, ein echter Mord, ein schöner Mord.“:
+                        Ästhetiken der Gewalt im Œuvre Georg Büchners
+                    </a>
 
+                </h2>
 
-        <div class="teaching-courses">
-
-            <article class="teaching-course">
-
-                <div class="teaching-course-main">
-
-                    <h3 class="teaching-course-title">
-
-                        <a
-                            href="https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung&navigationPosition=lectures%2Csearch&breadcrumb=searchLectures&topitem=lectures&subitem=search&veranstaltung.veranstid=183301"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            „Ein guter Mord, ein echter Mord, ein schöner Mord.“:
-                            Ästhetiken der Gewalt im Œuvre Georg Büchners
-
-                            <span class="teaching-external" aria-hidden="true">
-                                ↗
-                            </span>
-
-                            <span class="sr-only">
-                                (opens in a new tab)
-                            </span>
-                        </a>
-
-                    </h3>
+            </div>
 
 
-                    <p class="teaching-course-institution">
-                        University of Rostock
+            <dl class="teaching-meta">
+
+                <div class="teaching-meta-item">
+                    <dt>Location</dt>
+                    <dd>University of Rostock</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Language</dt>
+                    <dd>German</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Type</dt>
+                    <dd>Seminar</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>SWS</dt>
+                    <dd>2</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Term</dt>
+                    <dd>Summer 2026</dd>
+                </div>
+
+            </dl>
+
+
+            <details class="teaching-abstract">
+
+                <summary>
+                    Abstract
+                </summary>
+
+                <div class="teaching-abstract-panel">
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                        et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                        et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
                     </p>
-
-
-                    <div class="teaching-course-meta">
-
-                        <span class="teaching-course-type">
-                            Seminar
-                        </span>
-
-                        <span class="teaching-course-separator" aria-hidden="true">
-                            ·
-                        </span>
-
-                        <span>
-                            2 SWS
-                        </span>
-
-                    </div>
-
-
-                    <details class="teaching-abstract">
-
-                        <summary>
-                            <span>Abstract</span>
-                        </summary>
-
-                        <div class="teaching-abstract-content">
-
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                                no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                                no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                            </p>
-
-                        </div>
-
-                    </details>
 
                 </div>
 
-            </article>
+            </details>
+
+        </article>
 
 
-            <article class="teaching-course">
 
-                <div class="teaching-course-main">
+        <!-- Textanalyse -->
 
-                    <h3 class="teaching-course-title">
+        <article class="teaching-course">
 
-                        <a
-                            href="https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung&navigationPosition=lectures%2Csearch&breadcrumb=searchLectures&topitem=lectures&subitem=search&veranstaltung.veranstid=183313"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Textanalyse mit digitalen Methoden und KI-Tools
+            <div class="teaching-course-header">
 
-                            <span class="teaching-external" aria-hidden="true">
-                                ↗
-                            </span>
+                <h2 class="teaching-course-title">
 
-                            <span class="sr-only">
-                                (opens in a new tab)
-                            </span>
-                        </a>
+                    <a href="https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;navigationPosition=lectures%2Csearch&amp;breadcrumb=searchLectures&amp;topitem=lectures&amp;subitem=search&amp;veranstaltung.veranstid=183313">
+                        Textanalyse mit digitalen Methoden und KI-Tools
+                    </a>
 
-                    </h3>
+                </h2>
+
+            </div>
 
 
-                    <p class="teaching-course-institution">
-                        University of Rostock
+            <dl class="teaching-meta">
+
+                <div class="teaching-meta-item">
+                    <dt>Location</dt>
+                    <dd>University of Rostock</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Language</dt>
+                    <dd>German</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Type</dt>
+                    <dd>Exercise / Seminar</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>SWS</dt>
+                    <dd>2</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Term</dt>
+                    <dd>Summer 2026</dd>
+                </div>
+
+            </dl>
+
+
+            <details class="teaching-abstract">
+
+                <summary>
+                    Abstract
+                </summary>
+
+                <div class="teaching-abstract-panel">
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                        et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                        et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
                     </p>
-
-
-                    <div class="teaching-course-meta">
-
-                        <span class="teaching-course-type">
-                            Exercise / Seminar
-                        </span>
-
-                        <span class="teaching-course-separator" aria-hidden="true">
-                            ·
-                        </span>
-
-                        <span>
-                            2 SWS
-                        </span>
-
-                    </div>
-
-
-                    <details class="teaching-abstract">
-
-                        <summary>
-                            <span>Abstract</span>
-                        </summary>
-
-                        <div class="teaching-abstract-content">
-
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                                no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                                no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                            </p>
-
-                        </div>
-
-                    </details>
 
                 </div>
 
-            </article>
+            </details>
 
-        </div>
-
-    </section>
+        </article>
 
 
-    <!-- Winter Semester 2025/26 -->
 
-    <section class="teaching-term">
+        <!-- Ebner-Eschenbach -->
 
-        <header class="teaching-term-header">
+        <article class="teaching-course">
 
-            <span class="teaching-term-marker" aria-hidden="true"></span>
+            <div class="teaching-course-header">
 
-            <h2 class="teaching-term-title">
-                Winter Semester 2025/26
-            </h2>
+                <h2 class="teaching-course-title">
 
-        </header>
+                    <a href="https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;navigationPosition=lectures%2Csearch&amp;breadcrumb=searchLectures&amp;topitem=lectures&amp;subitem=search&amp;veranstaltung.veranstid=177988">
+                        Die Dramatikerin Marie von Ebner-Eschenbach
+                    </a>
 
+                </h2>
 
-        <div class="teaching-courses">
-
-            <article class="teaching-course">
-
-                <div class="teaching-course-main">
-
-                    <h3 class="teaching-course-title">
-
-                        <a
-                            href="https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung&navigationPosition=lectures%2Csearch&breadcrumb=searchLectures&topitem=lectures&subitem=search&veranstaltung.veranstid=177988"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Die Dramatikerin Marie von Ebner-Eschenbach
-
-                            <span class="teaching-external" aria-hidden="true">
-                                ↗
-                            </span>
-
-                            <span class="sr-only">
-                                (opens in a new tab)
-                            </span>
-                        </a>
-
-                    </h3>
+            </div>
 
 
-                    <p class="teaching-course-institution">
-                        University of Rostock
+            <dl class="teaching-meta">
+
+                <div class="teaching-meta-item">
+                    <dt>Location</dt>
+                    <dd>University of Rostock</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Language</dt>
+                    <dd>German</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Type</dt>
+                    <dd>Seminar</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>SWS</dt>
+                    <dd>2</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Term</dt>
+                    <dd>Winter 2025/26</dd>
+                </div>
+
+            </dl>
+
+
+            <details class="teaching-abstract">
+
+                <summary>
+                    Abstract
+                </summary>
+
+                <div class="teaching-abstract-panel">
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                        et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                        et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
                     </p>
-
-
-                    <div class="teaching-course-meta">
-
-                        <span class="teaching-course-type">
-                            Seminar
-                        </span>
-
-                        <span class="teaching-course-separator" aria-hidden="true">
-                            ·
-                        </span>
-
-                        <span>
-                            2 SWS
-                        </span>
-
-                    </div>
-
-
-                    <details class="teaching-abstract">
-
-                        <summary>
-                            <span>Abstract</span>
-                        </summary>
-
-                        <div class="teaching-abstract-content">
-
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                                no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                                no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                            </p>
-
-                        </div>
-
-                    </details>
 
                 </div>
 
-            </article>
+            </details>
+
+        </article>
 
 
-            <article class="teaching-course">
 
-                <div class="teaching-course-main">
+        <!-- Ringvorlesung -->
 
-                    <h3 class="teaching-course-title">
+        <article class="teaching-course">
 
-                        <a
-                            href="https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung&navigationPosition=lectures%2Csearch&breadcrumb=searchLectures&topitem=lectures&subitem=search&veranstaltung.veranstid=177990"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Übung zur Ringvorlesung „Digital Humanities im Fokus:
-                            Methoden, Anwendungen und Perspektiven“
+            <div class="teaching-course-header">
 
-                            <span class="teaching-external" aria-hidden="true">
-                                ↗
-                            </span>
+                <h2 class="teaching-course-title">
 
-                            <span class="sr-only">
-                                (opens in a new tab)
-                            </span>
-                        </a>
+                    <a href="https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;navigationPosition=lectures%2Csearch&amp;breadcrumb=searchLectures&amp;topitem=lectures&amp;subitem=search&amp;veranstaltung.veranstid=177990">
+                        Übung zur Ringvorlesung „Digital Humanities im Fokus:
+                        Methoden, Anwendungen und Perspektiven“
+                    </a>
 
-                    </h3>
+                </h2>
+
+            </div>
 
 
-                    <p class="teaching-course-institution">
-                        University of Rostock
+            <dl class="teaching-meta">
+
+                <div class="teaching-meta-item">
+                    <dt>Location</dt>
+                    <dd>University of Rostock</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Language</dt>
+                    <dd>German</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Type</dt>
+                    <dd>Exercise</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>SWS</dt>
+                    <dd>2</dd>
+                </div>
+
+                <div class="teaching-meta-item">
+                    <dt>Term</dt>
+                    <dd>Winter 2025/26</dd>
+                </div>
+
+            </dl>
+
+
+            <details class="teaching-abstract">
+
+                <summary>
+                    Abstract
+                </summary>
+
+                <div class="teaching-abstract-panel">
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                        et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                        et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
                     </p>
-
-
-                    <div class="teaching-course-meta">
-
-                        <span class="teaching-course-type">
-                            Exercise
-                        </span>
-
-                        <span class="teaching-course-separator" aria-hidden="true">
-                            ·
-                        </span>
-
-                        <span>
-                            2 SWS
-                        </span>
-
-                    </div>
-
-
-                    <details class="teaching-abstract">
-
-                        <summary>
-                            <span>Abstract</span>
-                        </summary>
-
-                        <div class="teaching-abstract-content">
-
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                                no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                                no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                            </p>
-
-                        </div>
-
-                    </details>
 
                 </div>
 
-            </article>
+            </details>
 
-        </div>
+        </article>
 
-    </section>
+    </div>
 
 </div>
