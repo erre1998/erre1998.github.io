@@ -27,7 +27,9 @@ description: "Academic services, committee work, reviewing, and professional mem
             <article class="service-entry">
 
                 <div class="service-entry-date">
-                    04/2024–05/2025
+                    <strong>
+                        04/2024–05/2025
+                    </strong>
                 </div>
 
 
@@ -43,8 +45,8 @@ description: "Academic services, committee work, reviewing, and professional mem
                     </p>
 
 
-                    <p class="service-entry-institution">                     
-                            Faculty of Humanities, University of Rostock
+                    <p class="service-entry-institution">
+                        Faculty of Humanities, University of Rostock
                     </p>
 
                 </div>
@@ -58,7 +60,9 @@ description: "Academic services, committee work, reviewing, and professional mem
             <article class="service-entry">
 
                 <div class="service-entry-date">
-                    01/2024–11/2024
+                    <strong>
+                        01/2024–11/2024
+                    </strong>
                 </div>
 
 
@@ -97,7 +101,8 @@ description: "Academic services, committee work, reviewing, and professional mem
 
 
         <p class="services-events-reference">
-            For conferences, workshops, lecture series, and other events organized by me, see <a href="{{ '/events/' | relative_url }}">Organized Events</a>.
+            For conferences, workshops, lecture series, and other events organized by me, see
+            <a href="{{ '/events/' | relative_url }}">Organized Events</a>.
         </p>
 
 
@@ -109,7 +114,15 @@ description: "Academic services, committee work, reviewing, and professional mem
             <article class="service-entry">
 
                 <div class="service-entry-date">
-                    since 06/2026
+
+                    <span class="service-entry-date-label">
+                        since
+                    </span>
+
+                    <strong>
+                        06/2026
+                    </strong>
+
                 </div>
 
 
@@ -121,13 +134,7 @@ description: "Academic services, committee work, reviewing, and professional mem
                             href="https://www.i-d-e.de/"
                             target="_blank"
                             rel="noopener noreferrer"
-                        >
-                            Institut für Dokumentologie und Editorik (IDE)
-                        </a>
-
-                        <span class="service-entry-function">
-                            (Member)
-                        </span>
+                        >Institut für Dokumentologie und Editorik (IDE)</a><span class="service-entry-function">&nbsp;(Member)</span>
 
                     </p>
 
@@ -142,7 +149,11 @@ description: "Academic services, committee work, reviewing, and professional mem
             <article class="service-entry">
 
                 <div class="service-entry-date">
-                    2026
+
+                    <strong>
+                        2026
+                    </strong>
+
                 </div>
 
 
@@ -154,13 +165,7 @@ description: "Academic services, committee work, reviewing, and professional mem
                             href="https://editopia2026.i-d-e.de/"
                             target="_blank"
                             rel="noopener noreferrer"
-                        >
-                            Editopia 2026: Zur Zukunft von Dokumentologie und Editorik im Postdigitalen
-                        </a>
-
-                        <span class="service-entry-function">
-                            (Programme Committee)
-                        </span>
+                        >Editopia 2026: Zur Zukunft von Dokumentologie und Editorik im Postdigitalen</a><span class="service-entry-function">&nbsp;(Programme Committee)</span>
 
                     </p>
 
@@ -175,7 +180,15 @@ description: "Academic services, committee work, reviewing, and professional mem
             <article class="service-entry">
 
                 <div class="service-entry-date">
-                    since 11/2024
+
+                    <span class="service-entry-date-label">
+                        since
+                    </span>
+
+                    <strong>
+                        11/2024
+                    </strong>
+
                 </div>
 
 
@@ -187,13 +200,7 @@ description: "Academic services, committee work, reviewing, and professional mem
                             href="https://digitalhumanities.de/"
                             target="_blank"
                             rel="noopener noreferrer"
-                        >
-                            Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)
-                        </a>
-
-                        <span class="service-entry-function">
-                            (Member)
-                        </span>
+                        >Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)</a><span class="service-entry-function">&nbsp;(Member)</span>
 
                     </p>
 
@@ -208,7 +215,11 @@ description: "Academic services, committee work, reviewing, and professional mem
             <article class="service-entry">
 
                 <div class="service-entry-date">
-                    2025
+
+                    <strong>
+                        2025
+                    </strong>
+
                 </div>
 
 
@@ -220,13 +231,7 @@ description: "Academic services, committee work, reviewing, and professional mem
                             href="https://www.forge25.uni-rostock.de/"
                             target="_blank"
                             rel="noopener noreferrer"
-                        >
-                            FORGE 2025: Daten neu denken
-                        </a>
-
-                        <span class="service-entry-function">
-                            (Programme Committee)
-                        </span>
+                        >FORGE 2025: Daten neu denken</a><span class="service-entry-function">&nbsp;(Programme Committee)</span>
 
                     </p>
 
@@ -241,7 +246,11 @@ description: "Academic services, committee work, reviewing, and professional mem
             <article class="service-entry">
 
                 <div class="service-entry-date">
-                    2025
+
+                    <strong>
+                        2025
+                    </strong>
+
                 </div>
 
 
@@ -253,13 +262,7 @@ description: "Academic services, committee work, reviewing, and professional mem
                             href="https://jcls.io/"
                             target="_blank"
                             rel="noopener noreferrer"
-                        >
-                            Journal of Computational Literary Studies (JCLS)
-                        </a>
-
-                        <span class="service-entry-function">
-                            (Reviewer)
-                        </span>
+                        >Journal of Computational Literary Studies (JCLS)</a><span class="service-entry-function">&nbsp;(Reviewer)</span>
 
                     </p>
 
@@ -274,7 +277,15 @@ description: "Academic services, committee work, reviewing, and professional mem
             <article class="service-entry">
 
                 <div class="service-entry-date">
-                    since 04/2023
+
+                    <span class="service-entry-date-label">
+                        since
+                    </span>
+
+                    <strong>
+                        04/2023
+                    </strong>
+
                 </div>
 
 
@@ -286,13 +297,7 @@ description: "Academic services, committee work, reviewing, and professional mem
                             href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/"
                             target="_blank"
                             rel="noopener noreferrer"
-                        >
-                            Rostock Working Group Digital Humanities (RosDH)
-                        </a>
-
-                        <span class="service-entry-function">
-                            (Co-Organizer and Founding Member)
-                        </span>
+                        >Rostock Working Group Digital Humanities (RosDH)</a><span class="service-entry-function">&nbsp;(Co-Organizer and Founding Member)</span>
 
                     </p>
 

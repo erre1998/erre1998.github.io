@@ -15,11 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "#projects-filter-year"
         );
 
-    const statusFilter =
-        document.querySelector(
-            "#projects-filter-status"
-        );
-
     const resetButton =
         document.querySelector(
             "#projects-filter-reset"
@@ -106,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
     /* ---------------------------------
        Apply filters
     ---------------------------------- */
@@ -120,10 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const selectedYear =
             yearFilter?.value || "";
-
-
-        const selectedStatus =
-            statusFilter?.value || "";
 
 
         let visibleCount = 0;
@@ -155,16 +147,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
 
 
-            const matchesStatus =
-                !selectedStatus ||
-                project.dataset.status ===
-                    selectedStatus;
-
-
             const matches =
                 matchesSearch &&
-                matchesYear &&
-                matchesStatus;
+                matchesYear;
 
 
             project.hidden =
@@ -239,22 +224,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ---------------------------------
-       Filters
+       Year filter
     ---------------------------------- */
 
-    [
-        yearFilter,
-        statusFilter
-    ]
-        .filter(Boolean)
-        .forEach(select => {
+    if (yearFilter) {
 
-            select.addEventListener(
-                "change",
-                applyFilters
-            );
+        yearFilter.addEventListener(
+            "change",
+            applyFilters
+        );
 
-        });
+    }
 
 
     /* ---------------------------------
@@ -274,11 +254,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (yearFilter) {
                     yearFilter.value = "";
-                }
-
-
-                if (statusFilter) {
-                    statusFilter.value = "";
                 }
 
 

@@ -11,52 +11,42 @@ description: "Funded projects by Erik Renz."
          Search and filters
     ---------------------------------- -->
 
-    <div
-        class="projects-toolbar"
-        aria-label="Search and filter projects"
+<div
+    class="projects-toolbar"
+    aria-label="Search and filter projects"
+>
+
+    <input
+        id="projects-search"
+        type="search"
+        placeholder="Search"
+        aria-label="Search projects"
     >
 
-        <input
-            id="projects-search"
-            type="search"
-            placeholder="Search"
-            aria-label="Search projects"
-        >
+
+    <select
+        id="projects-filter-year"
+        aria-label="Filter by year"
+    >
+        <option value="">All years</option>
+    </select>
 
 
-        <select
-            id="projects-filter-year"
-            aria-label="Filter by year"
-        >
-            <option value="">All years</option>
-        </select>
+    <button
+        id="projects-filter-reset"
+        type="button"
+    >
+        Reset
+    </button>
+
+</div>
 
 
-        <select
-            id="projects-filter-status"
-            aria-label="Filter by status"
-        >
-            <option value="">All statuses</option>
-        </select>
-
-
-        <button
-            id="projects-filter-reset"
-            type="button"
-        >
-            Reset
-        </button>
-
-    </div>
-
-
-    <p
-        class="projects-filter-status"
-        id="projects-filter-status"
-        aria-live="polite"
-    ></p>
-
-
+<p
+    class="projects-filter-status"
+    id="projects-filter-status"
+    aria-live="polite"
+></p>
 
     <!-- ---------------------------------
          Project list

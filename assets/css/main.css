@@ -3588,6 +3588,11 @@ a:focus-visible {
 ---------------------------------- */
 
 .service-entry-date {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.05rem;
+
     color:
         var(--services-color-3);
 
@@ -3595,6 +3600,31 @@ a:focus-visible {
     line-height: 1.45;
 }
 
+
+/* "since" */
+
+.service-entry-date-label {
+    color:
+        var(--services-color-3);
+
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    line-height: 1.45;
+}
+
+
+/* Year / month and year */
+
+.service-entry-date strong {
+    color:
+        var(--services-color-4);
+
+    font-size: 0.92rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
 
 /* ---------------------------------
    Service content
