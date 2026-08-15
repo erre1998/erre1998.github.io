@@ -46,7 +46,7 @@
 
 
                 <p class="service-entry-institution">
-                    Faculty of Humanities, University of Rostock
+                    Institute for German Studies, Faculty of Humanities, University of Rostock
                 </p>
 
             </div>
@@ -84,7 +84,7 @@
 
 
                 <p class="service-entry-institution">
-                    University of Rostock
+                    Institute for German Studies, Faculty of Humanities, University of Rostock
                 </p>
 
             </div>
@@ -175,7 +175,7 @@
                         href="https://editopia2026.i-d-e.de/"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >Editopia 2026: Zur Zukunft von Dokumentologie und Editorik im Postdigitalen</a><span class="service-entry-function">&nbsp;(Programme Committee)</span>
+                    >Editopia 2026: Zur Zukunft von Dokumentologie und Editorik im Postdigitalen</a><span class="service-entry-function">&nbsp;(Member of the Programme Committee)</span>
 
                 </p>
 
@@ -241,7 +241,7 @@
                         href="https://www.forge25.uni-rostock.de/"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >FORGE 2025: Daten neu denken</a><span class="service-entry-function">&nbsp;(Programme Committee)</span>
+                    >FORGE 2025: Daten neu denken</a><span class="service-entry-function">&nbsp;(Member of the Programme Committee)</span>
 
                 </p>
 
@@ -309,11 +309,6 @@
                         rel="noopener noreferrer"
                     >Rostock Working Group Digital Humanities (RosDH)</a><span class="service-entry-function">&nbsp;(Co-Organizer and Founding Member)</span>
 
-                </p>
-
-
-                <p class="service-entry-institution">
-                    University of Rostock
                 </p>
 
             </div>
