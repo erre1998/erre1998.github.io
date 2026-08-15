@@ -43,17 +43,8 @@ description: "Academic services, committee work, reviewing, and professional mem
                     </p>
 
 
-                    <p class="service-entry-institution">
-
-                        <a
-                            href="https://www.phf.uni-rostock.de/en/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Faculty of Humanities
-                        </a>,
-                        University of Rostock
-
+                    <p class="service-entry-institution">                     
+                            Faculty of Humanities, University of Rostock
                     </p>
 
                 </div>
@@ -106,10 +97,7 @@ description: "Academic services, committee work, reviewing, and professional mem
 
 
         <p class="services-events-reference">
-            For conferences, workshops, lecture series, and other events organized by me, see
-            <a href="{{ '/events/' | relative_url }}">
-                <strong>Organized Events</strong>
-            </a>.
+            For conferences, workshops, lecture series, and other events organized by me, see <a href="{{ '/events/' | relative_url }}">Organized Events</a>.
         </p>
 
 
