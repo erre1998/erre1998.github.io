@@ -11,8 +11,12 @@
        Configuration
     ---------------------------------- */
 
-    const USER_ID = app.dataset.zoteroUserId;
-    const ZOTERO_URL = app.dataset.zoteroUrl;
+    const USER_ID =
+        app.dataset.zoteroUserId;
+
+    const ZOTERO_URL =
+        app.dataset.zoteroUrl;
+
 
     const CATEGORY_ORDER = [
         "Books",
@@ -25,14 +29,37 @@
         "Other Publications"
     ];
 
+
     const WEBSITE_TAGS = {
-        upcoming: "website:upcoming",
-        inPreparation: "website:in-preparation",
-        forthcoming: "website:forthcoming",
-        editedJournalIssue: "website:edited-journal-issue"
+        upcoming:
+            "website:upcoming",
+
+        inPreparation:
+            "website:in-preparation",
+
+        forthcoming:
+            "website:forthcoming",
+
+        editedJournalIssue:
+            "website:edited-journal-issue"
     };
 
+
     let allItems = [];
+
+
+    /*
+     * Fallback sets containing the Zotero
+     * item keys associated with each
+     * website-specific tag.
+     */
+
+    let websiteTagKeys = {
+        upcoming: new Set(),
+        inPreparation: new Set(),
+        forthcoming: new Set(),
+        editedJournalIssue: new Set()
+    };
 
 
     /* ---------------------------------
@@ -40,25 +67,39 @@
     ---------------------------------- */
 
     const bibliography =
-        document.getElementById("bibliography");
+        document.getElementById(
+            "bibliography"
+        );
 
     const status =
-        document.getElementById("pub-status");
+        document.getElementById(
+            "pub-status"
+        );
 
     const searchInput =
-        document.getElementById("pub-search");
+        document.getElementById(
+            "pub-search"
+        );
 
     const yearSelect =
-        document.getElementById("pub-year");
+        document.getElementById(
+            "pub-year"
+        );
 
     const categorySelect =
-        document.getElementById("pub-category");
+        document.getElementById(
+            "pub-category"
+        );
 
     const resetButton =
-        document.getElementById("pub-reset");
+        document.getElementById(
+            "pub-reset"
+        );
 
     const printButton =
-        document.getElementById("pub-print");
+        document.getElementById(
+            "pub-print"
+        );
 
 
     /* ---------------------------------
@@ -75,18 +116,25 @@
             "'": "&#039;"
         };
 
-        return String(value ?? "").replace(
-            /[&<>"']/g,
-            character => characters[character]
-        );
+
+        return String(value ?? "")
+            .replace(
+                /[&<>"']/g,
+                character =>
+                    characters[character]
+            );
 
     }
 
 
     function yearOf(data) {
 
-        const match = String(data?.date || "")
-            .match(/\b(?:19|20)\d{2}\b/);
+        const match =
+            String(data?.date || "")
+                .match(
+                    /\b(?:19|20)\d{2}\b/
+                );
+
 
         return match
             ? Number(match[0])
@@ -101,6 +149,7 @@
             return creator.name;
         }
 
+
         return [
             creator.lastName,
             creator.firstName
@@ -111,7 +160,9 @@
     }
 
 
-    function joinCreators(creators = []) {
+    function joinCreators(
+        creators = []
+    ) {
 
         return creators
             .map(creatorName)
@@ -121,12 +172,18 @@
     }
 
 
-    function creatorsByType(data, creatorType) {
+    function creatorsByType(
+        data,
+        creatorType
+    ) {
 
-        return (data.creators || [])
+        return (
+            data.creators || []
+        )
             .filter(
                 creator =>
-                    creator.creatorType === creatorType
+                    creator.creatorType ===
+                    creatorType
             );
 
     }
@@ -134,10 +191,14 @@
 
     function getTags(data) {
 
-        return (data.tags || [])
+        return (
+            data.tags || []
+        )
             .map(
                 tag =>
-                    String(tag.tag || "")
+                    String(
+                        tag.tag || ""
+                    )
                         .trim()
                         .toLowerCase()
             );
@@ -145,13 +206,56 @@
     }
 
 
-    function hasWebsiteTag(item, tagName) {
+    function itemKey(item) {
 
-        const tags =
+        return (
+            item.key ||
+            item.data?.key ||
+            ""
+        );
+
+    }
+
+
+    /*
+     * A website tag can be detected in
+     * two ways:
+     *
+     * 1. directly in the item's JSON;
+     * 2. via the independently retrieved
+     *    set of item keys.
+     *
+     * This makes the categorization more
+     * robust.
+     */
+
+    function hasWebsiteTag(
+        item,
+        tagName
+    ) {
+
+        const directTags =
             getTags(item.data);
 
-        return tags.includes(
-            WEBSITE_TAGS[tagName]
+
+        if (
+            directTags.includes(
+                WEBSITE_TAGS[tagName]
+            )
+        ) {
+            return true;
+        }
+
+
+        const key =
+            itemKey(item);
+
+
+        return Boolean(
+            key &&
+            websiteTagKeys[tagName] &&
+            websiteTagKeys[tagName]
+                .has(key)
         );
 
     }
@@ -169,8 +273,15 @@
                 "inPreparation"
             )
         ) {
-            return "In preparation";
+            return {
+                label:
+                    "In Preparation",
+
+                className:
+                    "in-preparation"
+            };
         }
+
 
         if (
             hasWebsiteTag(
@@ -178,8 +289,15 @@
                 "upcoming"
             )
         ) {
-            return "Upcoming";
+            return {
+                label:
+                    "Upcoming",
+
+                className:
+                    "upcoming"
+            };
         }
+
 
         if (
             hasWebsiteTag(
@@ -187,10 +305,17 @@
                 "forthcoming"
             )
         ) {
-            return "Forthcoming";
+            return {
+                label:
+                    "Forthcoming",
+
+                className:
+                    "forthcoming"
+            };
         }
 
-        return "";
+
+        return null;
 
     }
 
@@ -201,13 +326,24 @@
 
     function detectCategory(item) {
 
-        const data = item.data;
-        const type = data.itemType;
+        const data =
+            item.data;
+
+        const type =
+            data.itemType;
 
 
         /*
-         * Special category:
-         * edited journal issues
+         * IMPORTANT:
+         *
+         * Website-defined categories must
+         * be checked before Zotero's native
+         * item type.
+         *
+         * This ensures that an item stored
+         * as "book" in Zotero can still be
+         * displayed as an edited journal
+         * issue on the website.
          */
 
         if (
@@ -220,27 +356,25 @@
         }
 
 
-        /*
-         * Books and edited books
-         */
+        /* Books */
 
-        if (type === "book") {
+        if (
+            type === "book"
+        ) {
             return "Books";
         }
 
 
-        /*
-         * Journal articles
-         */
+        /* Journal articles */
 
-        if (type === "journalArticle") {
+        if (
+            type === "journalArticle"
+        ) {
             return "Journal Articles";
         }
 
 
-        /*
-         * Book chapters
-         */
+        /* Book chapters */
 
         if (
             type === "bookSection" ||
@@ -250,18 +384,16 @@
         }
 
 
-        /*
-         * Conference publications
-         */
+        /* Conference publications */
 
-        if (type === "conferencePaper") {
+        if (
+            type === "conferencePaper"
+        ) {
             return "Conference Publications";
         }
 
 
-        /*
-         * Datasets and software
-         */
+        /* Datasets and software */
 
         if (
             type === "dataset" ||
@@ -272,9 +404,7 @@
         }
 
 
-        /*
-         * Blog posts
-         */
+        /* Blog posts */
 
         if (
             type === "blogPost" ||
@@ -297,12 +427,14 @@
 
         const publicationTitle =
             escapeHTML(
-                data.publicationTitle || ""
+                data.publicationTitle ||
+                ""
             );
 
         const bookTitle =
             escapeHTML(
-                data.bookTitle || ""
+                data.bookTitle ||
+                ""
             );
 
         const proceedingsTitle =
@@ -314,17 +446,20 @@
 
         const websiteTitle =
             escapeHTML(
-                data.websiteTitle || ""
+                data.websiteTitle ||
+                ""
             );
 
         const publisher =
             escapeHTML(
-                data.publisher || ""
+                data.publisher ||
+                ""
             );
 
         const place =
             escapeHTML(
-                data.place || ""
+                data.place ||
+                ""
             );
 
         const repository =
@@ -336,27 +471,32 @@
 
         const volume =
             escapeHTML(
-                data.volume || ""
+                data.volume ||
+                ""
             );
 
         const issue =
             escapeHTML(
-                data.issue || ""
+                data.issue ||
+                ""
             );
 
         const pages =
             escapeHTML(
-                data.pages || ""
+                data.pages ||
+                ""
             );
 
         const series =
             escapeHTML(
-                data.series || ""
+                data.series ||
+                ""
             );
 
         const seriesNumber =
             escapeHTML(
-                data.seriesNumber || ""
+                data.seriesNumber ||
+                ""
             );
 
         const version =
@@ -377,26 +517,45 @@
 
         /* Journal articles */
 
-        if (data.itemType === "journalArticle") {
+        if (
+            data.itemType ===
+            "journalArticle"
+        ) {
 
             let venue = "";
 
+
             if (publicationTitle) {
+
                 venue +=
                     `<em>${publicationTitle}</em>`;
+
             }
+
 
             if (volume) {
-                venue += ` ${volume}`;
+
+                venue +=
+                    ` ${volume}`;
+
             }
+
 
             if (issue) {
-                venue += `(${issue})`;
+
+                venue +=
+                    `(${issue})`;
+
             }
 
+
             if (pages) {
-                venue += `, ${pages}`;
+
+                venue +=
+                    `, ${pages}`;
+
             }
+
 
             return venue;
 
@@ -406,16 +565,20 @@
         /* Book chapters */
 
         if (
-            data.itemType === "bookSection" ||
-            data.itemType === "encyclopediaArticle"
+            data.itemType ===
+                "bookSection" ||
+            data.itemType ===
+                "encyclopediaArticle"
         ) {
 
             const parts = [];
+
 
             if (bookTitle) {
 
                 let book =
                     `In: <em>${bookTitle}</em>`;
+
 
                 if (editors) {
 
@@ -425,15 +588,18 @@
                             "editor"
                         ).length;
 
+
                     const editorLabel =
                         editorCount > 1
                             ? "eds."
                             : "ed.";
 
+
                     book +=
                         ` (${editorLabel} ${escapeHTML(editors)})`;
 
                 }
+
 
                 parts.push(book);
 
@@ -447,8 +613,13 @@
                 .filter(Boolean)
                 .join(": ");
 
+
             if (publicationPlace) {
-                parts.push(publicationPlace);
+
+                parts.push(
+                    publicationPlace
+                );
+
             }
 
 
@@ -457,32 +628,47 @@
                 let seriesText =
                     series;
 
+
                 if (seriesNumber) {
+
                     seriesText +=
                         ` ${seriesNumber}`;
+
                 }
 
-                parts.push(seriesText);
+
+                parts.push(
+                    seriesText
+                );
 
             }
 
 
             if (pages) {
+
                 parts.push(
                     `pp. ${pages}`
                 );
+
             }
 
-            return parts.join(" — ");
+
+            return parts.join(
+                " — "
+            );
 
         }
 
 
         /* Conference publications */
 
-        if (data.itemType === "conferencePaper") {
+        if (
+            data.itemType ===
+            "conferencePaper"
+        ) {
 
             const parts = [];
+
 
             if (proceedingsTitle) {
 
@@ -500,25 +686,37 @@
                 .filter(Boolean)
                 .join(": ");
 
+
             if (publicationPlace) {
-                parts.push(publicationPlace);
+
+                parts.push(
+                    publicationPlace
+                );
+
             }
 
 
             if (pages) {
+
                 parts.push(
                     `pp. ${pages}`
                 );
+
             }
 
-            return parts.join(" — ");
+
+            return parts.join(
+                " — "
+            );
 
         }
 
 
         /* Books */
 
-        if (data.itemType === "book") {
+        if (
+            data.itemType === "book"
+        ) {
 
             const parts = [];
 
@@ -530,8 +728,13 @@
                 .filter(Boolean)
                 .join(": ");
 
+
             if (publicationPlace) {
-                parts.push(publicationPlace);
+
+                parts.push(
+                    publicationPlace
+                );
+
             }
 
 
@@ -540,23 +743,35 @@
                 let seriesText =
                     series;
 
+
                 if (seriesNumber) {
+
                     seriesText +=
                         ` ${seriesNumber}`;
+
                 }
 
-                parts.push(seriesText);
+
+                parts.push(
+                    seriesText
+                );
 
             }
 
-            return parts.join(" — ");
+
+            return parts.join(
+                " — "
+            );
 
         }
 
 
         /* Datasets */
 
-        if (data.itemType === "dataset") {
+        if (
+            data.itemType ===
+            "dataset"
+        ) {
 
             return [
                 repository,
@@ -572,34 +787,52 @@
         /* Software */
 
         if (
-            data.itemType === "computerProgram" ||
-            data.itemType === "software"
+            data.itemType ===
+                "computerProgram" ||
+            data.itemType ===
+                "software"
         ) {
 
             const parts = [];
 
+
             if (version) {
+
                 parts.push(
                     `Version ${version}`
                 );
+
             }
+
 
             if (repository) {
-                parts.push(repository);
+
+                parts.push(
+                    repository
+                );
+
             }
+
 
             if (publisher) {
-                parts.push(publisher);
+
+                parts.push(
+                    publisher
+                );
+
             }
 
-            return parts.join(" — ");
+
+            return parts.join(
+                " — "
+            );
 
         }
 
 
         /*
          * Edited journal issues and
-         * other publication types
+         * remaining types
          */
 
         return [
@@ -625,6 +858,7 @@
             return {
                 url:
                     `https://doi.org/${data.DOI}`,
+
                 label:
                     "DOI"
             };
@@ -634,12 +868,17 @@
 
         if (
             data.url &&
-            /^https?:\/\//i.test(data.url)
+            /^https?:\/\//i.test(
+                data.url
+            )
         ) {
 
             return {
-                url: data.url,
-                label: "Link"
+                url:
+                    data.url,
+
+                label:
+                    "Link"
             };
 
         }
@@ -654,13 +893,18 @@
        Rendering
     ---------------------------------- */
 
-    function renderItem(item, category) {
+    function renderItem(
+        item,
+        category
+    ) {
 
         const data =
             item.data;
 
+
         const year =
             yearOf(data);
+
 
         const authors =
             joinCreators(
@@ -670,6 +914,7 @@
                 )
             );
 
+
         const editors =
             joinCreators(
                 creatorsByType(
@@ -678,11 +923,13 @@
                 )
             );
 
+
         const editorCount =
             creatorsByType(
                 data,
                 "editor"
             ).length;
+
 
         const title =
             escapeHTML(
@@ -690,14 +937,18 @@
                 "(Untitled)"
             );
 
+
         const venue =
             buildVenue(data);
+
 
         const link =
             itemLink(data);
 
-        const statusLabel =
+
+        const publicationStatusData =
             publicationStatus(item);
+
 
         const meta = [];
 
@@ -719,8 +970,10 @@
             !authors &&
             editors &&
             (
-                category === "Books" ||
-                category === "Edited Journal Issues"
+                category ===
+                    "Books" ||
+                category ===
+                    "Edited Journal Issues"
             )
         ) {
 
@@ -728,6 +981,7 @@
                 editorCount > 1
                     ? "eds."
                     : "ed.";
+
 
             meta.push(
                 `${escapeHTML(editors)} (${editorLabel})`
@@ -739,16 +993,22 @@
         /* Venue */
 
         if (venue) {
-            meta.push(venue);
+
+            meta.push(
+                venue
+            );
+
         }
 
 
         /* Year */
 
         if (year) {
+
             meta.push(
                 String(year)
             );
+
         }
 
 
@@ -772,10 +1032,12 @@
         /* Status */
 
         const statusHTML =
-            statusLabel
+            publicationStatusData
                 ? `
-                    <span class="pub-publication-status">
-                        ${escapeHTML(statusLabel)}
+                    <span
+                        class="pub-publication-status pub-publication-status-${escapeHTML(publicationStatusData.className)}"
+                    >
+                        ${escapeHTML(publicationStatusData.label)}
                     </span>
                 `
                 : "";
@@ -791,10 +1053,15 @@
 
                 <div class="pub-content">
 
-                    <span class="pub-title">
-                        ${title}
+                    <div class="pub-title-row">
+
+                        <span class="pub-title">
+                            ${title}
+                        </span>
+
                         ${statusHTML}
-                    </span>
+
+                    </div>
 
 
                     <span class="pub-meta">
@@ -823,11 +1090,17 @@
             const category =
                 detectCategory(item);
 
+
             if (!groups[category]) {
+
                 groups[category] = [];
+
             }
 
-            groups[category].push(item);
+
+            groups[category].push(
+                item
+            );
 
         });
 
@@ -842,18 +1115,24 @@
                             yearOf(b.data) -
                             yearOf(a.data);
 
+
                         if (
                             yearDifference !== 0
                         ) {
+
                             return yearDifference;
+
                         }
 
+
                         return String(
-                            a.data.title || ""
+                            a.data.title ||
+                            ""
                         )
                             .localeCompare(
                                 String(
-                                    b.data.title || ""
+                                    b.data.title ||
+                                    ""
                                 ),
                                 "en"
                             );
@@ -880,7 +1159,8 @@
                 .filter(
                     category =>
                         groups[category] &&
-                        groups[category].length
+                        groups[category]
+                            .length
                 )
                 .map(
                     category => `
@@ -893,6 +1173,7 @@
                             <h2 class="pub-section-title">
                                 ${escapeHTML(category)}
                             </h2>
+
 
                             <ul class="pub-list">
 
@@ -935,6 +1216,7 @@
         yearSelect.innerHTML =
             `<option value="">All years</option>`;
 
+
         categorySelect.innerHTML =
             `<option value="">All categories</option>`;
 
@@ -964,11 +1246,14 @@
                     "option"
                 );
 
+
             option.value =
                 String(year);
 
+
             option.textContent =
                 String(year);
+
 
             yearSelect.appendChild(
                 option
@@ -998,15 +1283,17 @@
                         "option"
                     );
 
+
                 option.value =
                     category;
+
 
                 option.textContent =
                     category;
 
-                categorySelect.appendChild(
-                    option
-                );
+
+                categorySelect
+                    .appendChild(option);
 
             });
 
@@ -1019,11 +1306,17 @@
             item.data;
 
 
+        const publicationStatusData =
+            publicationStatus(item);
+
+
         return [
             data.title,
+
             joinCreators(
                 data.creators || []
             ),
+
             data.publicationTitle,
             data.bookTitle,
             data.proceedingsTitle,
@@ -1037,7 +1330,10 @@
             data.DOI,
             data.url,
             data.date,
-            publicationStatus(item),
+
+            publicationStatusData
+                ?.label,
+
             detectCategory(item)
         ]
             .filter(Boolean)
@@ -1054,8 +1350,10 @@
                 .trim()
                 .toLowerCase();
 
+
         const year =
             yearSelect.value;
+
 
         const category =
             categorySelect.value;
@@ -1099,29 +1397,41 @@
             });
 
 
-        render(filteredItems);
+        render(
+            filteredItems
+        );
 
     }
 
 
     function resetFilters() {
 
-        searchInput.value = "";
-        yearSelect.value = "";
-        categorySelect.value = "";
+        searchInput.value =
+            "";
 
-        render(allItems);
+        yearSelect.value =
+            "";
+
+        categorySelect.value =
+            "";
+
+
+        render(
+            allItems
+        );
 
     }
 
 
     /* ---------------------------------
-       Zotero API
+       Zotero API:
+       publications
     ---------------------------------- */
 
     async function fetchPublications() {
 
         const items = [];
+
         const limit = 100;
 
         let start = 0;
@@ -1133,6 +1443,7 @@
                 new URL(
                     `https://api.zotero.org/users/${USER_ID}/publications/items`
                 );
+
 
             url.searchParams.set(
                 "format",
@@ -1184,31 +1495,194 @@
             const batch =
                 await response.json();
 
-            items.push(...batch);
+
+            items.push(
+                ...batch
+            );
 
 
-            if (batch.length < limit) {
+            if (
+                batch.length <
+                limit
+            ) {
                 break;
             }
+
 
             start += limit;
 
         }
 
 
-        return items.filter(item => {
+        return items.filter(
+            item => {
 
-            const type =
-                item?.data?.itemType;
+                const type =
+                    item?.data
+                        ?.itemType;
 
-            return (
-                item?.data &&
-                type !== "attachment" &&
-                type !== "note" &&
-                type !== "annotation"
+
+                return (
+                    item?.data &&
+                    type !==
+                        "attachment" &&
+                    type !==
+                        "note" &&
+                    type !==
+                        "annotation"
+                );
+
+            }
+        );
+
+    }
+
+
+    /* ---------------------------------
+       Zotero API:
+       website tag keys
+    ---------------------------------- */
+
+    async function fetchTaggedItemKeys(
+        tag
+    ) {
+
+        const url =
+            new URL(
+                `https://api.zotero.org/users/${USER_ID}/publications/items`
             );
 
-        });
+
+        url.searchParams.set(
+            "format",
+            "keys"
+        );
+
+
+        url.searchParams.set(
+            "tag",
+            tag
+        );
+
+
+        const response =
+            await fetch(
+                url.toString(),
+                {
+                    headers: {
+                        "Zotero-API-Version":
+                            "3"
+                    }
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                `Could not retrieve Zotero tag "${tag}" (${response.status}).`
+            );
+
+        }
+
+
+        const text =
+            await response.text();
+
+
+        return new Set(
+            text
+                .split(/\s+/)
+                .map(
+                    key =>
+                        key.trim()
+                )
+                .filter(Boolean)
+        );
+
+    }
+
+
+    /* ---------------------------------
+       Load website tags safely
+    ---------------------------------- */
+
+    async function fetchWebsiteTags() {
+
+        const tagNames = [
+            "upcoming",
+            "inPreparation",
+            "forthcoming",
+            "editedJournalIssue"
+        ];
+
+
+        /*
+         * Zotero recommends limiting
+         * concurrent requests. Four tag
+         * queries are therefore run here
+         * after the main publications
+         * request has completed.
+         */
+
+        const results =
+            await Promise.allSettled(
+                tagNames.map(
+                    tagName =>
+                        fetchTaggedItemKeys(
+                            WEBSITE_TAGS[
+                                tagName
+                            ]
+                        )
+                )
+            );
+
+
+        const tagSets = {
+            upcoming:
+                new Set(),
+
+            inPreparation:
+                new Set(),
+
+            forthcoming:
+                new Set(),
+
+            editedJournalIssue:
+                new Set()
+        };
+
+
+        results.forEach(
+            (result, index) => {
+
+                const tagName =
+                    tagNames[index];
+
+
+                if (
+                    result.status ===
+                    "fulfilled"
+                ) {
+
+                    tagSets[tagName] =
+                        result.value;
+
+                }
+                else {
+
+                    console.warn(
+                        `Zotero tag fallback failed for ${WEBSITE_TAGS[tagName]}. Direct item tags will still be used.`,
+                        result.reason
+                    );
+
+                }
+
+            }
+        );
+
+
+        return tagSets;
 
     }
 
@@ -1236,19 +1710,38 @@
 
 
             /*
-             * Only one Zotero request chain is needed.
-             * Website-specific tags are already included
-             * in each item's JSON data.
+             * Load publications first.
+             * A failure here is fatal,
+             * because there is nothing
+             * to render without the items.
              */
 
             allItems =
                 await fetchPublications();
 
 
-            buildFilters();
-            render(allItems);
+            /*
+             * Load website-specific tag
+             * information separately.
+             *
+             * Failure of one tag request
+             * will NOT prevent the
+             * bibliography from rendering.
+             */
 
-            status.textContent = "";
+            websiteTagKeys =
+                await fetchWebsiteTags();
+
+
+            buildFilters();
+
+            render(
+                allItems
+            );
+
+
+            status.textContent =
+                "";
 
         }
         catch (error) {
@@ -1285,24 +1778,29 @@
         applyFilters
     );
 
+
     yearSelect.addEventListener(
         "change",
         applyFilters
     );
+
 
     categorySelect.addEventListener(
         "change",
         applyFilters
     );
 
+
     resetButton.addEventListener(
         "click",
         resetFilters
     );
 
+
     printButton.addEventListener(
         "click",
-        () => window.print()
+        () =>
+            window.print()
     );
 
 

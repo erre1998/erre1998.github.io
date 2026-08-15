@@ -33,18 +33,10 @@ description: "Academic talks by Erik Renz."
 
 
         <select
-            id="talks-filter-status"
-            aria-label="Filter by status"
+            id="talks-filter-country"
+            aria-label="Filter by country"
         >
-            <option value="">All statuses</option>
-        </select>
-
-
-        <select
-            id="talks-filter-location"
-            aria-label="Filter by location"
-        >
-            <option value="">All locations</option>
+            <option value="">All countries</option>
         </select>
 
 
@@ -80,8 +72,7 @@ description: "Academic talks by Erik Renz."
         <article
             class="talk-item"
             data-years="2026"
-            data-status="Upcoming"
-            data-location="University of Greifswald"
+            data-country="Germany"
         >
 
             <div class="talk-date">
@@ -119,7 +110,7 @@ description: "Academic talks by Erik Renz."
 
 
                 <p class="talk-location">
-                    University of Greifswald
+                    University of Greifswald (Germany)
                 </p>
 
 
@@ -146,11 +137,14 @@ description: "Academic talks by Erik Renz."
         <article
             class="talk-item"
             data-years="2026"
-            data-status="Upcoming"
-            data-location=""
+            data-country="Poland"
         >
 
             <div class="talk-date">
+
+                <span class="talk-date-day">
+                    16 Sep
+                </span>
 
                 <strong class="talk-date-year">
                     2026
@@ -178,6 +172,11 @@ description: "Academic talks by Erik Renz."
                 <h2 class="talk-title">
                     DH as Linked Communities: A Comparison of Participants at Annual Conferences and in Lecture Series in Germany, Austria, and Switzerland
                 </h2>
+
+
+                <p class="talk-location">
+                    Jagiellonian University (Poland)
+                </p>
 
 
                 <p class="talk-collaborators">
@@ -217,8 +216,7 @@ description: "Academic talks by Erik Renz."
         <article
             class="talk-item"
             data-years="2026"
-            data-status="Past"
-            data-location="Martin Luther University Halle-Wittenberg"
+            data-country="Germany"
         >
 
             <div class="talk-date">
@@ -251,7 +249,7 @@ description: "Academic talks by Erik Renz."
 
 
                 <p class="talk-location">
-                    Martin Luther University Halle-Wittenberg
+                    Martin Luther University Halle-Wittenberg (Germany)
                 </p>
 
 
@@ -281,8 +279,7 @@ description: "Academic talks by Erik Renz."
         <article
             class="talk-item"
             data-years="2025"
-            data-status="Past"
-            data-location="Freie Universität Berlin"
+            data-country="Germany"
         >
 
             <div class="talk-date">
@@ -315,7 +312,7 @@ description: "Academic talks by Erik Renz."
 
 
                 <p class="talk-location">
-                    Freie Universität Berlin
+                    Freie Universität Berlin (Germany)
                 </p>
 
 

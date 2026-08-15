@@ -10,11 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const yearFilter =
         document.querySelector("#talks-filter-year");
 
-    const statusFilter =
-        document.querySelector("#talks-filter-status");
-
-    const locationFilter =
-        document.querySelector("#talks-filter-location");
+    const countryFilter =
+        document.querySelector("#talks-filter-country");
 
     const resetButton =
         document.querySelector("#talks-filter-reset");
@@ -90,13 +87,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ---------------------------------
-       Build status filter
+       Build country filter
     ---------------------------------- */
 
-    if (statusFilter) {
+    if (countryFilter) {
 
-        const statuses =
-            uniqueValues("status")
+        const countries =
+            uniqueValues("country")
                 .sort(
                     (a, b) =>
                         a.localeCompare(
@@ -106,53 +103,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
 
 
-        statuses.forEach(value => {
+        countries.forEach(country => {
 
             const option =
                 document.createElement("option");
 
             option.value =
-                value;
+                country;
 
             option.textContent =
-                value;
+                country;
 
-            statusFilter.appendChild(option);
-
-        });
-
-    }
-
-
-    /* ---------------------------------
-       Build location filter
-    ---------------------------------- */
-
-    if (locationFilter) {
-
-        const locations =
-            uniqueValues("location")
-                .sort(
-                    (a, b) =>
-                        a.localeCompare(
-                            b,
-                            "en"
-                        )
-                );
-
-
-        locations.forEach(value => {
-
-            const option =
-                document.createElement("option");
-
-            option.value =
-                value;
-
-            option.textContent =
-                value;
-
-            locationFilter.appendChild(option);
+            countryFilter.appendChild(option);
 
         });
 
@@ -173,11 +135,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const selectedYear =
             yearFilter?.value || "";
 
-        const selectedStatus =
-            statusFilter?.value || "";
-
-        const selectedLocation =
-            locationFilter?.value || "";
+        const selectedCountry =
+            countryFilter?.value || "";
 
 
         let visibleCount = 0;
@@ -202,23 +161,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     selectedYear;
 
 
-            const matchesStatus =
-                !selectedStatus ||
-                talk.dataset.status ===
-                    selectedStatus;
-
-
-            const matchesLocation =
-                !selectedLocation ||
-                talk.dataset.location ===
-                    selectedLocation;
+            const matchesCountry =
+                !selectedCountry ||
+                talk.dataset.country ===
+                    selectedCountry;
 
 
             const matches =
                 matchesSearch &&
                 matchesYear &&
-                matchesStatus &&
-                matchesLocation;
+                matchesCountry;
 
 
             talk.hidden =
@@ -265,7 +217,9 @@ document.addEventListener("DOMContentLoaded", () => {
         else {
 
             status.textContent =
-                `${visibleCount} of ${total} talks`;
+                visibleCount === 1
+                    ? `1 of ${total} talks`
+                    : `${visibleCount} of ${total} talks`;
 
         }
 
@@ -292,8 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     [
         yearFilter,
-        statusFilter,
-        locationFilter
+        countryFilter
     ]
         .filter(Boolean)
         .forEach(select => {
@@ -326,13 +279,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                if (statusFilter) {
-                    statusFilter.value = "";
-                }
-
-
-                if (locationFilter) {
-                    locationFilter.value = "";
+                if (countryFilter) {
+                    countryFilter.value = "";
                 }
 
 

@@ -5,41 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 
-    const searchInput = document.querySelector(
-        "#thesis-search"
-    );
+    const searchInput =
+        document.querySelector(
+            "#thesis-search"
+        );
 
-    const roleFilter = document.querySelector(
-        "#thesis-filter-role"
-    );
+    const roleFilter =
+        document.querySelector(
+            "#thesis-filter-role"
+        );
 
-    const supervisorFilter = document.querySelector(
-        "#thesis-filter-supervisor"
-    );
+    const resetButton =
+        document.querySelector(
+            "#thesis-filter-reset"
+        );
 
-    const locationFilter = document.querySelector(
-        "#thesis-filter-location"
-    );
-
-    const termFilter = document.querySelector(
-        "#thesis-filter-term"
-    );
-
-    const typeFilter = document.querySelector(
-        "#thesis-filter-type"
-    );
-
-    const languageFilter = document.querySelector(
-        "#thesis-filter-language"
-    );
-
-    const resetButton = document.querySelector(
-        "#thesis-filter-reset"
-    );
-
-    const status = document.querySelector(
-        "#thesis-filter-status"
-    );
+    const status =
+        document.querySelector(
+            "#thesis-filter-status"
+        );
 
 
     if (!theses.length) {
@@ -47,109 +31,120 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /*
-     * Normalize text for searching
-     */
+    /* ---------------------------------
+       Helpers
+    ---------------------------------- */
 
     function normalize(value) {
 
-        return (value || "")
+        return String(value || "")
             .toLocaleLowerCase()
             .trim();
 
     }
 
 
-    /*
-     * Filter configuration
-     */
+    /* ---------------------------------
+       Build role filter
+    ---------------------------------- */
 
-    const filters = {
-        role: roleFilter,
-        supervisor: supervisorFilter,
-        location: locationFilter,
-        term: termFilter,
-        type: typeFilter,
-        language: languageFilter
-    };
+    if (roleFilter) {
 
-
-    /*
-     * Automatically build filter options
-     */
-
-    Object.entries(filters).forEach(
-        ([key, select]) => {
-
-            if (!select) {
-                return;
-            }
+        const roles = [
+            ...new Set(
+                theses
+                    .map(
+                        thesis =>
+                            thesis.dataset.role
+                    )
+                    .filter(Boolean)
+            )
+        ];
 
 
-            const values = [
-                ...new Set(
-                    theses
-                        .map(thesis =>
-                            thesis.dataset[key]
-                        )
-                        .filter(Boolean)
-                )
-            ];
+        /*
+         * Keep supervisor roles
+         * in a logical order.
+         */
+
+        const roleOrder = [
+            "First Supervisor",
+            "Second Supervisor"
+        ];
 
 
-            /*
-             * Keep terms in the order in which
-             * they occur on the page.
-             *
-             * Sort all other metadata
-             * alphabetically.
-             */
+        roles.sort(
+            (a, b) => {
 
-            if (key !== "term") {
+                const aIndex =
+                    roleOrder.indexOf(a);
 
-                values.sort((a, b) =>
-                    a.localeCompare(b, "en")
+                const bIndex =
+                    roleOrder.indexOf(b);
+
+
+                if (
+                    aIndex !== -1 &&
+                    bIndex !== -1
+                ) {
+                    return aIndex - bIndex;
+                }
+
+
+                if (aIndex !== -1) {
+                    return -1;
+                }
+
+
+                if (bIndex !== -1) {
+                    return 1;
+                }
+
+
+                return a.localeCompare(
+                    b,
+                    "en"
                 );
 
             }
+        );
 
 
-            values.forEach(value => {
+        roles.forEach(role => {
 
-                const option =
-                    document.createElement("option");
+            const option =
+                document.createElement(
+                    "option"
+                );
 
-                option.value = value;
-                option.textContent = value;
+            option.value =
+                role;
 
-                select.appendChild(option);
+            option.textContent =
+                role;
 
-            });
+            roleFilter.appendChild(
+                option
+            );
 
-        }
-    );
+        });
+
+    }
 
 
-    /*
-     * Apply search and filters
-     */
+    /* ---------------------------------
+       Apply search and filter
+    ---------------------------------- */
 
     function applyFilters() {
 
         const searchTerm =
-            normalize(searchInput?.value);
+            normalize(
+                searchInput?.value
+            );
 
-
-        const selectedFilters = {};
-
-        Object.entries(filters).forEach(
-            ([key, select]) => {
-
-                selectedFilters[key] =
-                    select?.value || "";
-
-            }
-        );
+        const selectedRole =
+            roleFilter?.value || "";
 
 
         let visibleCount = 0;
@@ -158,33 +153,31 @@ document.addEventListener("DOMContentLoaded", () => {
         theses.forEach(thesis => {
 
             const thesisText =
-                normalize(thesis.textContent);
+                normalize(
+                    thesis.textContent
+                );
 
 
             const matchesSearch =
                 !searchTerm ||
-                thesisText.includes(searchTerm);
+                thesisText.includes(
+                    searchTerm
+                );
 
 
-            const matchesMetadata =
-                Object.entries(selectedFilters)
-                    .every(([key, value]) => {
-
-                        if (!value) {
-                            return true;
-                        }
-
-                        return thesis.dataset[key] === value;
-
-                    });
+            const matchesRole =
+                !selectedRole ||
+                thesis.dataset.role ===
+                    selectedRole;
 
 
             const matches =
                 matchesSearch &&
-                matchesMetadata;
+                matchesRole;
 
 
-            thesis.hidden = !matches;
+            thesis.hidden =
+                !matches;
 
 
             if (matches) {
@@ -194,14 +187,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-        updateStatus(visibleCount);
+        updateStatus(
+            visibleCount
+        );
 
     }
 
 
-    /*
-     * Result status
-     */
+    /* ---------------------------------
+       Result status
+    ---------------------------------- */
 
     function updateStatus(visibleCount) {
 
@@ -217,21 +212,26 @@ document.addEventListener("DOMContentLoaded", () => {
         if (visibleCount === total) {
 
             status.textContent =
-                `${total} theses`;
+                total === 1
+                    ? "1 thesis"
+                    : `${total} theses`;
 
-        } else {
+        }
+        else {
 
             status.textContent =
-                `${visibleCount} of ${total} theses`;
+                visibleCount === 1
+                    ? `1 of ${total} theses`
+                    : `${visibleCount} of ${total} theses`;
 
         }
 
     }
 
 
-    /*
-     * Search listener
-     */
+    /* ---------------------------------
+       Search
+    ---------------------------------- */
 
     if (searchInput) {
 
@@ -243,29 +243,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /*
-     * Filter listeners
-     */
+    /* ---------------------------------
+       Role filter
+    ---------------------------------- */
 
-    Object.values(filters).forEach(
-        select => {
+    if (roleFilter) {
 
-            if (!select) {
-                return;
-            }
+        roleFilter.addEventListener(
+            "change",
+            applyFilters
+        );
 
-            select.addEventListener(
-                "change",
-                applyFilters
-            );
-
-        }
-    );
+    }
 
 
-    /*
-     * Reset
-     */
+    /* ---------------------------------
+       Reset
+    ---------------------------------- */
 
     if (resetButton) {
 
@@ -278,15 +272,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                Object.values(filters).forEach(
-                    select => {
-
-                        if (select) {
-                            select.value = "";
-                        }
-
-                    }
-                );
+                if (roleFilter) {
+                    roleFilter.value = "";
+                }
 
 
                 applyFilters();
@@ -302,9 +290,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /*
-     * Initial state
-     */
+    /* ---------------------------------
+       Initial state
+    ---------------------------------- */
 
     applyFilters();
 

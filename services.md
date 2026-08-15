@@ -2,7 +2,376 @@
 layout: page
 title: Academic Services
 permalink: /services/
-description: "Academic services by Erik Renz."
+description: "Academic services, committee work, reviewing, and professional memberships of Erik Renz."
 ---
 
-Content coming soon.
+<div class="services">
+
+
+    <!-- =========================================
+         Academic Self-Government
+    ========================================== -->
+
+    <section class="services-section">
+
+        <h2 class="services-section-title">
+            Academic Self-Government
+        </h2>
+
+
+        <div class="services-list">
+
+
+            <!-- Appointment Committee -->
+
+            <article class="service-entry">
+
+                <div class="service-entry-date">
+                    04/2024–05/2025
+                </div>
+
+
+                <div class="service-entry-content">
+
+                    <p class="service-entry-role">
+                        Member of the Appointment Committee
+                    </p>
+
+
+                    <p class="service-entry-context">
+                        W2 Professorship for Historical Linguistics of German
+                    </p>
+
+
+                    <p class="service-entry-institution">
+
+                        <a
+                            href="https://www.phf.uni-rostock.de/en/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Faculty of Humanities
+                        </a>,
+                        University of Rostock
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Student Council -->
+
+            <article class="service-entry">
+
+                <div class="service-entry-date">
+                    01/2024–11/2024
+                </div>
+
+
+                <div class="service-entry-content">
+
+                    <p class="service-entry-role">
+                        Spokesperson of the German Studies Student Council (GeFaR)
+                    </p>
+
+
+                    <p class="service-entry-institution">
+                        University of Rostock
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         Programme Committees
+    ========================================== -->
+
+    <section class="services-section">
+
+        <h2 class="services-section-title">
+            Programme Committees
+        </h2>
+
+
+        <div class="services-list">
+
+
+            <!-- Editopia 2026 -->
+
+            <article class="service-entry">
+
+                <div class="service-entry-date">
+                    2026
+                </div>
+
+
+                <div class="service-entry-content">
+
+                    <p class="service-entry-role">
+                        Programme Committee
+                    </p>
+
+
+                    <p class="service-entry-context">
+
+                        <a
+                            href="https://editopia2026.i-d-e.de/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Editopia 2026: Zur Zukunft von Dokumentologie und Editorik im Postdigitalen
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- FORGE 2025 -->
+
+            <article class="service-entry">
+
+                <div class="service-entry-date">
+                    2025
+                </div>
+
+
+                <div class="service-entry-content">
+
+                    <p class="service-entry-role">
+                        Programme Committee
+                    </p>
+
+
+                    <p class="service-entry-context">
+
+                        <a
+                            href="https://www.forge25.uni-rostock.de/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            FORGE 2025: Daten neu denken
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         Reviewing
+    ========================================== -->
+
+    <section class="services-section">
+
+        <h2 class="services-section-title">
+            Reviewing
+        </h2>
+
+
+        <div class="services-list">
+
+
+            <!-- JCLS -->
+
+            <article class="service-entry">
+
+                <div class="service-entry-date">
+                    2025
+                </div>
+
+
+                <div class="service-entry-content">
+
+                    <p class="service-entry-role">
+                        Reviewer
+                    </p>
+
+
+                    <p class="service-entry-context">
+
+                        <a
+                            href="https://jcls.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Journal of Computational Literary Studies (JCLS)
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         Organized Events reference
+    ========================================== -->
+
+    <p class="services-events-reference">
+
+        For conferences, workshops, lecture series, and other events organized by me, see
+
+        <a href="{{ '/events/' | relative_url }}">
+            Organized Events
+        </a>.
+
+    </p>
+
+
+
+    <!-- =========================================
+         Professional Memberships & Roles
+    ========================================== -->
+
+    <section class="services-section services-memberships">
+
+        <h2 class="services-section-title">
+            Professional Memberships &amp; Roles
+        </h2>
+
+
+        <div class="services-list">
+
+
+            <!-- IDE -->
+
+            <article class="service-entry service-entry-membership">
+
+                <div class="service-entry-date">
+                    since 06/2026
+                </div>
+
+
+                <div class="service-entry-content">
+
+                    <p class="service-entry-role">
+                        Member
+                    </p>
+
+
+                    <p class="service-entry-context">
+
+                        <a
+                            href="https://www.i-d-e.de/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Institut für Dokumentologie und Editorik (IDE)
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- DHd -->
+
+            <article class="service-entry service-entry-membership">
+
+                <div class="service-entry-date">
+                    since 11/2024
+                </div>
+
+
+                <div class="service-entry-content">
+
+                    <p class="service-entry-role">
+                        Member
+                    </p>
+
+
+                    <p class="service-entry-context">
+
+                        <a
+                            href="https://digitalhumanities.de/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- RosDH -->
+
+            <article class="service-entry service-entry-membership">
+
+                <div class="service-entry-date">
+                    since 04/2023
+                </div>
+
+
+                <div class="service-entry-content">
+
+                    <p class="service-entry-role">
+                        Co-Organizer and Founding Member
+                    </p>
+
+
+                    <p class="service-entry-context">
+
+                        <a
+                            href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Rostock Working Group Digital Humanities (RosDH)
+                        </a>
+
+                    </p>
+
+
+                    <p class="service-entry-institution">
+                        University of Rostock
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+</div>
