@@ -3582,7 +3582,6 @@ a:focus-visible {
         var(--services-color-1);
 }
 
-
 /* ---------------------------------
    Service date
 ---------------------------------- */
@@ -3590,6 +3589,8 @@ a:focus-visible {
 .service-entry-date {
     display: flex;
     flex-direction: column;
+
+    align-items: flex-start;
 
     gap: 0.05rem;
 
@@ -3601,7 +3602,42 @@ a:focus-visible {
 }
 
 
-/* "since" */
+/* Start date */
+
+.service-entry-date-start {
+    color:
+        var(--services-color-3);
+
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+
+/* Separator */
+
+.service-entry-date-separator {
+    color:
+        var(--services-color-3);
+
+    font-size: 0.78rem;
+    font-weight: 400;
+}
+
+
+/* End date / single year */
+
+.service-entry-date-end {
+    color:
+        var(--services-color-4);
+
+    font-size: 0.92rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+
+/* "since" label */
 
 .service-entry-date-label {
     color:
@@ -3609,19 +3645,6 @@ a:focus-visible {
 
     font-size: 0.8rem;
     font-weight: 400;
-
-    line-height: 1.45;
-}
-
-
-/* Year / month and year */
-
-.service-entry-date strong {
-    color:
-        var(--services-color-4);
-
-    font-size: 0.92rem;
-    font-weight: 600;
 
     line-height: 1.45;
 }
