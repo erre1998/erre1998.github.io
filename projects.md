@@ -119,6 +119,15 @@ description: "Funded projects by Erik Renz."
 
 
                 <div class="project-links">
+                
+                  <a
+                        class="project-resource-button"
+                        href="https://www.germanistik.uni-rostock.de/forschung/digital-humanities/rosdh/ringvorlesung/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Project Website
+                    </a>
 
                     <a
                         class="project-resource-button"
