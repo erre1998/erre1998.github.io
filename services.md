@@ -62,7 +62,7 @@ description: "Academic services, committee work, reviewing, and professional mem
 
 
 
-            <!-- Student Council -->
+            <!-- German Studies Student Council -->
 
             <article class="service-entry">
 
@@ -94,17 +94,59 @@ description: "Academic services, committee work, reviewing, and professional mem
 
 
     <!-- =========================================
-         Programme Committees
+         Professional Memberships,
+         Committee Work, and Review Activities
     ========================================== -->
 
     <section class="services-section">
 
         <h2 class="services-section-title">
-            Programme Committees
+            Professional Memberships, Committee Work, and Review Activities
         </h2>
 
 
+        <p class="services-events-reference">
+            For conferences, workshops, lecture series, and other events organized by me, see
+            <a href="{{ '/events/' | relative_url }}">
+                <strong>Organized Events</strong>
+            </a>.
+        </p>
+
+
         <div class="services-list">
+
+
+            <!-- IDE -->
+
+            <article class="service-entry">
+
+                <div class="service-entry-date">
+                    since 06/2026
+                </div>
+
+
+                <div class="service-entry-content">
+
+                    <p class="service-entry-main">
+
+                        <a
+                            href="https://www.i-d-e.de/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Institut für Dokumentologie und Editorik (IDE)
+                        </a>
+
+                        <span class="service-entry-function">
+                            (Member)
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </article>
+
 
 
             <!-- Editopia 2026 -->
@@ -118,12 +160,7 @@ description: "Academic services, committee work, reviewing, and professional mem
 
                 <div class="service-entry-content">
 
-                    <p class="service-entry-role">
-                        Programme Committee
-                    </p>
-
-
-                    <p class="service-entry-context">
+                    <p class="service-entry-main">
 
                         <a
                             href="https://editopia2026.i-d-e.de/"
@@ -132,6 +169,43 @@ description: "Academic services, committee work, reviewing, and professional mem
                         >
                             Editopia 2026: Zur Zukunft von Dokumentologie und Editorik im Postdigitalen
                         </a>
+
+                        <span class="service-entry-function">
+                            (Programme Committee)
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- DHd -->
+
+            <article class="service-entry">
+
+                <div class="service-entry-date">
+                    since 11/2024
+                </div>
+
+
+                <div class="service-entry-content">
+
+                    <p class="service-entry-main">
+
+                        <a
+                            href="https://digitalhumanities.de/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)
+                        </a>
+
+                        <span class="service-entry-function">
+                            (Member)
+                        </span>
 
                     </p>
 
@@ -152,12 +226,7 @@ description: "Academic services, committee work, reviewing, and professional mem
 
                 <div class="service-entry-content">
 
-                    <p class="service-entry-role">
-                        Programme Committee
-                    </p>
-
-
-                    <p class="service-entry-context">
+                    <p class="service-entry-main">
 
                         <a
                             href="https://www.forge25.uni-rostock.de/"
@@ -167,31 +236,16 @@ description: "Academic services, committee work, reviewing, and professional mem
                             FORGE 2025: Daten neu denken
                         </a>
 
+                        <span class="service-entry-function">
+                            (Programme Committee)
+                        </span>
+
                     </p>
 
                 </div>
 
             </article>
 
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         Reviewing
-    ========================================== -->
-
-    <section class="services-section">
-
-        <h2 class="services-section-title">
-            Reviewing
-        </h2>
-
-
-        <div class="services-list">
 
 
             <!-- JCLS -->
@@ -205,12 +259,7 @@ description: "Academic services, committee work, reviewing, and professional mem
 
                 <div class="service-entry-content">
 
-                    <p class="service-entry-role">
-                        Reviewer
-                    </p>
-
-
-                    <p class="service-entry-context">
+                    <p class="service-entry-main">
 
                         <a
                             href="https://jcls.io/"
@@ -220,108 +269,9 @@ description: "Academic services, committee work, reviewing, and professional mem
                             Journal of Computational Literary Studies (JCLS)
                         </a>
 
-                    </p>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         Organized Events reference
-    ========================================== -->
-
-    <p class="services-events-reference">
-
-        For conferences, workshops, lecture series, and other events organized by me, see
-
-        <a href="{{ '/events/' | relative_url }}">
-            Organized Events
-        </a>.
-
-    </p>
-
-
-
-    <!-- =========================================
-         Professional Memberships & Roles
-    ========================================== -->
-
-    <section class="services-section services-memberships">
-
-        <h2 class="services-section-title">
-            Professional Memberships &amp; Roles
-        </h2>
-
-
-        <div class="services-list">
-
-
-            <!-- IDE -->
-
-            <article class="service-entry service-entry-membership">
-
-                <div class="service-entry-date">
-                    since 06/2026
-                </div>
-
-
-                <div class="service-entry-content">
-
-                    <p class="service-entry-role">
-                        Member
-                    </p>
-
-
-                    <p class="service-entry-context">
-
-                        <a
-                            href="https://www.i-d-e.de/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Institut für Dokumentologie und Editorik (IDE)
-                        </a>
-
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- DHd -->
-
-            <article class="service-entry service-entry-membership">
-
-                <div class="service-entry-date">
-                    since 11/2024
-                </div>
-
-
-                <div class="service-entry-content">
-
-                    <p class="service-entry-role">
-                        Member
-                    </p>
-
-
-                    <p class="service-entry-context">
-
-                        <a
-                            href="https://digitalhumanities.de/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)
-                        </a>
+                        <span class="service-entry-function">
+                            (Reviewer)
+                        </span>
 
                     </p>
 
@@ -333,7 +283,7 @@ description: "Academic services, committee work, reviewing, and professional mem
 
             <!-- RosDH -->
 
-            <article class="service-entry service-entry-membership">
+            <article class="service-entry">
 
                 <div class="service-entry-date">
                     since 04/2023
@@ -342,12 +292,7 @@ description: "Academic services, committee work, reviewing, and professional mem
 
                 <div class="service-entry-content">
 
-                    <p class="service-entry-role">
-                        Co-Organizer and Founding Member
-                    </p>
-
-
-                    <p class="service-entry-context">
+                    <p class="service-entry-main">
 
                         <a
                             href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/"
@@ -356,6 +301,10 @@ description: "Academic services, committee work, reviewing, and professional mem
                         >
                             Rostock Working Group Digital Humanities (RosDH)
                         </a>
+
+                        <span class="service-entry-function">
+                            (Co-Organizer and Founding Member)
+                        </span>
 
                     </p>
 

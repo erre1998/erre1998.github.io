@@ -126,7 +126,7 @@ description: "Funded projects by Erik Renz."
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Grant PSL-PHF-6-26
+                        Grant Number: PSL-PHF-6-26
                     </a>
 
                 </div>
@@ -193,7 +193,7 @@ description: "Funded projects by Erik Renz."
                         </dt>
 
                         <dd>
-                            Fund of the Pro-Rector for Studying, Teaching and Evaluation, University of Rostock
+                            Fund of the Pro-Rector of Studying and Teaching, University of Rostock
                         </dd>
 
                     </div>
@@ -286,7 +286,7 @@ description: "Funded projects by Erik Renz."
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Grant PSL-PHF-1-24
+                        Grant Number: PSL-PHF-1-24
                     </a>
 
                 </div>
@@ -356,7 +356,7 @@ description: "Funded projects by Erik Renz."
                         </dt>
 
                         <dd>
-                            Fund of the Pro-Rector for Studying, Teaching and Evaluation, University of Rostock
+                            Fund of the Pro-Rector of Studying and Teaching, University of Rostock
                         </dd>
 
                     </div>
