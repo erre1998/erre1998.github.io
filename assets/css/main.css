@@ -2996,7 +2996,6 @@ a:focus-visible {
 
 }
 
-
 /* ---------------------------------
    Thesis Supervisions
 ---------------------------------- */
@@ -3309,7 +3308,7 @@ a:focus-visible {
 }
 
 
-/* Second Supervisor */
+/* Other Supervisor */
 
 .thesis-badge:nth-child(2) {
     border-color:
@@ -3445,7 +3444,6 @@ a:focus-visible {
     }
 
 }
-
 
 /* ---------------------------------
    Academic Services

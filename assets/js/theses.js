@@ -62,52 +62,45 @@ document.addEventListener("DOMContentLoaded", () => {
         ];
 
 
-        /*
-         * Keep supervisor roles
-         * in a logical order.
-         */
-
         const roleOrder = [
             "First Supervisor",
             "Second Supervisor"
         ];
 
 
-        roles.sort(
-            (a, b) => {
+        roles.sort((a, b) => {
 
-                const aIndex =
-                    roleOrder.indexOf(a);
+            const aIndex =
+                roleOrder.indexOf(a);
 
-                const bIndex =
-                    roleOrder.indexOf(b);
-
-
-                if (
-                    aIndex !== -1 &&
-                    bIndex !== -1
-                ) {
-                    return aIndex - bIndex;
-                }
+            const bIndex =
+                roleOrder.indexOf(b);
 
 
-                if (aIndex !== -1) {
-                    return -1;
-                }
-
-
-                if (bIndex !== -1) {
-                    return 1;
-                }
-
-
-                return a.localeCompare(
-                    b,
-                    "en"
-                );
-
+            if (
+                aIndex !== -1 &&
+                bIndex !== -1
+            ) {
+                return aIndex - bIndex;
             }
-        );
+
+
+            if (aIndex !== -1) {
+                return -1;
+            }
+
+
+            if (bIndex !== -1) {
+                return 1;
+            }
+
+
+            return a.localeCompare(
+                b,
+                "en"
+            );
+
+        });
 
 
         roles.forEach(role => {
@@ -133,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ---------------------------------
-       Apply search and filter
+       Apply search and role filter
     ---------------------------------- */
 
     function applyFilters() {
@@ -152,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         theses.forEach(thesis => {
 
-            const thesisText =
+            const searchableText =
                 normalize(
                     thesis.textContent
                 );
@@ -160,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const matchesSearch =
                 !searchTerm ||
-                thesisText.includes(
+                searchableText.includes(
                     searchTerm
                 );
 
@@ -198,7 +191,9 @@ document.addEventListener("DOMContentLoaded", () => {
        Result status
     ---------------------------------- */
 
-    function updateStatus(visibleCount) {
+    function updateStatus(
+        visibleCount
+    ) {
 
         if (!status) {
             return;
