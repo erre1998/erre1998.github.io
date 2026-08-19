@@ -558,410 +558,415 @@ description: "Teaching and thesis supervision by Erik Renz."
 
 
     </div>
-<!-- =========================================
-     Thesis Supervisions
-========================================== -->
-
-<h2 class="thesis-supervisions-title">
-    Thesis Supervisions
-</h2>
 
 
-<!-- ---------------------------------
-     Thesis search and filters
----------------------------------- -->
 
-<div
-    class="thesis-toolbar"
-    aria-label="Search and filter thesis supervisions"
->
+    <!-- =========================================
+         Thesis Supervisions
+    ========================================== -->
 
-    <input
-        id="thesis-search"
-        type="search"
-        placeholder="Search"
-        aria-label="Search thesis supervisions"
-    >
+    <section class="thesis-supervisions">
+
+        <h2 class="thesis-supervisions-title">
+            Thesis Supervisions
+        </h2>
 
 
-    <select
-        id="thesis-filter-role"
-        aria-label="Filter by role"
-    >
-        <option value="">All roles</option>
-    </select>
+        <!-- ---------------------------------
+             Thesis search and filters
+        ---------------------------------- -->
+
+        <div
+            class="thesis-toolbar"
+            aria-label="Search and filter thesis supervisions"
+        >
+
+            <input
+                id="thesis-search"
+                type="search"
+                placeholder="Search"
+                aria-label="Search thesis supervisions"
+            >
 
 
-    <button
-        id="thesis-filter-reset"
-        type="button"
-    >
-        Reset
-    </button>
-
-</div>
+            <select
+                id="thesis-filter-role"
+                aria-label="Filter by role"
+            >
+                <option value="">All roles</option>
+            </select>
 
 
-<p
-    class="thesis-filter-status"
-    id="thesis-filter-status"
-    aria-live="polite"
-></p>
-
-
-<!-- ---------------------------------
-     Thesis list
----------------------------------- -->
-
-<div class="thesis-list">
-
-
-    <!-- Das Frauenbild in der Aufklärung -->
-
-    <article
-        class="thesis-entry"
-        data-role="First Supervisor"
-        data-term="Winter 2025/26"
-    >
-
-        <h3 class="thesis-title">
-            Das Frauenbild in der Aufklärung am Beispiel der <em>Emilia Galotti</em> von Gotthold Ephraim Lessing
-        </h3>
-
-
-        <div class="thesis-badges">
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Role
-                </span>
-
-                <span class="thesis-badge-value">
-                    First Supervisor
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Second Supervisor
-                </span>
-
-                <span class="thesis-badge-value">
-                    Ulrike Henny-Krahmer
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Location
-                </span>
-
-                <span class="thesis-badge-value">
-                    University of Rostock (Germany)
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Term
-                </span>
-
-                <span class="thesis-badge-value">
-                    Winter 2025/26
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Type
-                </span>
-
-                <span class="thesis-badge-value">
-                    Bachelor's Thesis
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Language
-                </span>
-
-                <span class="thesis-badge-value">
-                    German
-                </span>
-            </span>
+            <button
+                id="thesis-filter-reset"
+                type="button"
+            >
+                Reset
+            </button>
 
         </div>
 
-    </article>
+
+        <p
+            class="thesis-filter-status"
+            id="thesis-filter-status"
+            aria-live="polite"
+        ></p>
+
+
+        <!-- ---------------------------------
+             Thesis list
+        ---------------------------------- -->
+
+        <div class="thesis-list">
+
+
+            <!-- Das Frauenbild in der Aufklärung -->
+
+            <article
+                class="thesis-entry"
+                data-role="First Supervisor"
+                data-term="Winter 2025/26"
+            >
+
+                <h3 class="thesis-title">
+                    Das Frauenbild in der Aufklärung am Beispiel der <em>Emilia Galotti</em> von Gotthold Ephraim Lessing
+                </h3>
+
+
+                <div class="thesis-badges">
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Role
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            First Supervisor
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Second Supervisor
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            Ulrike Henny-Krahmer
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Location
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            University of Rostock (Germany)
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Term
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            Winter 2025/26
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Type
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            Bachelor's Thesis
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Language
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            German
+                        </span>
+                    </span>
+
+                </div>
+
+            </article>
 
 
 
-    <!-- Die Gestaltung des Chores -->
+            <!-- Die Gestaltung des Chores -->
 
-    <article
-        class="thesis-entry"
-        data-role="First Supervisor"
-        data-term="Winter 2026/27"
-    >
+            <article
+                class="thesis-entry"
+                data-role="First Supervisor"
+                data-term="Winter 2026/27"
+            >
 
-        <h3 class="thesis-title">
-            Die Gestaltung des Chores in Dramen der deutschen Klassik am Beispiel von Schillers <em>Die Braut von Messina</em>
-        </h3>
-
-
-        <div class="thesis-badges">
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Role
-                </span>
-
-                <span class="thesis-badge-value">
-                    First Supervisor
-                </span>
-            </span>
+                <h3 class="thesis-title">
+                    Die Gestaltung des Chores in Dramen der deutschen Klassik am Beispiel von Schillers <em>Die Braut von Messina</em>
+                </h3>
 
 
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Second Supervisor
-                </span>
+                <div class="thesis-badges">
 
-                <span class="thesis-badge-value">
-                    Magdalena Victoria Basedow
-                </span>
-            </span>
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Role
+                        </span>
 
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Location
-                </span>
-
-                <span class="thesis-badge-value">
-                    University of Rostock (Germany)
-                </span>
-            </span>
+                        <span class="thesis-badge-value">
+                            First Supervisor
+                        </span>
+                    </span>
 
 
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Term
-                </span>
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Second Supervisor
+                        </span>
 
-                <span class="thesis-badge-value">
-                    Winter 2026/27
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Type
-                </span>
-
-                <span class="thesis-badge-value">
-                    Bachelor's Thesis
-                </span>
-            </span>
+                        <span class="thesis-badge-value">
+                            Magdalena Victoria Basedow
+                        </span>
+                    </span>
 
 
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Language
-                </span>
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Location
+                        </span>
 
-                <span class="thesis-badge-value">
-                    German
-                </span>
-            </span>
+                        <span class="thesis-badge-value">
+                            University of Rostock (Germany)
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Term
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            Winter 2026/27
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Type
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            Bachelor's Thesis
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Language
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            German
+                        </span>
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Ehekonzepte -->
+
+            <article
+                class="thesis-entry"
+                data-role="First Supervisor"
+                data-term="Winter 2026/27"
+            >
+
+                <h3 class="thesis-title">
+                    Ehekonzepte in den Dramen des 19. Jahrhunderts am Beispiel von Charlotte Birch-Pfeiffer und Marie von Ebner-Eschenbach
+                </h3>
+
+
+                <div class="thesis-badges">
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Role
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            First Supervisor
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Second Supervisor
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            Ulrike Henny-Krahmer
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Location
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            University of Rostock (Germany)
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Term
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            Winter 2026/27
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Type
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            Bachelor's Thesis
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Language
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            German
+                        </span>
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Körper, Krankheit und Phantastik -->
+
+            <article
+                class="thesis-entry"
+                data-role="First Supervisor"
+                data-term="Winter 2026/27"
+            >
+
+                <h3 class="thesis-title">
+                    <em>Körper, Krankheit und Phantastik: Eine digital gestützte Analyse subjektiver Krankheitserfahrung in Walter Moers’ Prinzessin Insomnia</em>
+                </h3>
+
+
+                <div class="thesis-badges">
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Role
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            First Supervisor
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Second Supervisor
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            Ulrike Henny-Krahmer
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Location
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            University of Rostock (Germany)
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Term
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            Winter 2026/27
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Type
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            Master's Thesis
+                        </span>
+                    </span>
+
+
+                    <span class="thesis-badge">
+                        <span class="thesis-badge-label">
+                            Language
+                        </span>
+
+                        <span class="thesis-badge-value">
+                            German
+                        </span>
+                    </span>
+
+                </div>
+
+            </article>
+
 
         </div>
 
-    </article>
-
-
-
-    <!-- Ehekonzepte -->
-
-    <article
-        class="thesis-entry"
-        data-role="First Supervisor"
-        data-term="Winter 2026/27"
-    >
-
-        <h3 class="thesis-title">
-            Ehekonzepte in den Dramen des 19. Jahrhunderts am Beispiel von Charlotte Birch-Pfeiffer und Marie von Ebner-Eschenbach
-        </h3>
-
-
-        <div class="thesis-badges">
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Role
-                </span>
-
-                <span class="thesis-badge-value">
-                    First Supervisor
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Second Supervisor
-                </span>
-
-                <span class="thesis-badge-value">
-                    Ulrike Henny-Krahmer
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Location
-                </span>
-
-                <span class="thesis-badge-value">
-                    University of Rostock (Germany)
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Term
-                </span>
-
-                <span class="thesis-badge-value">
-                    Winter 2026/27
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Type
-                </span>
-
-                <span class="thesis-badge-value">
-                    Bachelor's Thesis
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Language
-                </span>
-
-                <span class="thesis-badge-value">
-                    German
-                </span>
-            </span>
-
-        </div>
-
-    </article>
-
-
-
-    <!-- Körper, Krankheit und Phantastik -->
-
-    <article
-        class="thesis-entry"
-        data-role="First Supervisor"
-        data-term="Winter 2026/27"
-    >
-
-        <h3 class="thesis-title">
-            <em>Körper, Krankheit und Phantastik: Eine digital gestützte Analyse subjektiver Krankheitserfahrung in Walter Moers’ Prinzessin Insomnia</em>
-        </h3>
-
-
-        <div class="thesis-badges">
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Role
-                </span>
-
-                <span class="thesis-badge-value">
-                    First Supervisor
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Second Supervisor
-                </span>
-
-                <span class="thesis-badge-value">
-                    Ulrike Henny-Krahmer
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Location
-                </span>
-
-                <span class="thesis-badge-value">
-                    University of Rostock (Germany)
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Term
-                </span>
-
-                <span class="thesis-badge-value">
-                    Winter 2026/27
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Type
-                </span>
-
-                <span class="thesis-badge-value">
-                    Master's Thesis
-                </span>
-            </span>
-
-
-            <span class="thesis-badge">
-                <span class="thesis-badge-label">
-                    Language
-                </span>
-
-                <span class="thesis-badge-value">
-                    German
-                </span>
-            </span>
-
-        </div>
-
-    </article>
-
-
-</div>
-
-</section>
+    </section>
 
 </div>
 
