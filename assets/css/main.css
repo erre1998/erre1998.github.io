@@ -4686,3 +4686,75 @@ a:focus-visible {
     }
 
 }
+
+/* ---------------------------------
+   Chicago Author-Date citation
+---------------------------------- */
+
+.pub-citation {
+    margin: 0;
+
+    padding-left: 1.15rem;
+    text-indent: -1.15rem;
+
+    color:
+        var(--color-text);
+
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+
+/* ---------------------------------
+   Chicago publication title
+---------------------------------- */
+
+.pub-citation-title {
+    color:
+        var(--color-text);
+}
+
+
+/* ---------------------------------
+   Status directly after title
+---------------------------------- */
+
+.pub-citation-title
++ .pub-publication-status {
+    margin-left: 0.4rem;
+    margin-right: 0.18rem;
+
+    vertical-align: 0.08em;
+}
+
+
+/* ---------------------------------
+   DOI / URL inside citation
+---------------------------------- */
+
+.pub-citation-url {
+    color:
+        var(--color-primary);
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+
+.pub-citation-url:hover {
+    color:
+        var(--color-text);
+}
+
+
+/* ---------------------------------
+   Chicago citation responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .pub-citation {
+        font-size: 0.91rem;
+    }
+
+}
