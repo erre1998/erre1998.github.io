@@ -211,76 +211,62 @@ a:focus-visible {
 }
 
 
-/* Mosaic rail */
+/* ---------------------------------
+   Page header tile cluster
+---------------------------------- */
 
 .page-header::before {
     content: "";
 
     display: block;
 
-    width: 100%;
-    height: 46px;
+    width: min(100%, 300px);
+    height: 40px;
 
-    margin-bottom: 1.35rem;
+    margin:
+        0
+        0
+        1.25rem
+        auto;
 
-    border-radius: 7px;
+    border-radius: 5px;
 
     background-image:
-        url("../imgs/footer-1.webp");
+        url("../imgs/kachel-5.webp"),
+        url("../imgs/kachel-3.webp"),
+        url("../imgs/kachel-1.webp");
 
-    background-repeat: no-repeat;
-    background-size: 165% auto;
-    background-position: 45% 48%;
+    background-repeat:
+        no-repeat,
+        no-repeat,
+        no-repeat;
+
+    background-size:
+        32% 100%,
+        32% 100%,
+        32% 100%;
+
+    background-position:
+        left center,
+        center center,
+        right center;
+
+    opacity: 0.96;
 }
 
-
-/* Secondary cropped tile */
 
 .page-header::after {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    right: 0;
-
-    width: 26%;
-    height: 46px;
-
-    border-left:
-        0.45rem solid
-        var(--color-background);
-
-    border-radius:
-        0
-        7px
-        7px
-        0;
-
-    background-image:
-        url("../imgs/footer-2.webp");
-
-    background-repeat: no-repeat;
-    background-size: 250% auto;
-    background-position: 72% 58%;
-
-    pointer-events: none;
+    content: none;
 }
+
 
 @media (max-width: 700px) {
 
     .page-header::before {
-        height: 38px;
+        width: min(78%, 250px);
+        height: 34px;
 
-        margin-bottom: 1.1rem;
-
-        background-size: 205% auto;
-    }
-
-
-    .page-header::after {
-        width: 31%;
-        height: 38px;
+        margin-bottom: 1rem;
     }
 
 }
@@ -313,23 +299,84 @@ a:focus-visible {
 
 
 /* ---------------------------------
-   Home profile layout
+   Home tile strip
+---------------------------------- */
+
+.home-tile-strip {
+    display: grid;
+
+    grid-template-columns:
+        1.15fr
+        0.85fr
+        0.9fr
+        0.75fr
+        1fr;
+
+    gap: 0.42rem;
+
+    height: 44px;
+
+    margin-bottom: 0.9rem;
+}
+
+
+.home-tile {
+    min-width: 0;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background-color:
+        var(--color-surface);
+}
+
+
+.home-tile img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ---------------------------------
+   Home profile card
 ---------------------------------- */
 
 .home-profile {
     display: grid;
 
     grid-template-columns:
-        180px
+        140px
         minmax(0, 1fr);
 
     align-items: start;
 
-    gap: 2.25rem;
+    gap: 1.8rem;
+
+    padding:
+        1.45rem
+        1.55rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.3);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.045);
 }
 
 
 .home-profile-sidebar {
+    width: 140px;
+
     min-width: 0;
 }
 
@@ -339,7 +386,7 @@ a:focus-visible {
 ---------------------------------- */
 
 .home-portrait {
-    width: 180px;
+    width: 140px;
 
     margin: 0;
 }
@@ -353,13 +400,13 @@ a:focus-visible {
     aspect-ratio: 4 / 5;
 
     object-fit: cover;
-    object-position: center 38%;
+    object-position: center 36%;
 
     border:
         1px solid
-        rgba(50, 88, 107, 0.28);
+        rgba(50, 88, 107, 0.26);
 
-    border-radius: 7px;
+    border-radius: 5px;
 
     background-color:
         var(--color-surface);
@@ -371,15 +418,23 @@ a:focus-visible {
 ---------------------------------- */
 
 .home-portrait-credit {
-    margin-top: 0.4rem;
+    margin-top: 0.42rem;
 
     color:
         var(--color-muted);
 
-    font-size: 0.68rem;
+    font-size: 0.67rem;
     line-height: 1.4;
 
     text-align: left;
+}
+
+
+.home-portrait-credit em {
+    color:
+        var(--color-muted);
+
+    font-style: italic;
 }
 
 
@@ -407,13 +462,13 @@ a:focus-visible {
     margin:
         0
         0
-        1.25rem;
+        1.15rem;
 
-    padding-bottom: 0.9rem;
+    padding-bottom: 0.85rem;
 
     border-bottom:
         1px solid
-        rgba(50, 88, 107, 0.22);
+        rgba(50, 88, 107, 0.2);
 }
 
 
@@ -437,7 +492,7 @@ a:focus-visible {
     color:
         var(--color-text);
 
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     font-weight: 600;
 
     line-height: 1.5;
@@ -473,7 +528,7 @@ a:focus-visible {
     color:
         var(--color-muted);
 
-    font-size: 0.84rem;
+    font-size: 0.83rem;
     line-height: 1.5;
 }
 
@@ -490,8 +545,8 @@ a:focus-visible {
     color:
         var(--color-text);
 
-    font-size: 1rem;
-    line-height: 1.75;
+    font-size: 0.96rem;
+    line-height: 1.72;
 }
 
 
@@ -499,7 +554,7 @@ a:focus-visible {
     margin:
         0
         0
-        1rem;
+        0.9rem;
 }
 
 
@@ -514,20 +569,40 @@ a:focus-visible {
 
 @media (max-width: 650px) {
 
+    .home-tile-strip {
+        grid-template-columns:
+            1.1fr
+            0.9fr
+            1fr;
+
+        height: 38px;
+    }
+
+
+    .home-tile:nth-child(4),
+    .home-tile:nth-child(5) {
+        display: none;
+    }
+
+
     .home-profile {
         grid-template-columns: 1fr;
 
-        gap: 1.35rem;
+        gap: 1.25rem;
+
+        padding:
+            1.25rem
+            1.2rem;
     }
 
 
     .home-profile-sidebar {
-        width: 150px;
+        width: 128px;
     }
 
 
     .home-portrait {
-        width: 150px;
+        width: 128px;
     }
 
 
