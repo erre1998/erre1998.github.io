@@ -91,6 +91,27 @@ description: "Curriculum Vitae of Erik Renz."
                         University of Rostock
                     </p>
 
+                    <p class="cv-entry-thesis">
+                        <span class="cv-entry-thesis-label">
+                            Projects:
+                        </span>
+                        <a
+                            href="https://demel.uni-rostock.de/?lang=en"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Diccionario del Español Medieval electrónico (DEMel)
+                        </a>
+                        <br>
+                        <a
+                            href="https://www.pessoadigital.pt/en/index.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Digital Edition of Fernando Pessoa: Projects and Publications (Pessoa Digital)
+                        </a>
+                    </p>
+
                 </div>
 
             </div>
@@ -175,6 +196,7 @@ description: "Curriculum Vitae of Erik Renz."
 
     </section>
 
+
     <section class="cv-section">
 
         <h2 class="cv-section-title">Education</h2>
@@ -256,7 +278,69 @@ description: "Curriculum Vitae of Erik Renz."
 
         </div>
 
+
+        <div class="cv-subsection">
+
+            <h3 class="cv-subsection-title">
+                Further Training
+            </h3>
+
+            <div class="cv-entry">
+
+                <div class="cv-entry-date">
+                    17.–18.08.2026
+                </div>
+
+                <div class="cv-entry-content">
+
+                    <p class="cv-entry-title">
+                        <a
+                            href="https://www.uni-rostock.de/weiterbildung/hochschuldidaktik/veranstaltungen-und-bildungsformate/02-lernfoerderung-und-begleitung/studierende-gut-beraten/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Studierende gut beraten
+                        </a>
+                    </p>
+
+                    <p class="cv-entry-meta">
+                        <em>Hochschuldidaktik</em>, University of Rostock
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="cv-entry">
+
+                <div class="cv-entry-date">
+                    08.07.2026
+                </div>
+
+                <div class="cv-entry-content">
+
+                    <p class="cv-entry-title">
+                        <a
+                            href="https://www.uni-rostock.de/weiterbildung/hochschuldidaktik/veranstaltungen-und-bildungsformate/03-lehrpersoenlichkeit-entwickeln/studierende-als-mitgestaltende-studentische-arbeiten-nachhaltig-nutzen/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Studierende als Mitgestaltende: Studentische Arbeiten nachhaltig nutzen
+                        </a>
+                    </p>
+
+                    <p class="cv-entry-meta">
+                        <em>Hochschuldidaktik</em>, University of Rostock
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
+
 
     <section class="cv-section">
 

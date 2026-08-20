@@ -309,14 +309,28 @@ a:focus-visible {
    Curriculum Vitae
 ---------------------------------- */
 
+.cv {
+    width: 100%;
+}
+
+
+/* ---------------------------------
+   CV sections
+---------------------------------- */
+
 .cv-section + .cv-section {
     margin-top: 4rem;
 }
 
-.cv-section-title {
-    margin: 0 0 1.75rem;
 
-    color: var(--color-text);
+.cv-section-title {
+    margin:
+        0
+        0
+        1.75rem;
+
+    color:
+        var(--color-text);
 
     font-size: 1.4rem;
     font-weight: 600;
@@ -325,14 +339,24 @@ a:focus-visible {
     letter-spacing: -0.015em;
 }
 
+
+/* ---------------------------------
+   CV subsections
+---------------------------------- */
+
 .cv-subsection {
-    margin-top: 2.5rem;
+    margin-top: 2.75rem;
 }
 
-.cv-subsection-title {
-    margin: 0 0 1.25rem;
 
-    color: var(--color-muted);
+.cv-subsection-title {
+    margin:
+        0
+        0
+        1.25rem;
+
+    color:
+        var(--color-muted);
 
     font-size: 0.8rem;
     font-weight: 600;
@@ -341,55 +365,167 @@ a:focus-visible {
     text-transform: uppercase;
 }
 
+
+/* ---------------------------------
+   CV entries
+---------------------------------- */
+
 .cv-entry {
     display: grid;
 
-    grid-template-columns: 125px minmax(0, 1fr);
+    grid-template-columns:
+        125px
+        minmax(0, 1fr);
+
     gap: 1.5rem;
 
-    padding: 1.15rem 0;
+    padding:
+        1.2rem
+        1.3rem;
 
-    border-top: 1px solid var(--color-border);
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        box-shadow 0.18s ease;
 }
 
+
+.cv-entry + .cv-entry {
+    margin-top: 0.9rem;
+}
+
+
+.cv-entry:hover {
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.05);
+}
+
+
+.cv-entry:focus-within {
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.065);
+}
+
+
+/* ---------------------------------
+   CV date
+---------------------------------- */
+
 .cv-entry-date {
-    color: var(--color-muted);
+    color:
+        var(--color-muted);
 
     font-size: 0.88rem;
     line-height: 1.5;
 }
 
+
+/* ---------------------------------
+   CV content
+---------------------------------- */
+
 .cv-entry-content {
     min-width: 0;
 }
 
+
 .cv-entry-title {
     margin: 0;
 
-    color: var(--color-text);
+    color:
+        var(--color-text);
 
     font-weight: 600;
     line-height: 1.5;
 }
 
-.cv-entry-meta {
-    margin: 0.2rem 0 0;
 
-    color: var(--color-muted);
+.cv-entry-title a {
+    color:
+        var(--color-text);
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease;
+}
+
+
+.cv-entry-title a:hover {
+    color:
+        var(--color-primary);
+}
+
+
+.cv-entry-title a:focus-visible {
+    color:
+        var(--color-primary);
+
+    outline:
+        2px solid
+        var(--color-primary);
+
+    outline-offset: 3px;
+}
+
+
+/* ---------------------------------
+   CV metadata
+---------------------------------- */
+
+.cv-entry-meta {
+    margin:
+        0.2rem
+        0
+        0;
+
+    color:
+        var(--color-muted);
 
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
+
+.cv-entry-meta em {
+    color:
+        var(--color-muted);
+}
+
+
+/* ---------------------------------
+   CV thesis / project information
+---------------------------------- */
+
 .cv-entry-thesis {
-    margin: 0.55rem 0 0;
+    margin:
+        0.55rem
+        0
+        0;
 
     font-size: 0.92rem;
     line-height: 1.6;
 }
 
+
 .cv-entry-thesis-label {
-    color: var(--color-muted);
+    color:
+        var(--color-muted);
+}
+
+
+.cv-entry-thesis a {
+    color:
+        var(--color-primary);
 }
 
 
@@ -397,16 +533,34 @@ a:focus-visible {
    Curriculum Vitae responsive
 ---------------------------------- */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+
+    .cv-section + .cv-section {
+        margin-top: 3.5rem;
+    }
+
+
+    .cv-subsection {
+        margin-top: 2.5rem;
+    }
+
 
     .cv-entry {
         grid-template-columns: 1fr;
 
         gap: 0.35rem;
+
+        padding:
+            1.05rem
+            1.1rem;
+    }
+
+
+    .cv-entry-date {
+        margin-bottom: 0.15rem;
     }
 
 }
-
 
 /* ---------------------------------
    Publications
