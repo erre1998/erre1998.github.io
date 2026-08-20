@@ -112,7 +112,7 @@ description: "Funded projects by Erik Renz."
                 
                   <a
                         class="project-resource-button"
-                        href="https://www.germanistik.uni-rostock.de/forschung/digital-humanities/rosdh/ringvorlesung/"
+                        href="https://www.germanistik.uni-rostock.de/forschung/digital-humanities/rosdh/forschung/toolingdrama/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

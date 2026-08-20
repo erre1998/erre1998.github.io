@@ -11,67 +11,43 @@ description: "Teaching and thesis supervision by Erik Renz."
          Search and filters
     ---------------------------------- -->
 
-    <div
-        class="teaching-toolbar"
-        aria-label="Search and filter courses"
+   <div
+    class="teaching-toolbar"
+    aria-label="Search and filter courses"
+>
+
+    <input
+        id="teaching-search"
+        type="search"
+        placeholder="Search"
+        aria-label="Search courses"
     >
 
-        <input
-            id="teaching-search"
-            type="search"
-            placeholder="Search"
-            aria-label="Search courses"
-        >
+
+    <select
+        id="filter-term"
+        aria-label="Filter by term"
+    >
+        <option value="">All terms</option>
+    </select>
 
 
-        <select
-            id="filter-location"
-            aria-label="Filter by location"
-        >
-            <option value="">All locations</option>
-        </select>
+    <select
+        id="filter-type"
+        aria-label="Filter by type"
+    >
+        <option value="">All types</option>
+    </select>
 
 
-        <select
-            id="filter-term"
-            aria-label="Filter by term"
-        >
-            <option value="">All terms</option>
-        </select>
+    <button
+        id="teaching-filter-reset"
+        type="button"
+    >
+        Reset
+    </button>
 
-
-        <select
-            id="filter-type"
-            aria-label="Filter by type"
-        >
-            <option value="">All types</option>
-        </select>
-
-
-        <select
-            id="filter-sws"
-            aria-label="Filter by SWS"
-        >
-            <option value="">All SWS</option>
-        </select>
-
-
-        <select
-            id="filter-language"
-            aria-label="Filter by language"
-        >
-            <option value="">All languages</option>
-        </select>
-
-
-        <button
-            id="teaching-filter-reset"
-            type="button"
-        >
-            Reset
-        </button>
-
-    </div>
+</div>
 
 
     <p

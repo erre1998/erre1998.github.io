@@ -14,13 +14,18 @@ description: "Curriculum Vitae of Erik Renz."
         <div class="cv-entry">
 
             <div class="cv-entry-date">
-                since 07/2025
+                <span class="cv-entry-date-detail">since</span>
+                <strong class="cv-entry-date-main">07/2025</strong>
             </div>
 
             <div class="cv-entry-content">
 
                 <p class="cv-entry-title">
-                    <a href="https://www.germanistik.uni-rostock.de/personen/wiss-mitarbeitende/erik-renz/">
+                    <a
+                        href="https://www.germanistik.uni-rostock.de/personen/wiss-mitarbeitende/erik-renz/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Research Associate (TV-L E 13, 50%)
                     </a>
                 </p>
@@ -34,10 +39,12 @@ description: "Curriculum Vitae of Erik Renz."
 
         </div>
 
+
         <div class="cv-entry">
 
             <div class="cv-entry-date">
-                07/2025–06/2026
+                <span class="cv-entry-date-detail">07/2025–</span>
+                <strong class="cv-entry-date-main">06/2026</strong>
             </div>
 
             <div class="cv-entry-content">
@@ -68,16 +75,19 @@ description: "Curriculum Vitae of Erik Renz."
 
         </div>
 
+
         <div class="cv-subsection">
 
             <h3 class="cv-subsection-title">
                 Student Assistant Positions
             </h3>
 
+
             <div class="cv-entry">
 
                 <div class="cv-entry-date">
-                    11/2022–06/2025
+                    <span class="cv-entry-date-detail">11/2022–</span>
+                    <strong class="cv-entry-date-main">06/2025</strong>
                 </div>
 
                 <div class="cv-entry-content">
@@ -100,7 +110,7 @@ description: "Curriculum Vitae of Erik Renz."
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Diccionario del Español Medieval electrónico (DEMel)
+                            Diccionario del Español Medieval <em>electrónico</em> (DEM<em>el</em>)
                         </a>
                         <br>
                         <a
@@ -116,10 +126,12 @@ description: "Curriculum Vitae of Erik Renz."
 
             </div>
 
+
             <div class="cv-entry">
 
                 <div class="cv-entry-date">
-                    01/2024–03/2025
+                    <span class="cv-entry-date-detail">01/2024–</span>
+                    <strong class="cv-entry-date-main">03/2025</strong>
                 </div>
 
                 <div class="cv-entry-content">
@@ -150,10 +162,12 @@ description: "Curriculum Vitae of Erik Renz."
 
             </div>
 
+
             <div class="cv-entry">
 
                 <div class="cv-entry-date">
-                    10/2023–01/2024
+                    <span class="cv-entry-date-detail">10/2023–</span>
+                    <strong class="cv-entry-date-main">01/2024</strong>
                 </div>
 
                 <div class="cv-entry-content">
@@ -171,10 +185,12 @@ description: "Curriculum Vitae of Erik Renz."
 
             </div>
 
+
             <div class="cv-entry">
 
                 <div class="cv-entry-date">
-                    04/2022–10/2022
+                    <span class="cv-entry-date-detail">04/2022–</span>
+                    <strong class="cv-entry-date-main">10/2022</strong>
                 </div>
 
                 <div class="cv-entry-content">
@@ -201,10 +217,12 @@ description: "Curriculum Vitae of Erik Renz."
 
         <h2 class="cv-section-title">Education</h2>
 
+
         <div class="cv-entry">
 
             <div class="cv-entry-date">
-                2022–2025
+                <span class="cv-entry-date-detail">2022–</span>
+                <strong class="cv-entry-date-main">2025</strong>
             </div>
 
             <div class="cv-entry-content">
@@ -221,19 +239,23 @@ description: "Curriculum Vitae of Erik Renz."
                     <span class="cv-entry-thesis-label">
                         Master’s thesis:
                     </span>
-                    <em>“Sag’ was Du sagen willst, klar, kurz, ruhig. Was ist's?”:
-                    Analyzing Women's Speech Patterns in Marie von Ebner-Eschenbach's
-                    Comedies through Information Visualization</em>
+                    <em>
+                        “Sag’ was Du sagen willst, klar, kurz, ruhig. Was ist's?”:
+                        Analyzing Women's Speech Patterns in Marie von Ebner-Eschenbach's
+                        Comedies through Information Visualization
+                    </em>
                 </p>
 
             </div>
 
         </div>
 
+
         <div class="cv-entry">
 
             <div class="cv-entry-date">
-                2018–2022
+                <span class="cv-entry-date-detail">2018–</span>
+                <strong class="cv-entry-date-main">2022</strong>
             </div>
 
             <div class="cv-entry-content">
@@ -250,18 +272,22 @@ description: "Curriculum Vitae of Erik Renz."
                     <span class="cv-entry-thesis-label">
                         Bachelor’s thesis:
                     </span>
-                    <em>Country Midwives in the Grand Duchies of Mecklenburg-Schwerin
-                    and Mecklenburg-Strelitz, 1871–1918</em>
+                    <em>
+                        Country Midwives in the Grand Duchies of Mecklenburg-Schwerin
+                        and Mecklenburg-Strelitz, 1871–1918
+                    </em>
                 </p>
 
             </div>
 
         </div>
 
+
         <div class="cv-entry">
 
             <div class="cv-entry-date">
-                2012–2018
+                <span class="cv-entry-date-detail">2012–</span>
+                <strong class="cv-entry-date-main">2018</strong>
             </div>
 
             <div class="cv-entry-content">
@@ -285,17 +311,19 @@ description: "Curriculum Vitae of Erik Renz."
                 Further Training
             </h3>
 
+
             <div class="cv-entry">
 
                 <div class="cv-entry-date">
-                    17.–18.08.2026
+                    <span class="cv-entry-date-detail">17.–18.08.</span>
+                    <strong class="cv-entry-date-main">2026</strong>
                 </div>
 
                 <div class="cv-entry-content">
 
                     <p class="cv-entry-title">
                         <a
-                            href="https://www.uni-rostock.de/weiterbildung/hochschuldidaktik/veranstaltungen-und-bildungsformate/02-lernfoerderung-und-begleitung/studierende-gut-beraten/"
+                            href="https://web.archive.org/web/20260820174141/https://www.uni-rostock.de/weiterbildung/hochschuldidaktik/veranstaltungen-und-bildungsformate/02-lernfoerderung-und-begleitung/studierende-gut-beraten/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -311,17 +339,19 @@ description: "Curriculum Vitae of Erik Renz."
 
             </div>
 
+
             <div class="cv-entry">
 
                 <div class="cv-entry-date">
-                    08.07.2026
+                    <span class="cv-entry-date-detail">08.07.</span>
+                    <strong class="cv-entry-date-main">2026</strong>
                 </div>
 
                 <div class="cv-entry-content">
 
                     <p class="cv-entry-title">
                         <a
-                            href="https://www.uni-rostock.de/weiterbildung/hochschuldidaktik/veranstaltungen-und-bildungsformate/03-lehrpersoenlichkeit-entwickeln/studierende-als-mitgestaltende-studentische-arbeiten-nachhaltig-nutzen/"
+                            href="https://web.archive.org/web/20260820174144/https://www.uni-rostock.de/weiterbildung/hochschuldidaktik/veranstaltungen-und-bildungsformate/03-lehrpersoenlichkeit-entwickeln/studierende-als-mitgestaltende-studentische-arbeiten-nachhaltig-nutzen/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -346,10 +376,11 @@ description: "Curriculum Vitae of Erik Renz."
 
         <h2 class="cv-section-title">Grants, Fellowships & Awards</h2>
 
+
         <div class="cv-entry">
 
             <div class="cv-entry-date">
-                2025
+                <strong class="cv-entry-date-main">2025</strong>
             </div>
 
             <div class="cv-entry-content">
@@ -377,10 +408,11 @@ description: "Curriculum Vitae of Erik Renz."
 
         </div>
 
+
         <div class="cv-entry">
 
             <div class="cv-entry-date">
-                2024
+                <strong class="cv-entry-date-main">2024</strong>
             </div>
 
             <div class="cv-entry-content">

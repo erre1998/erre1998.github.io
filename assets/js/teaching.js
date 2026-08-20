@@ -14,30 +14,31 @@ document.addEventListener("DOMContentLoaded", () => {
     ---------------------------------- */
 
     const searchInput =
-        document.querySelector("#teaching-search");
+        document.querySelector(
+            "#teaching-search"
+        );
 
     const filters = {
-        location:
-            document.querySelector("#filter-location"),
-
         term:
-            document.querySelector("#filter-term"),
+            document.querySelector(
+                "#filter-term"
+            ),
 
         type:
-            document.querySelector("#filter-type"),
-
-        sws:
-            document.querySelector("#filter-sws"),
-
-        language:
-            document.querySelector("#filter-language")
+            document.querySelector(
+                "#filter-type"
+            )
     };
 
     const resetButton =
-        document.querySelector("#teaching-filter-reset");
+        document.querySelector(
+            "#teaching-filter-reset"
+        );
 
     const status =
-        document.querySelector("#teaching-filter-status");
+        document.querySelector(
+            "#teaching-filter-status"
+        );
 
 
     /* ---------------------------------
@@ -50,6 +51,20 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!select) {
                 return;
             }
+
+
+            /*
+             * Remove previously generated
+             * options while retaining the
+             * first "All ..." option.
+             */
+
+            while (
+                select.options.length > 1
+            ) {
+                select.remove(1);
+            }
+
 
             const values = [
                 ...new Set(
@@ -64,11 +79,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             /*
-             * Terms retain the chronological
-             * order of the course list.
+             * Terms retain the order in
+             * which they occur in the
+             * course list.
+             *
+             * Types are sorted
+             * alphabetically.
              */
 
-            if (key !== "term") {
+            if (key === "type") {
 
                 values.sort(
                     (a, b) =>
@@ -109,6 +128,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function searchableText(course) {
 
+        /*
+         * The search remains deliberately
+         * broad even though only Term and
+         * Type are available as filters.
+         *
+         * This means that users can still
+         * search for locations, languages,
+         * titles, SWS, etc.
+         */
+
         return [
             course.textContent,
             course.dataset.location,
@@ -119,7 +148,11 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
             .filter(Boolean)
             .join(" ")
-            .replace(/\s+/g, " ")
+            .replace(
+                /\s+/g,
+                " "
+            )
+            .trim()
             .toLowerCase();
 
     }
@@ -139,17 +172,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 : "";
 
 
-        const activeFilters = {};
+        const selectedTerm =
+            filters.term
+                ? filters.term.value
+                : "";
 
-        Object.entries(filters)
-            .forEach(([key, select]) => {
 
-                activeFilters[key] =
-                    select
-                        ? select.value
-                        : "";
-
-            });
+        const selectedType =
+            filters.type
+                ? filters.type.value
+                : "";
 
 
         let visibleCount = 0;
@@ -157,22 +189,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         courses.forEach(course => {
 
-            const matchesMetadata =
-                Object.entries(activeFilters)
-                    .every(
-                        ([key, value]) => {
+            const matchesTerm =
+                !selectedTerm ||
+                course.dataset.term ===
+                    selectedTerm;
 
-                            if (!value) {
-                                return true;
-                            }
 
-                            return (
-                                course.dataset[key] ===
-                                value
-                            );
-
-                        }
-                    );
+            const matchesType =
+                !selectedType ||
+                course.dataset.type ===
+                    selectedType;
 
 
             const matchesSearch =
@@ -181,8 +207,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     .includes(query);
 
 
+            /*
+             * All active filters are
+             * combined with AND.
+             */
+
             const matches =
-                matchesMetadata &&
+                matchesTerm &&
+                matchesType &&
                 matchesSearch;
 
 
@@ -208,7 +240,9 @@ document.addEventListener("DOMContentLoaded", () => {
        Status
     ---------------------------------- */
 
-    function updateStatus(visibleCount) {
+    function updateStatus(
+        visibleCount
+    ) {
 
         if (!status) {
             return;
@@ -219,7 +253,9 @@ document.addEventListener("DOMContentLoaded", () => {
             courses.length;
 
 
-        if (visibleCount === total) {
+        if (
+            visibleCount === total
+        ) {
 
             status.textContent =
                 `${total} courses`;
@@ -229,7 +265,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        if (visibleCount === 0) {
+        if (
+            visibleCount === 0
+        ) {
 
             status.textContent =
                 "No courses found.";
@@ -252,7 +290,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function resetFilters() {
 
         if (searchInput) {
-            searchInput.value = "";
+
+            searchInput.value =
+                "";
+
         }
 
 
@@ -260,7 +301,10 @@ document.addEventListener("DOMContentLoaded", () => {
             .forEach(select => {
 
                 if (select) {
-                    select.value = "";
+
+                    select.value =
+                        "";
+
                 }
 
             });
@@ -291,6 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!select) {
                 return;
             }
+
 
             select.addEventListener(
                 "change",

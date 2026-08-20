@@ -304,7 +304,6 @@ a:focus-visible {
     margin-bottom: 0;
 }
 
-
 /* ---------------------------------
    Curriculum Vitae
 ---------------------------------- */
@@ -327,7 +326,7 @@ a:focus-visible {
     margin:
         0
         0
-        1.75rem;
+        1.5rem;
 
     color:
         var(--color-text);
@@ -367,7 +366,7 @@ a:focus-visible {
 
 
 /* ---------------------------------
-   CV entries
+   CV cards
 ---------------------------------- */
 
 .cv-entry {
@@ -379,13 +378,11 @@ a:focus-visible {
 
     gap: 1.5rem;
 
-    padding:
-        1.2rem
-        1.3rem;
+    padding: 1.4rem;
 
     border:
         1px solid
-        var(--color-border);
+        rgba(50, 88, 107, 0.3);
 
     border-radius: 7px;
 
@@ -393,26 +390,29 @@ a:focus-visible {
         var(--color-surface);
 
     transition:
+        border-color 0.18s ease,
         box-shadow 0.18s ease;
 }
 
 
 .cv-entry + .cv-entry {
-    margin-top: 0.9rem;
+    margin-top: 1rem;
 }
 
 
 .cv-entry:hover {
+    border-color:
+        rgba(50, 88, 107, 0.44);
+
     box-shadow:
         0 5px 17px
-        rgba(18, 51, 72, 0.05);
+        rgba(18, 51, 72, 0.055);
 }
 
 
 .cv-entry:focus-within {
-    box-shadow:
-        0 5px 17px
-        rgba(18, 51, 72, 0.065);
+    border-color:
+        rgba(50, 88, 107, 0.58);
 }
 
 
@@ -421,11 +421,40 @@ a:focus-visible {
 ---------------------------------- */
 
 .cv-entry-date {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.05rem;
+
     color:
         var(--color-muted);
 
-    font-size: 0.88rem;
-    line-height: 1.5;
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+
+.cv-entry-date-detail {
+    color:
+        var(--color-muted);
+
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    line-height: 1.45;
+}
+
+
+.cv-entry-date-main {
+    color:
+        var(--color-text);
+
+    font-size: 0.92rem;
+    font-weight: 600;
+
+    line-height: 1.45;
 }
 
 
@@ -444,8 +473,11 @@ a:focus-visible {
     color:
         var(--color-text);
 
+    font-size: 1rem;
     font-weight: 600;
+
     line-height: 1.5;
+    letter-spacing: -0.006em;
 }
 
 
@@ -484,15 +516,15 @@ a:focus-visible {
 
 .cv-entry-meta {
     margin:
-        0.2rem
+        0.25rem
         0
         0;
 
     color:
         var(--color-muted);
 
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.88rem;
+    line-height: 1.55;
 }
 
 
@@ -507,19 +539,26 @@ a:focus-visible {
 ---------------------------------- */
 
 .cv-entry-thesis {
+    max-width: 650px;
+
     margin:
-        0.55rem
+        0.6rem
         0
         0;
 
-    font-size: 0.92rem;
-    line-height: 1.6;
+    color:
+        var(--color-text);
+
+    font-size: 0.86rem;
+    line-height: 1.62;
 }
 
 
 .cv-entry-thesis-label {
     color:
         var(--color-muted);
+
+    font-weight: 500;
 }
 
 
@@ -550,14 +589,28 @@ a:focus-visible {
 
         gap: 0.35rem;
 
-        padding:
-            1.05rem
-            1.1rem;
+        padding: 1.15rem;
     }
 
 
     .cv-entry-date {
-        margin-bottom: 0.15rem;
+        flex-direction: row;
+
+        align-items: baseline;
+
+        gap: 0.3rem;
+
+        margin-bottom: 0.25rem;
+    }
+
+
+    .cv-entry-date-main {
+        font-size: 0.88rem;
+    }
+
+
+    .cv-entry-title {
+        font-size: 0.96rem;
     }
 
 }
@@ -4683,78 +4736,6 @@ a:focus-visible {
 
     .project-status {
         margin-top: 0.4rem;
-    }
-
-}
-
-/* ---------------------------------
-   Chicago Author-Date citation
----------------------------------- */
-
-.pub-citation {
-    margin: 0;
-
-    padding-left: 1.15rem;
-    text-indent: -1.15rem;
-
-    color:
-        var(--color-text);
-
-    font-size: 0.94rem;
-    line-height: 1.7;
-}
-
-
-/* ---------------------------------
-   Chicago publication title
----------------------------------- */
-
-.pub-citation-title {
-    color:
-        var(--color-text);
-}
-
-
-/* ---------------------------------
-   Status directly after title
----------------------------------- */
-
-.pub-citation-title
-+ .pub-publication-status {
-    margin-left: 0.4rem;
-    margin-right: 0.18rem;
-
-    vertical-align: 0.08em;
-}
-
-
-/* ---------------------------------
-   DOI / URL inside citation
----------------------------------- */
-
-.pub-citation-url {
-    color:
-        var(--color-primary);
-
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-
-.pub-citation-url:hover {
-    color:
-        var(--color-text);
-}
-
-
-/* ---------------------------------
-   Chicago citation responsive
----------------------------------- */
-
-@media (max-width: 700px) {
-
-    .pub-citation {
-        font-size: 0.91rem;
     }
 
 }
