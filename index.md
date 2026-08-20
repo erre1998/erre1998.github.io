@@ -7,33 +7,45 @@ description: "Personal academic website of Erik Renz."
 
 <section class="home">
 
-    <div class="home-visual-band" aria-hidden="true">
-
-        <span class="home-visual-tile home-visual-tile-1"></span>
-
-        <span class="home-visual-tile home-visual-tile-2"></span>
-
-        <span class="home-visual-tile home-visual-tile-3"></span>
-
-    </div>
-
-
     <div class="home-profile">
 
+        <figure class="home-portrait">
+
+            <img
+                src="{{ '/assets/imgs/2025_renz.png' | relative_url }}"
+                alt="Portrait of Erik Renz"
+            >
+
+            <figcaption class="home-portrait-credit">
+                Photo: Tim Bübning
+            </figcaption>
+
+        </figure>
+
+
         <div class="home-profile-content">
-
-            <p class="home-fields">
-                Digital Humanities · Computational Literary Studies
-            </p>
-
 
             <div class="home-intro">
 
                 <p>
-                    I work at the intersection of Digital Humanities and
-                    Computational Literary Studies, with a particular interest
-                    in computational approaches to literary texts, digital
-                    scholarly resources, and research-oriented teaching.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+                
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
                 </p>
 
             </div>
@@ -61,16 +73,6 @@ description: "Personal academic website of Erik Renz."
             </div>
 
         </div>
-
-
-<div class="home-portrait">
-
-    <img
-        src="{{ '/assets/imgs/2025_renz.png' | relative_url }}"
-        alt="Portrait of Erik Renz"
-    >
-
-</div>
 
     </div>
 
