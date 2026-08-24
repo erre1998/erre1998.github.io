@@ -124,7 +124,14 @@ description: "Academic services by Erik Renz"
         Professional Memberships, Committee Work, and Review Activities
     </h2>
 
-        <div class="services-list">
+
+    <p class="services-events-reference">
+        For conferences, workshops, lecture series, and other events organized by me, see
+        <a href="{{ '/events/' | relative_url }}">Organized Events</a>.
+    </p>
+
+
+    <div class="services-list">
 
 
         <!-- IDE -->
