@@ -46,31 +46,13 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-type">
-                    Academic Self-Government
-                </p>
-
-
                 <p class="service-entry-title">
                     Appointment Committee
                 </p>
 
-
-                <p class="service-entry-context">
-                    W2 Professorship for Historical Linguistics of German
+                <p class="service-entry-detail">
+                    Member · W2 Professorship for Historical Linguistics of German
                 </p>
-
-
-                <p class="service-entry-role">
-
-                    <span class="service-entry-role-label">
-                        Role
-                    </span>
-
-                    Member
-
-                </p>
-
 
                 <p class="service-entry-institution">
                     Faculty of Humanities, University of Rostock
@@ -108,26 +90,13 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-type">
-                    Academic Self-Government
-                </p>
-
-
                 <p class="service-entry-title">
                     German Studies Student Council (GeFaR)
                 </p>
 
-
-                <p class="service-entry-role">
-
-                    <span class="service-entry-role-label">
-                        Role
-                    </span>
-
+                <p class="service-entry-detail">
                     Spokesperson
-
                 </p>
-
 
                 <p class="service-entry-institution">
                     Faculty of Humanities, University of Rostock
@@ -184,11 +153,6 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-type">
-                    Professional Membership
-                </p>
-
-
                 <p class="service-entry-title">
 
                     <a
@@ -201,15 +165,8 @@ description: "Academic services by Erik Renz"
 
                 </p>
 
-
-                <p class="service-entry-role">
-
-                    <span class="service-entry-role-label">
-                        Role
-                    </span>
-
+                <p class="service-entry-detail">
                     Member
-
                 </p>
 
             </div>
@@ -233,11 +190,6 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-type">
-                    Programme Committee
-                </p>
-
-
                 <p class="service-entry-title">
 
                     <a
@@ -250,15 +202,8 @@ description: "Academic services by Erik Renz"
 
                 </p>
 
-
-                <p class="service-entry-role">
-
-                    <span class="service-entry-role-label">
-                        Role
-                    </span>
-
+                <p class="service-entry-detail">
                     Member of the Programme Committee
-
                 </p>
 
             </div>
@@ -286,11 +231,6 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-type">
-                    Professional Membership
-                </p>
-
-
                 <p class="service-entry-title">
 
                     <a
@@ -303,15 +243,8 @@ description: "Academic services by Erik Renz"
 
                 </p>
 
-
-                <p class="service-entry-role">
-
-                    <span class="service-entry-role-label">
-                        Role
-                    </span>
-
+                <p class="service-entry-detail">
                     Member
-
                 </p>
 
             </div>
@@ -335,11 +268,6 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-type">
-                    Programme Committee
-                </p>
-
-
                 <p class="service-entry-title">
 
                     <a
@@ -352,15 +280,8 @@ description: "Academic services by Erik Renz"
 
                 </p>
 
-
-                <p class="service-entry-role">
-
-                    <span class="service-entry-role-label">
-                        Role
-                    </span>
-
+                <p class="service-entry-detail">
                     Member of the Programme Committee
-
                 </p>
 
             </div>
@@ -384,11 +305,6 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-type">
-                    Peer Review
-                </p>
-
-
                 <p class="service-entry-title">
 
                     <a
@@ -401,15 +317,8 @@ description: "Academic services by Erik Renz"
 
                 </p>
 
-
-                <p class="service-entry-role">
-
-                    <span class="service-entry-role-label">
-                        Role
-                    </span>
-
+                <p class="service-entry-detail">
                     Reviewer
-
                 </p>
 
             </div>
@@ -437,11 +346,6 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-type">
-                    Working Group
-                </p>
-
-
                 <p class="service-entry-title">
 
                     <a
@@ -454,15 +358,8 @@ description: "Academic services by Erik Renz"
 
                 </p>
 
-
-                <p class="service-entry-role">
-
-                    <span class="service-entry-role-label">
-                        Role
-                    </span>
-
+                <p class="service-entry-detail">
                     Co-Organizer and Founding Member
-
                 </p>
 
             </div>
