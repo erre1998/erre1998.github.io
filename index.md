@@ -1,48 +1,5 @@
 <section class="home">
 
-<div
-    class="home-tile-strip"
-    aria-hidden="true"
->
-
-    <span class="home-tile">
-        <img
-            src="{{ '/assets/imgs/kachel-4.webp' | relative_url }}"
-            alt=""
-        >
-    </span>
-
-    <span class="home-tile">
-        <img
-            src="{{ '/assets/imgs/kachel-2.webp' | relative_url }}"
-            alt=""
-        >
-    </span>
-
-    <span class="home-tile">
-        <img
-            src="{{ '/assets/imgs/kachel-3.webp' | relative_url }}"
-            alt=""
-        >
-    </span>
-
-    <span class="home-tile">
-        <img
-            src="{{ '/assets/imgs/kachel-7.webp' | relative_url }}"
-            alt=""
-        >
-    </span>
-
-    <span class="home-tile">
-        <img
-            src="{{ '/assets/imgs/kachel-6.webp' | relative_url }}"
-            alt=""
-        >
-    </span>
-
-</div>
-
-
 <div class="home-profile">
 
     <div class="home-profile-sidebar">

@@ -1,50 +1,66 @@
 <footer class="site-footer">
-
+    
     <div
-        class="site-footer-mosaic"
+        class="site-footer-image"
         aria-hidden="true"
-    >
-        <span class="site-footer-mosaic-tile site-footer-mosaic-1"></span>
-        <span class="site-footer-mosaic-tile site-footer-mosaic-2"></span>
-        <span class="site-footer-mosaic-tile site-footer-mosaic-1"></span>
-        <span class="site-footer-mosaic-tile site-footer-mosaic-2"></span>
-    </div>
-
+        ></div>
+    
     <div class="container site-footer-inner">
-
+        
         <div class="site-footer-info">
-
+            
             <p class="site-footer-copyright">
                 &copy; {{ "now" | date: "%Y" }} Erik Renz
             </p>
-
+            
             <div class="site-footer-meta">
-
+                
                 <a href="{{ '/privacy-policy/' | relative_url }}">
                     Privacy Policy
                 </a>
-
+                
                 <span aria-hidden="true">·</span>
-
+                
                 <span>
                     Last update: {{ site.time | date: "%-d %B %Y" }}
                 </span>
-
+                
             </div>
-
+            
+            <p class="site-footer-image-credit">
+                Background image adapted from
+                <a
+                    href="https://commons.wikimedia.org/wiki/File:Modern_Portuguese_Tiles_(2704255061).jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    “Modern Portuguese Tiles”
+                </a>
+                by Pedro Ribeiro Simões,
+                licensed under
+                <a
+                    href="https://creativecommons.org/licenses/by/2.0/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    CC BY 2.0
+                </a>.
+                Modified from the original.
+            </p>
+            
         </div>
-
+        
         <div class="site-footer-contact">
-
+            
             <p class="site-footer-email">
                 erik.renz [at] uni-rostock.de
             </p>
-
+            
             <div
                 class="site-footer-profiles"
                 aria-label="Profiles"
-            >
-
+                >
+                
                 <a
                     class="site-footer-profile"
                     href="https://github.com/erre1998"
@@ -52,13 +68,13 @@
                     rel="noopener noreferrer"
                     aria-label="GitHub"
                     title="GitHub"
-                >
+                    >
                     <span
                         class="site-footer-icon site-footer-icon-github"
                         aria-hidden="true"
-                    ></span>
+                        ></span>
                 </a>
-
+                
                 <a
                     class="site-footer-profile"
                     href="https://orcid.org/0009-0005-8288-7470"
@@ -66,13 +82,13 @@
                     rel="noopener noreferrer"
                     aria-label="ORCID"
                     title="ORCID"
-                >
+                    >
                     <span
                         class="site-footer-icon site-footer-icon-orcid"
                         aria-hidden="true"
-                    ></span>
+                        ></span>
                 </a>
-
+                
                 <a
                     class="site-footer-profile"
                     href="https://fedihum.org/@erre1998"
@@ -80,17 +96,17 @@
                     rel="me noopener noreferrer"
                     aria-label="Mastodon"
                     title="Mastodon"
-                >
+                    >
                     <span
                         class="site-footer-icon site-footer-icon-mastodon"
                         aria-hidden="true"
-                    ></span>
+                        ></span>
                 </a>
-
+                
             </div>
-
+            
         </div>
-
+        
     </div>
-
+    
 </footer>

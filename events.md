@@ -97,7 +97,7 @@ description: "Academic events organized by Erik Renz."
             <div class="event-item-date">
 
                 <span>
-                    Since
+                    since
                 </span>
 
                 <strong>
@@ -163,7 +163,7 @@ description: "Academic events organized by Erik Renz."
                 <div class="event-series-editions">
 
 
-                    <!-- Winter 2026/27 -->
+                    <!-- Winter 2026–27 -->
 
                     <div
                         class="event-series-edition"
@@ -171,7 +171,7 @@ description: "Academic events organized by Erik Renz."
                     >
 
                         <div class="event-series-edition-term">
-                            Winter 2026/27
+                            Winter 2026–27
                         </div>
 
 
@@ -249,7 +249,7 @@ description: "Academic events organized by Erik Renz."
 
 
 
-                    <!-- Winter 2025/26 -->
+                    <!-- Winter 2025–26 -->
 
                     <div
                         class="event-series-edition"
@@ -257,7 +257,7 @@ description: "Academic events organized by Erik Renz."
                     >
 
                         <div class="event-series-edition-term">
-                            Winter 2025/26
+                            Winter 2025–26
                         </div>
 
 
@@ -345,7 +345,7 @@ description: "Academic events organized by Erik Renz."
 
 
 
-                    <!-- Winter 2024/25 -->
+                    <!-- Winter 2024–25 -->
 
                     <div
                         class="event-series-edition"
@@ -353,7 +353,7 @@ description: "Academic events organized by Erik Renz."
                     >
 
                         <div class="event-series-edition-term">
-                            Winter 2024/25
+                            Winter 2024–25
                         </div>
 
 
@@ -441,7 +441,7 @@ description: "Academic events organized by Erik Renz."
 
 
 
-                    <!-- Winter 2023/24 -->
+                    <!-- Winter 2023–24 -->
 
                     <div
                         class="event-series-edition"
@@ -449,7 +449,7 @@ description: "Academic events organized by Erik Renz."
                     >
 
                         <div class="event-series-edition-term">
-                            Winter 2023/24
+                            Winter 2023–24
                         </div>
 
 
@@ -559,7 +559,7 @@ description: "Academic events organized by Erik Renz."
             <div class="event-item-date">
 
                 <span>
-                    7–9 September
+                    7–9 Sep
                 </span>
 
                 <strong>
@@ -655,7 +655,7 @@ description: "Academic events organized by Erik Renz."
             <div class="event-item-date">
 
                 <span>
-                    24–26 September
+                    24–26 Sep
                 </span>
 
                 <strong>

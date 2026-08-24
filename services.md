@@ -1,3 +1,11 @@
+---
+layout: page
+title: Services
+permalink: /services/
+description: "Academic services by Erik Renz"
+---
+
+
 <!-- =========================================
      Academic Self-Government
 ========================================== -->
@@ -18,15 +26,18 @@
 
             <div class="service-entry-date">
 
-                <span class="service-entry-date-start">
+                <strong class="service-entry-date-range">
                     Apr 2024
-                </span>
+                </strong>
 
-                <span class="service-entry-date-separator">
+                <span
+                    class="service-entry-date-separator"
+                    aria-hidden="true"
+                >
                     –
                 </span>
 
-                <strong class="service-entry-date-end">
+                <strong class="service-entry-date-range">
                     May 2025
                 </strong>
 
@@ -61,15 +72,18 @@
 
             <div class="service-entry-date">
 
-                <span class="service-entry-date-start">
+                <strong class="service-entry-date-range">
                     Jan 2024
-                </span>
+                </strong>
 
-                <span class="service-entry-date-separator">
+                <span
+                    class="service-entry-date-separator"
+                    aria-hidden="true"
+                >
                     –
                 </span>
 
-                <strong class="service-entry-date-end">
+                <strong class="service-entry-date-range">
                     Nov 2024
                 </strong>
 
@@ -129,7 +143,7 @@
                     since
                 </span>
 
-                <strong class="service-entry-date-end">
+                <strong class="service-entry-date-range">
                     Jun 2026
                 </strong>
 
@@ -160,7 +174,7 @@
 
             <div class="service-entry-date">
 
-                <strong class="service-entry-date-end">
+                <strong class="service-entry-date-range">
                     2026
                 </strong>
 
@@ -195,7 +209,7 @@
                     since
                 </span>
 
-                <strong class="service-entry-date-end">
+                <strong class="service-entry-date-range">
                     Nov 2024
                 </strong>
 
@@ -226,7 +240,7 @@
 
             <div class="service-entry-date">
 
-                <strong class="service-entry-date-end">
+                <strong class="service-entry-date-range">
                     2025
                 </strong>
 
@@ -257,7 +271,7 @@
 
             <div class="service-entry-date">
 
-                <strong class="service-entry-date-end">
+                <strong class="service-entry-date-range">
                     2025
                 </strong>
 
@@ -292,7 +306,7 @@
                     since
                 </span>
 
-                <strong class="service-entry-date-end">
+                <strong class="service-entry-date-range">
                     Apr 2023
                 </strong>
 

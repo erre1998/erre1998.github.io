@@ -75,17 +75,17 @@ description: "Academic talks by Erik Renz."
             data-country="Germany"
         >
 
-            <div class="talk-date">
+<div class="talk-date">
 
-                <span class="talk-date-day">
-                    03 Dec
-                </span>
+    <span class="talk-date-day">
+        3 Dec
+    </span>
 
-                <strong class="talk-date-year">
-                    2026
-                </strong>
+    <strong class="talk-date-year">
+        2026
+    </strong>
 
-            </div>
+</div>
 
 
             <div class="talk-content">
@@ -140,17 +140,17 @@ description: "Academic talks by Erik Renz."
             data-country="Poland"
         >
 
-            <div class="talk-date">
+<div class="talk-date">
 
-                <span class="talk-date-day">
-                    16 Sep
-                </span>
+    <span class="talk-date-day">
+        16 Sep
+    </span>
 
-                <strong class="talk-date-year">
-                    2026
-                </strong>
+    <strong class="talk-date-year">
+        2026
+    </strong>
 
-            </div>
+</div>
 
 
             <div class="talk-content">
@@ -219,17 +219,17 @@ description: "Academic talks by Erik Renz."
             data-country="Germany"
         >
 
-            <div class="talk-date">
+<div class="talk-date">
 
-                <span class="talk-date-day">
-                    16 May
-                </span>
+    <span class="talk-date-day">
+        16 May
+    </span>
 
-                <strong class="talk-date-year">
-                    2026
-                </strong>
+    <strong class="talk-date-year">
+        2026
+    </strong>
 
-            </div>
+</div>
 
 
             <div class="talk-content">
@@ -282,17 +282,17 @@ description: "Academic talks by Erik Renz."
             data-country="Germany"
         >
 
-            <div class="talk-date">
+<div class="talk-date">
 
-                <span class="talk-date-day">
-                    02 Sep
-                </span>
+    <span class="talk-date-day">
+        2 Sep
+    </span>
 
-                <strong class="talk-date-year">
-                    2025
-                </strong>
+    <strong class="talk-date-year">
+        2025
+    </strong>
 
-            </div>
+</div>
 
 
             <div class="talk-content">

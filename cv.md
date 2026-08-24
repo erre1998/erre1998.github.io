@@ -15,7 +15,7 @@ description: "Curriculum Vitae of Erik Renz."
 
             <div class="cv-entry-date">
                 <span class="cv-entry-date-detail">since</span>
-                <strong class="cv-entry-date-main">07/2025</strong>
+                <strong class="cv-entry-date-main">Jul 2025</strong>
             </div>
 
             <div class="cv-entry-content">
@@ -43,8 +43,22 @@ description: "Curriculum Vitae of Erik Renz."
         <div class="cv-entry">
 
             <div class="cv-entry-date">
-                <span class="cv-entry-date-detail">07/2025–</span>
-                <strong class="cv-entry-date-main">06/2026</strong>
+
+                <strong class="cv-entry-date-range">
+                    Jul 2025
+                </strong>
+
+                <span
+                    class="cv-entry-date-separator"
+                    aria-hidden="true"
+                >
+                    –
+                </span>
+
+                <strong class="cv-entry-date-range">
+                    Jun 2026
+                </strong>
+
             </div>
 
             <div class="cv-entry-content">
@@ -86,8 +100,22 @@ description: "Curriculum Vitae of Erik Renz."
             <div class="cv-entry">
 
                 <div class="cv-entry-date">
-                    <span class="cv-entry-date-detail">11/2022–</span>
-                    <strong class="cv-entry-date-main">06/2025</strong>
+
+                    <strong class="cv-entry-date-range">
+                        Nov 2022
+                    </strong>
+
+                    <span
+                        class="cv-entry-date-separator"
+                        aria-hidden="true"
+                    >
+                        –
+                    </span>
+
+                    <strong class="cv-entry-date-range">
+                        Jun 2025
+                    </strong>
+
                 </div>
 
                 <div class="cv-entry-content">
@@ -130,8 +158,22 @@ description: "Curriculum Vitae of Erik Renz."
             <div class="cv-entry">
 
                 <div class="cv-entry-date">
-                    <span class="cv-entry-date-detail">01/2024–</span>
-                    <strong class="cv-entry-date-main">03/2025</strong>
+
+                    <strong class="cv-entry-date-range">
+                        Jan 2024
+                    </strong>
+
+                    <span
+                        class="cv-entry-date-separator"
+                        aria-hidden="true"
+                    >
+                        –
+                    </span>
+
+                    <strong class="cv-entry-date-range">
+                        Mar 2025
+                    </strong>
+
                 </div>
 
                 <div class="cv-entry-content">
@@ -166,8 +208,22 @@ description: "Curriculum Vitae of Erik Renz."
             <div class="cv-entry">
 
                 <div class="cv-entry-date">
-                    <span class="cv-entry-date-detail">10/2023–</span>
-                    <strong class="cv-entry-date-main">01/2024</strong>
+
+                    <strong class="cv-entry-date-range">
+                        Oct 2023
+                    </strong>
+
+                    <span
+                        class="cv-entry-date-separator"
+                        aria-hidden="true"
+                    >
+                        –
+                    </span>
+
+                    <strong class="cv-entry-date-range">
+                        Jan 2024
+                    </strong>
+
                 </div>
 
                 <div class="cv-entry-content">
@@ -189,8 +245,22 @@ description: "Curriculum Vitae of Erik Renz."
             <div class="cv-entry">
 
                 <div class="cv-entry-date">
-                    <span class="cv-entry-date-detail">04/2022–</span>
-                    <strong class="cv-entry-date-main">10/2022</strong>
+
+                    <strong class="cv-entry-date-range">
+                        Apr 2022
+                    </strong>
+
+                    <span
+                        class="cv-entry-date-separator"
+                        aria-hidden="true"
+                    >
+                        –
+                    </span>
+
+                    <strong class="cv-entry-date-range">
+                        Oct 2022
+                    </strong>
+
                 </div>
 
                 <div class="cv-entry-content">
@@ -221,8 +291,22 @@ description: "Curriculum Vitae of Erik Renz."
         <div class="cv-entry">
 
             <div class="cv-entry-date">
-                <span class="cv-entry-date-detail">2022–</span>
-                <strong class="cv-entry-date-main">2025</strong>
+
+                <strong class="cv-entry-date-range">
+                    2022
+                </strong>
+
+                <span
+                    class="cv-entry-date-separator"
+                    aria-hidden="true"
+                >
+                    –
+                </span>
+
+                <strong class="cv-entry-date-range">
+                    2025
+                </strong>
+
             </div>
 
             <div class="cv-entry-content">
@@ -254,8 +338,22 @@ description: "Curriculum Vitae of Erik Renz."
         <div class="cv-entry">
 
             <div class="cv-entry-date">
-                <span class="cv-entry-date-detail">2018–</span>
-                <strong class="cv-entry-date-main">2022</strong>
+
+                <strong class="cv-entry-date-range">
+                    2018
+                </strong>
+
+                <span
+                    class="cv-entry-date-separator"
+                    aria-hidden="true"
+                >
+                    –
+                </span>
+
+                <strong class="cv-entry-date-range">
+                    2022
+                </strong>
+
             </div>
 
             <div class="cv-entry-content">
@@ -286,8 +384,22 @@ description: "Curriculum Vitae of Erik Renz."
         <div class="cv-entry">
 
             <div class="cv-entry-date">
-                <span class="cv-entry-date-detail">2012–</span>
-                <strong class="cv-entry-date-main">2018</strong>
+
+                <strong class="cv-entry-date-range">
+                    2012
+                </strong>
+
+                <span
+                    class="cv-entry-date-separator"
+                    aria-hidden="true"
+                >
+                    –
+                </span>
+
+                <strong class="cv-entry-date-range">
+                    2018
+                </strong>
+
             </div>
 
             <div class="cv-entry-content">
@@ -315,7 +427,7 @@ description: "Curriculum Vitae of Erik Renz."
             <div class="cv-entry">
 
                 <div class="cv-entry-date">
-                    <span class="cv-entry-date-detail">17.–18.08.</span>
+                    <span class="cv-entry-date-detail">17–18 Aug</span>
                     <strong class="cv-entry-date-main">2026</strong>
                 </div>
 
@@ -343,7 +455,7 @@ description: "Curriculum Vitae of Erik Renz."
             <div class="cv-entry">
 
                 <div class="cv-entry-date">
-                    <span class="cv-entry-date-detail">08.07.</span>
+                    <span class="cv-entry-date-detail">8 Jul</span>
                     <strong class="cv-entry-date-main">2026</strong>
                 </div>
 
