@@ -210,7 +210,6 @@ a:focus-visible {
 
     margin-bottom: 3rem;
 }
-
 /* ---------------------------------
    Home
 ---------------------------------- */
@@ -240,11 +239,26 @@ a:focus-visible {
 
 
 /* ---------------------------------
-   Home portrait column
+   Home portrait card
 ---------------------------------- */
 
 .home-portrait-column {
     min-width: 0;
+
+    padding: 1rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.3);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.045);
 }
 
 
@@ -271,16 +285,12 @@ a:focus-visible {
 
     border:
         1px solid
-        rgba(50, 88, 107, 0.38);
+        rgba(50, 88, 107, 0.24);
 
-    border-radius: 7px;
+    border-radius: 5px;
 
     background-color:
         var(--color-surface);
-
-    box-shadow:
-        0 5px 17px
-        rgba(18, 51, 72, 0.045);
 }
 
 
@@ -478,7 +488,7 @@ a:focus-visible {
 
 
 /* ---------------------------------
-   Home profile link
+   Home profile links
 ---------------------------------- */
 
 .home-profile-link {
@@ -647,7 +657,9 @@ a:focus-visible {
 
 
     .home-portrait-column {
-        width: 160px;
+        width: 180px;
+
+        padding: 0.85rem;
     }
 
 
@@ -673,7 +685,7 @@ a:focus-visible {
 @media (max-width: 420px) {
 
     .home-portrait-column {
-        width: 145px;
+        width: 165px;
     }
 
 
@@ -2938,7 +2950,7 @@ a:focus-visible {
 
 .site-footer-profile:hover {
     color:
-        var(--color-warm);
+        rgba(247, 245, 240, 0.92);
 
     transform:
         translateY(-2px);

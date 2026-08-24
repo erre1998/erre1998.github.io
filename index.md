@@ -9,12 +9,16 @@
 
         <div class="home-portrait-column">
 
-            <figure class="home-portrait">
+     <figure class="home-portrait">
 
                 <img
                     src="{{ '/assets/imgs/2025_renz.png' | relative_url }}"
                     alt="Portrait of Erik Renz"
                 >
+
+                <figcaption class="home-portrait-credit">
+                    Photo: <em>Tim Bünning</em>
+                </figcaption>
 
             </figure>
 
@@ -36,10 +40,7 @@
             <div class="home-intro">
 
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </p>
 
                 <p>
