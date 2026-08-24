@@ -359,7 +359,7 @@ description: "Academic services by Erik Renz"
                 </p>
 
                 <p class="service-entry-detail">
-                    Co-Organizer and Founding Member
+                    Co-organizer and Founding Member
                 </p>
 
             </div>

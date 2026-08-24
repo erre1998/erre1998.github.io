@@ -9,7 +9,7 @@
 
         <div class="home-portrait-column">
 
-     <figure class="home-portrait">
+            <figure class="home-portrait">
 
                 <img
                     src="{{ '/assets/imgs/2025_renz.png' | relative_url }}"
@@ -17,7 +17,7 @@
                 >
 
                 <figcaption class="home-portrait-credit">
-                    Photo: <em>Tim Bünning</em>
+                    Photo: Tim Bünning.
                 </figcaption>
 
             </figure>
@@ -90,6 +90,7 @@
                 aria-label="Contact and profiles"
             >
 
+
                 <!-- Email -->
 
                 <a
@@ -116,6 +117,7 @@
                 </a>
 
 
+
                 <!-- ORCID -->
 
                 <a
@@ -139,6 +141,7 @@
                 </a>
 
 
+
                 <!-- GitHub -->
 
                 <a
@@ -160,6 +163,7 @@
                     </span>
 
                 </a>
+
 
 
                 <!-- Fedihum -->
@@ -186,8 +190,75 @@
 
             </nav>
 
+
+
+            <!-- =====================================
+                 Generate full CV
+            ====================================== -->
+
+            <div class="home-cv-action">
+
+                <button
+                    id="generate-cv-button"
+                    class="home-cv-button"
+                    type="button"
+
+                    data-name="{{ site.title }}"
+
+                    data-photo="{{ '/assets/imgs/2025_renz.png' | relative_url }}"
+
+                    data-cv-url="{{ '/cv/' | relative_url }}"
+
+                    data-publications-url="{{ '/publications/' | relative_url }}"
+
+                    data-talks-url="{{ '/talks/' | relative_url }}"
+
+                    data-teaching-url="{{ '/teaching/' | relative_url }}"
+
+                    data-events-url="{{ '/events/' | relative_url }}"
+
+                    data-services-url="{{ '/services/' | relative_url }}"
+
+                    data-projects-url="{{ '/projects/' | relative_url }}"
+
+                    data-zotero-user-id="{{ site.zotero.user_id }}"
+                >
+                    Generate full CV (PDF)
+                </button>
+
+
+                <span
+                    id="generate-cv-status"
+                    class="home-cv-status"
+                    aria-live="polite"
+                ></span>
+
+            </div>
+
+
         </div>
 
     </div>
 
 </section>
+
+
+
+<!-- =========================================
+     CV PDF generation
+========================================== -->
+
+<script
+    src="{{ '/assets/vendor/pdfmake/pdfmake.min.js' | relative_url }}"
+    defer
+></script>
+
+<script
+    src="{{ '/assets/vendor/pdfmake/vfs_fonts.js' | relative_url }}"
+    defer
+></script>
+
+<script
+    src="{{ '/assets/js/cv-generator.js' | relative_url }}?v=1"
+    defer
+></script>
