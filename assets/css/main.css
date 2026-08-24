@@ -5358,43 +5358,37 @@ border-left:
 ---------------------------------- */
 
 .home-cv-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    appearance: none;
+    -webkit-appearance: none;
 
-    min-height: 2.15rem;
+    min-height: 1.9rem;
+
+    margin: 0;
 
     padding:
-        0.42rem
-        0.75rem;
+        0.3rem
+        0.52rem;
 
     border:
         1px solid
-        rgba(35, 91, 133, 0.42);
+        rgba(50, 88, 107, 0.28);
 
     border-radius: 4px;
 
     background-color:
-        rgba(35, 91, 133, 0.05);
+        rgba(50, 88, 107, 0.035);
 
     color:
-        var(--color-primary);
+        var(--color-muted);
 
-    font: inherit;
-    font-size: 0.76rem;
-    font-weight: 600;
+    font-family: inherit;
+    font-size: 0.72rem;
+    font-weight: 500;
 
     line-height: 1.3;
 
     cursor: pointer;
-
-    transition:
-        border-color 0.18s ease,
-        background-color 0.18s ease,
-        color 0.18s ease,
-        transform 0.18s ease;
 }
-
 
 .home-cv-button:hover {
     border-color:

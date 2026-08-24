@@ -90,34 +90,6 @@
                 aria-label="Contact, CV and profiles"
             >
 
-
-                <!-- Email -->
-
-                <a
-                    class="home-profile-link"
-                    href="mailto:erik.renz@uni-rostock.de"
-                    aria-label="Email"
-                    title="Email"
-                >
-
-                    <svg
-                        class="home-profile-icon"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
-                        <path
-                            d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 2v.2l9 5.6 9-5.6V7H3Zm18 10V9.55l-8.47 5.27a1 1 0 0 1-1.06 0L3 9.55V17h18Z"
-                        ></path>
-                    </svg>
-
-                    <span class="home-profile-label">
-                        Email
-                    </span>
-
-                </a>
-
-
-
                 <!-- CV -->
 
 <button
@@ -153,6 +125,31 @@
         CV
     </span>
 </button>
+
+                <!-- Email -->
+
+                <a
+                    class="home-profile-link"
+                    href="mailto:erik.renz@uni-rostock.de"
+                    aria-label="Email"
+                    title="Email"
+                >
+
+                    <svg
+                        class="home-profile-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 2v.2l9 5.6 9-5.6V7H3Zm18 10V9.55l-8.47 5.27a1 1 0 0 1-1.06 0L3 9.55V17h18Z"
+                        ></path>
+                    </svg>
+
+                    <span class="home-profile-label">
+                        Email
+                    </span>
+
+                </a>
 
 
 

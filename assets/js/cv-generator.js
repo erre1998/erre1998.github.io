@@ -4154,7 +4154,7 @@
                     lineHeight:
                         1.05
                 },
-
+return {
 
                 personalData: {
                     fontSize:
@@ -4298,30 +4298,6 @@
                     lineHeight:
                         1.27
                 }
-            },
-
-
-            /*
-             * Additional orphan protection.
-             *
-             * Major headings are normally already
-             * bundled with their first content node
-             * by pushMajorSection(). This callback
-             * provides a second safeguard.
-             */
-
-            pageBreakBefore: (
-                currentNode,
-                followingNodesOnPage
-            ) => {
-
-                return (
-                    currentNode
-                        .headlineLevel === 1 &&
-                    followingNodesOnPage
-                        .length === 0
-                );
-
             },
 
 
