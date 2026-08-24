@@ -34,14 +34,6 @@ description: "Academic events organized by Erik Renz."
 
 
     <select
-        id="events-filter-role"
-        aria-label="Filter by role"
-    >
-        <option value="">All roles</option>
-    </select>
-
-
-    <select
         id="events-filter-type"
         aria-label="Filter by event type"
     >

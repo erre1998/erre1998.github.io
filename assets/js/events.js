@@ -12,10 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "#events-filter-year"
     );
 
-    const roleFilter = document.querySelector(
-        "#events-filter-role"
-    );
-
     const typeFilter = document.querySelector(
         "#events-filter-type"
     );
@@ -42,16 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         return (element.dataset.years || "")
             .split(/\s+/)
-            .map(value => value.trim())
-            .filter(Boolean);
-
-    }
-
-
-    function getRoles(element) {
-
-        return (element.dataset.roles || "")
-            .split("|")
             .map(value => value.trim())
             .filter(Boolean);
 
@@ -114,43 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /*
-     * Build role filter
-     */
-
-    if (roleFilter) {
-
-        const roles = new Set();
-
-
-        events.forEach(event => {
-
-            getRoles(event).forEach(role => {
-                roles.add(role);
-            });
-
-        });
-
-
-        Array.from(roles)
-            .sort((a, b) =>
-                a.localeCompare(b, "en")
-            )
-            .forEach(role => {
-
-                const option =
-                    document.createElement("option");
-
-                option.value = role;
-                option.textContent = role;
-
-                roleFilter.appendChild(option);
-
-            });
-
-    }
-
-
-    /*
      * Build event type filter
      */
 
@@ -198,9 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const selectedYear =
             yearFilter?.value || "";
 
-        const selectedRole =
-            roleFilter?.value || "";
-
         const selectedType =
             typeFilter?.value || "";
 
@@ -217,13 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const matchesSearch =
                 !searchTerm ||
                 eventText.includes(searchTerm);
-
-
-            const matchesRole =
-                !selectedRole ||
-                getRoles(event).includes(
-                    selectedRole
-                );
 
 
             const matchesType =
@@ -289,7 +228,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const matches =
                 matchesSearch &&
                 matchesYear &&
-                matchesRole &&
                 matchesType;
 
 
@@ -319,18 +257,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        const totalEvents = events.length;
+        const totalEvents =
+            events.length;
 
 
         if (visibleEvents === totalEvents) {
 
             status.textContent =
-                `${totalEvents} events`;
+                totalEvents === 1
+                    ? "1 event"
+                    : `${totalEvents} events`;
 
         } else {
 
             status.textContent =
-                `${visibleEvents} of ${totalEvents} events`;
+                visibleEvents === 1
+                    ? `1 of ${totalEvents} events`
+                    : `${visibleEvents} of ${totalEvents} events`;
 
         }
 
@@ -353,7 +296,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     [
         yearFilter,
-        roleFilter,
         typeFilter
     ].forEach(filter => {
 
@@ -383,13 +325,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     searchInput.value = "";
                 }
 
+
                 if (yearFilter) {
                     yearFilter.value = "";
                 }
 
-                if (roleFilter) {
-                    roleFilter.value = "";
-                }
 
                 if (typeFilter) {
                     typeFilter.value = "";

@@ -46,13 +46,29 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-role">
-                    Member of the Appointment Committee
+                <p class="service-entry-type">
+                    Academic Self-Government
+                </p>
+
+
+                <p class="service-entry-title">
+                    Appointment Committee
                 </p>
 
 
                 <p class="service-entry-context">
                     W2 Professorship for Historical Linguistics of German
+                </p>
+
+
+                <p class="service-entry-role">
+
+                    <span class="service-entry-role-label">
+                        Role
+                    </span>
+
+                    Member
+
                 </p>
 
 
@@ -92,8 +108,24 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
+                <p class="service-entry-type">
+                    Academic Self-Government
+                </p>
+
+
+                <p class="service-entry-title">
+                    German Studies Student Council (GeFaR)
+                </p>
+
+
                 <p class="service-entry-role">
-                    Spokesperson of the German Studies Student Council (GeFaR)
+
+                    <span class="service-entry-role-label">
+                        Role
+                    </span>
+
+                    Spokesperson
+
                 </p>
 
 
@@ -152,13 +184,31 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-main">
+                <p class="service-entry-type">
+                    Professional Membership
+                </p>
+
+
+                <p class="service-entry-title">
 
                     <a
                         href="https://www.i-d-e.de/"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >Institut für Dokumentologie und Editorik (IDE)</a><span class="service-entry-function">&nbsp;(Member)</span>
+                    >
+                        Institut für Dokumentologie und Editorik (IDE)
+                    </a>
+
+                </p>
+
+
+                <p class="service-entry-role">
+
+                    <span class="service-entry-role-label">
+                        Role
+                    </span>
+
+                    Member
 
                 </p>
 
@@ -183,13 +233,31 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-main">
+                <p class="service-entry-type">
+                    Programme Committee
+                </p>
+
+
+                <p class="service-entry-title">
 
                     <a
                         href="https://editopia2026.i-d-e.de/"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >Editopia 2026: Zur Zukunft von Dokumentologie und Editorik im Postdigitalen</a><span class="service-entry-function">&nbsp;(Member of the Programme Committee)</span>
+                    >
+                        Editopia 2026: Zur Zukunft von Dokumentologie und Editorik im Postdigitalen
+                    </a>
+
+                </p>
+
+
+                <p class="service-entry-role">
+
+                    <span class="service-entry-role-label">
+                        Role
+                    </span>
+
+                    Member of the Programme Committee
 
                 </p>
 
@@ -218,13 +286,31 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-main">
+                <p class="service-entry-type">
+                    Professional Membership
+                </p>
+
+
+                <p class="service-entry-title">
 
                     <a
                         href="https://digitalhumanities.de/"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)</a><span class="service-entry-function">&nbsp;(Member)</span>
+                    >
+                        Verband Digital Humanities im deutschsprachigen Raum e.V. (DHd)
+                    </a>
+
+                </p>
+
+
+                <p class="service-entry-role">
+
+                    <span class="service-entry-role-label">
+                        Role
+                    </span>
+
+                    Member
 
                 </p>
 
@@ -249,13 +335,31 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-main">
+                <p class="service-entry-type">
+                    Programme Committee
+                </p>
+
+
+                <p class="service-entry-title">
 
                     <a
                         href="https://www.forge25.uni-rostock.de/"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >FORGE 2025: Daten neu denken</a><span class="service-entry-function">&nbsp;(Member of the Programme Committee)</span>
+                    >
+                        FORGE 2025: Daten neu denken
+                    </a>
+
+                </p>
+
+
+                <p class="service-entry-role">
+
+                    <span class="service-entry-role-label">
+                        Role
+                    </span>
+
+                    Member of the Programme Committee
 
                 </p>
 
@@ -280,13 +384,31 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-main">
+                <p class="service-entry-type">
+                    Peer Review
+                </p>
+
+
+                <p class="service-entry-title">
 
                     <a
                         href="https://jcls.io/"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >Journal of Computational Literary Studies (JCLS)</a><span class="service-entry-function">&nbsp;(Reviewer)</span>
+                    >
+                        Journal of Computational Literary Studies (JCLS)
+                    </a>
+
+                </p>
+
+
+                <p class="service-entry-role">
+
+                    <span class="service-entry-role-label">
+                        Role
+                    </span>
+
+                    Reviewer
 
                 </p>
 
@@ -315,13 +437,31 @@ description: "Academic services by Erik Renz"
 
             <div class="service-entry-content">
 
-                <p class="service-entry-main">
+                <p class="service-entry-type">
+                    Working Group
+                </p>
+
+
+                <p class="service-entry-title">
 
                     <a
                         href="https://www.germanistik.uni-rostock.de/en/forschung/digital-humanities/rosdh/"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >Rostock Working Group Digital Humanities (RosDH)</a><span class="service-entry-function">&nbsp;(Co-Organizer and Founding Member)</span>
+                    >
+                        Rostock Working Group Digital Humanities (RosDH)
+                    </a>
+
+                </p>
+
+
+                <p class="service-entry-role">
+
+                    <span class="service-entry-role-label">
+                        Role
+                    </span>
+
+                    Co-Organizer and Founding Member
 
                 </p>
 
