@@ -508,12 +508,6 @@
             );
 
 
-        /*
-         * Clean outer whitespace while
-         * preserving whitespace between
-         * inline elements.
-         */
-
         if (
             runs.length &&
             typeof runs[0] === "object"
@@ -584,12 +578,6 @@
                 )
             );
 
-
-        /*
-         * Projects are represented as
-         * separate links and joined with
-         * typographic middots.
-         */
 
         if (
             label &&
@@ -3249,10 +3237,6 @@
             [];
 
 
-        /* ---------------------------------
-           Header
-        ---------------------------------- */
-
         const socialNodes =
             [
                 socialProfileNode(
@@ -3450,10 +3434,6 @@
         });
 
 
-        /* ---------------------------------
-           Existing CV sections
-        ---------------------------------- */
-
         model.cv.forEach(
             section => {
 
@@ -3559,10 +3539,6 @@
         );
 
 
-        /* ---------------------------------
-           Publications
-        ---------------------------------- */
-
         const publicationNodes =
             [];
 
@@ -3662,10 +3638,6 @@
         );
 
 
-        /* ---------------------------------
-           Talks
-        ---------------------------------- */
-
         const talkNodes =
             model.talks
                 .map(talk => {
@@ -3703,10 +3675,6 @@
             talkNodes
         );
 
-
-        /* ---------------------------------
-           Teaching
-        ---------------------------------- */
 
         const teachingNodes =
             [];
@@ -3788,10 +3756,6 @@
         );
 
 
-        /* ---------------------------------
-           Thesis Supervisions
-        ---------------------------------- */
-
         const thesisNodes =
             [];
 
@@ -3863,10 +3827,6 @@
             thesisNodes
         );
 
-
-        /* ---------------------------------
-           Organized Events
-        ---------------------------------- */
 
         const eventNodes =
             [];
@@ -3973,10 +3933,6 @@
         );
 
 
-        /* ---------------------------------
-           Academic Service
-        ---------------------------------- */
-
         const serviceNodes =
             [];
 
@@ -4052,10 +4008,6 @@
         );
 
 
-        /* ---------------------------------
-           Projects & Funding
-        ---------------------------------- */
-
         const projectNodes =
             model.projects
                 .map(project => {
@@ -4099,10 +4051,6 @@
             projectNodes
         );
 
-
-        /* =========================================
-           PDF definition
-        ========================================== */
 
         return {
             pageSize:
@@ -4154,7 +4102,7 @@
                     lineHeight:
                         1.05
                 },
-return {
+
 
                 personalData: {
                     fontSize:
