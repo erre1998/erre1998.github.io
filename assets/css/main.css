@@ -278,10 +278,10 @@ a:focus-visible {
 
     width: 100%;
 
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
 
     object-fit: cover;
-    object-position: center 36%;
+    object-position: center 32%;
 
     border:
         1px solid
@@ -657,9 +657,16 @@ a:focus-visible {
 
 
     .home-portrait-column {
-        width: 180px;
+        width: min(220px, 70vw);
+
+        margin-inline: auto;
 
         padding: 0.85rem;
+    }
+
+
+    .home-portrait-credit {
+        text-align: center;
     }
 
 
@@ -685,7 +692,7 @@ a:focus-visible {
 @media (max-width: 420px) {
 
     .home-portrait-column {
-        width: 165px;
+        width: min(190px, 72vw);
     }
 
 
@@ -3063,13 +3070,42 @@ a:focus-visible {
         );
     }
 
-    .navigation-list {
-        gap: 0.7rem 1rem;
+
+    .site-navigation {
+        margin-top: 1rem;
+        padding-top: 0.85rem;
     }
 
+
+    .navigation-list {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap:
+            0.35rem
+            0.8rem;
+    }
+
+
+    .navigation-item {
+        min-width: 0;
+    }
+
+
     .navigation-item a {
+        display: block;
+
+        width: 100%;
+
+        padding:
+            0.35rem
+            0;
+
         white-space: normal;
     }
+
 
     .site-main {
         padding-top: 3.5rem;
@@ -3080,6 +3116,43 @@ a:focus-visible {
         grid-template-columns: 1fr;
 
         gap: 1rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .site-header-inner {
+        padding-top: 1.35rem;
+        padding-bottom: 1rem;
+    }
+
+
+    .site-title {
+        font-size: 1.25rem;
+    }
+
+
+    .site-subtitle {
+        font-size: 0.82rem;
+        line-height: 1.4;
+    }
+
+
+    .navigation-list {
+        grid-template-columns: 1fr;
+
+        gap: 0.15rem;
+    }
+
+
+    .navigation-item a {
+        padding:
+            0.42rem
+            0;
+
+        font-size: 0.86rem;
     }
 
 }
@@ -4174,6 +4247,12 @@ a:focus-visible {
         -0.15rem
         0
         1.85rem;
+
+    padding-left: 0.75rem;
+
+border-left:
+    3px solid
+    var(--color-warm);
 
     color:
         var(--color-muted);
