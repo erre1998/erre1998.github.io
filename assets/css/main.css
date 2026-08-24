@@ -5357,17 +5357,6 @@ border-left:
    Home CV generation
 ---------------------------------- */
 
-.home-cv-action {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
-    gap: 0.65rem;
-
-    margin-top: 1.15rem;
-}
-
-
 .home-cv-button {
     display: inline-flex;
     align-items: center;
