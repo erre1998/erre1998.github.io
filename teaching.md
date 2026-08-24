@@ -864,7 +864,7 @@ description: "Teaching and thesis supervision by Erik Renz."
             >
 
                 <h3 class="thesis-title">
-                    <em>Körper, Krankheit und Phantastik: Eine digital gestützte Analyse subjektiver Krankheitserfahrung in Walter Moers’ Prinzessin Insomnia</em>
+                    Körper, Krankheit und Phantastik: Eine digital gestützte Analyse subjektiver Krankheitserfahrung in Walter Moers’ <em>Prinzessin Insomnia</em>
                 </h3>
 
 

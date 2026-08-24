@@ -16,10 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "#events-filter-role"
     );
 
-    const locationFilter = document.querySelector(
-        "#events-filter-location"
-    );
-
     const typeFilter = document.querySelector(
         "#events-filter-type"
     );
@@ -155,42 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /*
-     * Build location filter
-     */
-
-    if (locationFilter) {
-
-        const locations = [
-            ...new Set(
-                events
-                    .map(event =>
-                        event.dataset.location
-                    )
-                    .filter(Boolean)
-            )
-        ];
-
-
-        locations
-            .sort((a, b) =>
-                a.localeCompare(b, "en")
-            )
-            .forEach(location => {
-
-                const option =
-                    document.createElement("option");
-
-                option.value = location;
-                option.textContent = location;
-
-                locationFilter.appendChild(option);
-
-            });
-
-    }
-
-
-    /*
      * Build event type filter
      */
 
@@ -241,9 +201,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const selectedRole =
             roleFilter?.value || "";
 
-        const selectedLocation =
-            locationFilter?.value || "";
-
         const selectedType =
             typeFilter?.value || "";
 
@@ -267,12 +224,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 getRoles(event).includes(
                     selectedRole
                 );
-
-
-            const matchesLocation =
-                !selectedLocation ||
-                event.dataset.location ===
-                    selectedLocation;
 
 
             const matchesType =
@@ -339,7 +290,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 matchesSearch &&
                 matchesYear &&
                 matchesRole &&
-                matchesLocation &&
                 matchesType;
 
 
@@ -404,7 +354,6 @@ document.addEventListener("DOMContentLoaded", () => {
     [
         yearFilter,
         roleFilter,
-        locationFilter,
         typeFilter
     ].forEach(filter => {
 
@@ -440,10 +389,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (roleFilter) {
                     roleFilter.value = "";
-                }
-
-                if (locationFilter) {
-                    locationFilter.value = "";
                 }
 
                 if (typeFilter) {

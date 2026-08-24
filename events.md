@@ -12,59 +12,51 @@ description: "Academic events organized by Erik Renz."
          Search & filter
     ========================================== -->
 
-    <div
-        class="events-toolbar"
-        aria-label="Search and filter events"
+<div
+    class="events-toolbar"
+    aria-label="Search and filter events"
+>
+
+    <input
+        id="events-search"
+        type="search"
+        placeholder="Search"
+        aria-label="Search events"
     >
 
-        <input
-            id="events-search"
-            type="search"
-            placeholder="Search"
-            aria-label="Search events"
-        >
+
+    <select
+        id="events-filter-year"
+        aria-label="Filter by year"
+    >
+        <option value="">All years</option>
+    </select>
 
 
-        <select
-            id="events-filter-year"
-            aria-label="Filter by year"
-        >
-            <option value="">All years</option>
-        </select>
+    <select
+        id="events-filter-role"
+        aria-label="Filter by role"
+    >
+        <option value="">All roles</option>
+    </select>
 
 
-        <select
-            id="events-filter-role"
-            aria-label="Filter by role"
-        >
-            <option value="">All roles</option>
-        </select>
+    <select
+        id="events-filter-type"
+        aria-label="Filter by event type"
+    >
+        <option value="">All types</option>
+    </select>
 
 
-        <select
-            id="events-filter-location"
-            aria-label="Filter by location"
-        >
-            <option value="">All locations</option>
-        </select>
+    <button
+        id="events-filter-reset"
+        type="button"
+    >
+        Reset
+    </button>
 
-
-        <select
-            id="events-filter-type"
-            aria-label="Filter by event type"
-        >
-            <option value="">All types</option>
-        </select>
-
-
-        <button
-            id="events-filter-reset"
-            type="button"
-        >
-            Reset
-        </button>
-
-    </div>
+</div>
 
 
     <p

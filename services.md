@@ -57,7 +57,7 @@ description: "Academic services by Erik Renz"
 
 
                 <p class="service-entry-institution">
-                    Institute for German Studies, Faculty of Humanities, University of Rostock
+                    Faculty of Humanities, University of Rostock
                 </p>
 
             </div>
@@ -98,7 +98,7 @@ description: "Academic services by Erik Renz"
 
 
                 <p class="service-entry-institution">
-                    Institute for German Studies, Faculty of Humanities, University of Rostock
+                    Faculty of Humanities, University of Rostock
                 </p>
 
             </div>
