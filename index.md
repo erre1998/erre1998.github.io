@@ -257,6 +257,6 @@
 ></script>
 
 <script
-    src="{{ '/assets/js/cv-generator.js' | relative_url }}?v=4"
+    src="{{ '/assets/js/cv-generator.js' | relative_url }}?v=5"
     defer
 ></script>
