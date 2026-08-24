@@ -592,6 +592,7 @@
                     color:
                         COLORS.muted
                 },
+
                 " "
             ];
 
@@ -609,6 +610,7 @@
                             normalizeText(
                                 anchor.textContent
                             ),
+
                             absoluteUrl(
                                 anchor.getAttribute(
                                     "href"
@@ -2038,10 +2040,13 @@
         }
 
 
-        const items = [];
+        const items =
+            [];
+
 
         const limit =
             100;
+
 
         let start =
             0;
@@ -2123,7 +2128,8 @@
             }
 
 
-            start += limit;
+            start +=
+                limit;
 
         }
 
@@ -2206,11 +2212,18 @@
             );
 
 
+        const editorCount =
+            creatorsByType(
+                data,
+                "editor"
+            ).length;
+
+
         const creatorText =
             authors ||
             (
                 editors
-                    ? `${editors} (ed${creatorsByType(data, "editor").length > 1 ? "s" : ""}.)`
+                    ? `${editors} (ed${editorCount > 1 ? "s" : ""}.)`
                     : ""
             );
 
@@ -2237,13 +2250,16 @@
             data.itemType;
 
 
-        const parts = [];
+        const parts =
+            [];
 
 
         if (creatorText) {
+
             parts.push(
                 `${creatorText}.`
             );
+
         }
 
 
@@ -2559,7 +2575,8 @@
         records
     ) {
 
-        const groups = {};
+        const groups =
+            {};
 
 
         records.forEach(
@@ -2782,9 +2799,6 @@
     ) {
 
         return {
-            headlineLevel:
-                1,
-
             margin:
                 [0, 18, 0, 8],
 
@@ -2920,10 +2934,13 @@
         }
 
 
-        return {
-            unbreakable:
-                true,
+        /*
+         * Performance:
+         * No unbreakable here.
+         * Individual entries may flow naturally.
+         */
 
+        return {
             margin:
                 [0, 0, 0, 7],
 
@@ -3010,8 +3027,7 @@
     function pushMajorSection(
         content,
         title,
-        nodes,
-        keepCount = 1
+        nodes
     ) {
 
         if (!nodes.length) {
@@ -3019,18 +3035,11 @@
         }
 
 
-        const kept =
-            nodes.slice(
-                0,
-                keepCount
-            );
-
-
-        const remaining =
-            nodes.slice(
-                keepCount
-            );
-
+        /*
+         * Only this block remains unbreakable.
+         * It keeps a section heading together
+         * with the first meaningful content node.
+         */
 
         content.push({
             unbreakable:
@@ -3041,14 +3050,20 @@
                     title
                 ),
 
-                ...kept
+                nodes[0]
             ]
         });
 
 
-        content.push(
-            ...remaining
-        );
+        if (
+            nodes.length > 1
+        ) {
+
+            content.push(
+                ...nodes.slice(1)
+            );
+
+        }
 
     }
 
@@ -3111,9 +3126,11 @@
         if (
             meta.Language
         ) {
+
             parts.push(
                 meta.Language
             );
+
         }
 
 
@@ -3168,7 +3185,8 @@
         }
 
 
-        const columns = [];
+        const columns =
+            [];
 
 
         if (icon) {
@@ -3236,6 +3254,10 @@
         const content =
             [];
 
+
+        /* ---------------------------------
+           Header
+        ---------------------------------- */
 
         const socialNodes =
             [
@@ -3322,12 +3344,14 @@
                                 text:
                                     [
                                         model.profile.address,
+
                                         (
                                             model.profile.address &&
                                             model.profile.birthDate
                                         )
                                             ? "  ·  "
                                             : "",
+
                                         model.profile.birthDate
                                     ],
 
@@ -3343,15 +3367,18 @@
                                     model.profile.email
                                         ? linkedText(
                                             model.profile.email,
+
                                             `mailto:${model.profile.email}`
                                         )
                                         : "",
+
                                     (
                                         model.profile.email &&
                                         model.profile.website
                                     )
                                         ? "  ·  "
                                         : "",
+
                                     model.profile.website
                                         ? linkedText(
                                             model.profile.website,
@@ -3434,6 +3461,10 @@
         });
 
 
+        /* ---------------------------------
+           Existing CV sections
+        ---------------------------------- */
+
         model.cv.forEach(
             section => {
 
@@ -3481,10 +3512,11 @@
                                     block.entries[0];
 
 
-                                nodes.push({
-                                    unbreakable:
-                                        true,
+                                /*
+                                 * No nested unbreakable.
+                                 */
 
+                                nodes.push({
                                     stack: [
                                         subsectionHeading(
                                             block.title
@@ -3531,13 +3563,16 @@
                 pushMajorSection(
                     content,
                     section.title,
-                    nodes,
-                    1
+                    nodes
                 );
 
             }
         );
 
+
+        /* ---------------------------------
+           Publications
+        ---------------------------------- */
 
         const publicationNodes =
             [];
@@ -3562,9 +3597,10 @@
                                 );
 
 
-                            const runs = [
-                                citation
-                            ];
+                            const runs =
+                                [
+                                    citation
+                                ];
 
 
                             urls.forEach(
@@ -3610,9 +3646,6 @@
 
 
                 publicationNodes.push({
-                    unbreakable:
-                        true,
-
                     stack: [
                         subsectionHeading(
                             group.title
@@ -3633,10 +3666,13 @@
         pushMajorSection(
             content,
             "Publications",
-            publicationNodes,
-            1
+            publicationNodes
         );
 
+
+        /* ---------------------------------
+           Talks
+        ---------------------------------- */
 
         const talkNodes =
             model.talks
@@ -3676,6 +3712,10 @@
         );
 
 
+        /* ---------------------------------
+           Teaching
+        ---------------------------------- */
+
         const teachingNodes =
             [];
 
@@ -3697,9 +3737,6 @@
 
 
                 teachingNodes.push({
-                    unbreakable:
-                        true,
-
                     stack: [
                         academicYearMarker(
                             group.title
@@ -3708,12 +3745,15 @@
                         timelineEntry(
                             first.termInfo
                                 .label,
+
                             first.title,
+
                             [
                                 teachingMetadata(
                                     first.meta
                                 )
                             ],
+
                             {
                                 titleLink:
                                     first.titleLink
@@ -3731,12 +3771,15 @@
                             timelineEntry(
                                 course.termInfo
                                     .label,
+
                                 course.title,
+
                                 [
                                     teachingMetadata(
                                         course.meta
                                     )
                                 ],
+
                                 {
                                     titleLink:
                                         course.titleLink
@@ -3755,6 +3798,10 @@
             teachingNodes
         );
 
+
+        /* ---------------------------------
+           Thesis Supervisions
+        ---------------------------------- */
 
         const thesisNodes =
             [];
@@ -3777,9 +3824,6 @@
 
 
                 thesisNodes.push({
-                    unbreakable:
-                        true,
-
                     stack: [
                         academicYearMarker(
                             group.title
@@ -3788,7 +3832,9 @@
                         timelineEntry(
                             first.termInfo
                                 .label,
+
                             first.title,
+
                             [
                                 thesisMetadata(
                                     first.meta
@@ -3807,7 +3853,9 @@
                             timelineEntry(
                                 thesis.termInfo
                                     .label,
+
                                 thesis.title,
+
                                 [
                                     thesisMetadata(
                                         thesis.meta
@@ -3828,6 +3876,10 @@
         );
 
 
+        /* ---------------------------------
+           Organized Events
+        ---------------------------------- */
+
         const eventNodes =
             [];
 
@@ -3838,7 +3890,9 @@
                 eventNodes.push(
                     timelineEntry(
                         event.date,
+
                         event.title,
+
                         [
                             [
                                 event.type,
@@ -3849,6 +3903,7 @@
 
                             ...event.roles
                         ],
+
                         {
                             titleLink:
                                 event.titleLink,
@@ -3864,18 +3919,19 @@
                     ?.forEach(
                         edition => {
 
-                            const editionRuns = [
-                                {
-                                    text:
-                                        edition.term,
+                            const editionRuns =
+                                [
+                                    {
+                                        text:
+                                            edition.term,
 
-                                    bold:
-                                        true,
+                                        bold:
+                                            true,
 
-                                    color:
-                                        COLORS.teal
-                                }
-                            ];
+                                        color:
+                                            COLORS.teal
+                                    }
+                                ];
 
 
                             if (
@@ -3933,6 +3989,10 @@
         );
 
 
+        /* ---------------------------------
+           Academic Service
+        ---------------------------------- */
+
         const serviceNodes =
             [];
 
@@ -3953,9 +4013,6 @@
 
 
                 serviceNodes.push({
-                    unbreakable:
-                        true,
-
                     stack: [
                         subsectionHeading(
                             section.title
@@ -3963,11 +4020,14 @@
 
                         timelineEntry(
                             first.date,
+
                             first.title,
+
                             [
                                 first.detail,
                                 first.institution
                             ],
+
                             {
                                 titleLink:
                                     first.titleLink
@@ -3984,11 +4044,14 @@
                         serviceNodes.push(
                             timelineEntry(
                                 entry.date,
+
                                 entry.title,
+
                                 [
                                     entry.detail,
                                     entry.institution
                                 ],
+
                                 {
                                     titleLink:
                                         entry.titleLink
@@ -4007,6 +4070,10 @@
             serviceNodes
         );
 
+
+        /* ---------------------------------
+           Projects & Funding
+        ---------------------------------- */
 
         const projectNodes =
             model.projects
@@ -4031,8 +4098,11 @@
 
                     return timelineEntry(
                         project.period,
+
                         project.title,
+
                         details,
+
                         {
                             titleLink:
                                 project.titleLink,
@@ -4051,6 +4121,10 @@
             projectNodes
         );
 
+
+        /* =========================================
+           Document definition
+        ========================================== */
 
         return {
             pageSize:
@@ -4471,6 +4545,15 @@
             "Generating PDF…";
 
 
+        /*
+         * Timing output for debugging.
+         */
+
+        console.time(
+            "CV PDF generation"
+        );
+
+
         const definition =
             buildDocumentDefinition(
                 model,
@@ -4492,7 +4575,13 @@
             )
             .download(
                 filename,
+
                 () => {
+
+                    console.timeEnd(
+                        "CV PDF generation"
+                    );
+
 
                     status.textContent =
                         "CV generated.";
