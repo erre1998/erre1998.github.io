@@ -199,15 +199,15 @@
 
 
 
-                <!-- Fedihum -->
+                <!-- FeDiHum -->
 
                 <a
                     class="home-profile-link"
                     href="https://fedihum.org/@erre1998"
                     target="_blank"
                     rel="me noopener noreferrer"
-                    aria-label="Fedihum"
-                    title="Fedihum"
+                    aria-label="FeDiHum"
+                    title="FeDiHum"
                 >
 
                     <span
@@ -216,7 +216,7 @@
                     ></span>
 
                     <span class="home-profile-label">
-                        Fedihum
+                        FeDiHum
                     </span>
 
                 </a>

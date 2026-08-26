@@ -4598,6 +4598,57 @@ border-left:
 }
 
 /* ---------------------------------
+   Self-government roles
+---------------------------------- */
+
+.services-section-self-government .service-roles {
+    display: block;
+
+    max-width: none;
+
+    margin-top: 0.35rem;
+    padding-left: 0;
+
+    border-left: 0;
+}
+
+
+.services-section-self-government .service-role {
+    color:
+        var(--color-muted);
+
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
+
+.services-section-self-government .service-role-name {
+    color:
+        var(--services-color-1);
+
+    font-weight: 600;
+}
+
+
+.services-section-self-government .service-role-detail {
+    margin-left: 0.35rem;
+
+    color:
+        var(--color-muted);
+
+    font-weight: 400;
+}
+
+.service-role-separator {
+    margin:
+        0
+        0.25rem;
+
+    color:
+        var(--color-muted);
+}
+
+/* ---------------------------------
    Service institution
 ---------------------------------- */
 

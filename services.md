@@ -10,7 +10,7 @@ description: "Academic services by Erik Renz"
      Academic Self-Government
 ========================================== -->
 
-<section class="services-section">
+<section class="services-section services-section-self-government">
 
     <h2 class="services-section-title">
         Academic Self-Government
@@ -57,6 +57,13 @@ description: "Academic services by Erik Renz"
 
                         <span class="service-role-name">
                             Member
+                        </span>
+
+                        <span
+                            class="service-role-separator"
+                            aria-hidden="true"
+                        >
+                            ·
                         </span>
 
                         <span class="service-role-detail">
@@ -142,7 +149,7 @@ description: "Academic services by Erik Renz"
      Committee Work, and Review Activities
 ========================================== -->
 
-<section class="services-section">
+<section class="services-section services-section-professional">
 
     <h2 class="services-section-title">
         Professional Memberships, Committee Work, and Review Activities
