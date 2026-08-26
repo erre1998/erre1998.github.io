@@ -5410,3 +5410,50 @@ border-left:
     font-size: 0.72rem;
     line-height: 1.4;
 }
+
+/* ---------------------------------
+   Service roles
+---------------------------------- */
+
+.service-roles {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.25rem;
+
+    max-width: 650px;
+
+    margin-top: 0.7rem;
+    padding-left: 0.75rem;
+
+    border-left:
+        3px solid
+        var(--services-color-1);
+}
+
+
+.service-role {
+    margin: 0;
+
+    color:
+        var(--services-color-4);
+
+    font-size: 0.84rem;
+    line-height: 1.5;
+}
+
+
+.service-role-name {
+    color:
+        var(--services-color-1);
+
+    font-weight: 600;
+}
+
+
+.service-role-detail {
+    color:
+        var(--color-muted);
+
+    font-weight: 400;
+}

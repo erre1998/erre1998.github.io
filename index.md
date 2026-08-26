@@ -99,8 +99,8 @@
 
                     data-name="{{ site.title }}"
 
-                    data-address="August-Bebel-Straße 28 · 18055 Rostock"
-                    data-birth-date="18.07.1998"
+                    data-address="Office address: August-Bebel-Straße 28, 18055 Rostock"
+                    data-birth-date="Born in 1998 in Güstrow"
 
                     data-photo="{{ '/assets/imgs/2025_renz.png' | relative_url }}"
 
