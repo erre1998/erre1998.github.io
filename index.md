@@ -92,39 +92,37 @@
 
                 <!-- CV -->
 
-<button
-    id="generate-cv-button"
-    class="home-profile-link home-cv-button"
-    type="button"
+                <button
+                    id="generate-cv-button"
+                    class="home-profile-link home-cv-button"
+                    type="button"
 
-    data-name="{{ site.title }}"
+                    data-name="{{ site.title }}"
 
-    data-address="Kaiserdamm 112 · 14057 Berlin"
-    data-birth-date="18.07.1998"
+                    data-address="August-Bebel-Straße 28 · 18055 Rostock"
+                    data-birth-date="18.07.1998"
 
-    data-photo="{{ '/assets/imgs/2025_renz.png' | relative_url }}"
+                    data-photo="{{ '/assets/imgs/2025_renz.png' | relative_url }}"
 
-    data-orcid-icon="{{ '/assets/icons/orcid.svg' | relative_url }}"
-    data-github-icon="{{ '/assets/icons/github.svg' | relative_url }}"
-    data-mastodon-icon="{{ '/assets/icons/mastodon.svg' | relative_url }}"
+                    data-cv-url="{{ '/cv/' | relative_url }}"
+                    data-talks-url="{{ '/talks/' | relative_url }}"
+                    data-teaching-url="{{ '/teaching/' | relative_url }}"
+                    data-events-url="{{ '/events/' | relative_url }}"
+                    data-services-url="{{ '/services/' | relative_url }}"
+                    data-projects-url="{{ '/projects/' | relative_url }}"
 
-    data-cv-url="{{ '/cv/' | relative_url }}"
-    data-publications-url="{{ '/publications/' | relative_url }}"
-    data-talks-url="{{ '/talks/' | relative_url }}"
-    data-teaching-url="{{ '/teaching/' | relative_url }}"
-    data-events-url="{{ '/events/' | relative_url }}"
-    data-services-url="{{ '/services/' | relative_url }}"
-    data-projects-url="{{ '/projects/' | relative_url }}"
+                    data-zotero-user-id="{{ site.zotero.user_id }}"
 
-    data-zotero-user-id="{{ site.zotero.user_id }}"
+                    aria-label="Generate CV as PDF"
+                    title="Generate CV as PDF"
+                >
 
-    aria-label="Generate CV as PDF"
-    title="Generate CV as PDF"
->
-    <span class="home-profile-label">
-        CV
-    </span>
-</button>
+                    <span class="home-profile-label">
+                        CV
+                    </span>
+
+                </button>
+
 
                 <!-- Email -->
 
@@ -257,6 +255,6 @@
 ></script>
 
 <script
-    src="{{ '/assets/js/cv-generator.js' | relative_url }}?v=6"
+    src="{{ '/assets/js/cv-generator.js' | relative_url }}?v=7"
     defer
 ></script>

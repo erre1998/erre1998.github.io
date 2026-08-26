@@ -68,19 +68,14 @@
             return "";
         }
 
-
         try {
-
             return new URL(
                 value,
                 window.location.href
             ).href;
-
         }
         catch {
-
             return value;
-
         }
 
     };
@@ -92,8 +87,7 @@
             await fetch(
                 absoluteUrl(url),
                 {
-                    credentials:
-                        "same-origin"
+                    credentials: "same-origin"
                 }
             );
 
@@ -116,93 +110,6 @@
                 html,
                 "text/html"
             );
-
-    }
-
-
-    /* =========================================
-       Simple link helpers
-    ========================================== */
-
-    function linkedText(
-        value,
-        url
-    ) {
-
-        if (!url) {
-
-            return {
-                text:
-                    value
-            };
-
-        }
-
-
-        return {
-            text:
-                value,
-
-            link:
-                url,
-
-            color:
-                COLORS.blue,
-
-            decoration:
-                "none"
-        };
-
-    }
-
-
-    function socialHandle(
-        url,
-        type
-    ) {
-
-        if (!url) {
-            return "";
-        }
-
-
-        try {
-
-            const parsed =
-                new URL(url);
-
-
-            const parts =
-                parsed.pathname
-                    .split("/")
-                    .filter(Boolean);
-
-
-            const value =
-                parts[
-                    parts.length - 1
-                ] || "";
-
-
-            if (
-                type === "mastodon"
-            ) {
-
-                return value.startsWith("@")
-                    ? value
-                    : `@${value}`;
-
-            }
-
-
-            return value;
-
-        }
-        catch {
-
-            return url;
-
-        }
 
     }
 
@@ -244,18 +151,6 @@
         };
 
 
-        const orcid =
-            findLink("ORCID");
-
-
-        const github =
-            findLink("GitHub");
-
-
-        const fedihum =
-            findLink("Fedihum");
-
-
         return {
             name:
                 button.dataset.name ||
@@ -275,34 +170,16 @@
 
             email:
                 findLink("Email")
-                    .replace(
-                        /^mailto:/i,
-                        ""
-                    ),
+                    .replace(/^mailto:/i, ""),
 
-            orcid,
+            orcid:
+                findLink("ORCID"),
 
-            orcidHandle:
-                socialHandle(
-                    orcid,
-                    "orcid"
-                ),
+            github:
+                findLink("GitHub"),
 
-            github,
-
-            githubHandle:
-                socialHandle(
-                    github,
-                    "github"
-                ),
-
-            fedihum,
-
-            fedihumHandle:
-                socialHandle(
-                    fedihum,
-                    "mastodon"
-                ),
+            fedihum:
+                findLink("Fedihum"),
 
             website:
                 window.location.origin
@@ -314,86 +191,6 @@
     /* =========================================
        CV page
     ========================================== */
-
-    function extractCvDetail(element) {
-
-        if (!element) {
-            return "";
-        }
-
-
-        const label =
-            text(
-                element,
-                ".cv-entry-thesis-label"
-            );
-
-
-        const anchors =
-            Array.from(
-                element.querySelectorAll(
-                    "a"
-                )
-            );
-
-
-        /*
-         * Preserve project links.
-         *
-         * Multiple projects are separated
-         * by typographic middots.
-         */
-
-        if (
-            label &&
-            anchors.length
-        ) {
-
-            const runs = [
-                `${label} `
-            ];
-
-
-            anchors.forEach(
-                (anchor, index) => {
-
-                    if (index > 0) {
-
-                        runs.push(
-                            " · "
-                        );
-
-                    }
-
-
-                    runs.push(
-                        linkedText(
-                            normalizeText(
-                                anchor.textContent
-                            ),
-                            absoluteUrl(
-                                anchor.getAttribute(
-                                    "href"
-                                )
-                            )
-                        )
-                    );
-
-                }
-            );
-
-
-            return runs;
-
-        }
-
-
-        return normalizeText(
-            element.textContent
-        );
-
-    }
-
 
     function extractCvEntry(entry) {
 
@@ -417,10 +214,9 @@
                 ),
 
             detail:
-                extractCvDetail(
-                    entry.querySelector(
-                        ".cv-entry-thesis"
-                    )
+                text(
+                    entry,
+                    ".cv-entry-thesis"
                 )
         };
 
@@ -436,8 +232,7 @@
         )
             .map(section => {
 
-                const blocks =
-                    [];
+                const blocks = [];
 
 
                 Array.from(
@@ -447,15 +242,11 @@
 
                         if (
                             child.classList
-                                .contains(
-                                    "cv-entry"
-                                )
+                                .contains("cv-entry")
                         ) {
 
                             blocks.push({
-                                type:
-                                    "entry",
-
+                                type: "entry",
                                 entry:
                                     extractCvEntry(
                                         child
@@ -510,7 +301,11 @@
             })
             .filter(
                 section =>
-                    section.title
+                    section.title &&
+                    ![
+                        "Academic Service",
+                        "Professional Memberships & Roles"
+                    ].includes(section.title)
             );
 
     }
@@ -570,7 +365,6 @@
                                 ""
                             )
                     )
-
             }))
             .filter(
                 item =>
@@ -584,13 +378,9 @@
        Teaching + theses
     ========================================== */
 
-    function badgeMap(
-        root,
-        badgeSelector
-    ) {
+    function badgeMap(root, badgeSelector) {
 
-        const result =
-            {};
+        const result = {};
 
 
         Array.from(
@@ -618,10 +408,7 @@
                     label &&
                     value
                 ) {
-
-                    result[label] =
-                        value;
-
+                    result[label] = value;
                 }
 
             });
@@ -632,9 +419,7 @@
     }
 
 
-    function extractTeaching(
-        documentNode
-    ) {
+    function extractTeaching(documentNode) {
 
         return Array.from(
             documentNode.querySelectorAll(
@@ -654,7 +439,6 @@
                         course,
                         ".teaching-badge"
                     )
-
             }))
             .filter(
                 course =>
@@ -664,9 +448,7 @@
     }
 
 
-    function extractTheses(
-        documentNode
-    ) {
+    function extractTheses(documentNode) {
 
         return Array.from(
             documentNode.querySelectorAll(
@@ -686,7 +468,6 @@
                         thesis,
                         ".thesis-badge"
                     )
-
             }))
             .filter(
                 thesis =>
@@ -700,9 +481,7 @@
        Organized events
     ========================================== */
 
-    function extractEvents(
-        documentNode
-    ) {
+    function extractEvents(documentNode) {
 
         return Array.from(
             documentNode.querySelectorAll(
@@ -734,10 +513,7 @@
 
 
                             return normalizeText(
-                                [
-                                    name,
-                                    detail
-                                ]
+                                [name, detail]
                                     .filter(Boolean)
                                     .join(" ")
                             );
@@ -765,7 +541,6 @@
                                     edition,
                                     ".event-series-edition-meta"
                                 )
-
                         }))
                         .filter(
                             edition =>
@@ -805,7 +580,6 @@
                         ),
 
                     roles,
-
                     editions
                 };
 
@@ -822,9 +596,7 @@
        Academic service
     ========================================== */
 
-    function extractServices(
-        documentNode
-    ) {
+    function extractServices(documentNode) {
 
         return Array.from(
             documentNode.querySelectorAll(
@@ -859,24 +631,38 @@
                                     ".service-entry-title"
                                 ),
 
-                            detail:
-                                text(
-                                    entry,
-                                    ".service-entry-detail"
-                                ),
+                            roles:
+                                Array.from(
+                                    entry.querySelectorAll(
+                                        ".service-role"
+                                    )
+                                )
+                                    .map(role =>
+                                        [
+                                            text(
+                                                role,
+                                                ".service-role-name"
+                                            ),
+                                            text(
+                                                role,
+                                                ".service-role-detail"
+                                            )
+                                        ]
+                                            .filter(Boolean)
+                                            .join(" · ")
+                                    )
+                                    .filter(Boolean),
 
                             institution:
                                 text(
                                     entry,
                                     ".service-entry-institution"
                                 )
-
                         }))
                         .filter(
                             entry =>
                                 entry.title
                         )
-
             }))
             .filter(
                 section =>
@@ -890,9 +676,7 @@
        Projects & funding
     ========================================== */
 
-    function extractProjects(
-        documentNode
-    ) {
+    function extractProjects(documentNode) {
 
         return Array.from(
             documentNode.querySelectorAll(
@@ -901,8 +685,7 @@
         )
             .map(project => {
 
-                const metadata =
-                    {};
+                const metadata = {};
 
 
                 Array.from(
@@ -930,10 +713,8 @@
                             label &&
                             value
                         ) {
-
                             metadata[label] =
                                 value;
-
                         }
 
                     });
@@ -978,8 +759,7 @@
 
         const match =
             String(
-                data?.date ||
-                ""
+                data?.date || ""
             )
                 .match(
                     /\b(?:19|20)\d{2}\b/
@@ -987,35 +767,24 @@
 
 
         return match
-            ? Number(
-                match[0]
-            )
+            ? Number(match[0])
             : 0;
 
     }
 
 
-    function creatorName(
-        creator
-    ) {
+    function creatorName(creator) {
 
-        if (
-            creator.name
-        ) {
-
+        if (creator.name) {
             return creator.name;
-
         }
 
 
         const last =
-            creator.lastName ||
-            "";
-
+            creator.lastName || "";
 
         const first =
-            creator.firstName ||
-            "";
+            creator.firstName || "";
 
 
         return [
@@ -1034,8 +803,7 @@
     ) {
 
         return (
-            data.creators ||
-            []
+            data.creators || []
         )
             .filter(
                 creator =>
@@ -1063,14 +831,12 @@
     function getTags(data) {
 
         return (
-            data.tags ||
-            []
+            data.tags || []
         )
             .map(
                 tag =>
                     String(
-                        tag.tag ||
-                        ""
+                        tag.tag || ""
                     )
                         .trim()
                         .toLowerCase()
@@ -1126,9 +892,7 @@
 
 
         if (!response.ok) {
-
             return new Set();
-
         }
 
 
@@ -1164,7 +928,6 @@
                 names.map(
                     async name => [
                         name,
-
                         await fetchTaggedItemKeys(
                             userId,
                             WEBSITE_TAGS[name]
@@ -1188,21 +951,15 @@
     ) {
 
         const directTags =
-            getTags(
-                item.data
-            );
+            getTags(item.data);
 
 
         if (
             directTags.includes(
-                WEBSITE_TAGS[
-                    tagName
-                ]
+                WEBSITE_TAGS[tagName]
             )
         ) {
-
             return true;
-
         }
 
 
@@ -1212,9 +969,8 @@
 
         return Boolean(
             key &&
-            websiteTagKeys[
-                tagName
-            ]?.has(key)
+            websiteTagKeys[tagName]
+                ?.has(key)
         );
 
     }
@@ -1232,9 +988,7 @@
                 websiteTagKeys
             )
         ) {
-
             return "In preparation";
-
         }
 
 
@@ -1245,9 +999,7 @@
                 websiteTagKeys
             )
         ) {
-
             return "Upcoming";
-
         }
 
 
@@ -1258,9 +1010,7 @@
                 websiteTagKeys
             )
         ) {
-
             return "Forthcoming";
-
         }
 
 
@@ -1285,77 +1035,47 @@
                 websiteTagKeys
             )
         ) {
-
             return "Edited Journal Issues";
-
         }
 
 
-        if (
-            type ===
-            "book"
-        ) {
-
+        if (type === "book") {
             return "Books";
-
         }
 
 
-        if (
-            type ===
-            "journalArticle"
-        ) {
-
+        if (type === "journalArticle") {
             return "Journal Articles";
-
         }
 
 
         if (
-            type ===
-                "bookSection" ||
-            type ===
-                "encyclopediaArticle"
+            type === "bookSection" ||
+            type === "encyclopediaArticle"
         ) {
-
             return "Book Chapters";
-
         }
 
 
-        if (
-            type ===
-            "conferencePaper"
-        ) {
-
+        if (type === "conferencePaper") {
             return "Conference Publications";
-
         }
 
 
         if (
-            type ===
-                "dataset" ||
-            type ===
-                "computerProgram" ||
-            type ===
-                "software"
+            type === "dataset" ||
+            type === "computerProgram" ||
+            type === "software"
         ) {
-
             return "Datasets & Software";
-
         }
 
 
         if (
-            type ===
-                "blogPost" ||
-            type ===
-                "webpage"
+            type === "blogPost" ||
+            type === "webpage"
         ) {
-
             return "Blog Posts";
-
         }
 
 
@@ -1368,25 +1088,16 @@
         userId
     ) {
 
-        if (
-            !userId
-        ) {
-
+        if (!userId) {
             return [];
-
         }
 
 
-        const items =
-            [];
+        const items = [];
 
+        const limit = 100;
 
-        const limit =
-            100;
-
-
-        let start =
-            0;
+        let start = 0;
 
 
         while (true) {
@@ -1402,24 +1113,20 @@
                 "json"
             );
 
-
             url.searchParams.set(
                 "sort",
                 "date"
             );
-
 
             url.searchParams.set(
                 "direction",
                 "desc"
             );
 
-
             url.searchParams.set(
                 "limit",
                 String(limit)
             );
-
 
             url.searchParams.set(
                 "start",
@@ -1458,17 +1165,13 @@
 
 
             if (
-                batch.length <
-                limit
+                batch.length < limit
             ) {
-
                 break;
-
             }
 
 
-            start +=
-                limit;
+            start += limit;
 
         }
 
@@ -1482,12 +1185,9 @@
 
                 return (
                     item?.data &&
-                    type !==
-                        "attachment" &&
-                    type !==
-                        "note" &&
-                    type !==
-                        "annotation"
+                    type !== "attachment" &&
+                    type !== "note" &&
+                    type !== "annotation"
                 );
 
             });
@@ -1501,116 +1201,43 @@
 
         return clean.map(
             item => ({
-
                 item,
-
                 category:
                     detectPublicationCategory(
                         item,
                         websiteTagKeys
                     ),
-
                 status:
                     publicationStatus(
                         item,
                         websiteTagKeys
                     )
-
             })
         );
 
     }
 
 
-    /* =========================================
-       Publication links
-    ========================================== */
+    function publicationLink(data) {
 
-    function publicationUrls(data) {
-
-        const urls =
-            [];
-
-
-        if (
-            data.DOI
-        ) {
-
-            const doi =
-                String(
-                    data.DOI
-                )
-                    .replace(
-                        /^https?:\/\/doi\.org\//i,
-                        ""
-                    );
-
-
-            urls.push(
-                `https://doi.org/${doi}`
-            );
-
+        if (data.DOI) {
+            return `https://doi.org/${data.DOI}`;
         }
 
 
         if (
             data.url &&
-            /^https?:\/\//i
-                .test(
-                    data.url
-                )
-        ) {
-
-            urls.push(
+            /^https?:\/\//i.test(
                 data.url
-            );
-
+            )
+        ) {
+            return data.url;
         }
 
 
-        const seen =
-            new Set();
-
-
-        return urls.filter(
-            url => {
-
-                const normalized =
-                    String(url)
-                        .replace(
-                            /\/$/,
-                            ""
-                        )
-                        .toLowerCase();
-
-
-                if (
-                    seen.has(
-                        normalized
-                    )
-                ) {
-
-                    return false;
-
-                }
-
-
-                seen.add(
-                    normalized
-                );
-
-
-                return true;
-
-            }
-        );
-
+        return "";
     }
 
-
-    /* =========================================
-       Bibliography
-    ========================================== */
 
     function bibliographyText(record) {
 
@@ -1652,8 +1279,7 @@
         const yearText =
             year
                 ? String(year)
-                : record.status ||
-                "n.d.";
+                : record.status || "n.d.";
 
 
         const title =
@@ -1667,18 +1293,13 @@
             data.itemType;
 
 
-        const parts =
-            [];
+        const parts = [];
 
 
-        if (
-            creatorText
-        ) {
-
+        if (creatorText) {
             parts.push(
                 `${creatorText}.`
             );
-
         }
 
 
@@ -1688,8 +1309,7 @@
 
 
         if (
-            type ===
-            "journalArticle"
+            type === "journalArticle"
         ) {
 
             parts.push(
@@ -1707,54 +1327,34 @@
                 journal;
 
 
-            if (
-                data.volume
-            ) {
-
+            if (data.volume) {
                 venue +=
                     `${venue ? " " : ""}${data.volume}`;
-
             }
 
 
-            if (
-                data.issue
-            ) {
-
+            if (data.issue) {
                 venue +=
                     `(${data.issue})`;
-
             }
 
 
-            if (
-                data.pages
-            ) {
-
+            if (data.pages) {
                 venue +=
                     `${venue ? ": " : ""}${data.pages}`;
-
             }
 
 
-            if (
-                venue
-            ) {
-
+            if (venue) {
                 parts.push(
                     `${venue}.`
                 );
-
             }
 
         }
-
-
         else if (
-            type ===
-                "bookSection" ||
-            type ===
-                "encyclopediaArticle"
+            type === "bookSection" ||
+            type === "encyclopediaArticle"
         ) {
 
             parts.push(
@@ -1762,23 +1362,19 @@
             );
 
 
-            const container =
+            let container =
                 normalizeText(
                     data.bookTitle
                 );
 
 
-            if (
-                container
-            ) {
+            if (container) {
 
                 let sentence =
                     `In ${container}`;
 
 
-                if (
-                    editors
-                ) {
+                if (editors) {
 
                     sentence +=
                         `, edited by ${editors}`;
@@ -1786,18 +1382,13 @@
                 }
 
 
-                if (
-                    data.pages
-                ) {
-
+                if (data.pages) {
                     sentence +=
                         `, ${data.pages}`;
-
                 }
 
 
-                sentence +=
-                    ".";
+                sentence += ".";
 
 
                 parts.push(
@@ -1816,22 +1407,15 @@
                     .join(": ");
 
 
-            if (
-                imprint
-            ) {
-
+            if (imprint) {
                 parts.push(
                     `${imprint}.`
                 );
-
             }
 
         }
-
-
         else if (
-            type ===
-            "conferencePaper"
+            type === "conferencePaper"
         ) {
 
             parts.push(
@@ -1846,14 +1430,10 @@
                 );
 
 
-            if (
-                proceedings
-            ) {
-
+            if (proceedings) {
                 parts.push(
                     `In ${proceedings}.`
                 );
-
             }
 
 
@@ -1866,19 +1446,13 @@
                     .join(": ");
 
 
-            if (
-                imprint
-            ) {
-
+            if (imprint) {
                 parts.push(
                     `${imprint}.`
                 );
-
             }
 
         }
-
-
         else {
 
             parts.push(
@@ -1894,14 +1468,10 @@
                 );
 
 
-            if (
-                venue
-            ) {
-
+            if (venue) {
                 parts.push(
                     `${venue}.`
                 );
-
             }
 
 
@@ -1914,14 +1484,10 @@
                     .join(": ");
 
 
-            if (
-                imprint
-            ) {
-
+            if (imprint) {
                 parts.push(
                     `${imprint}.`
                 );
-
             }
 
         }
@@ -1931,11 +1497,9 @@
             record.status &&
             year
         ) {
-
             parts.push(
                 `[${record.status}]`
             );
-
         }
 
 
@@ -1945,10 +1509,8 @@
                     parts.join(" ")
                 ),
 
-            urls:
-                publicationUrls(
-                    data
-                ),
+            link:
+                publicationLink(data),
 
             year
         };
@@ -1960,42 +1522,27 @@
         records
     ) {
 
-        const groups =
-            {};
+        const groups = {};
 
 
-        records.forEach(
-            record => {
+        records.forEach(record => {
 
-                const category =
-                    record.category;
-
-
-                if (
-                    !groups[
-                        category
-                    ]
-                ) {
-
-                    groups[
-                        category
-                    ] = [];
-
-                }
+            const category =
+                record.category;
 
 
-                groups[
-                    category
-                ]
-                    .push(record);
-
+            if (!groups[category]) {
+                groups[category] = [];
             }
-        );
 
 
-        Object.values(
-            groups
-        )
+            groups[category]
+                .push(record);
+
+        });
+
+
+        Object.values(groups)
             .forEach(group => {
 
                 group.sort(
@@ -2010,23 +1557,17 @@
                             );
 
 
-                        if (
-                            yearDiff
-                        ) {
-
+                        if (yearDiff) {
                             return yearDiff;
-
                         }
 
 
                         return String(
-                            a.item.data.title ||
-                            ""
+                            a.item.data.title || ""
                         )
                             .localeCompare(
                                 String(
-                                    b.item.data.title ||
-                                    ""
+                                    b.item.data.title || ""
                                 ),
                                 "en"
                             );
@@ -2040,21 +1581,15 @@
         return PUBLICATION_CATEGORY_ORDER
             .filter(
                 category =>
-                    groups[
-                        category
-                    ]?.length
+                    groups[category]?.length
             )
             .map(
                 category => ({
-
                     title:
                         category,
 
                     items:
-                        groups[
-                            category
-                        ]
-
+                        groups[category]
                 })
             );
 
@@ -2072,9 +1607,7 @@
 
         const response =
             await fetch(
-                absoluteUrl(
-                    imageUrl
-                )
+                absoluteUrl(imageUrl)
             );
 
 
@@ -2129,7 +1662,6 @@
 
         context.beginPath();
 
-
         context.arc(
             size / 2,
             size / 2,
@@ -2138,16 +1670,13 @@
             Math.PI * 2
         );
 
-
         context.clip();
 
 
         const scale =
             Math.max(
-                size /
-                    bitmap.width,
-                size /
-                    bitmap.height
+                size / bitmap.width,
+                size / bitmap.height
             );
 
 
@@ -2155,24 +1684,23 @@
             bitmap.width *
             scale;
 
-
         const drawHeight =
             bitmap.height *
             scale;
 
 
         const x =
-            (
-                size -
-                drawWidth
-            ) / 2;
+            (size - drawWidth) /
+            2;
 
 
+        /*
+         * Slight upward shift so the crop
+         * resembles the homepage portrait.
+         */
         const y =
-            (
-                size -
-                drawHeight
-            ) * 0.32;
+            (size - drawHeight) *
+            0.32;
 
 
         context.drawImage(
@@ -2202,9 +1730,7 @@
         [0, 0, 0, 0];
 
 
-    function sectionHeading(
-        title
-    ) {
+    function sectionHeading(title) {
 
         return {
             margin:
@@ -2212,35 +1738,21 @@
 
             columns: [
                 {
-                    width:
-                        5,
+                    width: 5,
 
                     canvas: [
                         {
-                            type:
-                                "rect",
-
-                            x:
-                                0,
-
-                            y:
-                                0,
-
-                            w:
-                                5,
-
-                            h:
-                                18,
-
-                            color:
-                                COLORS.teal
+                            type: "rect",
+                            x: 0,
+                            y: 0,
+                            w: 5,
+                            h: 18,
+                            color: COLORS.teal
                         }
                     ]
                 },
-
                 {
-                    width:
-                        "*",
+                    width: "*",
 
                     text:
                         title,
@@ -2257,9 +1769,7 @@
     }
 
 
-    function subsectionHeading(
-        title
-    ) {
+    function subsectionHeading(title) {
 
         return {
             text:
@@ -2282,34 +1792,26 @@
     ) {
 
         return {
-            unbreakable:
-                true,
-
             margin:
                 [0, 0, 0, 7],
 
             columns: [
                 {
-                    width:
-                        78,
+                    width: 78,
 
                     text:
-                        date ||
-                        "",
+                        date || "",
 
                     style:
                         "date"
                 },
-
                 {
-                    width:
-                        "*",
+                    width: "*",
 
                     stack: [
                         {
                             text:
-                                title ||
-                                "",
+                                title || "",
 
                             style:
                                 "entryTitle",
@@ -2317,19 +1819,10 @@
                             margin:
                                 noMargin
                         },
-
                         ...details
-                            .filter(
-                                detail =>
-                                    detail &&
-                                    (
-                                        !Array.isArray(detail) ||
-                                        detail.length
-                                    )
-                            )
+                            .filter(Boolean)
                             .map(
                                 detail => ({
-
                                     text:
                                         detail,
 
@@ -2338,7 +1831,6 @@
 
                                     margin:
                                         [0, 2, 0, 0]
-
                                 })
                             )
                     ]
@@ -2352,65 +1844,15 @@
     }
 
 
-    function compactEntry(
-        title,
-        metaLines = []
-    ) {
-
-        return {
-            unbreakable:
-                true,
-
-            margin:
-                [0, 0, 0, 6],
-
-            stack: [
-                {
-                    text:
-                        title,
-
-                    style:
-                        "entryTitle"
-                },
-
-                ...metaLines
-                    .filter(Boolean)
-                    .map(
-                        line => ({
-
-                            text:
-                                line,
-
-                            style:
-                                "entryMeta",
-
-                            margin:
-                                [0, 2, 0, 0]
-
-                        })
-                    )
-            ]
-        };
-
-    }
-
-
     function statusText(value) {
 
-        if (
-            !value
-        ) {
-
+        if (!value) {
             return "";
-
         }
 
 
         return String(value)
-            .replace(
-                /\s+/g,
-                " "
-            )
+            .replace(/\s+/g, " ")
             .trim();
 
     }
@@ -2418,24 +1860,18 @@
 
     function teachingMeta(meta) {
 
-        const ordered = [
-            "Location",
-            "Term",
-            "Type",
-            "SWS",
-            "Language"
+        const values = [
+            meta.Location,
+            meta.Type,
+            meta.SWS
+                ? `${meta.SWS} SWS`
+                : "",
+            meta.Language
         ];
 
 
-        return ordered
-            .filter(
-                key =>
-                    meta[key]
-            )
-            .map(
-                key =>
-                    `${key}: ${meta[key]}`
-            )
+        return values
+            .filter(Boolean)
             .join(" · ");
 
     }
@@ -2443,26 +1879,39 @@
 
     function thesisMeta(meta) {
 
-        const ordered = [
-            "Role",
-            "First Supervisor",
-            "Second Supervisor",
-            "Location",
-            "Term",
-            "Type",
-            "Language"
-        ];
+        const lines = [];
 
 
-        return ordered
-            .filter(
-                key =>
-                    meta[key]
-            )
-            .map(
-                key =>
-                    `${key}: ${meta[key]}`
+        const overview = [
+            meta.Type,
+            meta.Location,
+            meta.Role,
+            meta.Language
+        ]
+            .filter(Boolean)
+            .join(" · ");
+
+
+        if (overview) {
+            lines.push(overview);
+        }
+
+
+        if (meta["First Supervisor"]) {
+            lines.push(
+                `First Supervisor: ${meta["First Supervisor"]}`
             );
+        }
+
+
+        if (meta["Second Supervisor"]) {
+            lines.push(
+                `Second Supervisor: ${meta["Second Supervisor"]}`
+            );
+        }
+
+
+        return lines;
 
     }
 
@@ -2500,127 +1949,10 @@
         portrait
     ) {
 
-        const content =
-            [];
+        const content = [];
 
 
-        /* =====================================
-           Header
-        ====================================== */
-
-        const contactRuns =
-            [];
-
-
-        if (
-            model.profile.email
-        ) {
-
-            contactRuns.push(
-                linkedText(
-                    model.profile.email,
-                    `mailto:${model.profile.email}`
-                )
-            );
-
-        }
-
-
-        if (
-            model.profile.website
-        ) {
-
-            if (
-                contactRuns.length
-            ) {
-
-                contactRuns.push(
-                    "  ·  "
-                );
-
-            }
-
-
-            contactRuns.push(
-                linkedText(
-                    model.profile.website,
-                    model.profile.website
-                )
-            );
-
-        }
-
-
-        const socialRuns =
-            [];
-
-
-        if (
-            model.profile.orcid &&
-            model.profile.orcidHandle
-        ) {
-
-            socialRuns.push(
-                linkedText(
-                    model.profile.orcidHandle,
-                    model.profile.orcid
-                )
-            );
-
-        }
-
-
-        if (
-            model.profile.github &&
-            model.profile.githubHandle
-        ) {
-
-            if (
-                socialRuns.length
-            ) {
-
-                socialRuns.push(
-                    "  ·  "
-                );
-
-            }
-
-
-            socialRuns.push(
-                linkedText(
-                    model.profile.githubHandle,
-                    model.profile.github
-                )
-            );
-
-        }
-
-
-        if (
-            model.profile.fedihum &&
-            model.profile.fedihumHandle
-        ) {
-
-            if (
-                socialRuns.length
-            ) {
-
-                socialRuns.push(
-                    "  ·  "
-                );
-
-            }
-
-
-            socialRuns.push(
-                linkedText(
-                    model.profile.fedihumHandle,
-                    model.profile.fedihum
-                )
-            );
-
-        }
-
+        /* Header */
 
         content.push({
             margin:
@@ -2633,12 +1965,7 @@
                 body: [[
                     {
                         border:
-                            [
-                                false,
-                                false,
-                                false,
-                                false
-                            ],
+                            [false, false, false, false],
 
                         stack: [
                             {
@@ -2659,15 +1986,9 @@
                         margin:
                             [0, 0, 8, 0]
                     },
-
                     {
                         border:
-                            [
-                                false,
-                                false,
-                                false,
-                                false
-                            ],
+                            [false, false, false, false],
 
                         stack: [
                             {
@@ -2677,48 +1998,86 @@
                                 style:
                                     "name"
                             },
-
                             {
                                 text: [
                                     model.profile.address,
-
-                                    (
-                                        model.profile.address &&
-                                        model.profile.birthDate
-                                    )
+                                    model.profile.address &&
+                                    model.profile.birthDate
                                         ? "  ·  "
                                         : "",
-
                                     model.profile.birthDate
                                 ],
 
                                 style:
-                                    "personalData",
+                                    "institution",
 
                                 margin:
-                                    [0, 4, 0, 0]
+                                    [0, 4, 0, 7]
                             },
-
                             {
-                                text:
-                                    contactRuns,
+                                text: [
+                                    model.profile.email
+                                        ? {
+                                            text:
+                                                model.profile.email,
+
+                                            link:
+                                                `mailto:${model.profile.email}`
+                                        }
+                                        : {},
+                                    model.profile.email &&
+                                    model.profile.website
+                                        ? "  ·  "
+                                        : "",
+                                    model.profile.website
+                                        ? {
+                                            text:
+                                                "Website",
+
+                                            link:
+                                                model.profile.website
+                                        }
+                                        : {},
+                                    model.profile.orcid
+                                        ? "  ·  "
+                                        : "",
+                                    model.profile.orcid
+                                        ? {
+                                            text:
+                                                "ORCID",
+
+                                            link:
+                                                model.profile.orcid
+                                        }
+                                        : {},
+                                    model.profile.github
+                                        ? "  ·  "
+                                        : "",
+                                    model.profile.github
+                                        ? {
+                                            text:
+                                                "GitHub",
+
+                                            link:
+                                                model.profile.github
+                                        }
+                                        : {},
+                                    model.profile.fedihum
+                                        ? "  ·  "
+                                        : "",
+                                    model.profile.fedihum
+                                        ? {
+                                            text:
+                                                "Fedihum",
+
+                                            link:
+                                                model.profile.fedihum
+                                        }
+                                        : {}
+                                ],
 
                                 style:
-                                    "contact",
-
-                                margin:
-                                    [0, 5, 0, 0]
-                            },
-
-                            {
-                                text:
-                                    socialRuns,
-
-                                style:
-                                    "contact",
-
-                                margin:
-                                    [0, 4, 0, 0]
+                                    "contact"
                             }
                         ]
                     }
@@ -2750,26 +2109,13 @@
         content.push({
             canvas: [
                 {
-                    type:
-                        "line",
-
-                    x1:
-                        0,
-
-                    y1:
-                        0,
-
-                    x2:
-                        515,
-
-                    y2:
-                        0,
-
-                    lineWidth:
-                        1.2,
-
-                    lineColor:
-                        COLORS.warm
+                    type: "line",
+                    x1: 0,
+                    y1: 0,
+                    x2: 515,
+                    y2: 0,
+                    lineWidth: 1.2,
+                    lineColor: COLORS.warm
                 }
             ],
 
@@ -2778,85 +2124,79 @@
         });
 
 
-        /* =====================================
-           Existing CV
-        ====================================== */
+        /* Existing CV */
 
-        model.cv.forEach(
-            section => {
+        model.cv.forEach(section => {
 
-                content.push(
-                    sectionHeading(
-                        section.title
-                    )
-                );
+            content.push(
+                sectionHeading(
+                    section.title
+                )
+            );
 
 
-                section.blocks
-                    .forEach(block => {
+            section.blocks
+                .forEach(block => {
 
-                        if (
-                            block.type ===
-                            "entry"
-                        ) {
+                    if (
+                        block.type ===
+                        "entry"
+                    ) {
 
-                            const entry =
-                                block.entry;
-
-
-                            content.push(
-                                timelineEntry(
-                                    entry.date,
-                                    entry.title,
-                                    [
-                                        entry.meta,
-                                        entry.detail
-                                    ]
-                                )
-                            );
-
-                        }
+                        const entry =
+                            block.entry;
 
 
-                        if (
-                            block.type ===
-                            "subsection"
-                        ) {
+                        content.push(
+                            timelineEntry(
+                                entry.date,
+                                entry.title,
+                                [
+                                    entry.meta,
+                                    entry.detail
+                                ]
+                            )
+                        );
 
-                            content.push(
-                                subsectionHeading(
-                                    block.title
-                                )
-                            );
-
-
-                            block.entries
-                                .forEach(entry => {
-
-                                    content.push(
-                                        timelineEntry(
-                                            entry.date,
-                                            entry.title,
-                                            [
-                                                entry.meta,
-                                                entry.detail
-                                            ]
-                                        )
-                                    );
-
-                                });
-
-                        }
-
-                    });
-
-            }
-        );
+                    }
 
 
-        /* =====================================
-           Publications
-        ====================================== */
+                    if (
+                        block.type ===
+                        "subsection"
+                    ) {
+
+                        content.push(
+                            subsectionHeading(
+                                block.title
+                            )
+                        );
+
+
+                        block.entries
+                            .forEach(entry => {
+
+                                content.push(
+                                    timelineEntry(
+                                        entry.date,
+                                        entry.title,
+                                        [
+                                            entry.meta,
+                                            entry.detail
+                                        ]
+                                    )
+                                );
+
+                            });
+
+                    }
+
+                });
+
+        });
+
+
+        /* Publications */
 
         content.push(
             sectionHeading(
@@ -2884,35 +2224,18 @@
                             );
 
 
-                        const runs = [
-                            bibliography.text
-                        ];
-
-
-                        bibliography.urls
-                            .forEach(url => {
-
-                                runs.push(
-                                    "  "
-                                );
-
-
-                                runs.push(
-                                    linkedText(
-                                        url,
-                                        url
-                                    )
-                                );
-
-                            });
-
-
                         content.push({
                             margin:
                                 [0, 0, 0, 6],
 
-                            text:
-                                runs,
+                            text: {
+                                text:
+                                    bibliography.text,
+
+                                link:
+                                    bibliography.link ||
+                                    undefined
+                            },
 
                             style:
                                 "bibliography"
@@ -2923,9 +2246,7 @@
             });
 
 
-        /* =====================================
-           Talks
-        ====================================== */
+        /* Talks */
 
         content.push(
             sectionHeading(
@@ -2940,11 +2261,9 @@
                 const detail = [
                     talk.event,
                     talk.location,
-
                     talk.collaborators
                         ? `With: ${talk.collaborators}`
                         : "",
-
                     talk.status
                         ? `Status: ${talk.status}`
                         : ""
@@ -2962,9 +2281,7 @@
             });
 
 
-        /* =====================================
-           Teaching
-        ====================================== */
+        /* Teaching */
 
         content.push(
             sectionHeading(
@@ -2977,7 +2294,8 @@
             .forEach(course => {
 
                 content.push(
-                    compactEntry(
+                    timelineEntry(
+                        course.meta.Term,
                         course.title,
                         [
                             teachingMeta(
@@ -2990,9 +2308,7 @@
             });
 
 
-        /* =====================================
-           Thesis Supervisions
-        ====================================== */
+        /* Thesis Supervisions */
 
         content.push(
             sectionHeading(
@@ -3005,7 +2321,8 @@
             .forEach(thesis => {
 
                 content.push(
-                    compactEntry(
+                    timelineEntry(
+                        thesis.meta.Term,
                         thesis.title,
                         thesisMeta(
                             thesis.meta
@@ -3016,9 +2333,7 @@
             });
 
 
-        /* =====================================
-           Organized Events
-        ====================================== */
+        /* Organized Events */
 
         content.push(
             sectionHeading(
@@ -3037,7 +2352,6 @@
                     ]
                         .filter(Boolean)
                         .join(" · "),
-
                     ...event.roles
                 ];
 
@@ -3074,7 +2388,6 @@
                                             color:
                                                 COLORS.teal
                                         },
-
                                         edition.meta
                                             ? ` · ${edition.meta}`
                                             : ""
@@ -3092,9 +2405,7 @@
             });
 
 
-        /* =====================================
-           Academic Service
-        ====================================== */
+        /* Academic Service */
 
         content.push(
             sectionHeading(
@@ -3121,7 +2432,7 @@
                                 entry.date,
                                 entry.title,
                                 [
-                                    entry.detail,
+                                    ...entry.roles,
                                     entry.institution
                                 ]
                             )
@@ -3132,9 +2443,7 @@
             });
 
 
-        /* =====================================
-           Projects & Funding
-        ====================================== */
+        /* Projects & Funding */
 
         content.push(
             sectionHeading(
@@ -3155,11 +2464,9 @@
                 if (
                     project.status
                 ) {
-
                     lines.unshift(
                         `Status: ${statusText(project.status)}`
                     );
-
                 }
 
 
@@ -3174,17 +2481,12 @@
             });
 
 
-        /* =====================================
-           PDF definition
-        ====================================== */
-
         return {
             pageSize:
                 "A4",
 
             pageMargins:
                 [42, 46, 42, 48],
-
 
             info: {
                 title:
@@ -3196,7 +2498,6 @@
                 subject:
                     "Academic Curriculum Vitae"
             },
-
 
             defaultStyle: {
                 font:
@@ -3212,9 +2513,7 @@
                     1.22
             },
 
-
             styles: {
-
                 name: {
                     fontSize:
                         23,
@@ -3229,18 +2528,13 @@
                         1.05
                 },
 
-
-                personalData: {
+                institution: {
                     fontSize:
-                        9,
+                        9.5,
 
                     color:
-                        COLORS.muted,
-
-                    lineHeight:
-                        1.3
+                        COLORS.muted
                 },
-
 
                 contact: {
                     fontSize:
@@ -3249,7 +2543,6 @@
                     color:
                         COLORS.blue
                 },
-
 
                 sectionTitle: {
                     fontSize:
@@ -3265,7 +2558,6 @@
                         1.1
                 },
 
-
                 subsectionTitle: {
                     fontSize:
                         9,
@@ -3279,7 +2571,6 @@
                     characterSpacing:
                         0.65
                 },
-
 
                 date: {
                     fontSize:
@@ -3295,7 +2586,6 @@
                         1.25
                 },
 
-
                 entryTitle: {
                     fontSize:
                         9.4,
@@ -3310,7 +2600,6 @@
                         1.25
                 },
 
-
                 entryMeta: {
                     fontSize:
                         8.5,
@@ -3321,7 +2610,6 @@
                     lineHeight:
                         1.25
                 },
-
 
                 bibliography: {
                     fontSize:
@@ -3335,12 +2623,10 @@
                 }
             },
 
-
             footer: (
                 currentPage,
                 pageCount
             ) => ({
-
                 margin:
                     [42, 12, 42, 0],
 
@@ -3355,7 +2641,6 @@
                         fontSize:
                             7.4
                     },
-
                     {
                         text:
                             `Page ${currentPage} of ${pageCount}`,
@@ -3371,7 +2656,6 @@
                     }
                 ]
             }),
-
 
             content
         };
@@ -3395,34 +2679,26 @@
             publicationRecords
         ] =
             await Promise.all([
-
                 fetchDocument(
                     button.dataset.cvUrl
                 ),
-
                 fetchDocument(
                     button.dataset.talksUrl
                 ),
-
                 fetchDocument(
                     button.dataset.teachingUrl
                 ),
-
                 fetchDocument(
                     button.dataset.eventsUrl
                 ),
-
                 fetchDocument(
                     button.dataset.servicesUrl
                 ),
-
                 fetchDocument(
                     button.dataset.projectsUrl
                 ),
-
                 fetchPublications(
-                    button.dataset
-                        .zoteroUserId
+                    button.dataset.zoteroUserId
                 )
             ]);
 
@@ -3530,10 +2806,7 @@
 
         const filename =
             `${model.profile.name
-                .replace(
-                    /\s+/g,
-                    "_"
-                )}_CV.pdf`;
+                .replace(/\s+/g, "_")}_CV.pdf`;
 
 
         window.pdfMake
@@ -3547,17 +2820,13 @@
                     status.textContent =
                         "CV generated.";
 
-
                     setTimeout(
                         () => {
-
                             status.textContent =
                                 "";
-
                         },
                         3500
                     );
-
 
                     button.disabled =
                         false;
@@ -3592,9 +2861,7 @@
                 !button ||
                 !status
             ) {
-
                 return;
-
             }
 
 

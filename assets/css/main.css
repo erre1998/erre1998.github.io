@@ -4551,26 +4551,6 @@ border-left:
 
 
 /* ---------------------------------
-   Service detail
----------------------------------- */
-
-.service-entry-detail {
-    margin:
-        0.25rem
-        0
-        0;
-
-    color:
-        var(--color-muted);
-
-    font-size: 0.86rem;
-    font-weight: 400;
-
-    line-height: 1.55;
-}
-
-
-/* ---------------------------------
    Service institution
 ---------------------------------- */
 

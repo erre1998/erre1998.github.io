@@ -640,7 +640,7 @@ description: "Teaching and thesis supervision by Erik Renz."
                         </span>
 
                         <span class="thesis-badge-value">
-                            University of Rostock (Germany)
+                            University of Rostock
                         </span>
                     </span>
 
@@ -726,7 +726,7 @@ description: "Teaching and thesis supervision by Erik Renz."
                         </span>
 
                         <span class="thesis-badge-value">
-                            University of Rostock (Germany)
+                            University of Rostock
                         </span>
                     </span>
 
@@ -812,7 +812,7 @@ description: "Teaching and thesis supervision by Erik Renz."
                         </span>
 
                         <span class="thesis-badge-value">
-                            University of Rostock (Germany)
+                            University of Rostock
                         </span>
                     </span>
 
@@ -898,7 +898,7 @@ description: "Teaching and thesis supervision by Erik Renz."
                         </span>
 
                         <span class="thesis-badge-value">
-                            University of Rostock (Germany)
+                            University of Rostock
                         </span>
                     </span>
 
