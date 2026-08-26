@@ -4345,17 +4345,32 @@ a:focus-visible {
         0
         1.85rem;
 
-    padding-left: 0.75rem;
+    padding:
+        0.8rem
+        0.95rem;
 
-border-left:
-    3px solid
-    var(--color-warm);
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.16);
+
+    border-left:
+        3px solid
+        var(--color-warm);
+
+    border-radius:
+        5px;
+
+    background-color:
+        rgba(255, 255, 255, 0.34);
 
     color:
         var(--color-muted);
 
-    font-size: 0.86rem;
-    line-height: 1.6;
+    font-size:
+        0.86rem;
+
+    line-height:
+        1.6;
 }
 
 
