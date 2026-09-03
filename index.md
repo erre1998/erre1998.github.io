@@ -40,14 +40,19 @@
             <div class="home-intro">
 
                 <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    I am currently a Research Associate in Digital Humanities at the University of Rostock, where my role combines research and teaching with responsibilities in academic administration and service. I am also closely involved in the development of new degree programmes in Digital Humanities, including a Bachelor's programme and a European joint Master's programme.
                 </p>
 
                 <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    Originally from northeastern Germany, I studied History and German Studies at the University of Rostock, where I completed both my Bachelor's and Master's degrees. My research lies at the intersection of Digital Humanities and textual analysis, with a particular focus on women's writing and drama, quantitative approaches to literature, and digital methods for the scholarly editing and analysis of texts.
+                </p>
+
+                <p>
+                    Since 2023, I have contributed to the Drama Corpora (DraCor) project, where I am expanding the German-language drama corpus GerDraCor to include works by women playwrights. This work is closely connected to my ongoing PhD research at Freie Universität Berlin.
+                </p>
+
+                <p>
+                    I am a member of the Institute for Documentology and Scholarly Editing (IDE).
                 </p>
 
             </div>
