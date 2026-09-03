@@ -40,7 +40,7 @@
             <div class="home-intro">
 
                 <p>
-                    I am currently a Research Associate in Digital Humanities at the University of Rostock, where my role combines research and teaching with responsibilities in academic administration and service. I am also closely involved in the development of new degree programmes in Digital Humanities, including a Bachelor's programme and a European joint Master's programme.
+                   I am currently a Research Associate in Digital Humanities at the University of Rostock, where my role combines research and teaching with responsibilities in academic administration and service. In the latter capacity, I am also closely involved in the development of new degree programmes in DH, including a Bachelor's programme and a European joint Master's programme. You can find my institutional webpage <a href="https://www.germanistik.uni-rostock.de/en/staff/research-associates/erik-renz/">here</a>.
                 </p>
 
                 <p>
@@ -56,35 +56,6 @@
                 </p>
 
             </div>
-
-
-
-            <!-- =====================================
-                 Current position
-            ====================================== -->
-
-            <div class="home-position">
-
-                <span class="home-position-label">
-                    Current position
-                </span>
-
-                <a
-                    class="home-position-link"
-                    href="https://www.germanistik.uni-rostock.de/en/staff/research-associates/erik-renz/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Research Associate · Junior Professorship for Digital Humanities
-                </a>
-
-                <span class="home-position-institution">
-                    University of Rostock
-                </span>
-
-            </div>
-
-
 
             <!-- =====================================
                  Contact, CV and profiles
