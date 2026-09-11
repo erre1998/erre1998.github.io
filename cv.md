@@ -444,7 +444,7 @@ description: "Curriculum Vitae of Erik Renz."
                     </p>
 
                     <p class="cv-entry-meta">
-                        <em>Hochschuldidaktik</em>, University of Rostock
+                        Hochschuldidaktik, University of Rostock
                     </p>
 
                 </div>
@@ -472,7 +472,7 @@ description: "Curriculum Vitae of Erik Renz."
                     </p>
 
                     <p class="cv-entry-meta">
-                        <em>Hochschuldidaktik</em>, University of Rostock
+                        Hochschuldidaktik, University of Rostock
                     </p>
 
                 </div>
