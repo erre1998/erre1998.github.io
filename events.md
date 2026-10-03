@@ -603,7 +603,7 @@ description: "Academic events organized by Erik Renz."
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Event Page
+                        Program
                     </a>
 
 

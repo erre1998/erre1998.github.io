@@ -158,13 +158,9 @@ description: "Academic talks by Erik Renz."
                 <div class="talk-heading-row">
 
                     <p class="talk-event">
-                        EADH 2026
+                        EADH 2026: Linking Europe: Digital Humanities Without Borders
                     </p>
 
-
-                    <span class="talk-status talk-status-upcoming">
-                        Upcoming
-                    </span>
 
                 </div>
 
@@ -200,7 +196,16 @@ description: "Academic talks by Erik Renz."
                     >
                         Program
                     </a>
-
+                    
+                    <a
+                        class="talk-resource-button"
+                        href="https://hennyu.github.io/eadh_26/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Slides
+                    </a>
+                    
                 </div>
 
             </div>

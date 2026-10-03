@@ -32,30 +32,31 @@
 
         <div class="home-content-card">
 
+<!-- =====================================
+     Introduction
+====================================== -->
 
-            <!-- =====================================
-                 Introduction
-            ====================================== -->
+<div class="home-intro">
 
-            <div class="home-intro">
+    <h1>Hi, I’m Erik 👋</h1>
 
-                <p>
-                   I am currently a Research Associate in Digital Humanities at the University of Rostock, where my role combines research and teaching with responsibilities in academic administration and service. In the latter capacity, I am also closely involved in the development of new degree programmes in DH, including a Bachelor's programme and a European joint Master's programme. You can find my institutional webpage <a href="https://www.germanistik.uni-rostock.de/en/staff/research-associates/erik-renz/">here</a>.
-                </p>
+    <p>
+        I’m currently a Research Associate in Digital Humanities at the University of Rostock, where I work across research, teaching, and academic service. I’m also involved in developing new degree programmes in Digital Humanities, including a Bachelor’s programme and a European joint Master’s programme. You can find out more about my work at the University of Rostock on my <a href="https://www.germanistik.uni-rostock.de/en/staff/research-associates/erik-renz/">institutional webpage</a>.
+    </p>
 
-                <p>
-                    Originally from northeastern Germany, I studied History and German Studies at the University of Rostock, where I completed both my Bachelor's and Master's degrees. My research lies at the intersection of Digital Humanities and textual analysis, with a particular focus on women's writing and drama, quantitative approaches to literature, and digital methods for the scholarly editing and analysis of texts.
-                </p>
+    <p>
+        My academic background is in History and German Studies, both of which I studied at the University of Rostock. Today, my research sits at the intersection of Digital Humanities and literary and textual studies. I’m particularly interested in women’s writing and drama, quantitative approaches to literature, and digital methods for editing, analysing, and exploring literary texts.
+    </p>
 
-                <p>
-                    Since 2023, I have contributed to the Drama Corpora (DraCor) project, where I am expanding the German-language drama corpus GerDraCor to include works by women playwrights. This work is closely connected to my ongoing PhD research at Freie Universität Berlin.
-                </p>
+    <p>
+        Since 2023, I’ve been contributing to the Drama Corpora (DraCor) project, where my work focuses on expanding the German-language drama corpus GerDraCor with plays by women playwrights. This work is closely connected to my ongoing PhD research at Freie Universität Berlin.
+    </p>
 
-                <p>
-                    I am a member of the Institute for Documentology and Scholarly Editing (IDE).
-                </p>
+    <p>
+        Beyond my research and teaching, I’m a member of the Institute for Documentology and Scholarly Editing (IDE).
+    </p>
 
-            </div>
+</div>
 
             <!-- =====================================
                  Contact, CV and profiles

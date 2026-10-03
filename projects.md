@@ -153,7 +153,7 @@ description: "Funded projects by Erik Renz."
                         </dt>
 
                         <dd>
-                            EUR 23,083.25
+                            EUR 23,083
                         </dd>
 
                     </div>

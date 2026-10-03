@@ -157,7 +157,7 @@ description: "Academic services by Erik Renz"
 
 
     <p class="services-events-reference">
-        For conferences, workshops, lecture series, and other events organized by me, see
+        For conferences, workshops, and other events organized by me, see
         <a href="{{ '/events/' | relative_url }}">Organized Events</a>.
     </p>
 
