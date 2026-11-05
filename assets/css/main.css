@@ -5523,3 +5523,38 @@ a:focus-visible {
     font-size: 0.72rem;
     line-height: 1.4;
 }
+
+/* ---------------------------------
+   Talks: Poster section
+   Reuses the existing talk card styles.
+---------------------------------- */
+
+.talks-posters {
+    margin-top: 3.5rem;
+}
+
+.talks-section-title {
+    margin: 0 0 1.25rem;
+    color: var(--color-text);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+/* Keep the longer conference date legible inside the date column. */
+.poster-item .talk-date-day {
+    white-space: nowrap;
+}
+
+/* The existing .talk-item uses display:grid, so hidden needs an override. */
+.talks-posters[hidden],
+.poster-item[hidden] {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .talks-posters {
+        margin-top: 3rem;
+    }
+}

@@ -1,8 +1,12 @@
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const talks = Array.from(
         document.querySelectorAll(".talk-item")
     );
+
+    const posterSection =
+        document.querySelector("#talks-posters");
 
     const searchInput =
         document.querySelector("#talks-search");
@@ -122,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ---------------------------------
-       Filter talks
+       Filter talks and posters
     ---------------------------------- */
 
     function applyFilters() {
@@ -184,9 +188,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-        updateStatus(
-            visibleCount
-        );
+        /* ---------------------------------
+           Poster section visibility
+        ---------------------------------- */
+
+        if (posterSection) {
+
+            const visiblePosters = talks.some(talk =>
+                talk.classList.contains("poster-item") &&
+                !talk.hidden
+            );
+
+            posterSection.hidden = !visiblePosters;
+
+        }
+
+
+        updateStatus(visibleCount);
 
     }
 
@@ -202,26 +220,68 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        const total =
-            talks.length;
+        const talkEntries = talks.filter(talk =>
+            !talk.classList.contains("poster-item")
+        );
 
 
-        if (visibleCount === total) {
+        const posterEntries = talks.filter(talk =>
+            talk.classList.contains("poster-item")
+        );
 
-            status.textContent =
-                total === 1
-                    ? "1 talk"
-                    : `${total} talks`;
+
+        const visibleTalks = talkEntries.filter(
+            talk => !talk.hidden
+        ).length;
+
+
+        const visiblePosters = posterEntries.filter(
+            talk => !talk.hidden
+        ).length;
+
+
+        const formatCount = (
+            visible,
+            total,
+            singular,
+            plural
+        ) => {
+
+            const label =
+                total === 1 ? singular : plural;
+
+            return visible === total
+                ? `${total} ${label}`
+                : `${visible} of ${total} ${label}`;
+
+        };
+
+
+        const parts = [
+            formatCount(
+                visibleTalks,
+                talkEntries.length,
+                "talk",
+                "talks"
+            )
+        ];
+
+
+        if (posterEntries.length) {
+
+            parts.push(
+                formatCount(
+                    visiblePosters,
+                    posterEntries.length,
+                    "poster",
+                    "posters"
+                )
+            );
 
         }
-        else {
 
-            status.textContent =
-                visibleCount === 1
-                    ? `1 of ${total} talks`
-                    : `${visibleCount} of ${total} talks`;
 
-        }
+        status.textContent = parts.join(" · ");
 
     }
 

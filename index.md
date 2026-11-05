@@ -38,14 +38,12 @@
 
 <div class="home-intro">
 
-    <h1>Hi, I’m Erik 👋</h1>
-
     <p>
         I’m currently a Research Associate in Digital Humanities at the University of Rostock, where I work across research, teaching, and academic service. I’m also involved in developing new degree programmes in Digital Humanities, including a Bachelor’s programme and a European joint Master’s programme. You can find out more about my work at the University of Rostock on my <a href="https://www.germanistik.uni-rostock.de/en/staff/research-associates/erik-renz/">institutional webpage</a>.
     </p>
 
     <p>
-        My academic background is in History and German Studies, both of which I studied at the University of Rostock. Today, my research sits at the intersection of Digital Humanities and literary and textual studies. I’m particularly interested in women’s writing and drama, quantitative approaches to literature, and digital methods for editing, analysing, and exploring literary texts.
+        My academic background is in History and German Studies, both of which I studied in Rostock. Today, my research sits at the intersection of Digital Humanities and literary and textual studies. I’m particularly interested in women’s writing and drama, quantitative approaches to literature, and digital methods for editing, analysing, and exploring literary texts.
     </p>
 
     <p>
