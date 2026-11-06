@@ -1,1422 +1,3 @@
-
-
-talks(6).md
-Dokument
-
-talks(3).js
-Code
-
-main(20261105-154356).css
-Code
-Du bist Experte für HTML, CSS und JavaScript sowie für die Gestaltung und Weiterentwicklung wissenschaftlicher Websites.
-
-Ich möchte meine persönliche Website um einen neuen Bereich für Posterbeiträge erweitern. Dieser soll unmittelbar unterhalb der bestehenden Vortragssektion eingefügt werden und sich gestalterisch sowie funktional nahtlos in die vorhandene Website integrieren.
-
-Berücksichtige dabei den bisherigen Projektkontext, insbesondere die bestehende HTML-Struktur, die CSS-Klassen, das JavaScript sowie die bereits implementierten Funktionen zur Darstellung, Sortierung und Filterung wissenschaftlicher Beiträge.
-
-Anforderungen
-Neue Sektion für Posterbeiträge: Ergänze unterhalb der Vorträge einen eigenständigen Bereich für wissenschaftliche Poster. Dieser soll hinsichtlich Aufbau, Gestaltung und Funktionalität den vorhandenen Sektionen entsprechen.
-Einheitliches Design: Übernimm die bestehenden Gestaltungsprinzipien, Abstände, Schriftarten, Farben und Darstellungsformen. Die neue Sektion soll sich harmonisch in das bestehende Layout einfügen.
-Bestehende Funktionen übernehmen: Berücksichtige die bisherige JavaScript-Logik, insbesondere gegebenenfalls vorhandene Filter-, Sortier- und Navigationsfunktionen. Passe diese so an, dass auch Posterbeiträge entsprechend verarbeitet werden können.
-Bestehenden Code erhalten: Verändere die bereits vorhandenen Sektionen und Funktionen nur, soweit dies für die Integration der neuen Poster-Sektion erforderlich ist. Vermeide unnötige Umstrukturierungen.
-Beispielbeitrag integrieren: Ich habe auf der FORGE-Konferenz 2025 ein wissenschaftliches Poster präsentiert. Verwende diesen Beitrag als ersten Eintrag in der neuen Sektion. Die bibliografischen Angaben und weitere relevante Informationen findest du unter folgendem DOI: . Recherchiere die erforderlichen Metadaten und übernimm sie in die bestehende Darstellungsstruktur.
-Gewünschte Ausgabe
-Gib mir den vollständigen, aktualisierten HTML-Code und anschließend separat den vollständigen, aktualisierten JavaScript-Code aus.
-
-Beide Dateien sollen unmittelbar verwendbar sein. Gib keine bloßen Codeausschnitte oder isolierten Ergänzungen aus, sondern jeweils den vollständigen Code einschließlich aller bisherigen Bestandteile.
-
-Orientiere dich konsequent am bisherigen Entwicklungsstand meiner Website. Die neue Poster-Sektion soll wie ein von Anfang an vorgesehener Bestandteil der Website wirken und sich sowohl technisch als auch visuell nahtlos in die vorhandene Struktur einfügen.
-
-Falls zusätzliche CSS-Anpassungen erforderlich sind, gib diese gesondert und vollständig an. Achte darauf, dass die bestehenden Funktionen und Darstellungen unverändert erhalten bleiben.
-
-\---\
-layout: page\
-title: Talks\
-permalink: /talks/\
-description: "Academic talks by Erik Renz."\
-\---\
-\
-\<div class="talks">\
-\
-    \<!-- ---------------------------------\
-         Search and filters\
-    \---------------------------------- -->\
-\
-    \<div\
-        class="talks-toolbar"\
-        aria-label="Search and filter talks"\
-    \>\
-\
-        \<input\
-            id="talks-search"\
-            type="search"\
-            placeholder="Search"\
-            aria-label="Search talks"\
-        \>\
-\
-\
-        \<select\
-            id="talks-filter-year"\
-            aria-label="Filter by year"\
-        \>\
-            \<option value="">All years\</option>\
-        \</select>\
-\
-\
-        \<select\
-            id="talks-filter-country"\
-            aria-label="Filter by country"\
-        \>\
-            \<option value="">All countries\</option>\
-        \</select>\
-\
-\
-        \<button\
-            id="talks-filter-reset"\
-            type="button"\
-        \>\
-            Reset\
-        \</button>\
-\
-    \</div>\
-\
-\
-    \<p\
-        class="talks-filter-status"\
-        id="talks-filter-status"\
-        aria-live="polite"\
-    \>\</p>\
-\
-\
-\
-    \<!-- ---------------------------------\
-         Talks\
-    \---------------------------------- -->\
-\
-    \<div class="talks-list">\
-\
-\
-\
-\<!-- =========================================\
-       Edition – Kommentar – Kanon 2027\
-     \========================================= -->\
-\
-\<article\
-    class="talk-item"\
-    data-years="2027"\
-    data-country="Germany"\
-\>\
-\
-    \<div class="talk-date">\
-\
-        \<span class="talk-date-day">\
-            12 Feb\
-        \</span>\
-\
-        \<strong class="talk-date-year">\
-            2027\
-        \</strong>\
-\
-    \</div>\
-\
-    \<div class="talk-content">\
-\
-        \<div class="talk-heading-row">\
-\
-            \<p class="talk-event">\
-                Edition – Kommentar – Kanon\
-            \</p>\
-\
-            \<span class="talk-status talk-status-upcoming">\
-                Upcoming\
-            \</span>\
-\
-        \</div>\
-\
-        \<h2 class="talk-title">\
-            Editionen als Gatekeeper? Digitale Perspektiven auf die (Un-)Sichtbarkeit von Dramatikerinnen des 19. Jahrhunderts\
-        \</h2>\
-\
-        \<p class="talk-location">\
-            University of Wuppertal (Germany)\
-        \</p>\
-\
-        \<p class="talk-collaborators">\
-\
-            \<span class="talk-collaborators-label">\
-                With\
-            \</span>\
-\
-            Ulrike Henny-Krahmer\
-\
-        \</p>\
-\
-    \</div>\
-\
-\</article>\
-\
-\
-\
-\
-\
-\
-\<!-- =========================================\
-             Love Data Week 2027\
-     \========================================= -->\
-\
-\<article\
-    class="talk-item"\
-    data-years="2027"\
-    data-country="Germany"\
-\>\
-\
-    \<div class="talk-date">\
-\
-        \<span class="talk-date-day">\
-            9 Feb\
-        \</span>\
-\
-        \<strong class="talk-date-year">\
-            2027\
-        \</strong>\
-\
-    \</div>\
-\
-    \<div class="talk-content">\
-\
-        \<div class="talk-heading-row">\
-\
-            \<p class="talk-event">\
-                Love Data Week 2027\
-            \</p>\
-\
-            \<span class="talk-status talk-status-upcoming">\
-                Upcoming\
-            \</span>\
-\
-        \</div>\
-\
-        \<h2 class="talk-title">\
-            Working with Drama Data: Modellierung und Nachnutzung von Forschungsdaten im Projekt ToolingDrama\
-        \</h2>\
-\
-        \<p class="talk-location">\
-            University of Rostock (Germany)\
-        \</p>\
-\
-        \<p class="talk-collaborators">\
-\
-            \<span class="talk-collaborators-label">\
-                With\
-            \</span>\
-\
-            Marco Erik Schönfeld\
-\
-        \</p>\
-\
-    \</div>\
-\
-\</article>\
-\
-        \<!-- =========================================\
-             EADH 2026\
-        \========================================== -->\
-\
-        \<article\
-            class="talk-item"\
-            data-years="2026"\
-            data-country="Poland"\
-        \>\
-\
-\<div class="talk-date">\
-\
-    \<span class="talk-date-day">\
-        16 Sep\
-    \</span>\
-\
-    \<strong class="talk-date-year">\
-        2026\
-    \</strong>\
-\
-\</div>\
-\
-\
-            \<div class="talk-content">\
-\
-                \<div class="talk-heading-row">\
-\
-                    \<p class="talk-event">\
-                        EADH 2026: Linking Europe: Digital Humanities Without Borders\
-                    \</p>\
-\
-\
-                \</div>\
-\
-\
-                \<h2 class="talk-title">\
-                    DH as Linked Communities: A Comparison of Participants at Annual Conferences and in Lecture Series in Germany, Austria, and Switzerland\
-                \</h2>\
-\
-\
-                \<p class="talk-location">\
-                    Jagiellonian University (Poland)\
-                \</p>\
-\
-\
-                \<p class="talk-collaborators">\
-\
-                    \<span class="talk-collaborators-label">\
-                        With\
-                    \</span>\
-\
-                    Ulrike Henny-Krahmer\
-\
-                \</p>\
-\
-\
-                \<div class="talk-links">\
-\
-                    \<a\
-                        class="talk-resource-button"\
-                        href="[https://eadh2026.confer.uj.edu.pl/programme](https://eadh2026.confer.uj.edu.pl/programme)"\
-                        target="\_blank"\
-                        rel="noopener noreferrer"\
-                    \>\
-                        Program\
-                    \</a>\
-                    \
-                    \<a\
-                        class="talk-resource-button"\
-                        href="[https://hennyu.github.io/eadh_26/](https://hennyu.github.io/eadh_26/)"\
-                        target="\_blank"\
-                        rel="noopener noreferrer"\
-       
-
-…
-1. Umsetzung der Poster-Sektion
-Ich habe die vorhandenen HTML-, JavaScript- und CSS-Dateien geprüft. Die neue Sektion lässt sich integrieren, ohne das bestehende Designsystem oder die Darstellung der Vorträge grundlegend zu verändern.
-
-Die Umsetzung berücksichtigt folgende Punkte:
-
-Eigenständiger Bereich „Posters“ direkt unterhalb der Vortragsliste, mit derselben Kartenstruktur, Datumsanzeige, Farbgebung und responsiven Gestaltung.
-
-Gemeinsame Suche und Filterung: Die vorhandenen Filter für Jahr und Land berücksichtigen künftig Vorträge und Poster.
-
-Getrennte Ergebniszahlen: Die Statusanzeige unterscheidet zwischen Talks und Posters.
-
-Erhalt der bestehenden Einträge: Alle fünf vorhandenen Vorträge, einschließlich ihrer Links und Statusangaben, bleiben bestehen.
-
-Minimale CSS-Erweiterungen: Die neuen Poster übernehmen die vorhandenen .talk-*-Klassen. Nur für die Abschnittstrennung und die Filterdarstellung sind zusätzliche Regeln notwendig.
-
-Recherchierter Posterbeitrag
-FORGE 2025 · Wissenschaftliches Poster
-
-Aus dem Off: Ringvorlesungen und ihr Nutzen als Forschungsdatenquelle in den Digital Humanities
-
-Erik Renz · Universität Rostock
-
-24–26 Sep 2025 · Rostock, Germany
-
-Zenodo
-Der Zenodo-Datensatz bestätigt den Titel, Erik Renz als Autor, das Beitragsformat „Poster“ und die Konferenz FORGE 2025 – Daten neu denken. Das Konferenzdatum ist mit dem 24.–26. September 2025 angegeben. Ein individueller Präsentationstag lässt sich daraus nicht eindeutig bestimmen, weshalb ich den gesamten Konferenzzeitraum verwende. 
-
-Zenodo
-
-Die Veröffentlichung auf Zenodo erfolgte am 24. Oktober 2026. Dieses Datum wird nicht mit dem Konferenzdatum verwechselt.
-
-2. Vollständige aktualisierte Dateien
-Die drei Dateien sind vollständig erstellt und können die bisherigen Dateien ersetzen.
-
-1. HTML / Jekyll – talks.md
-
-Alle fünf Vorträge und die neue Poster-Sektion, einschließlich YAML-Frontmatter und Skripteinbindung.
-
-Vollständigen HTML-Code herunterladen
-
-2. JavaScript – talks.js
-
-Vollständige Such- und Filterlogik für beide Beitragstypen, dynamische Filteroptionen und Ergebnisanzeige.
-
-Vollständigen JavaScript-Code herunterladen
-
-3. CSS – main.css
-
-Das vollständige bisherige Stylesheet einschließlich sämtlicher bestehender Regeln und der ergänzten Poster-Formatierung.
-
-Vollständigen CSS-Code herunterladen
-
-3. Einbindung in GitHub Pages
-Die Dateien gehören an die bisherigen Speicherorte im Repository:
-
-Datei
-
-Speicherort
-
-talks.md
-
-Bisheriger Speicherort der Talks-Seite
-
-talks.js
-
-assets/js/talks.js
-
-main.css
-
-assets/css/main.css
-
-Die bestehende JavaScript-Einbindung bleibt erhalten:
-
-
-<script
-    src="{{ '/assets/js/talks.js' | relative_url }}"
-    defer
-></script>
-
-Ein zusätzliches JavaScript oder Stylesheet ist nicht erforderlich.
-
-4. Technische Prüfung
-Der JavaScript-Syntaxcheck war erfolgreich. Die generierte HTML-Datei enthält weiterhin fünf Vorträge und zusätzlich einen Posterbeitrag. Der bisherige CSS-Inhalt wurde beibehalten und am Ende gezielt ergänzt.
-
-Die Integration ist damit auf Dateiebene vorbereitet. Ein vollständiger Browsertest der veröffentlichten Jekyll-Website wurde noch nicht durchgeführt.
-
-Die Poster-Sektion kann künftig um weitere Beiträge erweitert werden, indem zusätzliche poster-item-Elemente eingefügt werden. Die Suche und die Jahres- und Länderfilter erfassen diese automatisch.
-
-
-talks.md
-Dokument
-
-talks.js
-Code
-
-main.css
-Code
-ich kann die talks js nicht herunterladne doer mich anzeigen lassen. geben mir den vollstöndjne code heir im chat
-Hier ist der vollständige JavaScript-Code der aktualisierten Datei talks.js, einschließlich der bestehenden Such- und Filterfunktionen sowie der neuen Unterstützung für Posterbeiträge.
-
-Du kannst den bisherigen Inhalt deiner Datei assets/js/talks.js vollständig durch diesen Code ersetzen.
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const talks = Array.from(
-        document.querySelectorAll(".talk-item")
-    );
-
-    const posterSection =
-        document.querySelector("#talks-posters");
-
-    const searchInput =
-        document.querySelector("#talks-search");
-
-    const yearFilter =
-        document.querySelector("#talks-filter-year");
-
-    const countryFilter =
-        document.querySelector("#talks-filter-country");
-
-    const resetButton =
-        document.querySelector("#talks-filter-reset");
-
-    const status =
-        document.querySelector("#talks-filter-status");
-
-
-    if (!talks.length) {
-        return;
-    }
-
-
-    /* ---------------------------------
-       Helpers
-    ---------------------------------- */
-
-    function normalize(value) {
-
-        return String(value || "")
-            .toLocaleLowerCase()
-            .trim();
-
-    }
-
-
-    function uniqueValues(key) {
-
-        return [
-            ...new Set(
-                talks
-                    .map(
-                        talk =>
-                            talk.dataset[key]
-                    )
-                    .filter(Boolean)
-            )
-        ];
-
-    }
-
-
-    /* ---------------------------------
-       Build year filter
-    ---------------------------------- */
-
-    if (yearFilter) {
-
-        const years =
-            uniqueValues("years")
-                .sort(
-                    (a, b) =>
-                        Number(b) - Number(a)
-                );
-
-
-        years.forEach(year => {
-
-            const option =
-                document.createElement("option");
-
-            option.value =
-                year;
-
-            option.textContent =
-                year;
-
-            yearFilter.appendChild(option);
-
-        });
-
-    }
-
-
-    /* ---------------------------------
-       Build country filter
-    ---------------------------------- */
-
-    if (countryFilter) {
-
-        const countries =
-            uniqueValues("country")
-                .sort(
-                    (a, b) =>
-                        a.localeCompare(
-                            b,
-                            "en"
-                        )
-                );
-
-
-        countries.forEach(country => {
-
-            const option =
-                document.createElement("option");
-
-            option.value =
-                country;
-
-            option.textContent =
-                country;
-
-            countryFilter.appendChild(option);
-
-        });
-
-    }
-
-
-    /* ---------------------------------
-       Filter talks and posters
-    ---------------------------------- */
-
-    function applyFilters() {
-
-        const query =
-            normalize(
-                searchInput?.value
-            );
-
-        const selectedYear =
-            yearFilter?.value || "";
-
-        const selectedCountry =
-            countryFilter?.value || "";
-
-
-        let visibleCount = 0;
-
-
-        talks.forEach(talk => {
-
-            const searchableText =
-                normalize(
-                    talk.textContent
-                );
-
-
-            const matchesSearch =
-                !query ||
-                searchableText.includes(query);
-
-
-            const matchesYear =
-                !selectedYear ||
-                talk.dataset.years ===
-                    selectedYear;
-
-
-            const matchesCountry =
-                !selectedCountry ||
-                talk.dataset.country ===
-                    selectedCountry;
-
-
-            const matches =
-                matchesSearch &&
-                matchesYear &&
-                matchesCountry;
-
-
-            talk.hidden =
-                !matches;
-
-
-            if (matches) {
-                visibleCount += 1;
-            }
-
-        });
-
-
-        /* ---------------------------------
-           Poster section visibility
-        ---------------------------------- */
-
-        if (posterSection) {
-
-            const visiblePosters = talks.some(talk =>
-                talk.classList.contains("poster-item") &&
-                !talk.hidden
-            );
-
-            posterSection.hidden = !visiblePosters;
-
-        }
-
-
-        updateStatus(visibleCount);
-
-    }
-
-
-    /* ---------------------------------
-       Status text
-    ---------------------------------- */
-
-    function updateStatus(visibleCount) {
-
-        if (!status) {
-            return;
-        }
-
-
-        const talkEntries = talks.filter(talk =>
-            !talk.classList.contains("poster-item")
-        );
-
-
-        const posterEntries = talks.filter(talk =>
-            talk.classList.contains("poster-item")
-        );
-
-
-        const visibleTalks = talkEntries.filter(
-            talk => !talk.hidden
-        ).length;
-
-
-        const visiblePosters = posterEntries.filter(
-            talk => !talk.hidden
-        ).length;
-
-
-        const formatCount = (
-            visible,
-            total,
-            singular,
-            plural
-        ) => {
-
-            const label =
-                total === 1 ? singular : plural;
-
-            return visible === total
-                ? `${total} ${label}`
-                : `${visible} of ${total} ${label}`;
-
-        };
-
-
-        const parts = [
-            formatCount(
-                visibleTalks,
-                talkEntries.length,
-                "talk",
-                "talks"
-            )
-        ];
-
-
-        if (posterEntries.length) {
-
-            parts.push(
-                formatCount(
-                    visiblePosters,
-                    posterEntries.length,
-                    "poster",
-                    "posters"
-                )
-            );
-
-        }
-
-
-        status.textContent = parts.join(" · ");
-
-    }
-
-
-    /* ---------------------------------
-       Search
-    ---------------------------------- */
-
-    if (searchInput) {
-
-        searchInput.addEventListener(
-            "input",
-            applyFilters
-        );
-
-    }
-
-
-    /* ---------------------------------
-       Filters
-    ---------------------------------- */
-
-    [
-        yearFilter,
-        countryFilter
-    ]
-        .filter(Boolean)
-        .forEach(select => {
-
-            select.addEventListener(
-                "change",
-                applyFilters
-            );
-
-        });
-
-
-    /* ---------------------------------
-       Reset
-    ---------------------------------- */
-
-    if (resetButton) {
-
-        resetButton.addEventListener(
-            "click",
-            () => {
-
-                if (searchInput) {
-                    searchInput.value = "";
-                }
-
-
-                if (yearFilter) {
-                    yearFilter.value = "";
-                }
-
-
-                if (countryFilter) {
-                    countryFilter.value = "";
-                }
-
-
-                applyFilters();
-
-
-                if (searchInput) {
-                    searchInput.focus();
-                }
-
-            }
-        );
-
-    }
-
-
-    /* ---------------------------------
-       Initialise
-    ---------------------------------- */
-
-    applyFilters();
-
-});
-
-Wichtig für die Integration: Damit Posterbeiträge von diesem JavaScript berücksichtigt werden, müssen sie im HTML sowohl die Klasse talk-item als auch poster-item besitzen, beispielsweise class="talk-item poster-item". Außerdem muss die Poster-Sektion die ID talks-posters haben.
-
-Damit greifen die bestehenden Jahres- und Länderfilter auch für Posterbeiträge. Sobald kein Poster mehr den gewählten Filterkriterien entspricht, wird die gesamte Poster-Sektion ausgeblendet.
-
-Ich benötige folgende Anpassungen im Posterbereich meiner Website:
-
-Filterfunktion: Im Posterbereich soll eine Filterfunktion ergänzt werden, die hinsichtlich Gestaltung und Funktionsweise der bereits vorhandenen Filterfunktion im Vortragsbereich entspricht.
-Programmverlinkung: Beim bestehenden Posterbeitrag zur FORGE 2025 soll zusätzlich ein Button mit der Bezeichnung „Programm“ eingefügt werden. Dieser soll auf folgende Seite verweisen: https://web.archive.org/web/20260226155332/https://www.conftool.net/forge2025/sessions.php
-Reihenfolge der Buttons: Der Button „Programm“ muss vor dem bereits vorhandenen Button „Poster“ angezeigt werden.
-Menübezeichnung: Der Titel des entsprechenden Menüeintrags soll ebenfalls angepasst werden. Die bestehende URL beziehungsweise der zugehörige Anker kann unverändert bleiben.
-Bitte orientiere dich bei allen Anpassungen an der bestehenden HTML-, CSS- und JavaScript-Struktur meiner Website und achte auf eine einheitliche Gestaltung sowie die vollständige Funktionsfähigkeit der vorhandenen Elemente.
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const talks = Array.from(
-        document.querySelectorAll(".talk-item")
-    );
-
-    const posterSection =
-        document.querySelector("#talks-posters");
-
-    const searchInput =
-        document.querySelector("#talks-search");
-
-    const yearFilter =
-        document.querySelector("#talks-filter-year");
-
-    const countryFilter =
-        document.querySelector("#talks-filter-country");
-
-    const resetButton =
-        document.querySelector("#talks-filter-reset");
-
-    const status =
-        document.querySelector("#talks-filter-status");
-
-
-    if (!talks.length) {
-        return;
-    }
-
-
-    /* ---------------------------------
-       Helpers
-    ---------------------------------- */
-
-    function normalize(value) {
-
-        return String(value || "")
-            .toLocaleLowerCase()
-            .trim();
-
-    }
-
-
-    function uniqueValues(key) {
-
-        return [
-            ...new Set(
-                talks
-                    .map(
-                        talk =>
-                            talk.dataset[key]
-                    )
-                    .filter(Boolean)
-            )
-        ];
-
-    }
-
-
-    /* ---------------------------------
-       Build year filter
-    ---------------------------------- */
-
-    if (yearFilter) {
-
-        const years =
-            uniqueValues("years")
-                .sort(
-                    (a, b) =>
-                        Number(b) - Number(a)
-                );
-
-
-        years.forEach(year => {
-
-            const option =
-                document.createElement("option");
-
-            option.value =
-                year;
-
-            option.textContent =
-                year;
-
-            yearFilter.appendChild(option);
-
-        });
-
-    }
-
-
-    /* ---------------------------------
-       Build country filter
-    ---------------------------------- */
-
-    if (countryFilter) {
-
-        const countries =
-            uniqueValues("country")
-                .sort(
-                    (a, b) =>
-                        a.localeCompare(
-                            b,
-                            "en"
-                        )
-                );
-
-
-        countries.forEach(country => {
-
-            const option =
-                document.createElement("option");
-
-            option.value =
-                country;
-
-            option.textContent =
-                country;
-
-            countryFilter.appendChild(option);
-
-        });
-
-    }
-
-
-    /* ---------------------------------
-       Filter talks and posters
-    ---------------------------------- */
-
-    function applyFilters() {
-
-        const query =
-            normalize(
-                searchInput?.value
-            );
-
-        const selectedYear =
-            yearFilter?.value || "";
-
-        const selectedCountry =
-            countryFilter?.value || "";
-
-
-        let visibleCount = 0;
-
-
-        talks.forEach(talk => {
-
-            const searchableText =
-                normalize(
-                    talk.textContent
-                );
-
-
-            const matchesSearch =
-                !query ||
-                searchableText.includes(query);
-
-
-            const matchesYear =
-                !selectedYear ||
-                talk.dataset.years ===
-                    selectedYear;
-
-
-            const matchesCountry =
-                !selectedCountry ||
-                talk.dataset.country ===
-                    selectedCountry;
-
-
-            const matches =
-                matchesSearch &&
-                matchesYear &&
-                matchesCountry;
-
-
-            talk.hidden =
-                !matches;
-
-
-            if (matches) {
-                visibleCount += 1;
-            }
-
-        });
-
-
-        /* ---------------------------------
-           Poster section visibility
-        ---------------------------------- */
-
-        if (posterSection) {
-
-            const visiblePosters = talks.some(talk =>
-                talk.classList.contains("poster-item") &&
-                !talk.hidden
-            );
-
-            posterSection.hidden = !visiblePosters;
-
-        }
-
-
-        updateStatus(visibleCount);
-
-    }
-
-
-    /* ---------------------------------
-       Status text
-    ---------------------------------- */
-
-    function updateStatus(visibleCount) {
-
-        if (!status) {
-            return;
-        }
-
-
-        const talkEntries = talks.filter(talk =>
-            !talk.classList.contains("poster-item")
-        );
-
-
-        const posterEntries = talks.filter(talk =>
-            talk.classList.contains("poster-item")
-        );
-
-
-        const visibleTalks = talkEntries.filter(
-            talk => !talk.hidden
-        ).length;
-
-
-        const visiblePosters = posterEntries.filter(
-            talk => !talk.hidden
-        ).length;
-
-
-        const formatCount = (
-            visible,
-            total,
-            singular,
-            plural
-        ) => {
-
-            const label =
-                total === 1 ? singular : plural;
-
-            return visible === total
-                ? `${total} ${label}`
-                : `${visible} of ${total} ${label}`;
-
-        };
-
-
-        const parts = [
-            formatCount(
-                visibleTalks,
-                talkEntries.length,
-                "talk",
-                "talks"
-            )
-        ];
-
-
-        if (posterEntries.length) {
-
-            parts.push(
-                formatCount(
-                    visiblePosters,
-                    posterEntries.length,
-                    "poster",
-                    "posters"
-                )
-            );
-
-        }
-
-
-        status.textContent = parts.join(" · ");
-
-    }
-
-
-    /* ---------------------------------
-       Search
-    ---------------------------------- */
-
-    if (searchInput) {
-
-        searchInput.addEventListener(
-            "input",
-            applyFilters
-        );
-
-    }
-
-
-    /* ---------------------------------
-       Filters
-    ---------------------------------- */
-
-    [
-        yearFilter,
-        countryFilter
-    ]
-        .filter(Boolean)
-        .forEach(select => {
-
-            select.addEventListener(
-                "change",
-                applyFilters
-            );
-
-        });
-
-
-    /* ---------------------------------
-       Reset
-    ---------------------------------- */
-
-    if (resetButton) {
-
-        resetButton.addEventListener(
-            "click",
-            () => {
-
-                if (searchInput) {
-                    searchInput.value = "";
-                }
-
-
-                if (yearFilter) {
-                    yearFilter.value = "";
-                }
-
-
-                if (countryFilter) {
-                    countryFilter.value = "";
-                }
-
-
-                applyFilters();
-
-
-                if (searchInput) {
-                    searchInput.focus();
-                }
-
-            }
-        );
-
-    }
-
-
-    /* ---------------------------------
-       Initialise
-    ---------------------------------- */
-
-    applyFilters();
-
-});\
-
-
-1m 59s nachgedacht
-Die Anpassungen sind in den drei Dateien umgesetzt. Die bisherige Website-Struktur und die fünf vorhandenen Vorträge bleiben erhalten.
-
-1. Aktualisierte Dateien
-HTML/Jekyll – talks.md
-
-Enthält die separate Poster-Filterleiste, den zusätzlichen Button „Programm“ vor „Poster“ und den neuen Seitentitel „Talks & Posters“.
-
-Vollständige HTML-Datei
-
-JavaScript – talks.js
-
-Die Vorträge und Poster verfügen nun über unabhängig bedienbare Suchfelder, Jahres- und Länderfilter, Reset-Buttons und Ergebnisanzeigen.
-
-Vollständige JavaScript-Datei
-
-CSS – main.css
-
-Das vollständige Stylesheet einschließlich der Poster-Anpassungen. Für beide Filterleisten werden die vorhandenen Gestaltungsklassen verwendet.
-
-Vollständige CSS-Datei
-
-Die bisherige URL /talks/ bleibt unverändert. Ich habe als neue Bezeichnung Talks & Posters gewählt. Falls die Hauptnavigation bei deiner Jekyll-Website separat in _config.yml oder einer Navigationsdatei definiert wird, muss dort lediglich der sichtbare Menütext ebenfalls geändert werden; das Linkziel bleibt /talks/.
-
-2. Neuer Posterbereich
-Der Posterbereich erhält eine eigene Filterleiste mit der bisherigen Gestaltung:
-
-Posters
-Search
-1 poster
-24–26 Sep
-
-2025
-
-FORGE 2025: DATEN NEU DENKEN
-
-Aus dem Off: Ringvorlesungen und ihr Nutzen als Forschungsdatenquelle in den Digital Humanities
-
-University of Rostock (Germany)
-
-Interaktive Funktionsvorschau. Das eigentliche Website-Layout verwendet weiterhin die bestehenden CSS-Klassen.
-Die beiden Filtergruppen arbeiten unabhängig. Ein Suchbegriff im Vortragsbereich verändert die Poster nicht und umgekehrt. Auch bei null Treffern bleibt die jeweilige Filterleiste sichtbar.
-
-3. Vollständiger JavaScript-Code
-Da du die JavaScript-Datei zuvor nicht herunterladen konntest, findest du den vollständigen aktualisierten Inhalt von assets/js/talks.js auch direkt hier:
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    /* ---------------------------------
-       Independent filter groups
-       Talks and posters use the same UI
-       but maintain separate filter states.
-    ---------------------------------- */
-
-    function initializeFilterGroup(config) {
-
-        const items = Array.from(
-            document.querySelectorAll(config.itemSelector)
-        );
-
-        const searchInput =
-            document.querySelector(config.searchSelector);
-
-        const yearFilter =
-            document.querySelector(config.yearSelector);
-
-        const countryFilter =
-            document.querySelector(config.countrySelector);
-
-        const resetButton =
-            document.querySelector(config.resetSelector);
-
-        const status =
-            document.querySelector(config.statusSelector);
-
-        if (!items.length) {
-            if (status) {
-                status.textContent = `0 ${config.plural}`;
-            }
-            return;
-        }
-
-
-        /* ---------------------------------
-           Helpers
-        ---------------------------------- */
-
-        function normalize(value) {
-            return String(value || "")
-                .toLocaleLowerCase()
-                .trim();
-        }
-
-        function uniqueValues(key) {
-            return [
-                ...new Set(
-                    items
-                        .map(item => item.dataset[key])
-                        .filter(Boolean)
-                )
-            ];
-        }
-
-
-        /* ---------------------------------
-           Build year filter
-        ---------------------------------- */
-
-        if (yearFilter) {
-            uniqueValues("years")
-                .sort((a, b) => Number(b) - Number(a))
-                .forEach(year => {
-                    const option = document.createElement("option");
-                    option.value = year;
-                    option.textContent = year;
-                    yearFilter.appendChild(option);
-                });
-        }
-
-
-        /* ---------------------------------
-           Build country filter
-        ---------------------------------- */
-
-        if (countryFilter) {
-            uniqueValues("country")
-                .sort((a, b) => a.localeCompare(b, "en"))
-                .forEach(country => {
-                    const option = document.createElement("option");
-                    option.value = country;
-                    option.textContent = country;
-                    countryFilter.appendChild(option);
-                });
-        }
-
-
-        /* ---------------------------------
-           Status text
-        ---------------------------------- */
-
-        function updateStatus(visibleCount) {
-            if (!status) return;
-
-            const total = items.length;
-            const label = total === 1
-                ? config.singular
-                : config.plural;
-
-            status.textContent = visibleCount === total
-                ? `${total} ${label}`
-                : `${visibleCount} of ${total} ${label}`;
-        }
-
-
-        /* ---------------------------------
-           Apply filters
-        ---------------------------------- */
-
-        function applyFilters() {
-            const query = normalize(searchInput?.value);
-            const selectedYear = yearFilter?.value || "";
-            const selectedCountry = countryFilter?.value || "";
-            let visibleCount = 0;
-
-            items.forEach(item => {
-                const searchableText = normalize(item.textContent);
-
-                const matchesSearch =
-                    !query || searchableText.includes(query);
-
-                const matchesYear =
-                    !selectedYear || item.dataset.years === selectedYear;
-
-                const matchesCountry =
-                    !selectedCountry ||
-                    item.dataset.country === selectedCountry;
-
-                const matches =
-                    matchesSearch && matchesYear && matchesCountry;
-
-                item.hidden = !matches;
-
-                if (matches) visibleCount += 1;
-            });
-
-            // Keep the section and its toolbar visible.
-            updateStatus(visibleCount);
-        }
-
-
-        /* ---------------------------------
-           Search and select listeners
-        ---------------------------------- */
-
-        if (searchInput) {
-            searchInput.addEventListener("input", applyFilters);
-        }
-
-        [yearFilter, countryFilter]
-            .filter(Boolean)
-            .forEach(select => {
-                select.addEventListener("change", applyFilters);
-            });
-
-
-        /* ---------------------------------
-           Reset
-        ---------------------------------- */
-
-        if (resetButton) {
-            resetButton.addEventListener("click", () => {
-                if (searchInput) searchInput.value = "";
-                if (yearFilter) yearFilter.value = "";
-                if (countryFilter) countryFilter.value = "";
-
-                applyFilters();
-
-                if (searchInput) searchInput.focus();
-            });
-        }
-
-
-        /* ---------------------------------
-           Initialise
-        ---------------------------------- */
-
-        applyFilters();
-    }
-
-
-    /* ---------------------------------
-       Talks
-    ---------------------------------- */
-
-    initializeFilterGroup({
-        itemSelector: ".talks > .talks-list .talk-item:not(.poster-item)",
-        searchSelector: "#talks-search",
-        yearSelector: "#talks-filter-year",
-        countrySelector: "#talks-filter-country",
-        resetSelector: "#talks-filter-reset",
-        statusSelector: "#talks-filter-status",
-        singular: "talk",
-        plural: "talks"
-    });
-
-
-    /* ---------------------------------
-       Posters
-    ---------------------------------- */
-
-    initializeFilterGroup({
-        itemSelector: "#talks-posters .poster-item",
-        searchSelector: "#posters-search",
-        yearSelector: "#posters-filter-year",
-        countrySelector: "#posters-filter-country",
-        resetSelector: "#posters-filter-reset",
-        statusSelector: "#posters-filter-status",
-        singular: "poster",
-        plural: "posters"
-    });
-
-});
-
-Die JavaScript-Datei wurde auf Syntaxfehler geprüft. Zusätzlich habe ich in der aktualisierten HTML-Datei kontrolliert, dass weiterhin fünf Vortragskarten und eine Posterkarte sowie zwei separate Filterleisten vorhanden sind. Eine Überprüfung der veröffentlichten Website im Browser steht noch aus.
-
-
-talks.md
-Dokument
-
-talks.js
-Code
-
-main.css
-Code
 /* ---------------------------------
    Design system
 ---------------------------------- */
@@ -1545,6 +126,5434 @@ a:focus-visible {
     color: var(--color-muted);
 
     font-size: 0.9rem;
+    line-height: 1.45;
+}
 
 
+/* ---------------------------------
+   Navigation
+---------------------------------- */
 
+.site-navigation {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.55rem 1.3rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.navigation-item a {
+    display: inline-block;
+
+    padding-bottom: 0.15rem;
+
+    border-bottom: 2px solid transparent;
+
+    color: var(--color-muted);
+
+    font-size: 0.88rem;
+    line-height: 1.4;
+
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navigation-item a:hover {
+    color: var(--color-primary);
+}
+
+.navigation-item a[aria-current="page"] {
+    border-bottom-color: var(--color-primary);
+
+    color: var(--color-text);
+}
+
+
+/* ---------------------------------
+   Main
+---------------------------------- */
+
+.site-main {
+    min-height: 65vh;
+
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+}
+
+
+/* ---------------------------------
+   Standard pages
+---------------------------------- */
+
+.page {
+    max-width: var(--reading-width);
+}
+
+/* ---------------------------------
+   Page header
+---------------------------------- */
+
+.page-header {
+    position: relative;
+
+    margin-bottom: 3rem;
+}
+/* ---------------------------------
+   Home
+---------------------------------- */
+
+.home {
+    width: 100%;
+
+    max-width: 1040px;
+}
+
+
+/* ---------------------------------
+   Home layout
+---------------------------------- */
+
+.home-layout {
+    display: grid;
+
+    grid-template-columns:
+        280px
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 2.2rem;
+}
+
+
+/* ---------------------------------
+   Home portrait card
+---------------------------------- */
+
+.home-portrait-column {
+    min-width: 0;
+
+    padding: 1rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.3);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.045);
+}
+
+
+/* ---------------------------------
+   Home portrait
+---------------------------------- */
+
+.home-portrait {
+    width: 100%;
+
+    margin: 0;
+}
+
+
+.home-portrait img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    object-position: center 32%;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.24);
+
+    border-radius: 5px;
+
+    background-color:
+        var(--color-surface);
+}
+
+
+/* ---------------------------------
+   Home portrait credit
+---------------------------------- */
+
+.home-portrait-credit {
+    margin-top: 0.45rem;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.67rem;
+    line-height: 1.4;
+
+    text-align: left;
+}
+
+
+.home-portrait-credit em {
+    color:
+        var(--color-muted);
+
+    font-style: italic;
+}
+
+
+/* ---------------------------------
+   Home content card
+---------------------------------- */
+
+.home-content-card {
+    min-width: 0;
+
+    padding:
+        1.75rem
+        1.85rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.3);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.045);
+}
+
+
+/* ---------------------------------
+   Home intro
+---------------------------------- */
+
+.home-intro {
+    max-width: 680px;
+
+    margin: 0;
+
+    color:
+        var(--color-text);
+
+    font-size: 0.96rem;
+    line-height: 1.72;
+}
+
+
+.home-intro p {
+    margin:
+        0
+        0
+        1rem;
+}
+
+
+.home-intro p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------------------------------
+   Current position
+---------------------------------- */
+
+.home-position {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    max-width: 680px;
+
+    margin-top: 1.65rem;
+
+    padding:
+        0.15rem
+        0
+        0.15rem
+        1rem;
+
+    border-left:
+        3px solid
+        var(--color-warm);
+}
+
+
+.home-position-label {
+    margin-bottom: 0.2rem;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.64rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+}
+
+
+.home-position-link {
+    color:
+        var(--color-text);
+
+    font-size: 0.92rem;
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease;
+}
+
+
+.home-position-link:hover {
+    color:
+        var(--color-primary);
+}
+
+
+.home-position-link:focus-visible {
+    color:
+        var(--color-primary);
+
+    outline:
+        2px solid
+        var(--color-primary);
+
+    outline-offset: 3px;
+}
+
+
+.home-position-institution {
+    margin-top: 0.1rem;
+
+    color:
+        var(--color-text);
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------
+   Home profiles
+---------------------------------- */
+
+.home-profiles {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap:
+        0.55rem
+        0.75rem;
+
+    margin-top: 1.5rem;
+
+    padding-top: 1.1rem;
+
+    border-top:
+        1px solid
+        rgba(50, 88, 107, 0.18);
+}
+
+
+/* ---------------------------------
+   Home profile links
+---------------------------------- */
+
+.home-profile-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.38rem;
+
+    min-height: 1.9rem;
+
+    padding:
+        0.3rem
+        0.52rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.28);
+
+    border-radius: 4px;
+
+    background-color:
+        rgba(50, 88, 107, 0.035);
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    line-height: 1.3;
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+.home-profile-link:hover {
+    border-color:
+        var(--color-primary);
+
+    background-color:
+        rgba(35, 91, 133, 0.07);
+
+    color:
+        var(--color-primary);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.home-profile-link:focus-visible {
+    outline:
+        2px solid
+        var(--color-primary);
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Home profile icons
+---------------------------------- */
+
+.home-profile-icon,
+.home-profile-icon-mask {
+    display: block;
+
+    flex:
+        0
+        0
+        auto;
+
+    width: 0.95rem;
+    height: 0.95rem;
+}
+
+
+.home-profile-icon {
+    fill: currentColor;
+}
+
+
+.home-profile-icon-mask {
+    background-color:
+        currentColor;
+
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+}
+
+
+.home-profile-icon-github {
+    mask-image:
+        url("../icons/github.svg");
+
+    -webkit-mask-image:
+        url("../icons/github.svg");
+}
+
+
+.home-profile-icon-orcid {
+    mask-image:
+        url("../icons/orcid.svg");
+
+    -webkit-mask-image:
+        url("../icons/orcid.svg");
+}
+
+
+.home-profile-icon-mastodon {
+    mask-image:
+        url("../icons/mastodon.svg");
+
+    -webkit-mask-image:
+        url("../icons/mastodon.svg");
+}
+
+
+.home-profile-label {
+    line-height: 1;
+}
+
+
+/* ---------------------------------
+   Home responsive
+---------------------------------- */
+
+@media (max-width: 800px) {
+
+    .home-layout {
+        grid-template-columns:
+            220px
+            minmax(0, 1fr);
+
+        gap: 1.5rem;
+    }
+
+
+    .home-content-card {
+        padding:
+            1.45rem
+            1.5rem;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .home-layout {
+        display: block;
+    }
+
+
+    .home-portrait-column {
+        width: auto;
+
+        margin: 0;
+
+        padding:
+            1.3rem
+            1.25rem
+            0;
+
+        border:
+            1px solid
+            rgba(50, 88, 107, 0.3);
+
+        border-bottom: 0;
+
+        border-radius:
+            7px
+            7px
+            0
+            0;
+
+        background-color:
+            var(--color-surface);
+
+        box-shadow: none;
+    }
+
+
+    .home-portrait {
+        width: min(210px, 68vw);
+
+        margin-inline: auto;
+    }
+
+
+    .home-portrait-credit {
+        text-align: center;
+    }
+
+
+    .home-content-card {
+        margin-top: 0;
+
+        padding:
+            1.2rem
+            1.25rem
+            1.3rem;
+
+        border:
+            1px solid
+            rgba(50, 88, 107, 0.3);
+
+        border-top: 0;
+
+        border-radius:
+            0
+            0
+            7px
+            7px;
+
+        box-shadow:
+            0 5px 17px
+            rgba(18, 51, 72, 0.045);
+    }
+
+
+    .home-position {
+        margin-top: 1.4rem;
+    }
+
+
+    .home-profiles {
+        gap: 0.5rem;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .home-portrait {
+        width: min(190px, 72vw);
+    }
+
+
+    .home-profile-label {
+        display: none;
+    }
+
+
+    .home-profile-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 2rem;
+        height: 2rem;
+
+        min-height: 2rem;
+
+        padding: 0;
+    }
+
+
+    .home-profile-icon,
+    .home-profile-icon-mask {
+        width: 1rem;
+        height: 1rem;
+    }
+
+}
+
+/* ---------------------------------
+   Curriculum Vitae
+---------------------------------- */
+
+.cv {
+    width: 100%;
+}
+
+
+/* ---------------------------------
+   CV sections
+---------------------------------- */
+
+.cv-section + .cv-section {
+    margin-top: 4rem;
+}
+
+
+.cv-section-title {
+    margin:
+        0
+        0
+        1.5rem;
+
+    color:
+        var(--color-text);
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+
+/* ---------------------------------
+   CV subsections
+---------------------------------- */
+
+.cv-subsection {
+    margin-top: 2.75rem;
+}
+
+
+.cv-subsection-title {
+    margin:
+        0
+        0
+        1.25rem;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------
+   CV cards
+---------------------------------- */
+
+.cv-entry {
+    display: grid;
+
+    grid-template-columns:
+        125px
+        minmax(0, 1fr);
+
+    gap: 1.5rem;
+
+    padding: 1.4rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.3);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+.cv-entry + .cv-entry {
+    margin-top: 1rem;
+}
+
+
+.cv-entry:hover {
+    border-color:
+        rgba(50, 88, 107, 0.44);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.055);
+}
+
+
+.cv-entry:focus-within {
+    border-color:
+        rgba(50, 88, 107, 0.58);
+}
+
+
+/* ---------------------------------
+   CV date
+---------------------------------- */
+
+.cv-entry-date {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.05rem;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+
+.cv-entry-date-detail {
+    color:
+        var(--color-muted);
+
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    line-height: 1.45;
+}
+
+
+.cv-entry-date-main,
+.cv-entry-date-range {
+    color:
+        var(--color-text);
+
+    font-size: 0.92rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+
+.cv-entry-date-separator {
+    color:
+        var(--color-muted);
+
+    font-size: 0.78rem;
+    font-weight: 400;
+
+    line-height: 1.35;
+}
+
+
+/* ---------------------------------
+   CV content
+---------------------------------- */
+
+.cv-entry-content {
+    min-width: 0;
+}
+
+
+.cv-entry-title {
+    margin: 0;
+
+    color:
+        var(--color-text);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1.5;
+    letter-spacing: -0.006em;
+}
+
+
+.cv-entry-title a {
+    color:
+        var(--color-text);
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease;
+}
+
+
+.cv-entry-title a:hover {
+    color:
+        var(--color-primary);
+}
+
+
+.cv-entry-title a:focus-visible {
+    color:
+        var(--color-primary);
+
+    outline:
+        2px solid
+        var(--color-primary);
+
+    outline-offset: 3px;
+}
+
+
+/* ---------------------------------
+   CV metadata
+---------------------------------- */
+
+.cv-entry-meta {
+    margin:
+        0.25rem
+        0
+        0;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+
+.cv-entry-meta em {
+    color:
+        var(--color-muted);
+}
+
+
+/* ---------------------------------
+   CV thesis / project information
+---------------------------------- */
+
+.cv-entry-thesis {
+    max-width: 650px;
+
+    margin:
+        0.6rem
+        0
+        0;
+
+    color:
+        var(--color-text);
+
+    font-size: 0.86rem;
+    line-height: 1.62;
+}
+
+
+.cv-entry-thesis-label {
+    color:
+        var(--color-muted);
+
+    font-weight: 500;
+}
+
+
+.cv-entry-thesis a {
+    color:
+        var(--color-primary);
+}
+
+
+/* ---------------------------------
+   Curriculum Vitae responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .cv-section + .cv-section {
+        margin-top: 3.5rem;
+    }
+
+
+    .cv-subsection {
+        margin-top: 2.5rem;
+    }
+
+
+    .cv-entry {
+        grid-template-columns: 1fr;
+
+        gap: 0.35rem;
+
+        padding: 1.15rem;
+    }
+
+
+    .cv-entry-date {
+        margin-bottom: 0.25rem;
+    }
+
+
+    .cv-entry-date-main {
+        font-size: 0.88rem;
+    }
+
+
+    .cv-entry-title {
+        font-size: 0.96rem;
+    }
+
+}
+
+/* ---------------------------------
+   Publications
+---------------------------------- */
+
+.publications-intro {
+    margin: 0 0 2rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.95rem;
+}
+
+
+/* ---------------------------------
+   Publications toolbar
+---------------------------------- */
+
+.pub-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.65rem;
+
+    margin-bottom: 2.5rem;
+}
+
+.pub-toolbar input,
+.pub-toolbar select,
+.pub-toolbar button {
+    min-height: 2.5rem;
+
+    padding: 0.5rem 0.7rem;
+
+    border: 1px solid var(--color-border);
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font: inherit;
+    font-size: 0.85rem;
+}
+
+.pub-toolbar input[type="search"] {
+    flex: 1 1 220px;
+
+    min-width: 180px;
+}
+
+.pub-toolbar select {
+    cursor: pointer;
+}
+
+.pub-toolbar button {
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.pub-toolbar button:hover {
+    border-color: var(--color-primary);
+
+    color: var(--color-primary);
+}
+
+.pub-toolbar input:focus,
+.pub-toolbar select:focus,
+.pub-toolbar button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Publications status
+---------------------------------- */
+
+.pub-status {
+    min-height: 1.3rem;
+
+    margin: 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* ---------------------------------
+   Publication sections
+---------------------------------- */
+
+.pub-section {
+    margin-top: 3.5rem;
+}
+
+.pub-section-title {
+    margin: 0 0 1.25rem;
+
+    color: var(--color-text);
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+
+/* ---------------------------------
+   Publication list
+---------------------------------- */
+
+.pub-list {
+    display: grid;
+
+    gap: 0.9rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* ---------------------------------
+   Publication card
+---------------------------------- */
+
+.pub-item {
+    display: grid;
+
+    grid-template-columns:
+        64px
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 1rem;
+
+    min-width: 0;
+
+    padding:
+        1rem
+        1.1rem
+        0.8rem
+        1.3rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.34);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.pub-item:hover {
+    border-color:
+        rgba(35, 91, 133, 0.58);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.055);
+}
+
+.pub-item:focus-within {
+    border-color:
+        var(--color-primary);
+}
+
+
+/* ---------------------------------
+   Publication resource column
+---------------------------------- */
+
+.pub-actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    min-width: 0;
+}
+
+
+/* ---------------------------------
+   Publication content
+---------------------------------- */
+
+.pub-content {
+    min-width: 0;
+}
+
+
+/* ---------------------------------
+   Publication title row
+---------------------------------- */
+
+.pub-title-row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    gap:
+        0.35rem
+        0.55rem;
+}
+
+
+/* ---------------------------------
+   Publication title
+---------------------------------- */
+
+.pub-title {
+    display: inline;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+    letter-spacing: -0.006em;
+}
+
+.pub-editors {
+    color: var(--color-muted);
+
+    font-weight: 400;
+}
+
+
+/* ---------------------------------
+   Publication metadata
+---------------------------------- */
+
+.pub-meta {
+    display: block;
+
+    margin-top: 0.25rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.pub-meta em {
+    color: var(--color-text);
+}
+
+
+/* ---------------------------------
+   Publication DOI / resource button
+---------------------------------- */
+
+.pub-link,
+.pub-resource-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-width: 3.5rem;
+    min-height: 1.75rem;
+
+    margin: 0;
+
+    padding:
+        0.28rem
+        0.5rem;
+
+    border:
+        1px solid
+        rgba(35, 91, 133, 0.42);
+
+    border-radius: 4px;
+
+    background-color:
+        rgba(35, 91, 133, 0.05);
+
+    color: var(--color-primary);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        border-color 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.pub-link:hover,
+.pub-resource-button:hover {
+    border-color:
+        var(--color-primary);
+
+    background-color:
+        rgba(35, 91, 133, 0.09);
+
+    color: var(--color-text);
+
+    text-decoration: none;
+
+    transform:
+        translateY(-1px);
+}
+
+.pub-link:focus-visible,
+.pub-resource-button:focus-visible {
+    outline:
+        2px solid
+        var(--color-primary);
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Publication status
+---------------------------------- */
+
+.pub-publication-status {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 1.55rem;
+
+    padding:
+        0.2rem
+        0.45rem;
+
+    border-radius: 999px;
+
+    font-size: 0.64rem;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* Upcoming */
+
+.pub-publication-status-upcoming {
+    border:
+        1px solid
+        rgba(187, 158, 118, 0.68);
+
+    background-color:
+        rgba(187, 158, 118, 0.1);
+
+    color:
+        #795f3d;
+}
+
+
+/* In Preparation */
+
+.pub-publication-status-in-preparation {
+    border:
+        1px solid
+        rgba(84, 146, 145, 0.55);
+
+    background-color:
+        rgba(84, 146, 145, 0.09);
+
+    color:
+        #315f5e;
+}
+
+
+/* Forthcoming */
+
+.pub-publication-status-forthcoming {
+    border:
+        1px solid
+        rgba(35, 91, 133, 0.46);
+
+    background-color:
+        rgba(35, 91, 133, 0.07);
+
+    color:
+        var(--color-primary);
+}
+
+
+/* ---------------------------------
+   Publications empty state
+---------------------------------- */
+
+.pub-empty {
+    margin-top: 2rem;
+
+    color: var(--color-muted);
+}
+
+
+/* ---------------------------------
+   Publications responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .pub-list {
+        gap: 0.8rem;
+    }
+
+    .pub-item {
+        padding:
+            0.95rem
+            0.9rem
+            0.75rem
+            1.1rem;
+    }
+
+    .pub-title {
+        font-size: 0.96rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .pub-item {
+        grid-template-columns: 1fr;
+
+        gap: 0.6rem;
+    }
+
+    .pub-actions {
+        width: fit-content;
+    }
+
+    .pub-link,
+    .pub-resource-button {
+        width: auto;
+
+        min-width: 3.75rem;
+    }
+
+    .pub-title-row {
+        align-items: flex-start;
+    }
+
+}
+
+
+/* ---------------------------------
+   Publications print
+---------------------------------- */
+
+@media print {
+
+    .site-header,
+    .site-footer,
+    .publications-intro,
+    .pub-toolbar,
+    .pub-status {
+        display: none;
+    }
+
+    .site-main {
+        padding: 0;
+    }
+
+    .page {
+        max-width: none;
+    }
+
+    .page-header {
+        margin-bottom: 2rem;
+    }
+
+    .pub-section,
+    .pub-item {
+        break-inside: avoid;
+    }
+
+    .pub-item {
+        grid-template-columns:
+            55px
+            minmax(0, 1fr);
+
+        box-shadow: none;
+    }
+
+}
+
+
+/* ---------------------------------
+   Organized Events
+---------------------------------- */
+
+.events {
+    width: 100%;
+
+    --events-color-1: #17525b;
+    --events-color-2: #19405d;
+    --events-color-3: #32586b;
+    --events-color-4: #123348;
+}
+
+
+/* ---------------------------------
+   Events toolbar
+---------------------------------- */
+
+.events-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.65rem;
+
+    margin-bottom: 0.7rem;
+}
+
+.events-toolbar input,
+.events-toolbar select,
+.events-toolbar button {
+    min-height: 2.5rem;
+
+    padding: 0.5rem 0.7rem;
+
+    border: 1px solid var(--color-border);
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font: inherit;
+    font-size: 0.85rem;
+}
+
+.events-toolbar input[type="search"] {
+    flex: 1 1 220px;
+
+    min-width: 180px;
+}
+
+.events-toolbar select {
+    cursor: pointer;
+}
+
+.events-toolbar button {
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.events-toolbar button:hover {
+    border-color: var(--events-color-1);
+
+    color: var(--events-color-1);
+}
+
+.events-toolbar input:focus,
+.events-toolbar select:focus,
+.events-toolbar button:focus-visible {
+    outline: 2px solid var(--events-color-1);
+    outline-offset: 2px;
+}
+
+.events-filter-status {
+    min-height: 1.3rem;
+
+    margin:
+        0
+        0
+        1.5rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* ---------------------------------
+   Event list
+---------------------------------- */
+
+.events-list {
+    display: grid;
+
+    gap: 1rem;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------
+   Main event
+---------------------------------- */
+
+.event-item {
+    display: grid;
+
+    grid-template-columns:
+        125px
+        minmax(0, 1fr);
+
+    gap: 1.5rem;
+
+    padding: 1.4rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.3);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.event-item:hover {
+    border-color:
+        rgba(23, 82, 91, 0.58);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.055);
+}
+
+.event-item:focus-within {
+    border-color:
+        var(--events-color-1);
+}
+
+.event-item-date {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.05rem;
+
+    color: var(--events-color-3);
+
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+.event-item-date strong {
+    color: var(--events-color-4);
+
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.event-item-content {
+    min-width: 0;
+}
+
+.event-item-type {
+    margin:
+        0
+        0
+        0.25rem;
+
+    color: var(--events-color-1);
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.event-item-title {
+    margin: 0;
+
+    color: var(--events-color-4);
+
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+    letter-spacing: -0.008em;
+}
+
+.event-item-title a {
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease;
+}
+
+.event-item-title a:hover {
+    color: var(--events-color-1);
+}
+
+.event-item-title a:focus-visible {
+    color: var(--events-color-1);
+
+    outline:
+        2px solid
+        var(--events-color-1);
+
+    outline-offset: 3px;
+}
+
+.event-item-location {
+    margin:
+        0.3rem
+        0
+        0;
+
+    color: var(--events-color-3);
+
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+.event-item-description {
+    max-width: 650px;
+
+    margin:
+        0.7rem
+        0
+        0;
+
+    color: var(--color-muted);
+
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+
+/* ---------------------------------
+   Event roles
+---------------------------------- */
+
+.event-roles {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.25rem;
+
+    max-width: 650px;
+
+    margin-top: 0.7rem;
+    padding-left: 0.75rem;
+
+    border-left:
+        3px solid
+        var(--events-color-1);
+}
+
+.event-role {
+    margin: 0;
+
+    color: var(--events-color-4);
+
+    font-size: 0.84rem;
+    line-height: 1.5;
+}
+
+.event-role-name {
+    color: var(--events-color-1);
+
+    font-weight: 600;
+}
+
+.event-role-detail {
+    color: var(--color-muted);
+
+    font-weight: 400;
+}
+
+
+/* ---------------------------------
+   Event resource links
+---------------------------------- */
+
+.event-item-links,
+.event-series-edition-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.4rem;
+
+    margin:
+        0.55rem
+        0
+        0;
+}
+
+
+/* ---------------------------------
+   Event resource buttons
+---------------------------------- */
+
+.event-resource-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 1.75rem;
+
+    padding:
+        0.28rem
+        0.55rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.42);
+
+    border-radius: 4px;
+
+    background-color:
+        rgba(50, 88, 107, 0.045);
+
+    color: var(--events-color-1);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.event-resource-button:hover {
+    border-color:
+        var(--events-color-1);
+
+    background-color:
+        rgba(23, 82, 91, 0.08);
+
+    color:
+        var(--events-color-4);
+
+    text-decoration: none;
+
+    transform: translateY(-1px);
+}
+
+.event-resource-button:focus-visible {
+    outline:
+        2px solid
+        var(--events-color-1);
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Recurring series
+---------------------------------- */
+
+.event-item-series {
+    padding-bottom: 1.5rem;
+}
+
+.event-series-editions {
+    position: relative;
+
+    max-width: 650px;
+
+    margin-top: 1.4rem;
+    padding-left: 1.25rem;
+}
+
+
+/* Vertical timeline */
+
+.event-series-editions::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0.45rem;
+    bottom: 0.45rem;
+    left: 0;
+
+    width: 1px;
+
+    background:
+        rgba(50, 88, 107, 0.42);
+}
+
+
+/* Individual edition */
+
+.event-series-edition {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        135px
+        minmax(0, 1fr);
+
+    gap: 1rem;
+
+    padding:
+        0.65rem
+        0;
+}
+
+
+/* Timeline marker */
+
+.event-series-edition::before {
+    content: "";
+
+    position: absolute;
+
+    top: 1rem;
+    left: -1.25rem;
+
+    width: 0.48rem;
+    height: 0.48rem;
+
+    border:
+        2px solid
+        var(--events-color-1);
+
+    border-radius: 50%;
+
+    background-color:
+        var(--color-surface);
+
+    transform:
+        translateX(-50%);
+}
+
+.event-series-edition:first-child::before {
+    background-color:
+        var(--events-color-1);
+}
+
+.event-series-edition-term {
+    color: var(--events-color-4);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+.event-series-edition-content {
+    min-width: 0;
+}
+
+.event-series-edition-meta {
+    margin: 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------
+   Filtered events
+---------------------------------- */
+
+.event-item[hidden],
+.event-series-edition[hidden] {
+    display: none;
+}
+
+
+/* ---------------------------------
+   Events responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .event-item {
+        grid-template-columns: 1fr;
+
+        gap: 0.35rem;
+
+        padding: 1.15rem;
+    }
+
+    .event-item-date {
+        flex-direction: row;
+
+        gap: 0.3rem;
+
+        margin-bottom: 0.25rem;
+    }
+
+    .event-item-date strong {
+        font-size: inherit;
+    }
+
+    .event-series-editions {
+        margin-top: 1.2rem;
+    }
+
+    .event-series-edition {
+        grid-template-columns: 1fr;
+
+        gap: 0.15rem;
+
+        padding:
+            0.65rem
+            0;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .events-toolbar {
+        align-items: stretch;
+    }
+
+    .events-toolbar input[type="search"] {
+        flex-basis: 100%;
+    }
+
+    .events-toolbar select {
+        flex:
+            1 1
+            calc(50% - 0.65rem);
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .events-toolbar select,
+    .events-toolbar button {
+        width: 100%;
+    }
+
+    .events-toolbar select {
+        flex-basis: 100%;
+    }
+
+    .event-series-editions {
+        padding-left: 1rem;
+    }
+
+    .event-series-edition::before {
+        left: -1rem;
+    }
+
+}
+
+
+/* ---------------------------------
+   Talks
+---------------------------------- */
+
+.talks {
+    width: 100%;
+
+    --talks-color-1: #19405d;
+    --talks-color-2: #bb9e76;
+    --talks-color-3: #32586b;
+    --talks-color-4: #123348;
+}
+
+
+/* ---------------------------------
+   Talks toolbar
+---------------------------------- */
+
+.talks-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.65rem;
+
+    margin-bottom: 0.7rem;
+}
+
+.talks-toolbar input,
+.talks-toolbar select,
+.talks-toolbar button {
+    min-height: 2.5rem;
+
+    padding:
+        0.5rem
+        0.7rem;
+
+    border:
+        1px solid
+        var(--color-border);
+
+    background-color:
+        var(--color-background);
+
+    color:
+        var(--color-text);
+
+    font: inherit;
+    font-size: 0.85rem;
+}
+
+.talks-toolbar input[type="search"] {
+    flex:
+        1 1
+        220px;
+
+    min-width: 180px;
+}
+
+.talks-toolbar select {
+    cursor: pointer;
+}
+
+.talks-toolbar button {
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.talks-toolbar button:hover {
+    border-color:
+        var(--talks-color-1);
+
+    color:
+        var(--talks-color-1);
+}
+
+.talks-toolbar input:focus,
+.talks-toolbar select:focus,
+.talks-toolbar button:focus-visible {
+    outline:
+        2px solid
+        var(--talks-color-1);
+
+    outline-offset: 2px;
+}
+
+.talks-filter-status {
+    min-height: 1.3rem;
+
+    margin:
+        0
+        0
+        1.5rem;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* ---------------------------------
+   Talks list
+---------------------------------- */
+
+.talks-list {
+    display: grid;
+
+    gap: 0.9rem;
+}
+
+
+/* ---------------------------------
+   Talk card
+---------------------------------- */
+
+.talk-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        108px
+        minmax(0, 1fr);
+
+    gap: 1.35rem;
+
+    overflow: hidden;
+
+    padding:
+        1.15rem
+        1.2rem
+        1.1rem
+        1.15rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.34);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        transform 0.18s ease;
+}
+
+.talk-item:hover {
+    border-color:
+        rgba(25, 64, 93, 0.62);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.065);
+}
+
+.talk-item:focus-within {
+    border-color:
+        var(--talks-color-1);
+}
+
+
+/* ---------------------------------
+   Talk date
+---------------------------------- */
+
+.talk-date {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    min-width: 0;
+
+    padding-right: 1.15rem;
+}
+
+.talk-date::after {
+    content: "";
+
+    position: absolute;
+
+    top: -1.15rem;
+    right: 0;
+    bottom: -1.1rem;
+
+    width: 4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--talks-color-1),
+            var(--talks-color-2)
+        );
+
+    opacity: 0.86;
+
+    transition:
+        opacity 0.18s ease,
+        width 0.18s ease;
+}
+
+.talk-item:hover .talk-date::after {
+    width: 5px;
+
+    opacity: 1;
+}
+
+.talk-date-day {
+    color:
+        var(--talks-color-3);
+
+    font-size: 0.78rem;
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+.talk-date-year {
+    margin-top: 0.05rem;
+
+    color:
+        var(--talks-color-4);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+
+/* ---------------------------------
+   Talk content
+---------------------------------- */
+
+.talk-content {
+    min-width: 0;
+}
+
+
+/* ---------------------------------
+   Talk heading
+---------------------------------- */
+
+.talk-heading-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap:
+        0.45rem
+        1rem;
+
+    margin-bottom: 0.3rem;
+}
+
+.talk-event {
+    margin: 0;
+
+    color:
+        var(--talks-color-1);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------
+   Talk title
+---------------------------------- */
+
+.talk-title {
+    max-width: 650px;
+
+    margin: 0;
+
+    color:
+        var(--talks-color-4);
+
+    font-size: 1.02rem;
+    font-weight: 600;
+
+    line-height: 1.48;
+    letter-spacing: -0.006em;
+}
+
+
+/* ---------------------------------
+   Talk status
+---------------------------------- */
+
+.talk-status {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 1.55rem;
+
+    padding:
+        0.2rem
+        0.45rem;
+
+    border-radius: 999px;
+
+    font-size: 0.64rem;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+.talk-status-upcoming {
+    border:
+        1px solid
+        rgba(187, 158, 118, 0.68);
+
+    background-color:
+        rgba(187, 158, 118, 0.1);
+
+    color:
+        #795f3d;
+}
+
+
+/* ---------------------------------
+   Talk location
+---------------------------------- */
+
+.talk-location {
+    margin:
+        0.4rem
+        0
+        0;
+
+    color:
+        var(--talks-color-3);
+
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------
+   Talk collaborators
+---------------------------------- */
+
+.talk-collaborators {
+    margin:
+        0.45rem
+        0
+        0;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
+.talk-collaborators-label {
+    margin-right: 0.2rem;
+
+    color:
+        var(--talks-color-1);
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------
+   Talk resource links
+---------------------------------- */
+
+.talk-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.4rem;
+
+    margin-top: 0.65rem;
+}
+
+.talk-resource-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 1.75rem;
+
+    padding:
+        0.28rem
+        0.55rem;
+
+    border:
+        1px solid
+        rgba(25, 64, 93, 0.38);
+
+    border-radius: 4px;
+
+    background-color:
+        rgba(25, 64, 93, 0.045);
+
+    color:
+        var(--talks-color-1);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.talk-resource-button:hover {
+    border-color:
+        var(--talks-color-1);
+
+    background-color:
+        rgba(25, 64, 93, 0.085);
+
+    color:
+        var(--talks-color-4);
+
+    text-decoration: none;
+
+    transform:
+        translateY(-1px);
+}
+
+.talk-resource-button:focus-visible {
+    outline:
+        2px solid
+        var(--talks-color-1);
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Filtered talks
+---------------------------------- */
+
+.talk-item[hidden] {
+    display: none;
+}
+
+
+/* ---------------------------------
+   Talks responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .talks-list {
+        gap: 0.8rem;
+    }
+
+    .talk-item {
+        grid-template-columns: 1fr;
+
+        gap: 0.65rem;
+
+        padding:
+            1rem
+            0.95rem
+            0.95rem
+            1.1rem;
+    }
+
+    .talk-date {
+        flex-direction: row;
+
+        align-items: baseline;
+
+        gap: 0.35rem;
+
+        padding:
+            0
+            0
+            0.55rem;
+    }
+
+    .talk-date::after {
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 3px;
+
+        background:
+            linear-gradient(
+                90deg,
+                var(--talks-color-1),
+                var(--talks-color-2)
+            );
+    }
+
+    .talk-item:hover .talk-date::after {
+        width: 100%;
+        height: 4px;
+    }
+
+    .talk-date-year {
+        margin-top: 0;
+
+        font-size: 0.9rem;
+    }
+
+    .talk-title {
+        font-size: 0.96rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .talks-toolbar {
+        align-items: stretch;
+    }
+
+    .talks-toolbar input[type="search"] {
+        flex-basis: 100%;
+    }
+
+    .talks-toolbar select {
+        flex:
+            1 1
+            calc(50% - 0.65rem);
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .talks-toolbar select,
+    .talks-toolbar button {
+        width: 100%;
+    }
+
+    .talks-toolbar select {
+        flex-basis: 100%;
+    }
+
+    .talk-heading-row {
+        display: block;
+    }
+
+    .talk-status {
+        margin-top: 0.4rem;
+    }
+
+}
+
+/* ---------------------------------
+   Footer
+---------------------------------- */
+
+.site-footer {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 190px;
+
+    border-top: 1px solid var(--color-border);
+
+    background-color: var(--color-text);
+    color: #f7f5f0;
+}
+
+
+/* ---------------------------------
+   Footer background image
+---------------------------------- */
+
+.site-footer-image {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    background-image:
+        url("../imgs/footer-1.webp");
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    /*
+       The original image is landscape-oriented.
+       This positioning keeps the darker blue
+       sections prominent while retaining some
+       of the lighter upper area.
+    */
+    background-position: center 52%;
+}
+
+
+/* ---------------------------------
+   Footer overlay
+---------------------------------- */
+
+.site-footer::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 36, 61, 0.58) 0%,
+            rgba(19, 55, 69, 0.42) 52%,
+            rgba(15, 42, 59, 0.54) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------
+   Footer content
+---------------------------------- */
+
+.site-footer-inner {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 2.5rem;
+
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+}
+
+
+.site-footer-info {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 650px;
+
+    gap: 0.3rem;
+}
+
+
+.site-footer-copyright,
+.site-footer-email {
+    margin: 0;
+
+    color: #f7f5f0;
+
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+
+.site-footer-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.35rem;
+
+    color:
+        rgba(247, 245, 240, 0.82);
+
+    font-size: 0.78rem;
+}
+
+
+.site-footer-meta a {
+    color:
+        rgba(247, 245, 240, 0.92);
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease,
+        text-decoration-color 0.18s ease;
+}
+
+
+.site-footer-meta a:hover {
+    color: #ffffff;
+
+    text-decoration: underline;
+    text-decoration-color: var(--color-warm);
+    text-underline-offset: 0.2em;
+}
+
+
+.site-footer-meta a:focus-visible {
+    outline-color: #ffffff;
+}
+
+
+/* ---------------------------------
+   Footer image credit
+---------------------------------- */
+
+.site-footer-image-credit {
+    max-width: 620px;
+
+    margin:
+        0.55rem
+        0
+        0;
+
+    color:
+        rgba(247, 245, 240, 0.68);
+
+    font-size: 0.67rem;
+    line-height: 1.5;
+}
+
+
+.site-footer-image-credit a {
+    color:
+        rgba(247, 245, 240, 0.82);
+
+    text-decoration: underline;
+
+    text-decoration-color:
+        rgba(247, 245, 240, 0.38);
+
+    text-underline-offset: 0.16em;
+
+    transition:
+        color 0.18s ease,
+        text-decoration-color 0.18s ease;
+}
+
+
+.site-footer-image-credit a:hover {
+    color: #ffffff;
+
+    text-decoration-color:
+        var(--color-warm);
+}
+
+
+.site-footer-image-credit a:focus-visible {
+    color: #ffffff;
+
+    outline:
+        2px solid #ffffff;
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Footer contact
+---------------------------------- */
+
+.site-footer-contact {
+    display: flex;
+    align-items: center;
+
+    gap: 1.25rem;
+}
+
+
+.site-footer-profiles {
+    display: flex;
+    align-items: center;
+
+    gap: 0.75rem;
+}
+
+
+.site-footer-profile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color:
+        rgba(247, 245, 240, 0.92);
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+.site-footer-profile:hover {
+    color:
+        rgba(247, 245, 240, 0.92);
+
+    transform:
+        translateY(-2px);
+}
+
+
+.site-footer-profile:focus-visible {
+    color: #ffffff;
+
+    outline-color: #ffffff;
+}
+
+
+/* ---------------------------------
+   Footer icons
+---------------------------------- */
+
+.site-footer-icon {
+    display: block;
+
+    width: 1.15rem;
+    height: 1.15rem;
+
+    background-color: currentColor;
+
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+}
+
+
+.site-footer-icon-github {
+    mask-image:
+        url("../icons/github.svg");
+
+    -webkit-mask-image:
+        url("../icons/github.svg");
+}
+
+
+.site-footer-icon-orcid {
+    mask-image:
+        url("../icons/orcid.svg");
+
+    -webkit-mask-image:
+        url("../icons/orcid.svg");
+}
+
+
+.site-footer-icon-mastodon {
+    mask-image:
+        url("../icons/mastodon.svg");
+
+    -webkit-mask-image:
+        url("../icons/mastodon.svg");
+}
+
+
+/* ---------------------------------
+   Footer responsive
+---------------------------------- */
+
+@media (max-width: 800px) {
+
+    .site-footer-image {
+        background-position: 42% center;
+    }
+
+
+    .site-footer-inner {
+        flex-direction: column;
+
+        gap: 1.25rem;
+
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+
+    .site-footer-contact {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 0.75rem;
+    }
+
+
+    .site-footer-image-credit {
+        max-width: 100%;
+
+        font-size: 0.65rem;
+    }
+
+}
+
+/* ---------------------------------
+   General responsive
+---------------------------------- */
+
+@media (max-width: 800px) {
+
+    .container {
+        width: min(
+            calc(100% - 2rem),
+            var(--content-width)
+        );
+    }
+
+
+    .site-navigation {
+        margin-top: 1rem;
+        padding-top: 0.85rem;
+    }
+
+
+    .navigation-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap:
+            0.2rem
+            0.45rem;
+    }
+
+
+    .navigation-item {
+        display: inline-flex;
+        align-items: center;
+
+        min-width: 0;
+    }
+
+
+    .navigation-item:not(:last-child)::after {
+        content: "·";
+
+        margin-left: 0.45rem;
+
+        color:
+            var(--color-muted);
+
+        font-size: 0.9rem;
+        line-height: 1;
+    }
+
+
+    .navigation-item a {
+        display: inline-block;
+
+        width: auto;
+
+        padding:
+            0.22rem
+            0;
+
+        white-space: nowrap;
+    }
+
+
+    .site-main {
+        padding-top: 3.5rem;
+        padding-bottom: 4rem;
+    }
+
+    .home-section {
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .site-header-inner {
+        padding-top: 1.35rem;
+        padding-bottom: 1rem;
+    }
+
+
+    .site-title {
+        font-size: 1.25rem;
+    }
+
+
+    .site-subtitle {
+        font-size: 0.82rem;
+        line-height: 1.4;
+    }
+
+
+    .site-navigation {
+        margin-top: 1rem;
+        padding-top: 0.8rem;
+    }
+
+
+    .navigation-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap:
+            0.2rem
+            0.45rem;
+    }
+
+
+    .navigation-item {
+        display: inline-flex;
+        align-items: center;
+    }
+
+
+    .navigation-item:not(:last-child)::after {
+        content: "·";
+
+        margin-left: 0.45rem;
+
+        color:
+            var(--color-muted);
+
+        font-size: 0.9rem;
+        line-height: 1;
+    }
+
+
+    .navigation-item a {
+        display: inline-block;
+
+        width: auto;
+
+        padding:
+            0.22rem
+            0;
+
+        font-size: 0.84rem;
+        line-height: 1.35;
+
+        white-space: nowrap;
+    }
+
+}
+
+
+/* ---------------------------------
+   Teaching
+---------------------------------- */
+
+.teaching {
+    width: 100%;
+
+    --teaching-color-1: #17525b;
+    --teaching-color-2: #19405d;
+    --teaching-color-3: #32586b;
+    --teaching-color-4: #123348;
+
+    --abstract-color-1: #43741a;
+    --abstract-color-2: #84b87d;
+    --abstract-color-3: #549291;
+    --abstract-color-4: #164319;
+}
+
+
+/* ---------------------------------
+   Teaching toolbar
+---------------------------------- */
+
+.teaching-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.65rem;
+
+    margin-bottom: 0.7rem;
+}
+
+.teaching-toolbar input,
+.teaching-toolbar select,
+.teaching-toolbar button {
+    min-height: 2.5rem;
+
+    padding: 0.5rem 0.7rem;
+
+    border: 1px solid var(--color-border);
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font: inherit;
+    font-size: 0.85rem;
+}
+
+.teaching-toolbar input[type="search"] {
+    flex: 1 1 220px;
+
+    min-width: 180px;
+}
+
+.teaching-toolbar select {
+    cursor: pointer;
+}
+
+.teaching-toolbar button {
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.teaching-toolbar button:hover {
+    border-color: var(--teaching-color-1);
+
+    color: var(--teaching-color-1);
+}
+
+.teaching-toolbar input:focus,
+.teaching-toolbar select:focus,
+.teaching-toolbar button:focus-visible {
+    outline: 2px solid var(--teaching-color-1);
+    outline-offset: 2px;
+}
+
+.teaching-filter-status {
+    min-height: 1.3rem;
+
+    margin:
+        0
+        0
+        1.5rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* ---------------------------------
+   Teaching list
+---------------------------------- */
+
+.teaching-list {
+    display: grid;
+
+    gap: 0.9rem;
+}
+
+
+/* ---------------------------------
+   Teaching course
+---------------------------------- */
+
+.teaching-course {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.34);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.teaching-course:hover {
+    border-color:
+        rgba(23, 82, 91, 0.72);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.07);
+}
+
+.teaching-course:focus-within {
+    border-color:
+        var(--teaching-color-1);
+}
+
+.teaching-course::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--color-primary),
+            var(--color-accent)
+        );
+
+    opacity: 0.9;
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------
+   Teaching title
+---------------------------------- */
+
+.teaching-course-header {
+    padding:
+        1rem
+        1.1rem
+        0.8rem
+        1.3rem;
+}
+
+.teaching-course-title {
+    margin: 0;
+
+    color:
+        var(--teaching-color-4);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+    letter-spacing: -0.006em;
+}
+
+.teaching-course-title a {
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease;
+}
+
+.teaching-course-title a:hover {
+    color:
+        var(--teaching-color-1);
+}
+
+.teaching-course-title a:focus-visible {
+    color:
+        var(--teaching-color-1);
+
+    outline:
+        2px solid
+        var(--teaching-color-1);
+
+    outline-offset: 3px;
+}
+
+
+/* ---------------------------------
+   Teaching badges
+---------------------------------- */
+
+.teaching-badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.45rem;
+
+    margin-top: 0.7rem;
+}
+
+.teaching-badge {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.35rem;
+
+    min-height: 1.75rem;
+
+    padding:
+        0.28rem
+        0.55rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.32);
+
+    border-radius: 999px;
+
+    background-color:
+        rgba(50, 88, 107, 0.055);
+
+    color:
+        var(--teaching-color-4);
+
+    font-size: 0.73rem;
+    line-height: 1.3;
+
+    white-space: nowrap;
+}
+
+.teaching-badge-label {
+    color:
+        var(--teaching-color-3);
+
+    font-size: 0.62rem;
+    font-weight: 600;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+}
+
+.teaching-badge-value {
+    color:
+        var(--teaching-color-4);
+
+    font-weight: 500;
+}
+
+
+/* Location */
+
+.teaching-badge:nth-child(1) {
+    border-color:
+        rgba(23, 82, 91, 0.34);
+
+    background-color:
+        rgba(23, 82, 91, 0.07);
+}
+
+
+/* Term */
+
+.teaching-badge:nth-child(2) {
+    border-color:
+        rgba(25, 64, 93, 0.32);
+
+    background-color:
+        rgba(25, 64, 93, 0.065);
+}
+
+
+/* Type */
+
+.teaching-badge:nth-child(3) {
+    border-color:
+        rgba(50, 88, 107, 0.34);
+
+    background-color:
+        rgba(50, 88, 107, 0.065);
+}
+
+
+/* Language */
+
+.teaching-badge:nth-child(4) {
+    border-color:
+        rgba(23, 82, 91, 0.26);
+
+    background-color:
+        rgba(23, 82, 91, 0.045);
+}
+
+
+/* SWS */
+
+.teaching-badge:nth-child(5) {
+    border-color:
+        rgba(18, 51, 72, 0.28);
+
+    background-color:
+        rgba(18, 51, 72, 0.05);
+}
+
+
+/* ---------------------------------
+   Teaching abstract
+---------------------------------- */
+
+.teaching-abstract {
+    padding:
+        0
+        1.1rem
+        0.95rem
+        1.3rem;
+}
+
+.teaching-abstract summary {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.45rem;
+
+    width: fit-content;
+
+    margin: 0;
+
+    padding:
+        0.34rem
+        0.6rem;
+
+    border:
+        1px solid
+        var(--abstract-color-1);
+
+    border-radius: 4px;
+
+    background-color: transparent;
+
+    color:
+        var(--abstract-color-4);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+
+    transition:
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease;
+}
+
+.teaching-abstract summary::-webkit-details-marker {
+    display: none;
+}
+
+.teaching-abstract summary::after {
+    content: "+";
+
+    color:
+        var(--abstract-color-1);
+
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.teaching-abstract summary:hover {
+    border-color:
+        var(--abstract-color-1);
+
+    background-color:
+        rgba(132, 184, 125, 0.16);
+
+    color:
+        var(--abstract-color-4);
+}
+
+.teaching-abstract summary:focus-visible {
+    outline:
+        2px solid
+        var(--abstract-color-1);
+
+    outline-offset: 3px;
+}
+
+.teaching-abstract[open] summary {
+    border-color:
+        var(--color-primary);
+
+    background-color:
+        var(--color-primary);
+
+    color: #ffffff;
+}
+
+.teaching-abstract[open] summary::after {
+    content: "−";
+
+    color: #ffffff;
+}
+
+
+/* ---------------------------------
+   Teaching abstract panel
+---------------------------------- */
+
+.teaching-abstract-panel {
+    margin-top: 0.75rem;
+
+    padding:
+        0.9rem
+        1rem;
+
+    border:
+        1px solid
+        rgba(35, 91, 133, 0.22);
+
+    border-left:
+        3px solid
+        var(--color-accent);
+
+    border-radius: 5px;
+
+    background-color:
+        rgba(35, 91, 133, 0.045);
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.86rem;
+    line-height: 1.68;
+}
+
+.teaching-abstract-panel a {
+    color:
+        var(--abstract-color-1);
+}
+
+.teaching-abstract-panel a:hover {
+    color:
+        var(--abstract-color-4);
+}
+
+.teaching-abstract-panel > :first-child {
+    margin-top: 0;
+}
+
+.teaching-abstract-panel > :last-child {
+    margin-bottom: 0;
+}
+
+.teaching-course:has(.teaching-abstract[open]) {
+    border-color:
+        rgba(67, 116, 26, 0.58);
+
+    box-shadow:
+        0 6px 20px
+        rgba(22, 67, 25, 0.065);
+}
+
+
+/* ---------------------------------
+   Filtered courses
+---------------------------------- */
+
+.teaching-course[hidden] {
+    display: none;
+}
+
+
+/* ---------------------------------
+   Teaching responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .teaching-list {
+        gap: 0.8rem;
+    }
+
+    .teaching-course-header {
+        padding:
+            0.95rem
+            0.9rem
+            0.75rem
+            1.1rem;
+    }
+
+    .teaching-course::before {
+        width: 3px;
+    }
+
+    .teaching-course-title {
+        font-size: 0.96rem;
+    }
+
+    .teaching-badges {
+        gap: 0.4rem;
+    }
+
+    .teaching-badge {
+        white-space: normal;
+    }
+
+    .teaching-abstract {
+        padding:
+            0
+            0.9rem
+            0.9rem
+            1.1rem;
+    }
+
+    .teaching-abstract-panel {
+        font-size: 0.84rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .teaching-toolbar {
+        align-items: stretch;
+    }
+
+    .teaching-toolbar input[type="search"] {
+        flex-basis: 100%;
+    }
+
+    .teaching-toolbar select {
+        flex:
+            1 1
+            calc(50% - 0.65rem);
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .teaching-toolbar select,
+    .teaching-toolbar button {
+        width: 100%;
+    }
+
+    .teaching-toolbar select {
+        flex-basis: 100%;
+    }
+
+}
+
+/* ---------------------------------
+   Thesis Supervisions
+---------------------------------- */
+
+.thesis-supervisions {
+    width: 100%;
+
+    margin-top: 4rem;
+
+    --thesis-color-1: #43741a;
+    --thesis-color-2: #549291;
+    --thesis-color-3: #32586b;
+    --thesis-color-4: #164319;
+}
+
+
+/* ---------------------------------
+   Thesis section title
+---------------------------------- */
+
+.thesis-supervisions-title {
+    margin:
+        0
+        0
+        1.5rem;
+
+    color:
+        var(--color-text);
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+
+/* ---------------------------------
+   Thesis toolbar
+---------------------------------- */
+
+.thesis-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.65rem;
+
+    margin-bottom: 0.7rem;
+}
+
+.thesis-toolbar input,
+.thesis-toolbar select,
+.thesis-toolbar button {
+    min-height: 2.5rem;
+
+    padding:
+        0.5rem
+        0.7rem;
+
+    border:
+        1px solid
+        var(--color-border);
+
+    background-color:
+        var(--color-background);
+
+    color:
+        var(--color-text);
+
+    font: inherit;
+    font-size: 0.85rem;
+}
+
+.thesis-toolbar input[type="search"] {
+    flex:
+        1 1
+        220px;
+
+    min-width: 180px;
+}
+
+.thesis-toolbar select {
+    cursor: pointer;
+}
+
+.thesis-toolbar button {
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.thesis-toolbar button:hover {
+    border-color:
+        var(--thesis-color-1);
+
+    color:
+        var(--thesis-color-1);
+}
+
+.thesis-toolbar input:focus,
+.thesis-toolbar select:focus,
+.thesis-toolbar button:focus-visible {
+    outline:
+        2px solid
+        var(--thesis-color-1);
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Thesis filter status
+---------------------------------- */
+
+.thesis-filter-status {
+    min-height: 1.3rem;
+
+    margin:
+        0
+        0
+        1.5rem;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* ---------------------------------
+   Thesis list
+---------------------------------- */
+
+.thesis-list {
+    display: grid;
+
+    gap: 0.9rem;
+}
+
+
+/* ---------------------------------
+   Thesis entry
+---------------------------------- */
+
+.thesis-entry {
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        1rem
+        1.1rem
+        0.8rem
+        1.3rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.34);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.thesis-entry:hover {
+    border-color:
+        rgba(67, 116, 26, 0.58);
+
+    box-shadow:
+        0 5px 17px
+        rgba(22, 67, 25, 0.055);
+}
+
+.thesis-entry:focus-within {
+    border-color:
+        var(--thesis-color-1);
+}
+
+
+/* ---------------------------------
+   Thesis color edge
+---------------------------------- */
+
+.thesis-entry::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--thesis-color-1),
+            var(--thesis-color-2)
+        );
+
+    opacity: 0.88;
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------
+   Thesis title
+---------------------------------- */
+
+.thesis-title {
+    margin: 0;
+
+    color:
+        var(--color-text);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+    letter-spacing: -0.006em;
+}
+
+.thesis-title em {
+    font-weight: inherit;
+}
+
+
+/* ---------------------------------
+   Thesis badges
+---------------------------------- */
+
+.thesis-badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.45rem;
+
+    margin-top: 0.7rem;
+}
+
+.thesis-badge {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.35rem;
+
+    min-height: 1.75rem;
+
+    padding:
+        0.28rem
+        0.55rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.3);
+
+    border-radius: 999px;
+
+    background-color:
+        rgba(50, 88, 107, 0.045);
+
+    color:
+        var(--color-text);
+
+    font-size: 0.73rem;
+    line-height: 1.3;
+
+    white-space: nowrap;
+}
+
+.thesis-badge-label {
+    color:
+        var(--color-muted);
+
+    font-size: 0.62rem;
+    font-weight: 600;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+}
+
+.thesis-badge-value {
+    color:
+        var(--color-text);
+
+    font-weight: 500;
+}
+
+
+/* Role */
+
+.thesis-badge:nth-child(1) {
+    border-color:
+        rgba(67, 116, 26, 0.3);
+
+    background-color:
+        rgba(67, 116, 26, 0.055);
+}
+
+
+/* Other Supervisor */
+
+.thesis-badge:nth-child(2) {
+    border-color:
+        rgba(84, 146, 145, 0.32);
+
+    background-color:
+        rgba(84, 146, 145, 0.055);
+}
+
+
+/* Location */
+
+.thesis-badge:nth-child(3) {
+    border-color:
+        rgba(50, 88, 107, 0.32);
+
+    background-color:
+        rgba(50, 88, 107, 0.055);
+}
+
+
+/* Term */
+
+.thesis-badge:nth-child(4) {
+    border-color:
+        rgba(67, 116, 26, 0.24);
+
+    background-color:
+        rgba(67, 116, 26, 0.04);
+}
+
+
+/* Type */
+
+.thesis-badge:nth-child(5) {
+    border-color:
+        rgba(84, 146, 145, 0.27);
+
+    background-color:
+        rgba(84, 146, 145, 0.045);
+}
+
+
+/* Language */
+
+.thesis-badge:nth-child(6) {
+    border-color:
+        rgba(22, 67, 25, 0.22);
+
+    background-color:
+        rgba(22, 67, 25, 0.035);
+}
+
+
+/* ---------------------------------
+   Filtered theses
+---------------------------------- */
+
+.thesis-entry[hidden] {
+    display: none;
+}
+
+
+/* ---------------------------------
+   Thesis responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .thesis-supervisions {
+        margin-top: 3.5rem;
+    }
+
+    .thesis-list {
+        gap: 0.8rem;
+    }
+
+    .thesis-entry {
+        padding:
+            0.95rem
+            0.9rem
+            0.75rem
+            1.1rem;
+    }
+
+    .thesis-entry::before {
+        width: 3px;
+    }
+
+    .thesis-title {
+        font-size: 0.96rem;
+    }
+
+    .thesis-badges {
+        gap: 0.4rem;
+    }
+
+    .thesis-badge {
+        white-space: normal;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .thesis-toolbar {
+        align-items: stretch;
+    }
+
+    .thesis-toolbar input[type="search"] {
+        flex-basis: 100%;
+    }
+
+    .thesis-toolbar select {
+        flex:
+            1 1
+            calc(50% - 0.65rem);
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .thesis-toolbar select,
+    .thesis-toolbar button {
+        width: 100%;
+    }
+
+    .thesis-toolbar select {
+        flex-basis: 100%;
+    }
+
+}
+
+/* ---------------------------------
+   Academic Services
+---------------------------------- */
+
+.services {
+    width: 100%;
+
+    --services-color-1: #17525b;
+    --services-color-2: #19405d;
+    --services-color-3: #32586b;
+    --services-color-4: #123348;
+}
+
+
+/* ---------------------------------
+   Services sections
+---------------------------------- */
+
+.services-section + .services-section {
+    margin-top: 4rem;
+}
+
+
+.services-section-title {
+    margin:
+        0
+        0
+        1.25rem;
+
+    color:
+        var(--color-text);
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+
+/* ---------------------------------
+   Organized Events reference
+---------------------------------- */
+
+.services-events-reference {
+    max-width: 680px;
+
+    margin:
+        -0.15rem
+        0
+        1.85rem;
+
+    padding:
+        0.8rem
+        0.95rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.16);
+
+    border-left:
+        3px solid
+        var(--color-warm);
+
+    border-radius:
+        5px;
+
+    background-color:
+        rgba(255, 255, 255, 0.34);
+
+    color:
+        var(--color-muted);
+
+    font-size:
+        0.86rem;
+
+    line-height:
+        1.6;
+}
+
+
+.services-events-reference a {
+    color:
+        var(--services-color-1);
+
+    font-weight: 600;
+
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+
+
+.services-events-reference a:hover {
+    color:
+        var(--services-color-4);
+}
+
+
+/* ---------------------------------
+   Services list
+---------------------------------- */
+
+.services-list {
+    display: grid;
+
+    gap: 1rem;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------
+   Service card
+---------------------------------- */
+
+.service-entry {
+    display: grid;
+
+    grid-template-columns:
+        125px
+        minmax(0, 1fr);
+
+    gap: 1.5rem;
+
+    padding: 1.4rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.3);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+.service-entry:hover {
+    border-color:
+        rgba(23, 82, 91, 0.58);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.055);
+}
+
+
+.service-entry:focus-within {
+    border-color:
+        var(--services-color-1);
+}
+
+
+/* ---------------------------------
+   Service date
+---------------------------------- */
+
+.service-entry-date {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.05rem;
+
+    color:
+        var(--services-color-3);
+
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+
+/* Date range */
+
+.service-entry-date-range {
+    color:
+        var(--services-color-4);
+
+    font-size: 0.92rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+
+/* Separator */
+
+.service-entry-date-separator {
+    color:
+        var(--services-color-3);
+
+    font-size: 0.78rem;
+    font-weight: 400;
+
+    line-height: 1.35;
+}
+
+
+/* "since" label */
+
+.service-entry-date-label {
+    color:
+        var(--services-color-3);
+
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    line-height: 1.45;
+}
+
+
+/* ---------------------------------
+   Service content
+---------------------------------- */
+
+.service-entry-content {
+    min-width: 0;
+}
+
+
+/* ---------------------------------
+   Service title
+---------------------------------- */
+
+.service-entry-title {
+    margin: 0;
+
+    color:
+        var(--services-color-4);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1.5;
+    letter-spacing: -0.006em;
+}
+
+
+.service-entry-title a {
+    color:
+        var(--services-color-4);
+
+    text-decoration: none;
+
+    transition:
+        color 0.18s ease;
+}
+
+
+.service-entry-title a:hover {
+    color:
+        var(--services-color-1);
+}
+
+
+.service-entry-title a:focus-visible {
+    color:
+        var(--services-color-1);
+
+    outline:
+        2px solid
+        var(--services-color-1);
+
+    outline-offset: 3px;
+}
+
+
+/* ---------------------------------
+   Service roles
+---------------------------------- */
+
+.service-roles {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.25rem;
+
+    max-width: 650px;
+
+    margin-top: 0.7rem;
+    padding-left: 0.75rem;
+
+    border-left:
+        3px solid
+        var(--services-color-1);
+}
+
+
+.service-role {
+    margin: 0;
+
+    color:
+        var(--services-color-4);
+
+    font-size: 0.84rem;
+    line-height: 1.5;
+}
+
+
+.service-role-name {
+    color:
+        var(--services-color-1);
+
+    font-weight: 600;
+}
+
+
+.service-role-detail {
+    color:
+        var(--color-muted);
+
+    font-weight: 400;
+}
+
+/* ---------------------------------
+   Self-government roles
+---------------------------------- */
+
+.services-section-self-government .service-roles {
+    display: block;
+
+    max-width: none;
+
+    margin-top: 0.35rem;
+    padding-left: 0;
+
+    border-left: 0;
+}
+
+
+.services-section-self-government .service-role {
+    color:
+        var(--color-muted);
+
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
+
+.services-section-self-government .service-role-name {
+    color:
+        var(--services-color-1);
+
+    font-weight: 600;
+}
+
+
+.services-section-self-government .service-role-detail {
+    margin-left: 0.35rem;
+
+    color:
+        var(--color-muted);
+
+    font-weight: 400;
+}
+
+.service-role-separator {
+    margin:
+        0
+        0.25rem;
+
+    color:
+        var(--color-muted);
+}
+
+/* ---------------------------------
+   Service institution
+---------------------------------- */
+
+.service-entry-institution {
+    margin:
+        0.18rem
+        0
+        0;
+
+    color:
+        var(--services-color-3);
+
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------
+   Academic Services responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .services-section + .services-section {
+        margin-top: 3.5rem;
+    }
+
+
+    .service-entry {
+        grid-template-columns: 1fr;
+
+        gap: 0.35rem;
+
+        padding: 1.15rem;
+    }
+
+
+    .service-entry-date {
+        margin-bottom: 0.25rem;
+    }
+
+
+    .service-entry-title {
+        font-size: 0.96rem;
+    }
+
+}
+
+
+/* ---------------------------------
+   Projects & Funding
+---------------------------------- */
+
+.projects {
+    width: 100%;
+
+    --projects-color-1: #17525b;
+    --projects-color-2: #bb9e76;
+    --projects-color-3: #32586b;
+    --projects-color-4: #123348;
+}
+
+
+/* ---------------------------------
+   Projects toolbar
+---------------------------------- */
+
+.projects-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.65rem;
+
+    margin-bottom: 0.7rem;
+}
+
+
+.projects-toolbar input,
+.projects-toolbar select,
+.projects-toolbar button {
+    min-height: 2.5rem;
+
+    padding:
+        0.5rem
+        0.7rem;
+
+    border:
+        1px solid
+        var(--color-border);
+
+    background-color:
+        var(--color-background);
+
+    color:
+        var(--color-text);
+
+    font: inherit;
+    font-size: 0.85rem;
+}
+
+
+.projects-toolbar input[type="search"] {
+    flex:
+        1 1
+        220px;
+
+    min-width: 180px;
+}
+
+
+.projects-toolbar select {
+    cursor: pointer;
+}
+
+
+.projects-toolbar button {
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background-color 0.18s ease;
+}
+
+
+.projects-toolbar button:hover {
+    border-color:
+        var(--projects-color-1);
+
+    color:
+        var(--projects-color-1);
+}
+
+
+.projects-toolbar input:focus,
+.projects-toolbar select:focus,
+.projects-toolbar button:focus-visible {
+    outline:
+        2px solid
+        var(--projects-color-1);
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Projects filter status
+---------------------------------- */
+
+.projects-filter-status {
+    min-height: 1.3rem;
+
+    margin:
+        0
+        0
+        1.5rem;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* ---------------------------------
+   Projects list
+---------------------------------- */
+
+.projects-list {
+    display: grid;
+
+    gap: 1rem;
+}
+
+
+/* ---------------------------------
+   Project card
+---------------------------------- */
+
+.project-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        118px
+        minmax(0, 1fr);
+
+    gap: 1.5rem;
+
+    overflow: hidden;
+
+    padding:
+        1.2rem
+        1.25rem
+        1.15rem
+        1.25rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.34);
+
+    border-radius: 7px;
+
+    background-color:
+        var(--color-surface);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+.project-item:hover {
+    border-color:
+        rgba(23, 82, 91, 0.62);
+
+    box-shadow:
+        0 5px 17px
+        rgba(18, 51, 72, 0.065);
+}
+
+
+.project-item:focus-within {
+    border-color:
+        var(--projects-color-1);
+}
+
+
+/* ---------------------------------
+   Project period
+---------------------------------- */
+
+.project-period {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    min-width: 0;
+
+    padding-right: 1.2rem;
+
+    color:
+        var(--projects-color-3);
+
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+
+.project-period::after {
+    content: "";
+
+    position: absolute;
+
+    top: -1.2rem;
+    right: 0;
+    bottom: -1.15rem;
+
+    width: 4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--projects-color-1),
+            var(--projects-color-2)
+        );
+
+    opacity: 0.88;
+
+    transition:
+        width 0.18s ease,
+        opacity 0.18s ease;
+}
+
+
+.project-item:hover .project-period::after {
+    width: 5px;
+
+    opacity: 1;
+}
+
+
+.project-period-range {
+    color:
+        var(--projects-color-4);
+
+    font-size: 0.84rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+
+.project-period-separator {
+    color:
+        var(--projects-color-3);
+
+    font-size: 0.72rem;
+}
+
+
+/* ---------------------------------
+   Project content
+---------------------------------- */
+
+.project-content {
+    min-width: 0;
+}
+
+
+/* ---------------------------------
+   Project heading
+---------------------------------- */
+
+.project-heading-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap:
+        0.45rem
+        1rem;
+
+    margin-bottom: 0.3rem;
+}
+
+
+.project-eyebrow {
+    margin: 0;
+
+    color:
+        var(--projects-color-1);
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------
+   Project title
+---------------------------------- */
+
+.project-title {
+    margin: 0;
+
+    color:
+        var(--projects-color-4);
+
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+    letter-spacing: -0.008em;
+}
+
+
+/* ---------------------------------
+   Project status
+---------------------------------- */
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 1.55rem;
+
+    padding:
+        0.2rem
+        0.45rem;
+
+    border-radius: 999px;
+
+    font-size: 0.64rem;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+.project-status-upcoming {
+    border:
+        1px solid
+        rgba(187, 158, 118, 0.68);
+
+    background-color:
+        rgba(187, 158, 118, 0.1);
+
+    color:
+        #795f3d;
+}
+
+
+.project-status-current {
+    border:
+        1px solid
+        rgba(84, 146, 145, 0.55);
+
+    background-color:
+        rgba(84, 146, 145, 0.09);
+
+    color:
+        #315f5e;
+}
+
+
+.project-status-completed {
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.32);
+
+    background-color:
+        rgba(50, 88, 107, 0.05);
+
+    color:
+        var(--projects-color-3);
+}
+
+
+/* ---------------------------------
+   Project resource links
+---------------------------------- */
+
+.project-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.4rem;
+
+    margin-top: 0.65rem;
+}
+
+
+.project-resource-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 1.75rem;
+
+    padding:
+        0.28rem
+        0.55rem;
+
+    border:
+        1px solid
+        rgba(23, 82, 91, 0.38);
+
+    border-radius: 4px;
+
+    background-color:
+        rgba(23, 82, 91, 0.045);
+
+    color:
+        var(--projects-color-1);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+.project-resource-button:hover {
+    border-color:
+        var(--projects-color-1);
+
+    background-color:
+        rgba(23, 82, 91, 0.085);
+
+    color:
+        var(--projects-color-4);
+
+    text-decoration: none;
+
+    transform:
+        translateY(-1px);
+}
+
+
+.project-resource-button:focus-visible {
+    outline:
+        2px solid
+        var(--projects-color-1);
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------
+   Project metadata
+---------------------------------- */
+
+.project-meta {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap:
+        0.65rem
+        1rem;
+
+    margin:
+        1rem
+        0
+        0;
+
+    padding:
+        0.85rem
+        0;
+
+    border-top:
+        1px solid
+        rgba(50, 88, 107, 0.2);
+
+    border-bottom:
+        1px solid
+        rgba(50, 88, 107, 0.2);
+}
+
+
+.project-meta-item {
+    min-width: 0;
+}
+
+
+.project-meta-item-wide {
+    grid-column:
+        1 / -1;
+}
+
+
+.project-meta dt {
+    margin: 0;
+
+    color:
+        var(--projects-color-3);
+
+    font-size: 0.62rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+
+.project-meta dd {
+    margin:
+        0.18rem
+        0
+        0;
+
+    color:
+        var(--color-text);
+
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+
+.project-meta-note {
+    color:
+        var(--color-muted);
+}
+
+
+/* ---------------------------------
+   Project description
+---------------------------------- */
+
+.project-description {
+    max-width: 650px;
+
+    margin-top: 0.9rem;
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.88rem;
+    line-height: 1.68;
+}
+
+
+.project-description > :first-child {
+    margin-top: 0;
+}
+
+
+.project-description > :last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------------------------------
+   Project note
+---------------------------------- */
+
+.project-note {
+    max-width: 650px;
+
+    margin:
+        0.8rem
+        0
+        0;
+
+    padding-left: 0.75rem;
+
+    border-left:
+        3px solid
+        var(--projects-color-2);
+
+    color:
+        var(--color-muted);
+
+    font-size: 0.78rem;
+    line-height: 1.55;
+}
+
+
+/* ---------------------------------
+   Filtered projects
+---------------------------------- */
+
+.project-item[hidden] {
+    display: none;
+}
+
+
+/* ---------------------------------
+   Projects responsive
+---------------------------------- */
+
+@media (max-width: 700px) {
+
+    .projects-list {
+        gap: 0.8rem;
+    }
+
+
+    .project-item {
+        grid-template-columns: 1fr;
+
+        gap: 0.7rem;
+
+        padding:
+            1rem
+            0.95rem
+            0.95rem
+            1.1rem;
+    }
+
+
+    .project-period {
+        flex-direction: row;
+
+        align-items: baseline;
+
+        gap: 0.3rem;
+
+        padding:
+            0
+            0
+            0.55rem;
+    }
+
+
+    .project-period::after {
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 3px;
+
+        background:
+            linear-gradient(
+                90deg,
+                var(--projects-color-1),
+                var(--projects-color-2)
+            );
+    }
+
+
+    .project-item:hover .project-period::after {
+        width: 100%;
+        height: 4px;
+    }
+
+
+    .project-title {
+        font-size: 0.98rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .projects-toolbar {
+        align-items: stretch;
+    }
+
+
+    .projects-toolbar input[type="search"] {
+        flex-basis: 100%;
+    }
+
+
+    .projects-toolbar select {
+        flex:
+            1 1
+            calc(50% - 0.65rem);
+    }
+
+
+    .project-meta {
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-meta-item-wide {
+        grid-column: auto;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .projects-toolbar select,
+    .projects-toolbar button {
+        width: 100%;
+    }
+
+
+    .projects-toolbar select {
+        flex-basis: 100%;
+    }
+
+
+    .project-heading-row {
+        display: block;
+    }
+
+
+    .project-status {
+        margin-top: 0.4rem;
+    }
+
+}
+
+/* ---------------------------------
+   Home CV generation
+---------------------------------- */
+
+.home-cv-button {
+    appearance: none;
+    -webkit-appearance: none;
+
+    min-height: 1.9rem;
+
+    margin: 0;
+
+    padding:
+        0.3rem
+        0.52rem;
+
+    border:
+        1px solid
+        rgba(50, 88, 107, 0.28);
+
+    border-radius: 4px;
+
+    background-color:
+        rgba(50, 88, 107, 0.035);
+
+    color:
+        var(--color-muted);
+
+    font-family: inherit;
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    line-height: 1.3;
+
+    cursor: pointer;
+}
+
+.home-cv-button:hover {
+    border-color:
+        var(--color-primary);
+
+    background-color:
+        rgba(35, 91, 133, 0.09);
+
+    color:
+        var(--color-text);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.home-cv-button:focus-visible {
+    outline:
+        2px solid
+        var(--color-primary);
+
+    outline-offset: 2px;
+}
+
+
+.home-cv-button:disabled {
+    cursor: wait;
+
+    opacity: 0.65;
+
+    transform: none;
+}
+
+
+.home-cv-status {
+    color:
+        var(--color-muted);
+
+    font-size: 0.72rem;
+    line-height: 1.4;
+}
+
+/* ---------------------------------
+   Talks: Poster section
+---------------------------------- */
+
+.talks-posters {
+    margin-top: 3.5rem;
+}
+
+.talks-section-title {
+    margin: 0 0 1.25rem;
+    color: var(--color-text);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+/* Keep the longer conference date legible inside the date column. */
+.poster-item .talk-date-day {
+    white-space: nowrap;
+}
+
+/* The existing .talk-item uses display:grid, so hidden needs an override. */
+.talks-posters[hidden],
+.poster-item[hidden] {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .talks-posters {
+        margin-top: 3rem;
+    }
+}
