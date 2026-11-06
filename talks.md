@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Talks
+title: Talks & Posters
 permalink: /talks/
 description: "Academic talks and posters by Erik Renz."
 ---
@@ -13,14 +13,14 @@ description: "Academic talks and posters by Erik Renz."
 
     <div
         class="talks-toolbar"
-        aria-label="Search and filter talks and posters"
+        aria-label="Search and filter talks"
     >
 
         <input
             id="talks-search"
             type="search"
             placeholder="Search"
-            aria-label="Search talks and posters"
+            aria-label="Search talks"
         >
 
 
@@ -418,6 +418,32 @@ description: "Academic talks and posters by Erik Renz."
             Posters
         </h2>
 
+        <!-- Independent poster search and filters -->
+        <div class="talks-toolbar" aria-label="Search and filter posters">
+            <input
+                id="posters-search"
+                type="search"
+                placeholder="Search"
+                aria-label="Search posters"
+            >
+
+            <select id="posters-filter-year" aria-label="Filter posters by year">
+                <option value="">All years</option>
+            </select>
+
+            <select id="posters-filter-country" aria-label="Filter posters by country">
+                <option value="">All countries</option>
+            </select>
+
+            <button id="posters-filter-reset" type="button">Reset</button>
+        </div>
+
+        <p
+            class="talks-filter-status"
+            id="posters-filter-status"
+            aria-live="polite"
+        ></p>
+
         <div class="talks-list talks-posters-list">
 
             <!-- =========================================
@@ -462,6 +488,15 @@ description: "Academic talks and posters by Erik Renz."
                     </p>
 
                     <div class="talk-links">
+
+                        <a
+                            class="talk-resource-button"
+                            href="https://web.archive.org/web/20260226155332/https://www.conftool.net/forge2025/sessions.php"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Programm
+                        </a>
 
                         <a
                             class="talk-resource-button"
