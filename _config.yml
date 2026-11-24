@@ -1,0 +1,20 @@
+title: "Erik Renz"
+tagline: "Digital Humanities · Computational Literary Studies · Digital Scholarly Editions"
+description: "Personal academic website of Erik Renz"
+
+url: "https://erre1998.github.io"
+baseurl: ""
+
+lang: "en"
+timezone: "Europe/Berlin"
+
+markdown: kramdown
+
+permalink: pretty
+
+exclude:
+  - README.md
+  
+zotero:
+  user_id: "11763888"
+  username: "erre1998"
